@@ -73,3 +73,7 @@ A feature is done when:
 ## 9. Avoid process overhead
 
 No issue tracker, sprint board, ADR numbering system, CI pipeline, backend, or cloud database until one of those solves a real problem we actually have.
+
+## 10. Bilingual interface rule
+
+Show English and Spanish together for short interface labels where it remains readable. Keep scientific names single. Do not duplicate long free-text content unless it is actually useful. Translation/display wording must not require changing stable stored data values.

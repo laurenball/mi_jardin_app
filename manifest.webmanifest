@@ -1,6 +1,6 @@
 {
-  "name": "My Garden",
-  "short_name": "Garden",
+  "name": "My Garden / Mi Jardín",
+  "short_name": "Garden / Jardín",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f4f7ef",

@@ -1,43 +1,37 @@
-# My Garden App
+# My Garden / Mi Jardín
 
-A tiny private, local-first garden app for keeping track of plants I want, plants I have, and eventually birds, propagation notes, and garden ideas.
+A private, local-first native-garden field guide and planning app.
 
-## Why this starts simple
+## Current version
 
-The first version is intentionally small. It should be easy to understand, easy to change, and useful on a phone before we add more features.
+The app now stores plants as more than a wishlist. Each record can include:
 
-## Version 0.1
+- Identity / Identidad
+- Native ecology / Ecología nativa
+- Wildlife value / Valor para la fauna
+- Growing information / Cultivo
+- Human uses / Usos humanos
+- My garden / Mi jardín
 
-- Add plants
-- Attach a photo
-- Common name
-- Scientific name
-- Description
-- Notes
-- Sun preference
-- Native status
-- Wildlife value
-- Status: Want / Looking For / Bought / Planted
-- Search plants
-- Store data locally in the browser using IndexedDB
-- Basic offline support
-- Installable as a PWA on supported phones
+It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus filters by garden layer, purpose, and status.
 
-## Run it locally
-
-From this folder:
+## Run locally
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open:
+Then open `http://localhost:8000`.
 
-```text
-http://localhost:8000
-```
+## Important data behavior
 
-On another device on the same Wi-Fi network, use your computer's local network IP instead of `localhost`.
+Plant data is stored in IndexedDB on the device/browser where it is entered. Starter plants are added only when the database is completely empty, so restarting the app will not duplicate them.
+
+Existing Version 1 plant records remain compatible.
+
+## Language approach
+
+English and Spanish are shown together where useful. Scientific names remain single. Longer notes can be in either language.
 
 ## Project structure
 
@@ -47,19 +41,9 @@ my-garden-app/
 ├── styles.css
 ├── app.js
 ├── db.js
+├── starter-plants.js
 ├── manifest.webmanifest
 ├── service-worker.js
 ├── assets/
-│   └── icon.svg
-├── docs/
-│   ├── PROCESS.md
-│   ├── ROADMAP.md
-│   └── DATA_MODEL.md
-└── README.md
+└── docs/
 ```
-
-## Important limitation in this first version
-
-The data lives in the browser on the device where you enter it. That is excellent for privacy and simplicity, but it is not yet synchronized between your computer and phone and is not yet automatically backed up.
-
-Backup/export is therefore an early roadmap item.

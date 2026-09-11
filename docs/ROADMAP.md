@@ -1,21 +1,16 @@
 # Roadmap
 
-## Now — Version 0.1
+## Version 0.2 — current
 
-Make a pleasant, usable personal plant list.
-
-- [x] Add plant records
-- [x] Add a photo
-- [x] Store records locally
-- [x] Search
-- [x] Status field
-- [x] Offline app shell
+- [x] Bilingual English / Spanish labels together
+- [x] Rich plant schema: identity, ecology, wildlife, growing, human use, personal garden
+- [x] Layer, purpose and status filters
+- [x] Starter native-garden dataset
+- [x] Preserve Version 1 records
 - [ ] Test installation on phone
 - [ ] Test camera/photo picker on phone
 
-## Next — Version 0.2
-
-Protect the information before expanding the app.
+## Next — protect and maintain the collection
 
 - [ ] Export all garden data to a backup file
 - [ ] Import a backup file
@@ -25,16 +20,10 @@ Protect the information before expanding the app.
 
 ## Later — only after using it
 
-Possible additions:
-
 - Plants I Have view
-- Filters: native, sun, wildlife value, status
-- Nursery/source and price
-- Propagation notes
-- Flowering dates
-- Garden locations / beds
-- Bird observations
-- Garden ideas
+- Nursery/source and price improvements
+- Propagation journal
+- Flowering and fruiting observations
+- Garden beds / map
+- Bird observations linked to plants
 - Sync between devices
-
-These are possibilities, not commitments.
