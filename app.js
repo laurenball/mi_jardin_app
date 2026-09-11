@@ -1,9 +1,10 @@
-import { addPlant, addPlants, getPlants } from './db.js';
+import { addPlant, addPlants, getPlants, updatePlant } from './db.js';
 import { STARTER_PLANTS } from './starter-plants.js';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
 const browseDetail = document.querySelector('#browse-detail');
+const browsePhotoInput = document.querySelector('#browse-photo-input');
 const form = document.querySelector('#plant-form');
 const grid = document.querySelector('#plant-grid');
 const emptyState = document.querySelector('#empty-state');
@@ -78,6 +79,24 @@ function openPlant(plantId, level = 'overview') {
 function closeBrowseDialog() {
   browseDialog.close();
   cleanupBrowseObjectUrls();
+}
+
+async function appendPhotosToActivePlant(files) {
+  if (!activePlantId || files.length === 0) return;
+  const plant = plants.find(item => item.id === activePlantId);
+  if (!plant) return;
+  const photos = [...plantPhotos(plant), ...files];
+  const updatedPlant = {
+    ...plant,
+    photos,
+    photo: plant.photo || photos[0] || null,
+    updatedAt: new Date().toISOString(),
+    schemaVersion: Math.max(Number(plant.schemaVersion) || 1, 3)
+  };
+  await updatePlant(updatedPlant);
+  plants = await getPlants();
+  render();
+  renderBrowseDialog();
 }
 
 function sectionHtml(title, rows) {
@@ -193,7 +212,10 @@ function detailPlant(plant) {
   const tags = tagMarkup(plant, 8);
   return `
     <div class="dialog-toolbar">
-      <button type="button" class="secondary-button" data-action="overview">Less / Menos</button>
+      <div class="dialog-actions">
+        <button type="button" class="secondary-button" data-action="overview">Less / Menos</button>
+        <button type="button" class="secondary-button" data-action="add-photos">Add photos / Agregar fotos</button>
+      </div>
       <button type="button" class="icon-button" data-action="close" aria-label="Close / Cerrar">×</button>
     </div>
     <div class="plant-detail full-detail">
@@ -225,7 +247,10 @@ function overviewPlant(plant) {
   ].join('');
   return `
     <div class="dialog-toolbar">
-      <button type="button" class="primary-button" data-action="full">Full details / Detalle completo</button>
+      <div class="dialog-actions">
+        <button type="button" class="primary-button" data-action="full">Full details / Detalle completo</button>
+        <button type="button" class="secondary-button" data-action="add-photos">Add photos / Agregar fotos</button>
+      </div>
       <button type="button" class="icon-button" data-action="close" aria-label="Close / Cerrar">×</button>
     </div>
     <div class="plant-detail overview-detail">
@@ -319,8 +344,13 @@ browseDialog.addEventListener('click', event => {
     activeDetailLevel = 'overview';
     renderBrowseDialog();
   }
+  if (action === 'add-photos') browsePhotoInput.click();
 });
 browseDialog.addEventListener('close', cleanupBrowseObjectUrls);
+browsePhotoInput.addEventListener('change', async () => {
+  await appendPhotosToActivePlant(Array.from(browsePhotoInput.files || []));
+  browsePhotoInput.value = '';
+});
 for (const input of viewInputs) {
   input.checked = input.value === currentView;
   input.addEventListener('change', () => {

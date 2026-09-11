@@ -29,7 +29,7 @@ Plant data is stored in IndexedDB on the device/browser where it is entered. Sta
 
 Existing Version 1 plant records remain compatible.
 
-New records can store multiple photos in `photos`; the first image is also saved as `photo` so older single-photo records and code paths remain compatible.
+New records can store multiple photos in `photos`; the first image is also saved as `photo` so older single-photo records and code paths remain compatible. Photos can also be added later from a plant detail view.
 
 ## Language approach
 

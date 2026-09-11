@@ -13,6 +13,8 @@ Version 3 adds multi-photo support without changing the IndexedDB store.
 
 `photos` is the preferred gallery field. `photo` is still kept as the primary image for compatibility with older records and older app code.
 
+Photos can be appended to an existing plant from the plant detail view. The app preserves the existing primary `photo` when adding more images.
+
 ## Version 2
 
 Plant records now separate identity, native ecology, wildlife, growing information, human uses, and personal garden information.

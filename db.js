@@ -40,6 +40,17 @@ export async function addPlants(plants) {
   });
 }
 
+export async function updatePlant(plant) {
+  const db = await openDatabase();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(PLANT_STORE, 'readwrite');
+    tx.objectStore(PLANT_STORE).put(plant);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error);
+  });
+}
+
 export async function getPlants() {
   const db = await openDatabase();
   return new Promise((resolve, reject) => {
