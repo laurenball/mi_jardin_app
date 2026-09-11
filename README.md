@@ -15,6 +15,8 @@ The app now stores plants as more than a wishlist. Each record can include:
 
 It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus filters by garden layer, purpose, and status. The plant list uses a photo-first mobile flow: tap a plant to expand it into a card, then open all information from that card.
 
+The list is grouped by garden layer, using the same bilingual labels as the layer filter: Canopy / Dosel, Climber / Trepadora, Fruit tree / Frutal, Grass / Gramínea, Herbaceous / Herbácea, Shrub / Arbusto. Group headings are alphabetical and plants are alphabetical by common name within each group, compared with Spanish collation so accented names sort correctly. Plants with no layer set appear in a final Other / Otras group.
+
 ## Run locally
 
 ```bash

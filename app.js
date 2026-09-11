@@ -8,6 +8,7 @@ const browsePhotoInput = document.querySelector('#browse-photo-input');
 const form = document.querySelector('#plant-form');
 const grid = document.querySelector('#plant-grid');
 const emptyState = document.querySelector('#empty-state');
+const noResults = document.querySelector('#no-results');
 const searchInput = document.querySelector('#search');
 const layerFilter = document.querySelector('#layer-filter');
 const purposeFilter = document.querySelector('#purpose-filter');
@@ -30,6 +31,9 @@ const DISPLAY_LABELS = {
   layer: {'Canopy':'Canopy / Dosel','Fruit tree':'Fruit tree / Frutal','Shrub':'Shrub / Arbusto','Herbaceous':'Herbaceous / Herbácea','Grass':'Grass / Gramínea','Climber':'Climber / Trepadora'},
   purpose: {'Bird food':'Bird food / Alimento para aves','Shelter':'Shelter / Refugio','Nesting':'Nesting / Nidificación','Hummingbirds':'Hummingbirds / Picaflores','Butterflies':'Butterflies / Mariposas','Pollinators':'Pollinators / Polinizadores','Edible':'Edible / Comestible','Medicinal tradition':'Medicinal tradition / Uso medicinal tradicional'}
 };
+
+const UNGROUPED_LABEL = 'Other / Otras';
+const nameCollator = new Intl.Collator(['es', 'en'], {sensitivity: 'base', numeric: true});
 
 function displayValue(group, value) { return DISPLAY_LABELS[group]?.[value] || value || ''; }
 function openForm() { form.reset(); dialog.showModal(); }
@@ -213,6 +217,37 @@ function tagMarkup(plant, limit = 4) {
     .filter(Boolean).map(v => `<span class="tag">${escapeHtml(v)}</span>`).join('');
 }
 
+function groupLabel(plant) {
+  return plant.layer ? displayValue('layer', plant.layer) : UNGROUPED_LABEL;
+}
+
+function groupPlants(list) {
+  const groups = new Map();
+  for (const plant of list) {
+    const label = groupLabel(plant);
+    if (!groups.has(label)) groups.set(label, []);
+    groups.get(label).push(plant);
+  }
+  for (const items of groups.values()) {
+    items.sort((a, b) => nameCollator.compare(a.commonName || '', b.commonName || ''));
+  }
+  return [...groups.entries()].sort(([a], [b]) =>
+    (a === UNGROUPED_LABEL) - (b === UNGROUPED_LABEL) || nameCollator.compare(a, b));
+}
+
+function groupSection(label, items) {
+  const section = document.createElement('section');
+  section.className = 'plant-group';
+  const heading = document.createElement('h2');
+  heading.className = 'group-heading';
+  heading.textContent = label;
+  const list = document.createElement('div');
+  list.className = 'plant-group-items';
+  list.append(...items.map(plant => plant.id === expandedPlantId ? cardForPlant(plant) : photoPlant(plant)));
+  section.append(heading, list);
+  return section;
+}
+
 function photoPlant(plant) {
   const article = document.createElement('article');
   article.className = 'photo-plant';
@@ -222,7 +257,7 @@ function photoPlant(plant) {
   article.setAttribute('aria-label', `Expand ${plant.commonName} / Expandir ${plant.commonName}`);
   article.innerHTML = `${photoMarkup(plant, 'plant-thumb')}
     <div>
-      <h2>${escapeHtml(plant.commonName)}</h2>
+      <h3>${escapeHtml(plant.commonName)}</h3>
       ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
     </div>`;
   return article;
@@ -243,7 +278,7 @@ function cardForPlant(plant) {
     <div class="plant-card-body">
       <div class="card-title-row">
         <div>
-          <h2>${escapeHtml(plant.commonName)}</h2>
+          <h3>${escapeHtml(plant.commonName)}</h3>
           ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
         </div>
         ${photoCount > 1 ? `<span class="photo-count">${photoCount} photos / fotos</span>` : ''}
@@ -316,8 +351,9 @@ function render() {
   });
   if (expandedPlantId && !visiblePlants.some(plant => plant.id === expandedPlantId)) expandedPlantId = null;
   grid.className = 'plant-grid view-photos';
-  grid.replaceChildren(...visiblePlants.map(plant => plant.id === expandedPlantId ? cardForPlant(plant) : photoPlant(plant)));
+  grid.replaceChildren(...groupPlants(visiblePlants).map(([label, items]) => groupSection(label, items)));
   emptyState.hidden = plants.length > 0;
+  noResults.hidden = plants.length === 0 || visiblePlants.length > 0;
 }
 
 form.addEventListener('submit', async (event) => {
@@ -340,6 +376,11 @@ form.addEventListener('submit', async (event) => {
 for (const id of ['open-form','empty-add']) document.querySelector(`#${id}`).addEventListener('click', openForm);
 for (const id of ['close-form','cancel-form']) document.querySelector(`#${id}`).addEventListener('click', closeForm);
 for (const input of [searchInput, layerFilter, purposeFilter, statusFilter]) input.addEventListener(input.tagName === 'INPUT' ? 'input' : 'change', render);
+document.querySelector('#clear-filters').addEventListener('click', () => {
+  searchInput.value = '';
+  for (const filter of [layerFilter, purposeFilter, statusFilter]) filter.value = '';
+  render();
+});
 grid.addEventListener('click', event => {
   const action = event.target.closest('[data-action]')?.dataset.action;
   if (action === 'all-info') {
