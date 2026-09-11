@@ -80,11 +80,22 @@ function openPlant(plantId) {
   activePlantId = plantId;
   renderBrowseDialog();
   browseDialog.showModal();
+  browseDialog.scrollTop = 0;
+  browseDetail.scrollTop = 0;
 }
 
 function expandPlant(plantId) {
   expandedPlantId = plantId;
   render();
+  grid.querySelector('.expanded-card')?.scrollIntoView({block: 'start'});
+}
+
+function collapsePlant() {
+  const plantId = expandedPlantId;
+  if (!plantId) return;
+  expandedPlantId = null;
+  render();
+  grid.querySelector(`[data-plant-id="${CSS.escape(plantId)}"]`)?.scrollIntoView({block: 'nearest'});
 }
 
 function closeBrowseDialog() {
@@ -274,14 +285,17 @@ function cardForPlant(plant) {
   ].filter(Boolean).slice(0, 3).map(v => `<li>${escapeHtml(v)}</li>`).join('');
   const photoCount = plantPhotos(plant).length;
 
-  article.innerHTML = `${photoMarkup(plant)}
+  article.innerHTML = `<div class="card-photo-toggle" data-action="collapse">${photoMarkup(plant)}</div>
     <div class="plant-card-body">
       <div class="card-title-row">
         <div>
           <h3>${escapeHtml(plant.commonName)}</h3>
           ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
         </div>
-        ${photoCount > 1 ? `<span class="photo-count">${photoCount} photos / fotos</span>` : ''}
+        <div class="card-title-aside">
+          ${photoCount > 1 ? `<span class="photo-count">${photoCount} photos / fotos</span>` : ''}
+          <button type="button" class="icon-button card-close-button" data-action="collapse" aria-label="Close card / Cerrar tarjeta">×</button>
+        </div>
       </div>
       ${tags ? `<div class="meta">${tags}</div>` : ''}
       ${facts ? `<ul class="fact-list">${facts}</ul>` : ''}
@@ -381,23 +395,25 @@ document.querySelector('#clear-filters').addEventListener('click', () => {
   for (const filter of [layerFilter, purposeFilter, statusFilter]) filter.value = '';
   render();
 });
-grid.addEventListener('click', event => {
-  const action = event.target.closest('[data-action]')?.dataset.action;
-  if (action === 'all-info') {
-    openPlant(event.target.closest('[data-plant-id]')?.dataset.plantId);
-    return;
+function activateGridTarget(target) {
+  const action = target.closest('[data-action]')?.dataset.action;
+  if (action === 'collapse') {
+    collapsePlant();
+    return true;
   }
-  const plantItem = event.target.closest('[data-plant-id]');
-  if (plantItem) expandPlant(plantItem.dataset.plantId);
-});
+  const plantId = target.closest('[data-plant-id]')?.dataset.plantId;
+  if (!plantId) return false;
+  if (action === 'all-info') openPlant(plantId);
+  else if (plantId === expandedPlantId) collapsePlant();
+  else expandPlant(plantId);
+  return true;
+}
+
+grid.addEventListener('click', event => { activateGridTarget(event.target); });
 grid.addEventListener('keydown', event => {
   if (event.key !== 'Enter' && event.key !== ' ') return;
-  const plantItem = event.target.closest('[data-plant-id]');
-  if (!plantItem) return;
-  event.preventDefault();
-  const action = event.target.closest('[data-action]')?.dataset.action;
-  if (action === 'all-info') openPlant(plantItem.dataset.plantId);
-  else expandPlant(plantItem.dataset.plantId);
+  if (event.target.closest('button')) return;
+  if (activateGridTarget(event.target)) event.preventDefault();
 });
 browseDialog.addEventListener('click', event => {
   if (event.target === browseDialog) closeBrowseDialog();
