@@ -65,9 +65,9 @@
       </div>
       <fieldset class="view-toggle" aria-label="Plant view / Vista de plantas">
         <legend>View / Vista</legend>
-        <label><input type="radio" name="plant-view" value="compact" /> Compact / Compacta</label>
-        <label><input type="radio" name="plant-view" value="cards" checked /> Cards / Tarjetas</label>
-        <label><input type="radio" name="plant-view" value="detail" /> Detail / Detalle</label>
+        <label><input type="radio" name="plant-view" value="compact" /> Names / Nombres</label>
+        <label><input type="radio" name="plant-view" value="photos" checked /> Photos / Fotos</label>
+        <label><input type="radio" name="plant-view" value="cards" /> Cards / Tarjetas</label>
       </fieldset>
     </section>
 
@@ -80,6 +80,10 @@
 
     <section id="plant-grid" class="plant-grid" aria-live="polite"></section>
   </main>
+
+  <dialog id="browse-dialog">
+    <article id="browse-detail"></article>
+  </dialog>
 
   <dialog id="plant-dialog">
     <form id="plant-form" method="dialog">

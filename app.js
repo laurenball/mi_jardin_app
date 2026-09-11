@@ -2,6 +2,8 @@ import { addPlant, addPlants, getPlants } from './db.js';
 import { STARTER_PLANTS } from './starter-plants.js';
 
 const dialog = document.querySelector('#plant-dialog');
+const browseDialog = document.querySelector('#browse-dialog');
+const browseDetail = document.querySelector('#browse-detail');
 const form = document.querySelector('#plant-form');
 const grid = document.querySelector('#plant-grid');
 const emptyState = document.querySelector('#empty-state');
@@ -12,7 +14,10 @@ const statusFilter = document.querySelector('#status-filter');
 const viewInputs = Array.from(document.querySelectorAll('input[name="plant-view"]'));
 let plants = [];
 let objectUrls = [];
+let browseObjectUrls = [];
 let currentView = readSavedView();
+let activePlantId = null;
+let activeDetailLevel = 'overview';
 
 const DISPLAY_LABELS = {
   status: {'Want':'Want / Quiero','Looking For':'Looking For / Buscando','Bought':'Bought / Comprada','Planted':'Planted / Plantada'},
@@ -25,13 +30,15 @@ function displayValue(group, value) { return DISPLAY_LABELS[group]?.[value] || v
 function openForm() { form.reset(); dialog.showModal(); }
 function closeForm() { dialog.close(); }
 function cleanupObjectUrls() { objectUrls.forEach(URL.revokeObjectURL); objectUrls = []; }
+function cleanupBrowseObjectUrls() { browseObjectUrls.forEach(URL.revokeObjectURL); browseObjectUrls = []; }
 function escapeHtml(value = '') { return String(value).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c])); }
 function readSavedView() {
   try {
     const saved = localStorage.getItem('plantView');
-    return ['compact', 'cards', 'detail'].includes(saved) ? saved : 'cards';
+    if (saved === 'detail') return 'cards';
+    return ['compact', 'photos', 'cards'].includes(saved) ? saved : 'photos';
   } catch {
-    return 'cards';
+    return 'photos';
   }
 }
 function saveView(value) {
@@ -44,21 +51,33 @@ function plantPhotos(plant) {
   const photos = Array.isArray(plant.photos) ? plant.photos.filter(Boolean) : [];
   return photos.length > 0 ? photos : (plant.photo ? [plant.photo] : []);
 }
-function photoUrl(photo) {
+function photoUrl(photo, bucket = objectUrls) {
   if (typeof photo === 'string') return photo;
   const url = URL.createObjectURL(photo);
-  objectUrls.push(url);
+  bucket.push(url);
   return url;
 }
-function photoMarkup(plant, className = 'plant-photo') {
+function photoMarkup(plant, className = 'plant-photo', bucket = objectUrls) {
   const [photo] = plantPhotos(plant);
   if (!photo) return '<div class="plant-photo photo-placeholder" aria-hidden="true">🌱</div>';
-  return `<img class="${className}" src="${escapeHtml(photoUrl(photo))}" alt="${escapeHtml(plant.commonName)}" />`;
+  return `<img class="${className}" src="${escapeHtml(photoUrl(photo, bucket))}" alt="${escapeHtml(plant.commonName)}" />`;
 }
 
 function infoRow(label, value) {
   if (!value) return '';
   return `<div class="info-row"><span>${escapeHtml(label)}</span><p>${escapeHtml(value)}</p></div>`;
+}
+
+function openPlant(plantId, level = 'overview') {
+  activePlantId = plantId;
+  activeDetailLevel = level;
+  renderBrowseDialog();
+  browseDialog.showModal();
+}
+
+function closeBrowseDialog() {
+  browseDialog.close();
+  cleanupBrowseObjectUrls();
 }
 
 function sectionHtml(title, rows) {
@@ -109,13 +128,36 @@ function tagMarkup(plant, limit = 4) {
 function compactPlant(plant) {
   const article = document.createElement('article');
   article.className = 'compact-plant';
+  article.setAttribute('role', 'button');
+  article.tabIndex = 0;
+  article.dataset.plantId = plant.id;
+  article.setAttribute('aria-label', `Open ${plant.commonName} / Abrir ${plant.commonName}`);
   article.innerHTML = `<h2>${escapeHtml(plant.commonName)}</h2>${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}`;
+  return article;
+}
+
+function photoPlant(plant) {
+  const article = document.createElement('article');
+  article.className = 'photo-plant';
+  article.setAttribute('role', 'button');
+  article.tabIndex = 0;
+  article.dataset.plantId = plant.id;
+  article.setAttribute('aria-label', `Open ${plant.commonName} / Abrir ${plant.commonName}`);
+  article.innerHTML = `${photoMarkup(plant, 'plant-thumb')}
+    <div>
+      <h2>${escapeHtml(plant.commonName)}</h2>
+      ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
+    </div>`;
   return article;
 }
 
 function cardForPlant(plant) {
   const article = document.createElement('article');
   article.className = 'plant-card';
+  article.setAttribute('role', 'button');
+  article.tabIndex = 0;
+  article.dataset.plantId = plant.id;
+  article.setAttribute('aria-label', `Open ${plant.commonName} / Abrir ${plant.commonName}`);
   const tags = tagMarkup(plant);
   const facts = [
     displayValue('sun', plant.sun),
@@ -141,19 +183,54 @@ function cardForPlant(plant) {
   return article;
 }
 
-function galleryMarkup(plant) {
+function galleryMarkup(plant, bucket = objectUrls) {
   const photos = plantPhotos(plant);
   if (photos.length === 0) return '<div class="plant-photo detail-photo photo-placeholder" aria-hidden="true">🌱</div>';
-  return `<div class="photo-gallery">${photos.map((photo, index) => `<img src="${escapeHtml(photoUrl(photo))}" alt="${escapeHtml(`${plant.commonName} photo ${index + 1}`)}" />`).join('')}</div>`;
+  return `<div class="photo-gallery">${photos.map((photo, index) => `<img src="${escapeHtml(photoUrl(photo, bucket))}" alt="${escapeHtml(`${plant.commonName} photo ${index + 1}`)}" />`).join('')}</div>`;
 }
 
 function detailPlant(plant) {
-  const article = document.createElement('article');
-  article.className = 'plant-detail';
   const tags = tagMarkup(plant, 8);
-  article.innerHTML = `
-    ${galleryMarkup(plant)}
-    <div class="plant-detail-body">
+  return `
+    <div class="dialog-toolbar">
+      <button type="button" class="secondary-button" data-action="overview">Less / Menos</button>
+      <button type="button" class="icon-button" data-action="close" aria-label="Close / Cerrar">×</button>
+    </div>
+    <div class="plant-detail full-detail">
+      ${galleryMarkup(plant, browseObjectUrls)}
+      <div class="plant-detail-body">
+        <header class="detail-heading">
+          <div>
+            <h2>${escapeHtml(plant.commonName)}</h2>
+            ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
+          </div>
+          ${plant.plantType ? `<span class="detail-type">${escapeHtml(plant.plantType)}</span>` : ''}
+        </header>
+        ${tags ? `<div class="meta">${tags}</div>` : ''}
+        ${plant.description ? `<p>${escapeHtml(plant.description)}</p>` : ''}
+        ${plant.wildlifeNotes ? `<p class="wildlife-callout">${escapeHtml(plant.wildlifeNotes)}</p>` : ''}
+        <div class="detail-sections">${plantSections(plant)}</div>
+      </div>
+    </div>`;
+}
+
+function overviewPlant(plant) {
+  const tags = tagMarkup(plant, 5);
+  const facts = [
+    infoRow('Sun / Sol', displayValue('sun', plant.sun)),
+    infoRow('Water / Agua', plant.water),
+    infoRow('Size / Tamaño', plant.size),
+    infoRow('Status / Estado', displayValue('status', plant.status)),
+    infoRow('Priority / Prioridad', plant.priority)
+  ].join('');
+  return `
+    <div class="dialog-toolbar">
+      <button type="button" class="primary-button" data-action="full">Full details / Detalle completo</button>
+      <button type="button" class="icon-button" data-action="close" aria-label="Close / Cerrar">×</button>
+    </div>
+    <div class="plant-detail overview-detail">
+      ${photoMarkup(plant, 'plant-photo detail-photo', browseObjectUrls)}
+      <div class="plant-detail-body">
       <header class="detail-heading">
         <div>
           <h2>${escapeHtml(plant.commonName)}</h2>
@@ -164,9 +241,19 @@ function detailPlant(plant) {
       ${tags ? `<div class="meta">${tags}</div>` : ''}
       ${plant.description ? `<p>${escapeHtml(plant.description)}</p>` : ''}
       ${plant.wildlifeNotes ? `<p class="wildlife-callout">${escapeHtml(plant.wildlifeNotes)}</p>` : ''}
-      <div class="detail-sections">${plantSections(plant)}</div>
+      ${facts ? `<div class="overview-facts">${facts}</div>` : ''}
+      </div>
     </div>`;
-  return article;
+}
+
+function renderBrowseDialog() {
+  const plant = plants.find(item => item.id === activePlantId);
+  if (!plant) {
+    closeBrowseDialog();
+    return;
+  }
+  cleanupBrowseObjectUrls();
+  browseDetail.innerHTML = activeDetailLevel === 'full' ? detailPlant(plant) : overviewPlant(plant);
 }
 
 function searchableText(plant) {
@@ -184,7 +271,7 @@ function render() {
       && (!statusFilter.value || plant.status === statusFilter.value);
   });
   grid.className = `plant-grid view-${currentView}`;
-  const viewRenderer = currentView === 'compact' ? compactPlant : currentView === 'detail' ? detailPlant : cardForPlant;
+  const viewRenderer = currentView === 'compact' ? compactPlant : currentView === 'photos' ? photoPlant : cardForPlant;
   grid.replaceChildren(...visiblePlants.map(viewRenderer));
   emptyState.hidden = plants.length > 0;
 }
@@ -209,6 +296,31 @@ form.addEventListener('submit', async (event) => {
 for (const id of ['open-form','empty-add']) document.querySelector(`#${id}`).addEventListener('click', openForm);
 for (const id of ['close-form','cancel-form']) document.querySelector(`#${id}`).addEventListener('click', closeForm);
 for (const input of [searchInput, layerFilter, purposeFilter, statusFilter]) input.addEventListener(input.tagName === 'INPUT' ? 'input' : 'change', render);
+grid.addEventListener('click', event => {
+  const plantItem = event.target.closest('[data-plant-id]');
+  if (plantItem) openPlant(plantItem.dataset.plantId);
+});
+grid.addEventListener('keydown', event => {
+  if (event.key !== 'Enter' && event.key !== ' ') return;
+  const plantItem = event.target.closest('[data-plant-id]');
+  if (!plantItem) return;
+  event.preventDefault();
+  openPlant(plantItem.dataset.plantId);
+});
+browseDialog.addEventListener('click', event => {
+  if (event.target === browseDialog) closeBrowseDialog();
+  const action = event.target.closest('[data-action]')?.dataset.action;
+  if (action === 'close') closeBrowseDialog();
+  if (action === 'full') {
+    activeDetailLevel = 'full';
+    renderBrowseDialog();
+  }
+  if (action === 'overview') {
+    activeDetailLevel = 'overview';
+    renderBrowseDialog();
+  }
+});
+browseDialog.addEventListener('close', cleanupBrowseObjectUrls);
 for (const input of viewInputs) {
   input.checked = input.value === currentView;
   input.addEventListener('change', () => {
