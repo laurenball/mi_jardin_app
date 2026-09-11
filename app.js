@@ -12,13 +12,11 @@ const searchInput = document.querySelector('#search');
 const layerFilter = document.querySelector('#layer-filter');
 const purposeFilter = document.querySelector('#purpose-filter');
 const statusFilter = document.querySelector('#status-filter');
-const viewInputs = Array.from(document.querySelectorAll('input[name="plant-view"]'));
 let plants = [];
 let objectUrls = [];
 let browseObjectUrls = [];
-let currentView = readSavedView();
+let expandedPlantId = null;
 let activePlantId = null;
-let activeDetailLevel = 'overview';
 
 const DISPLAY_LABELS = {
   status: {'Want':'Want / Quiero','Looking For':'Looking For / Buscando','Bought':'Bought / Comprada','Planted':'Planted / Plantada'},
@@ -33,18 +31,6 @@ function closeForm() { dialog.close(); }
 function cleanupObjectUrls() { objectUrls.forEach(URL.revokeObjectURL); objectUrls = []; }
 function cleanupBrowseObjectUrls() { browseObjectUrls.forEach(URL.revokeObjectURL); browseObjectUrls = []; }
 function escapeHtml(value = '') { return String(value).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c])); }
-function readSavedView() {
-  try {
-    const saved = localStorage.getItem('plantView');
-    if (saved === 'detail') return 'cards';
-    return ['compact', 'photos', 'cards'].includes(saved) ? saved : 'photos';
-  } catch {
-    return 'photos';
-  }
-}
-function saveView(value) {
-  try { localStorage.setItem('plantView', value); } catch {}
-}
 function plantPurposes(plant) {
   return plant.purposes || (plant.wildlifeValue ? [plant.wildlifeValue] : []);
 }
@@ -80,11 +66,15 @@ function infoRow(label, value) {
   return `<div class="info-row"><span>${escapeHtml(label)}</span><p>${escapeHtml(value)}</p></div>`;
 }
 
-function openPlant(plantId, level = 'overview') {
+function openPlant(plantId) {
   activePlantId = plantId;
-  activeDetailLevel = level;
   renderBrowseDialog();
   browseDialog.showModal();
+}
+
+function expandPlant(plantId) {
+  expandedPlantId = plantId;
+  render();
 }
 
 function closeBrowseDialog() {
@@ -173,24 +163,13 @@ function tagMarkup(plant, limit = 4) {
     .filter(Boolean).map(v => `<span class="tag">${escapeHtml(v)}</span>`).join('');
 }
 
-function compactPlant(plant) {
-  const article = document.createElement('article');
-  article.className = 'compact-plant';
-  article.setAttribute('role', 'button');
-  article.tabIndex = 0;
-  article.dataset.plantId = plant.id;
-  article.setAttribute('aria-label', `Open ${plant.commonName} / Abrir ${plant.commonName}`);
-  article.innerHTML = `<h2>${escapeHtml(plant.commonName)}</h2>${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}`;
-  return article;
-}
-
 function photoPlant(plant) {
   const article = document.createElement('article');
   article.className = 'photo-plant';
   article.setAttribute('role', 'button');
   article.tabIndex = 0;
   article.dataset.plantId = plant.id;
-  article.setAttribute('aria-label', `Open ${plant.commonName} / Abrir ${plant.commonName}`);
+  article.setAttribute('aria-label', `Expand ${plant.commonName} / Expandir ${plant.commonName}`);
   article.innerHTML = `${photoMarkup(plant, 'plant-thumb')}
     <div>
       <h2>${escapeHtml(plant.commonName)}</h2>
@@ -201,11 +180,7 @@ function photoPlant(plant) {
 
 function cardForPlant(plant) {
   const article = document.createElement('article');
-  article.className = 'plant-card';
-  article.setAttribute('role', 'button');
-  article.tabIndex = 0;
-  article.dataset.plantId = plant.id;
-  article.setAttribute('aria-label', `Open ${plant.commonName} / Abrir ${plant.commonName}`);
+  article.className = 'plant-card expanded-card';
   const tags = tagMarkup(plant);
   const facts = [
     displayValue('sun', plant.sun),
@@ -227,6 +202,7 @@ function cardForPlant(plant) {
       ${facts ? `<ul class="fact-list">${facts}</ul>` : ''}
       ${plant.description ? `<p>${escapeHtml(plant.description)}</p>` : ''}
       ${plant.wildlifeNotes ? `<p class="wildlife-callout">${escapeHtml(plant.wildlifeNotes)}</p>` : ''}
+      <button type="button" class="primary-button card-more-button" data-action="all-info" data-plant-id="${escapeHtml(plant.id)}">All information / Toda la información</button>
     </div>`;
   return article;
 }
@@ -242,7 +218,6 @@ function detailPlant(plant) {
   return `
     <div class="dialog-toolbar">
       <div class="dialog-actions">
-        <button type="button" class="secondary-button" data-action="overview">Less / Menos</button>
         <button type="button" class="secondary-button" data-action="add-photos">Add photos / Agregar fotos</button>
       </div>
       <button type="button" class="icon-button" data-action="close" aria-label="Close / Cerrar">×</button>
@@ -265,41 +240,6 @@ function detailPlant(plant) {
     </div>`;
 }
 
-function overviewPlant(plant) {
-  const tags = tagMarkup(plant, 5);
-  const facts = [
-    infoRow('Sun / Sol', displayValue('sun', plant.sun)),
-    infoRow('Water / Agua', plant.water),
-    infoRow('Size / Tamaño', plant.size),
-    infoRow('Status / Estado', displayValue('status', plant.status)),
-    infoRow('Priority / Prioridad', plant.priority)
-  ].join('');
-  return `
-    <div class="dialog-toolbar">
-      <div class="dialog-actions">
-        <button type="button" class="primary-button" data-action="full">Full details / Detalle completo</button>
-        <button type="button" class="secondary-button" data-action="add-photos">Add photos / Agregar fotos</button>
-      </div>
-      <button type="button" class="icon-button" data-action="close" aria-label="Close / Cerrar">×</button>
-    </div>
-    <div class="plant-detail overview-detail">
-      ${photoMarkup(plant, 'plant-photo detail-photo', browseObjectUrls)}
-      <div class="plant-detail-body">
-      <header class="detail-heading">
-        <div>
-          <h2>${escapeHtml(plant.commonName)}</h2>
-          ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
-        </div>
-        ${plant.plantType ? `<span class="detail-type">${escapeHtml(plant.plantType)}</span>` : ''}
-      </header>
-      ${tags ? `<div class="meta">${tags}</div>` : ''}
-      ${plant.description ? `<p>${escapeHtml(plant.description)}</p>` : ''}
-      ${plant.wildlifeNotes ? `<p class="wildlife-callout">${escapeHtml(plant.wildlifeNotes)}</p>` : ''}
-      ${facts ? `<div class="overview-facts">${facts}</div>` : ''}
-      </div>
-    </div>`;
-}
-
 function renderBrowseDialog() {
   const plant = plants.find(item => item.id === activePlantId);
   if (!plant) {
@@ -307,7 +247,7 @@ function renderBrowseDialog() {
     return;
   }
   cleanupBrowseObjectUrls();
-  browseDetail.innerHTML = activeDetailLevel === 'full' ? detailPlant(plant) : overviewPlant(plant);
+  browseDetail.innerHTML = detailPlant(plant);
 }
 
 function searchableText(plant) {
@@ -324,9 +264,9 @@ function render() {
       && (!purposeFilter.value || purposes.includes(purposeFilter.value))
       && (!statusFilter.value || plant.status === statusFilter.value);
   });
-  grid.className = `plant-grid view-${currentView}`;
-  const viewRenderer = currentView === 'compact' ? compactPlant : currentView === 'photos' ? photoPlant : cardForPlant;
-  grid.replaceChildren(...visiblePlants.map(viewRenderer));
+  if (expandedPlantId && !visiblePlants.some(plant => plant.id === expandedPlantId)) expandedPlantId = null;
+  grid.className = 'plant-grid view-photos';
+  grid.replaceChildren(...visiblePlants.map(plant => plant.id === expandedPlantId ? cardForPlant(plant) : photoPlant(plant)));
   emptyState.hidden = plants.length > 0;
 }
 
@@ -351,28 +291,27 @@ for (const id of ['open-form','empty-add']) document.querySelector(`#${id}`).add
 for (const id of ['close-form','cancel-form']) document.querySelector(`#${id}`).addEventListener('click', closeForm);
 for (const input of [searchInput, layerFilter, purposeFilter, statusFilter]) input.addEventListener(input.tagName === 'INPUT' ? 'input' : 'change', render);
 grid.addEventListener('click', event => {
+  const action = event.target.closest('[data-action]')?.dataset.action;
+  if (action === 'all-info') {
+    openPlant(event.target.closest('[data-plant-id]')?.dataset.plantId);
+    return;
+  }
   const plantItem = event.target.closest('[data-plant-id]');
-  if (plantItem) openPlant(plantItem.dataset.plantId);
+  if (plantItem) expandPlant(plantItem.dataset.plantId);
 });
 grid.addEventListener('keydown', event => {
   if (event.key !== 'Enter' && event.key !== ' ') return;
   const plantItem = event.target.closest('[data-plant-id]');
   if (!plantItem) return;
   event.preventDefault();
-  openPlant(plantItem.dataset.plantId);
+  const action = event.target.closest('[data-action]')?.dataset.action;
+  if (action === 'all-info') openPlant(plantItem.dataset.plantId);
+  else expandPlant(plantItem.dataset.plantId);
 });
 browseDialog.addEventListener('click', event => {
   if (event.target === browseDialog) closeBrowseDialog();
   const action = event.target.closest('[data-action]')?.dataset.action;
   if (action === 'close') closeBrowseDialog();
-  if (action === 'full') {
-    activeDetailLevel = 'full';
-    renderBrowseDialog();
-  }
-  if (action === 'overview') {
-    activeDetailLevel = 'overview';
-    renderBrowseDialog();
-  }
   if (action === 'add-photos') browsePhotoInput.click();
 });
 browseDialog.addEventListener('close', cleanupBrowseObjectUrls);
@@ -380,14 +319,6 @@ browsePhotoInput.addEventListener('change', async () => {
   await appendPhotosToActivePlant(Array.from(browsePhotoInput.files || []));
   browsePhotoInput.value = '';
 });
-for (const input of viewInputs) {
-  input.checked = input.value === currentView;
-  input.addEventListener('change', () => {
-    currentView = input.value;
-    saveView(currentView);
-    render();
-  });
-}
 
 if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(console.error));
 

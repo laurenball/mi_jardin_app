@@ -13,7 +13,7 @@ The app now stores plants as more than a wishlist. Each record can include:
 - Human uses / Usos humanos
 - My garden / Mi jardín
 
-It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus filters by garden layer, purpose, and status. The plant list has names-only, photo, and card browsing modes for quick mobile scanning; tapping any plant opens more information, then full detail.
+It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus filters by garden layer, purpose, and status. The plant list uses a photo-first mobile flow: tap a plant to expand it into a card, then open all information from that card.
 
 ## Run locally
 

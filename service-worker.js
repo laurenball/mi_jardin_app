@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-garden-shell-v7';
+const CACHE_NAME = 'my-garden-shell-v8';
 const PLANT_IMAGES = [
   './assets/plants/araza.jpg',
   './assets/plants/carqueja.jpg',
