@@ -1,0 +1,16 @@
+{
+  "name": "My Garden",
+  "short_name": "Garden",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f7ef",
+  "theme_color": "#f4f7ef",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

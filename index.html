@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f4f7ef" />
+  <title>My Garden</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">My Garden</p>
+      <h1>Plants I Want</h1>
+    </div>
+    <button id="open-form" class="primary-button">+ Add plant</button>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="Plant tools">
+      <label class="search-field">
+        <span class="sr-only">Search plants</span>
+        <input id="search" type="search" placeholder="Search plants…" autocomplete="off" />
+      </label>
+    </section>
+
+    <section id="empty-state" class="empty-state">
+      <div class="empty-icon">🌿</div>
+      <h2>Your plant list is empty</h2>
+      <p>Add plants you are interested in and keep the useful information together.</p>
+      <button id="empty-add" class="secondary-button">Add your first plant</button>
+    </section>
+
+    <section id="plant-grid" class="plant-grid" aria-live="polite"></section>
+  </main>
+
+  <dialog id="plant-dialog">
+    <form id="plant-form" method="dialog">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">New entry</p>
+          <h2>Add a plant</h2>
+        </div>
+        <button type="button" id="close-form" class="icon-button" aria-label="Close">×</button>
+      </div>
+
+      <label>
+        Photo
+        <input id="photo" name="photo" type="file" accept="image/*" capture="environment" />
+      </label>
+
+      <div class="two-column">
+        <label>
+          Common name
+          <input name="commonName" required placeholder="e.g. Blue anise sage" />
+        </label>
+        <label>
+          Scientific name
+          <input name="scientificName" placeholder="e.g. Salvia guaranitica" />
+        </label>
+      </div>
+
+      <label>
+        Description
+        <textarea name="description" rows="3" placeholder="What is it like?"></textarea>
+      </label>
+
+      <label>
+        Notes
+        <textarea name="notes" rows="3" placeholder="Why do I want it? Where did I see it?"></textarea>
+      </label>
+
+      <div class="two-column">
+        <label>
+          Sun
+          <select name="sun">
+            <option value="">Not set</option>
+            <option>Full sun</option>
+            <option>Sun / partial shade</option>
+            <option>Partial shade</option>
+            <option>Shade</option>
+          </select>
+        </label>
+
+        <label>
+          Status
+          <select name="status">
+            <option>Want</option>
+            <option>Looking For</option>
+            <option>Bought</option>
+            <option>Planted</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="two-column">
+        <label>
+          Native status
+          <input name="nativeStatus" placeholder="e.g. Native to Argentina" />
+        </label>
+        <label>
+          Wildlife value
+          <input name="wildlifeValue" placeholder="e.g. Hummingbirds, bees" />
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" id="cancel-form" class="secondary-button">Cancel</button>
+        <button type="submit" class="primary-button">Save plant</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
