@@ -12,11 +12,17 @@ const searchInput = document.querySelector('#search');
 const layerFilter = document.querySelector('#layer-filter');
 const purposeFilter = document.querySelector('#purpose-filter');
 const statusFilter = document.querySelector('#status-filter');
+const updateNotice = document.querySelector('#update-notice');
+const updateButton = document.querySelector('#update-app');
 let plants = [];
 let objectUrls = [];
 let browseObjectUrls = [];
 let expandedPlantId = null;
 let activePlantId = null;
+let updateWorker = null;
+let updateReady = false;
+let reloadForUpdate = false;
+let reloading = false;
 
 const DISPLAY_LABELS = {
   status: {'Want':'Want / Quiero','Looking For':'Looking For / Buscando','Bought':'Bought / Comprada','Planted':'Planted / Plantada'},
@@ -80,6 +86,50 @@ function expandPlant(plantId) {
 function closeBrowseDialog() {
   browseDialog.close();
   cleanupBrowseObjectUrls();
+}
+
+function showUpdateNotice(worker) {
+  updateWorker = worker || updateWorker;
+  updateReady = updateReady || updateWorker?.state === 'activated';
+  updateNotice.hidden = false;
+}
+
+function reloadAppForUpdate() {
+  reloadForUpdate = true;
+  updateNotice.hidden = true;
+  if (updateWorker && updateWorker.state !== 'activated') updateWorker.postMessage({type: 'SKIP_WAITING'});
+  if (updateReady || !updateWorker || updateWorker.state === 'activated') {
+    window.location.reload();
+    return;
+  }
+  updateWorker.addEventListener('statechange', () => {
+    if (updateWorker.state === 'activated' && !reloading) {
+      reloading = true;
+      window.location.reload();
+    }
+  });
+}
+
+async function registerServiceWorker() {
+  if (!('serviceWorker' in navigator)) return;
+  try {
+    const registration = await navigator.serviceWorker.register('./service-worker.js');
+    if (registration.waiting && navigator.serviceWorker.controller) showUpdateNotice(registration.waiting);
+    registration.addEventListener('updatefound', () => {
+      const worker = registration.installing;
+      if (!worker) return;
+      worker.addEventListener('statechange', () => {
+        if ((worker.state === 'installed' || worker.state === 'activated') && navigator.serviceWorker.controller) showUpdateNotice(worker);
+      });
+    });
+    registration.update().catch(console.error);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') registration.update().catch(console.error);
+    });
+    setInterval(() => registration.update().catch(console.error), 60 * 60 * 1000);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 async function appendPhotosToActivePlant(files) {
@@ -319,8 +369,20 @@ browsePhotoInput.addEventListener('change', async () => {
   await appendPhotosToActivePlant(Array.from(browsePhotoInput.files || []));
   browsePhotoInput.value = '';
 });
-
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(console.error));
+updateButton.addEventListener('click', reloadAppForUpdate);
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    updateReady = true;
+    if (reloadForUpdate && !reloading) {
+      reloading = true;
+      window.location.reload();
+    }
+  });
+  navigator.serviceWorker.addEventListener('message', event => {
+    if (event.data?.type === 'NEW_VERSION_READY') showUpdateNotice(navigator.serviceWorker.controller);
+  });
+  window.addEventListener('load', registerServiceWorker);
+}
 
 plants = await getPlants();
 if (plants.length === 0) {
