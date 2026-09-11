@@ -31,6 +31,8 @@ Existing Version 1 plant records remain compatible.
 
 New records can store multiple photos in `photos`; the first image is also saved as `photo` so older single-photo records and code paths remain compatible. Photos can also be added later from a plant detail view.
 
+Starter plant photos are bundled in `assets/plants/` and credited in `docs/PHOTO_SOURCES.md`. Existing starter records are enriched with bundled photos only when they do not already have photos.
+
 ## Language approach
 
 English and Spanish are shown together where useful. Scientific names remain single. Longer notes can be in either language.

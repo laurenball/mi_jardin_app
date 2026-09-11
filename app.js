@@ -52,6 +52,17 @@ function plantPhotos(plant) {
   const photos = Array.isArray(plant.photos) ? plant.photos.filter(Boolean) : [];
   return photos.length > 0 ? photos : (plant.photo ? [plant.photo] : []);
 }
+function starterRecordFor(plant) {
+  const commonName = String(plant.commonName || '').toLowerCase();
+  const scientificName = String(plant.scientificName || '').toLowerCase();
+  return STARTER_PLANTS.find(starter =>
+    String(starter.commonName || '').toLowerCase() === commonName
+    || String(starter.scientificName || '').toLowerCase() === scientificName
+  );
+}
+function starterPhotosFor(plant) {
+  return (starterRecordFor(plant)?.photos || []).filter(Boolean);
+}
 function photoUrl(photo, bucket = objectUrls) {
   if (typeof photo === 'string') return photo;
   const url = URL.createObjectURL(photo);
@@ -97,6 +108,24 @@ async function appendPhotosToActivePlant(files) {
   plants = await getPlants();
   render();
   renderBrowseDialog();
+}
+
+async function enrichStarterPhotos() {
+  const updates = plants
+    .filter(plant => plantPhotos(plant).length === 0 && starterPhotosFor(plant).length > 0)
+    .map(plant => {
+      const photos = starterPhotosFor(plant);
+      return updatePlant({
+        ...plant,
+        photos,
+        photo: plant.photo || photos[0] || null,
+        updatedAt: plant.updatedAt || new Date().toISOString(),
+        schemaVersion: Math.max(Number(plant.schemaVersion) || 1, 3)
+      });
+    });
+  if (updates.length === 0) return;
+  await Promise.all(updates);
+  plants = await getPlants();
 }
 
 function sectionHtml(title, rows) {
@@ -365,7 +394,12 @@ if ('serviceWorker' in navigator) window.addEventListener('load', () => navigato
 plants = await getPlants();
 if (plants.length === 0) {
   const now = new Date();
-  const seeded = STARTER_PLANTS.map((plant, i) => ({id: crypto.randomUUID(), ...plant, photos: [], photo: null, createdAt: new Date(now.getTime() - i * 1000).toISOString(), updatedAt: now.toISOString(), schemaVersion: 3}));
+  const seeded = STARTER_PLANTS.map((plant, i) => {
+    const photos = (plant.photos || []).filter(Boolean);
+    return {id: crypto.randomUUID(), ...plant, photos, photo: photos[0] || null, createdAt: new Date(now.getTime() - i * 1000).toISOString(), updatedAt: now.toISOString(), schemaVersion: 3};
+  });
   await addPlants(seeded); plants = await getPlants();
+} else {
+  await enrichStarterPhotos();
 }
 render();

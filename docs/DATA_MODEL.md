@@ -15,6 +15,8 @@ Version 3 adds multi-photo support without changing the IndexedDB store.
 
 Photos can be appended to an existing plant from the plant detail view. The app preserves the existing primary `photo` when adding more images.
 
+Starter records include bundled local image paths. Existing IndexedDB records that match starter plants can be enriched with these paths if they have no photos yet; user-added photos are not overwritten.
+
 ## Version 2
 
 Plant records now separate identity, native ecology, wildlife, growing information, human uses, and personal garden information.
