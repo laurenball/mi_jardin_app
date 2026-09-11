@@ -9,8 +9,10 @@ const searchInput = document.querySelector('#search');
 const layerFilter = document.querySelector('#layer-filter');
 const purposeFilter = document.querySelector('#purpose-filter');
 const statusFilter = document.querySelector('#status-filter');
+const viewInputs = Array.from(document.querySelectorAll('input[name="plant-view"]'));
 let plants = [];
 let objectUrls = [];
+let currentView = readSavedView();
 
 const DISPLAY_LABELS = {
   status: {'Want':'Want / Quiero','Looking For':'Looking For / Buscando','Bought':'Bought / Comprada','Planted':'Planted / Plantada'},
@@ -24,34 +26,146 @@ function openForm() { form.reset(); dialog.showModal(); }
 function closeForm() { dialog.close(); }
 function cleanupObjectUrls() { objectUrls.forEach(URL.revokeObjectURL); objectUrls = []; }
 function escapeHtml(value = '') { return String(value).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c])); }
+function readSavedView() {
+  try {
+    const saved = localStorage.getItem('plantView');
+    return ['compact', 'cards', 'detail'].includes(saved) ? saved : 'cards';
+  } catch {
+    return 'cards';
+  }
+}
+function saveView(value) {
+  try { localStorage.setItem('plantView', value); } catch {}
+}
+function plantPurposes(plant) {
+  return plant.purposes || (plant.wildlifeValue ? [plant.wildlifeValue] : []);
+}
+function plantPhotos(plant) {
+  const photos = Array.isArray(plant.photos) ? plant.photos.filter(Boolean) : [];
+  return photos.length > 0 ? photos : (plant.photo ? [plant.photo] : []);
+}
+function photoUrl(photo) {
+  if (typeof photo === 'string') return photo;
+  const url = URL.createObjectURL(photo);
+  objectUrls.push(url);
+  return url;
+}
+function photoMarkup(plant, className = 'plant-photo') {
+  const [photo] = plantPhotos(plant);
+  if (!photo) return '<div class="plant-photo photo-placeholder" aria-hidden="true">🌱</div>';
+  return `<img class="${className}" src="${escapeHtml(photoUrl(photo))}" alt="${escapeHtml(plant.commonName)}" />`;
+}
 
 function infoRow(label, value) {
   if (!value) return '';
   return `<div class="info-row"><span>${escapeHtml(label)}</span><p>${escapeHtml(value)}</p></div>`;
 }
 
+function sectionHtml(title, rows) {
+  const content = rows.filter(Boolean).join('');
+  return content ? `<section class="detail-section"><h3>${escapeHtml(title)}</h3>${content}</section>` : '';
+}
+
+function plantSections(plant) {
+  return [
+    sectionHtml('Native ecology / Ecología nativa', [
+      infoRow('Native / Nativa', plant.nativeStatus),
+      infoRow('Range / Distribución', plant.nativeRange),
+      infoRow('Ecology / Ecología', plant.ecology),
+      infoRow('Host plant / Hospedera', plant.hostPlant)
+    ]),
+    sectionHtml('Growing / Cultivo', [
+      infoRow('Sun / Sol', displayValue('sun', plant.sun)),
+      infoRow('Water / Agua', plant.water),
+      infoRow('Soil / Suelo', plant.soil),
+      infoRow('Size / Tamaño', plant.size),
+      infoRow('Flowering / Floración', plant.flowering),
+      infoRow('Fruiting / Fructificación', plant.fruiting),
+      infoRow('Propagation / Propagación', plant.propagation)
+    ]),
+    sectionHtml('Human uses / Usos humanos', [
+      infoRow('Edible / Comestible', plant.edibleUses),
+      infoRow('Traditional medicinal use / Uso medicinal tradicional', plant.medicinalUses),
+      infoRow('Other uses / Otros usos', plant.otherUses),
+      infoRow('Safety / Precauciones', plant.safety)
+    ]),
+    sectionHtml('My garden / Mi jardín', [
+      infoRow('Status / Estado', displayValue('status', plant.status)),
+      infoRow('Priority / Prioridad', plant.priority),
+      infoRow('Nursery / Vivero', plant.nursery),
+      infoRow('Price / Precio', plant.price),
+      infoRow('Garden location / Ubicación', plant.gardenLocation),
+      infoRow('Notes / Notas', plant.notes)
+    ])
+  ].join('');
+}
+
+function tagMarkup(plant, limit = 4) {
+  const purposes = plantPurposes(plant);
+  return [displayValue('status', plant.status), displayValue('layer', plant.layer), ...purposes.slice(0, limit).map(v => displayValue('purpose', v))]
+    .filter(Boolean).map(v => `<span class="tag">${escapeHtml(v)}</span>`).join('');
+}
+
+function compactPlant(plant) {
+  const article = document.createElement('article');
+  article.className = 'compact-plant';
+  article.innerHTML = `<h2>${escapeHtml(plant.commonName)}</h2>${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}`;
+  return article;
+}
+
 function cardForPlant(plant) {
   const article = document.createElement('article');
   article.className = 'plant-card';
-  let photoHtml = '<div class="plant-photo photo-placeholder" aria-hidden="true">🌱</div>';
-  if (plant.photo) {
-    const url = URL.createObjectURL(plant.photo); objectUrls.push(url);
-    photoHtml = `<img class="plant-photo" src="${url}" alt="${escapeHtml(plant.commonName)}" />`;
-  }
-  const purposes = plant.purposes || (plant.wildlifeValue ? [plant.wildlifeValue] : []);
-  const tags = [displayValue('status', plant.status), displayValue('layer', plant.layer), ...purposes.slice(0,4).map(v=>displayValue('purpose',v))]
-    .filter(Boolean).map(v=>`<span class="tag">${escapeHtml(v)}</span>`).join('');
+  const tags = tagMarkup(plant);
+  const facts = [
+    displayValue('sun', plant.sun),
+    plant.water,
+    plant.size
+  ].filter(Boolean).slice(0, 3).map(v => `<li>${escapeHtml(v)}</li>`).join('');
+  const photoCount = plantPhotos(plant).length;
 
-  const ecology = [
-    infoRow('Native / Nativa', plant.nativeStatus), infoRow('Range / Distribución', plant.nativeRange), infoRow('Ecology / Ecología', plant.ecology), infoRow('Host plant / Hospedera', plant.hostPlant)
-  ].join('');
-  const growing = [
-    infoRow('Sun / Sol', displayValue('sun', plant.sun)), infoRow('Water / Agua', plant.water), infoRow('Soil / Suelo', plant.soil), infoRow('Size / Tamaño', plant.size), infoRow('Flowering / Floración', plant.flowering), infoRow('Fruiting / Fructificación', plant.fruiting), infoRow('Propagation / Propagación', plant.propagation)
-  ].join('');
-  const uses = [infoRow('Edible / Comestible', plant.edibleUses), infoRow('Traditional medicinal use / Uso medicinal tradicional', plant.medicinalUses), infoRow('Other uses / Otros usos', plant.otherUses), infoRow('Safety / Precauciones', plant.safety)].join('');
-  const personal = [infoRow('Priority / Prioridad', plant.priority), infoRow('Nursery / Vivero', plant.nursery), infoRow('Price / Precio', plant.price), infoRow('Garden location / Ubicación', plant.gardenLocation), infoRow('Notes / Notas', plant.notes)].join('');
+  article.innerHTML = `${photoMarkup(plant)}
+    <div class="plant-card-body">
+      <div class="card-title-row">
+        <div>
+          <h2>${escapeHtml(plant.commonName)}</h2>
+          ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
+        </div>
+        ${photoCount > 1 ? `<span class="photo-count">${photoCount} photos / fotos</span>` : ''}
+      </div>
+      ${tags ? `<div class="meta">${tags}</div>` : ''}
+      ${facts ? `<ul class="fact-list">${facts}</ul>` : ''}
+      ${plant.description ? `<p>${escapeHtml(plant.description)}</p>` : ''}
+      ${plant.wildlifeNotes ? `<p class="wildlife-callout">${escapeHtml(plant.wildlifeNotes)}</p>` : ''}
+    </div>`;
+  return article;
+}
 
-  article.innerHTML = `${photoHtml}<div class="plant-card-body"><h2>${escapeHtml(plant.commonName)}</h2>${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>`:''}${tags?`<div class="meta">${tags}</div>`:''}${plant.description?`<p>${escapeHtml(plant.description)}</p>`:''}${plant.wildlifeNotes?`<p class="wildlife-callout">🦋 ${escapeHtml(plant.wildlifeNotes)}</p>`:''}<details class="card-details"><summary>More / Más</summary>${ecology?`<h3>Native ecology / Ecología nativa</h3>${ecology}`:''}${growing?`<h3>Growing / Cultivo</h3>${growing}`:''}${uses?`<h3>Human uses / Usos humanos</h3>${uses}`:''}${personal?`<h3>My garden / Mi jardín</h3>${personal}`:''}</details></div>`;
+function galleryMarkup(plant) {
+  const photos = plantPhotos(plant);
+  if (photos.length === 0) return '<div class="plant-photo detail-photo photo-placeholder" aria-hidden="true">🌱</div>';
+  return `<div class="photo-gallery">${photos.map((photo, index) => `<img src="${escapeHtml(photoUrl(photo))}" alt="${escapeHtml(`${plant.commonName} photo ${index + 1}`)}" />`).join('')}</div>`;
+}
+
+function detailPlant(plant) {
+  const article = document.createElement('article');
+  article.className = 'plant-detail';
+  const tags = tagMarkup(plant, 8);
+  article.innerHTML = `
+    ${galleryMarkup(plant)}
+    <div class="plant-detail-body">
+      <header class="detail-heading">
+        <div>
+          <h2>${escapeHtml(plant.commonName)}</h2>
+          ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
+        </div>
+        ${plant.plantType ? `<span class="detail-type">${escapeHtml(plant.plantType)}</span>` : ''}
+      </header>
+      ${tags ? `<div class="meta">${tags}</div>` : ''}
+      ${plant.description ? `<p>${escapeHtml(plant.description)}</p>` : ''}
+      ${plant.wildlifeNotes ? `<p class="wildlife-callout">${escapeHtml(plant.wildlifeNotes)}</p>` : ''}
+      <div class="detail-sections">${plantSections(plant)}</div>
+    </div>`;
   return article;
 }
 
@@ -63,13 +177,15 @@ function render() {
   cleanupObjectUrls();
   const query = searchInput.value.trim().toLowerCase();
   const visiblePlants = plants.filter(plant => {
-    const purposes = plant.purposes || [];
+    const purposes = plantPurposes(plant);
     return searchableText(plant).includes(query)
       && (!layerFilter.value || plant.layer === layerFilter.value)
       && (!purposeFilter.value || purposes.includes(purposeFilter.value))
       && (!statusFilter.value || plant.status === statusFilter.value);
   });
-  grid.replaceChildren(...visiblePlants.map(cardForPlant));
+  grid.className = `plant-grid view-${currentView}`;
+  const viewRenderer = currentView === 'compact' ? compactPlant : currentView === 'detail' ? detailPlant : cardForPlant;
+  grid.replaceChildren(...visiblePlants.map(viewRenderer));
   emptyState.hidden = plants.length > 0;
 }
 
@@ -78,13 +194,14 @@ form.addEventListener('submit', async (event) => {
   const data = new FormData(form);
   const now = new Date().toISOString();
   const value = name => String(data.get(name) || '').trim();
+  const photos = Array.from(document.querySelector('#photo').files || []);
   const plant = {
     id: crypto.randomUUID(), commonName: value('commonName'), scientificName: value('scientificName'), plantType: value('plantType'), layer: value('layer'), description: value('description'),
     nativeStatus: value('nativeStatus'), nativeRange: value('nativeRange'), ecology: value('ecology'), hostPlant: value('hostPlant'), purposes: data.getAll('purposes'), wildlifeNotes: value('wildlifeNotes'),
     sun: value('sun'), water: value('water'), soil: value('soil'), size: value('size'), flowering: value('flowering'), fruiting: value('fruiting'), propagation: value('propagation'),
     edibleUses: value('edibleUses'), medicinalUses: value('medicinalUses'), otherUses: value('otherUses'), safety: value('safety'),
     status: value('status'), priority: value('priority'), nursery: value('nursery'), price: value('price'), gardenLocation: value('gardenLocation'), notes: value('notes'),
-    photo: document.querySelector('#photo').files[0] || null, createdAt: now, updatedAt: now, schemaVersion: 2
+    photos, photo: photos[0] || null, createdAt: now, updatedAt: now, schemaVersion: 3
   };
   await addPlant(plant); plants = await getPlants(); closeForm(); render();
 });
@@ -92,13 +209,21 @@ form.addEventListener('submit', async (event) => {
 for (const id of ['open-form','empty-add']) document.querySelector(`#${id}`).addEventListener('click', openForm);
 for (const id of ['close-form','cancel-form']) document.querySelector(`#${id}`).addEventListener('click', closeForm);
 for (const input of [searchInput, layerFilter, purposeFilter, statusFilter]) input.addEventListener(input.tagName === 'INPUT' ? 'input' : 'change', render);
+for (const input of viewInputs) {
+  input.checked = input.value === currentView;
+  input.addEventListener('change', () => {
+    currentView = input.value;
+    saveView(currentView);
+    render();
+  });
+}
 
 if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(console.error));
 
 plants = await getPlants();
 if (plants.length === 0) {
   const now = new Date();
-  const seeded = STARTER_PLANTS.map((plant, i) => ({id: crypto.randomUUID(), ...plant, photo: null, createdAt: new Date(now.getTime() - i * 1000).toISOString(), updatedAt: now.toISOString(), schemaVersion: 2}));
+  const seeded = STARTER_PLANTS.map((plant, i) => ({id: crypto.randomUUID(), ...plant, photos: [], photo: null, createdAt: new Date(now.getTime() - i * 1000).toISOString(), updatedAt: now.toISOString(), schemaVersion: 3}));
   await addPlants(seeded); plants = await getPlants();
 }
 render();

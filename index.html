@@ -63,6 +63,12 @@
           </select>
         </label>
       </div>
+      <fieldset class="view-toggle" aria-label="Plant view / Vista de plantas">
+        <legend>View / Vista</legend>
+        <label><input type="radio" name="plant-view" value="compact" /> Compact / Compacta</label>
+        <label><input type="radio" name="plant-view" value="cards" checked /> Cards / Tarjetas</label>
+        <label><input type="radio" name="plant-view" value="detail" /> Detail / Detalle</label>
+      </fieldset>
     </section>
 
     <section id="empty-state" class="empty-state">
@@ -87,7 +93,7 @@
 
       <details open>
         <summary>Identity / Identidad</summary>
-        <label>Photo / Foto<input id="photo" name="photo" type="file" accept="image/*" capture="environment" /></label>
+        <label>Photos / Fotos<input id="photo" name="photos" type="file" accept="image/*" multiple /></label>
         <div class="two-column">
           <label>Common name / Nombre común<input name="commonName" required placeholder="e.g. Tala" /></label>
           <label>Scientific name / Nombre científico<input name="scientificName" placeholder="e.g. Celtis tala" /></label>
