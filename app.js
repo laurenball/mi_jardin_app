@@ -165,19 +165,31 @@ async function appendPhotosToActivePlant(files) {
   renderBrowseDialog();
 }
 
-async function enrichStarterPhotos() {
+function isBundledPhoto(photo) {
+  return typeof photo === 'string' && /^\.?\/?assets\/plants\//.test(photo);
+}
+
+function starterPhotoUpdate(plant) {
+  const starterPhotos = starterPhotosFor(plant);
+  if (starterPhotos.length === 0) return null;
+  const current = plantPhotos(plant);
+  const ownPhotos = current.filter(photo => !isBundledPhoto(photo));
+  const next = [...starterPhotos, ...ownPhotos];
+  const unchanged = current.length === next.length && current.every((photo, i) => photo === next[i]);
+  return unchanged ? null : next;
+}
+
+async function syncStarterPhotos() {
   const updates = plants
-    .filter(plant => plantPhotos(plant).length === 0 && starterPhotosFor(plant).length > 0)
-    .map(plant => {
-      const photos = starterPhotosFor(plant);
-      return updatePlant({
-        ...plant,
-        photos,
-        photo: plant.photo || photos[0] || null,
-        updatedAt: plant.updatedAt || new Date().toISOString(),
-        schemaVersion: Math.max(Number(plant.schemaVersion) || 1, 3)
-      });
-    });
+    .map(plant => [plant, starterPhotoUpdate(plant)])
+    .filter(([, photos]) => photos)
+    .map(([plant, photos]) => updatePlant({
+      ...plant,
+      photos,
+      photo: isBundledPhoto(plant.photo) || !plant.photo ? photos[0] : plant.photo,
+      updatedAt: plant.updatedAt || new Date().toISOString(),
+      schemaVersion: Math.max(Number(plant.schemaVersion) || 1, 3)
+    }));
   if (updates.length === 0) return;
   await Promise.all(updates);
   plants = await getPlants();
@@ -450,6 +462,6 @@ if (plants.length === 0) {
   });
   await addPlants(seeded); plants = await getPlants();
 } else {
-  await enrichStarterPhotos();
+  await syncStarterPhotos();
 }
 render();

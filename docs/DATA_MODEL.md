@@ -15,7 +15,7 @@ Version 3 adds multi-photo support without changing the IndexedDB store.
 
 Photos can be appended to an existing plant from the plant detail view. The app preserves the existing primary `photo` when adding more images.
 
-Starter records include bundled local image paths. Existing IndexedDB records that match starter plants can be enriched with these paths if they have no photos yet; user-added photos are not overwritten.
+Starter records include bundled local image paths, up to three per plant. On startup the app re-syncs those paths onto matching IndexedDB records so an older install picks up added or renamed bundled images. A record's bundled paths are replaced with the current set; photos the user added themselves are never removed and keep their place after the bundled ones. The primary `photo` field is repointed only when it still holds a bundled path.
 
 ## Version 2
 
