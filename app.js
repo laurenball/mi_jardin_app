@@ -161,6 +161,41 @@ async function registerServiceWorker() {
   }
 }
 
+async function saveActivePlantPhotos(photos) {
+  const plant = plants.find(item => item.id === activePlantId);
+  if (!plant) return;
+  await updatePlant({
+    ...plant,
+    photos,
+    photo: photos[0] || null,
+    photosEdited: true,
+    updatedAt: new Date().toISOString(),
+    schemaVersion: Math.max(Number(plant.schemaVersion) || 1, SCHEMA_VERSION)
+  });
+  plants = await getPlants();
+  render();
+  renderBrowseDialog();
+}
+
+async function movePhoto(index, delta) {
+  const plant = plants.find(item => item.id === activePlantId);
+  if (!plant) return;
+  const photos = [...plantPhotos(plant)];
+  const target = index + delta;
+  if (index < 0 || target < 0 || target >= photos.length) return;
+  [photos[index], photos[target]] = [photos[target], photos[index]];
+  await saveActivePlantPhotos(photos);
+}
+
+async function removePhoto(index) {
+  const plant = plants.find(item => item.id === activePlantId);
+  if (!plant) return;
+  const photos = plantPhotos(plant);
+  if (index < 0 || index >= photos.length) return;
+  if (!window.confirm('Delete this photo? / ¿Borrar esta foto?')) return;
+  await saveActivePlantPhotos(photos.filter((_, i) => i !== index));
+}
+
 async function appendPhotosToActivePlant(files) {
   if (!activePlantId || files.length === 0) return;
   const plant = plants.find(item => item.id === activePlantId);
@@ -184,6 +219,7 @@ function isBundledPhoto(photo) {
 }
 
 function starterPhotoUpdate(plant) {
+  if (plant.photosEdited) return null;
   const starterPhotos = starterPhotosFor(plant);
   if (starterPhotos.length === 0) return null;
   const current = plantPhotos(plant);
@@ -336,7 +372,7 @@ function cardForPlant(plant) {
   ].filter(Boolean).slice(0, 3).map(v => `<li>${escapeHtml(v)}</li>`).join('');
   const photoCount = plantPhotos(plant).length;
 
-  article.innerHTML = `<div class="card-photo-toggle" data-action="collapse">${photoMarkup(plant)}</div>
+  article.innerHTML = `<div class="card-gallery">${galleryMarkup(plant)}</div>
     <div class="plant-card-body">
       <div class="card-title-row">
         <div>
@@ -357,10 +393,24 @@ function cardForPlant(plant) {
   return article;
 }
 
-function galleryMarkup(plant, bucket = objectUrls) {
+function photoControls(index, total) {
+  const button = (action, label, symbol, disabled) =>
+    `<button type="button" class="photo-button" data-action="${action}" data-index="${index}" aria-label="${escapeHtml(label)}"${disabled ? ' disabled' : ''}>${symbol}</button>`;
+  return `<div class="photo-controls">
+    ${button('photo-earlier', 'Move photo earlier / Mover antes', '‹', index === 0)}
+    <span class="photo-position">${index + 1}/${total}</span>
+    ${button('photo-later', 'Move photo later / Mover después', '›', index === total - 1)}
+    ${button('photo-remove', 'Delete photo / Borrar foto', '×', false)}
+  </div>`;
+}
+
+function galleryMarkup(plant, bucket = objectUrls, editable = false) {
   const photos = plantPhotos(plant);
   if (photos.length === 0) return '<div class="plant-photo detail-photo photo-placeholder" aria-hidden="true">🌱</div>';
-  return `<div class="photo-gallery">${photos.map((photo, index) => `<img src="${escapeHtml(photoUrl(photo, bucket))}" alt="${escapeHtml(`${plant.commonName} photo ${index + 1}`)}" />`).join('')}</div>`;
+  return `<div class="photo-gallery">${photos.map((photo, index) => `<figure class="photo-slide">
+      <img src="${escapeHtml(photoUrl(photo, bucket))}" alt="${escapeHtml(`${plant.commonName} photo ${index + 1}`)}" />
+      ${editable ? photoControls(index, photos.length) : ''}
+    </figure>`).join('')}</div>`;
 }
 
 function detailPlant(plant) {
@@ -373,7 +423,7 @@ function detailPlant(plant) {
       <button type="button" class="icon-button" data-action="close" aria-label="Close / Cerrar">×</button>
     </div>
     <div class="plant-detail full-detail">
-      ${galleryMarkup(plant, browseObjectUrls)}
+      ${galleryMarkup(plant, browseObjectUrls, true)}
       <div class="plant-detail-body">
         <header class="detail-heading">
           <div>
@@ -472,6 +522,10 @@ browseDialog.addEventListener('click', event => {
   const action = event.target.closest('[data-action]')?.dataset.action;
   if (action === 'close') closeBrowseDialog();
   if (action === 'add-photos') browsePhotoInput.click();
+  const index = Number(event.target.closest('[data-index]')?.dataset.index);
+  if (action === 'photo-earlier') movePhoto(index, -1);
+  if (action === 'photo-later') movePhoto(index, 1);
+  if (action === 'photo-remove') removePhoto(index);
 });
 browseDialog.addEventListener('close', cleanupBrowseObjectUrls);
 browsePhotoInput.addEventListener('change', async () => {
