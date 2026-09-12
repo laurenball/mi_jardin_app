@@ -29,9 +29,12 @@ const DISPLAY_LABELS = {
   status: {'Want':'Want / Quiero','Looking For':'Looking For / Buscando','Bought':'Bought / Comprada','Planted':'Planted / Plantada'},
   sun: {'Full sun':'Full sun / Pleno sol','Sun / partial shade':'Sun / partial shade / Sol y media sombra','Partial shade':'Partial shade / Media sombra','Shade':'Shade / Sombra'},
   layer: {'Canopy':'Canopy / Dosel','Fruit tree':'Fruit tree / Frutal','Shrub':'Shrub / Arbusto','Herbaceous':'Herbaceous / Herbácea','Grass':'Grass / Gramínea','Climber':'Climber / Trepadora'},
-  purpose: {'Bird food':'Bird food / Alimento para aves','Shelter':'Shelter / Refugio','Nesting':'Nesting / Nidificación','Hummingbirds':'Hummingbirds / Picaflores','Butterflies':'Butterflies / Mariposas','Pollinators':'Pollinators / Polinizadores','Edible':'Edible / Comestible','Medicinal tradition':'Medicinal tradition / Uso medicinal tradicional'}
+  purpose: {'Bird food':'Bird food / Alimento para aves','Shelter':'Shelter / Refugio','Nesting':'Nesting / Nidificación','Hummingbirds':'Hummingbirds / Picaflores','Butterflies':'Butterflies / Mariposas','Pollinators':'Pollinators / Polinizadores','Edible':'Edible / Comestible','Medicinal tradition':'Medicinal / Uso medicinal'}
 };
 
+const SCHEMA_VERSION = 4;
+const STARTER_INFO_FIELDS = ['description','nativeStatus','nativeRange','ecology','hostPlant','purposes','wildlifeNotes',
+  'sun','water','soil','size','flowering','fruiting','propagation','edibleUses','medicinalUses','otherUses','safety','sources'];
 const UNGROUPED_LABEL = 'Other / Otras';
 const nameCollator = new Intl.Collator(['es', 'en'], {sensitivity: 'base', numeric: true});
 
@@ -74,6 +77,17 @@ function photoMarkup(plant, className = 'plant-photo', bucket = objectUrls) {
 function infoRow(label, value) {
   if (!value) return '';
   return `<div class="info-row"><span>${escapeHtml(label)}</span><p>${escapeHtml(value)}</p></div>`;
+}
+
+function linkify(value) {
+  return String(value).split(/(https?:\/\/[^\s|]+)/g).map((part, index) => index % 2
+    ? `<a href="${escapeHtml(part)}" target="_blank" rel="noopener noreferrer">${escapeHtml(part)}</a>`
+    : escapeHtml(part)).join('');
+}
+
+function linkRow(label, value) {
+  if (!value) return '';
+  return `<div class="info-row"><span>${escapeHtml(label)}</span><p>${linkify(value)}</p></div>`;
 }
 
 function openPlant(plantId) {
@@ -179,17 +193,39 @@ function starterPhotoUpdate(plant) {
   return unchanged ? null : next;
 }
 
-async function syncStarterPhotos() {
-  const updates = plants
-    .map(plant => [plant, starterPhotoUpdate(plant)])
-    .filter(([, photos]) => photos)
-    .map(([plant, photos]) => updatePlant({
-      ...plant,
-      photos,
-      photo: isBundledPhoto(plant.photo) || !plant.photo ? photos[0] : plant.photo,
-      updatedAt: plant.updatedAt || new Date().toISOString(),
-      schemaVersion: Math.max(Number(plant.schemaVersion) || 1, 3)
-    }));
+function sameFieldValue(current, next) {
+  if (Array.isArray(current) || Array.isArray(next)) {
+    return JSON.stringify(current || []) === JSON.stringify(next || []);
+  }
+  return (current || '') === (next || '');
+}
+
+function starterInfoUpdate(plant) {
+  const starter = starterRecordFor(plant);
+  if (!starter) return null;
+  const changes = {};
+  for (const field of STARTER_INFO_FIELDS) {
+    const next = field in starter ? starter[field] : (field === 'purposes' ? [] : '');
+    if (!sameFieldValue(plant[field], next)) changes[field] = next;
+  }
+  return Object.keys(changes).length > 0 ? changes : null;
+}
+
+function starterRecordUpdate(plant) {
+  const photos = starterPhotoUpdate(plant);
+  const info = starterInfoUpdate(plant);
+  if (!photos && !info) return null;
+  return {
+    ...plant,
+    ...(info || {}),
+    ...(photos ? {photos, photo: isBundledPhoto(plant.photo) || !plant.photo ? photos[0] : plant.photo} : {}),
+    updatedAt: plant.updatedAt || new Date().toISOString(),
+    schemaVersion: Math.max(Number(plant.schemaVersion) || 1, SCHEMA_VERSION)
+  };
+}
+
+async function syncStarterRecords() {
+  const updates = plants.map(starterRecordUpdate).filter(Boolean).map(updatePlant);
   if (updates.length === 0) return;
   await Promise.all(updates);
   plants = await getPlants();
@@ -219,9 +255,12 @@ function plantSections(plant) {
     ]),
     sectionHtml('Human uses / Usos humanos', [
       infoRow('Edible / Comestible', plant.edibleUses),
-      infoRow('Traditional medicinal use / Uso medicinal tradicional', plant.medicinalUses),
+      infoRow('Medicinal use / Uso medicinal', plant.medicinalUses),
       infoRow('Other uses / Otros usos', plant.otherUses),
       infoRow('Safety / Precauciones', plant.safety)
+    ]),
+    sectionHtml('Sources / Fuentes', [
+      linkRow('Reference / Referencia', String(plant.sources || '').split(' | ').join('\n'))
     ]),
     sectionHtml('My garden / Mi jardín', [
       infoRow('Status / Estado', displayValue('status', plant.status)),
@@ -393,8 +432,9 @@ form.addEventListener('submit', async (event) => {
     nativeStatus: value('nativeStatus'), nativeRange: value('nativeRange'), ecology: value('ecology'), hostPlant: value('hostPlant'), purposes: data.getAll('purposes'), wildlifeNotes: value('wildlifeNotes'),
     sun: value('sun'), water: value('water'), soil: value('soil'), size: value('size'), flowering: value('flowering'), fruiting: value('fruiting'), propagation: value('propagation'),
     edibleUses: value('edibleUses'), medicinalUses: value('medicinalUses'), otherUses: value('otherUses'), safety: value('safety'),
+    sources: value('sources'),
     status: value('status'), priority: value('priority'), nursery: value('nursery'), price: value('price'), gardenLocation: value('gardenLocation'), notes: value('notes'),
-    photos, photo: photos[0] || null, createdAt: now, updatedAt: now, schemaVersion: 3
+    photos, photo: photos[0] || null, createdAt: now, updatedAt: now, schemaVersion: SCHEMA_VERSION
   };
   await addPlant(plant); plants = await getPlants(); closeForm(); render();
 });
@@ -458,10 +498,10 @@ if (plants.length === 0) {
   const now = new Date();
   const seeded = STARTER_PLANTS.map((plant, i) => {
     const photos = (plant.photos || []).filter(Boolean);
-    return {id: crypto.randomUUID(), ...plant, photos, photo: photos[0] || null, createdAt: new Date(now.getTime() - i * 1000).toISOString(), updatedAt: now.toISOString(), schemaVersion: 3};
+    return {id: crypto.randomUUID(), ...plant, photos, photo: photos[0] || null, createdAt: new Date(now.getTime() - i * 1000).toISOString(), updatedAt: now.toISOString(), schemaVersion: SCHEMA_VERSION};
   });
   await addPlants(seeded); plants = await getPlants();
 } else {
-  await syncStarterPhotos();
+  await syncStarterRecords();
 }
 render();

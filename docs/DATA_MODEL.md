@@ -1,5 +1,29 @@
 # Plant Data Model
 
+## Version 4
+
+Version 4 adds one optional field without changing the IndexedDB store.
+
+```js
+{
+  sources
+}
+```
+
+`sources` records where the information in an entry came from. It is free text, and several references can be separated with ` | `. The detail view renders it as a Sources section and turns any `http` or `https` address into a link.
+
+Starter records now also carry their descriptive content in the app rather than only in a first seeding. On startup the app refreshes the informational fields of records that match a starter plant, so an existing install receives corrected or expanded text:
+
+```text
+description, nativeStatus, nativeRange, ecology, hostPlant, purposes, wildlifeNotes,
+sun, water, soil, size, flowering, fruiting, propagation,
+edibleUses, medicinalUses, otherUses, safety, sources
+```
+
+Personal fields are never touched by that refresh: `status`, `priority`, `nursery`, `price`, `gardenLocation` and `notes` stay as the user left them, as do photos the user added. For the informational fields the starter record is the source of truth, so a field the starter no longer sets is cleared rather than left holding old text. That is what lets wording be corrected as well as extended.
+
+This matters because plants are seeded only into an empty database. Without the refresh, improvements to starter content would reach new installs only.
+
 ## Version 3
 
 Version 3 adds multi-photo support without changing the IndexedDB store.
