@@ -1,0 +1,59 @@
+{
+  "slug": "pasionaria",
+  "commonName": "Pasionaria / Mburucuyá",
+  "scientificName": "Passiflora caerulea",
+  "plantType": "Climber",
+  "layer": "Climber",
+  "description": "The native passion flower. A vigorous climber with spectacular flowers and edible orange fruit.",
+  "nativeStatus": "Native to the Río de la Plata and surrounding South American region",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Brazil and nearby regions",
+  "ecology": "Climbs through the shrub and canopy layers, and is the exclusive larval host for several Heliconius butterflies.",
+  "hostPlant": "Exclusive host plant for several Heliconius butterfly species",
+  "purposes": [
+    "Butterflies",
+    "Pollinators",
+    "Edible",
+    "Medicinal tradition"
+  ],
+  "wildlifeNotes": "Host vine for native passion-vine butterflies, and the flowers are worked heavily by pollinators.",
+  "sun": "Sun / partial shade",
+  "water": "Medium",
+  "soil": "Adaptable with good drainage",
+  "flowering": "Warm season",
+  "fruiting": "Small orange fruit",
+  "propagation": "Seed, cuttings and suckers.",
+  "edibleUses": "The fruit is small but edible and aromatic, less fleshy than cultivated passionfruit.",
+  "medicinalUses": "The anxiolytic effect comes from chrysin. This is one of the best-documented natural anxiolytics in the world, used in herbal medicine across South America and now in European phytotherapy.",
+  "sources": "Plantas medicinales autóctonas de la Argentina, Talapampa: http://www.talapampa.com/plantas_medicinales_autoctonas_de_la_argentina.pdf",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "pasionaria-2.jpg",
+      "shows": "Flower close-up",
+      "sourceFile": "Passiflora caerulea (makro close-up).jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Passiflora_caerulea_%28makro_close-up%29.jpg",
+      "author": "Petar Milošević",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "pasionaria-1.jpg",
+      "shows": "Flower and leaves",
+      "sourceFile": "Passiflora caerulea flor hojas.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Passiflora_caerulea_flor_hojas.jpg",
+      "author": "Antovigano",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "pasionaria-3.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Passiflora caerulea Frutos maduros.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Passiflora_caerulea_Frutos_maduros.jpg",
+      "author": "http://floradeluruguay.blogspot.com.ar",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
+  ]
+}

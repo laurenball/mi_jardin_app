@@ -1,0 +1,43 @@
+{
+  "slug": "dicliptera",
+  "commonName": "Fosforito / Bandera española",
+  "scientificName": "Dicliptera tweediana",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "A low herbaceous plant with bright tubular red-orange flowers that hummingbirds adore. Very easy to grow.",
+  "nativeStatus": "Native to the Río de la Plata region",
+  "nativeRange": "Argentina, Uruguay and nearby areas",
+  "ecology": "Fills the shaded herbaceous layer, where most hummingbird plants will not flower.",
+  "purposes": [
+    "Hummingbirds",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "The tubular flowers are shaped for hummingbirds and they use them heavily.",
+  "sun": "Partial shade",
+  "water": "Medium",
+  "soil": "Adaptable",
+  "flowering": "Warm season",
+  "propagation": "Easy in shade or partial shade; one of the simplest natives to establish.",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "dicliptera-1.jpg",
+      "shows": "Plant in flower",
+      "sourceFile": "Dicliptera squarrosa in Jardin des plantes de Montpellier 01.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Dicliptera_squarrosa_in_Jardin_des_plantes_de_Montpellier_01.jpg",
+      "author": "Krzysztof Golik",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "dicliptera-2.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Dicliptera squarrosa in Jardin des plantes de Montpellier 02.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Dicliptera_squarrosa_in_Jardin_des_plantes_de_Montpellier_02.jpg",
+      "author": "Krzysztof Golik",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

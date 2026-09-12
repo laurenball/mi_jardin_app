@@ -1,0 +1,42 @@
+{
+  "slug": "cola-de-zorro",
+  "commonName": "Cola de zorro",
+  "scientificName": "Setaria spp.",
+  "plantType": "Grass",
+  "layer": "Grass",
+  "description": "Foxtail grasses, named for the dense cylindrical seedheads. The common name covers several species.",
+  "nativeStatus": "Some Setaria are native and others introduced; verify the exact species",
+  "nativeRange": "Depends on species",
+  "ecology": "Native grasses are the backbone of this landscape. They feed seed-eating birds, supply nesting material and shelter ground-dwelling insects.",
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Nesting"
+  ],
+  "wildlifeNotes": "The seedheads feed finches, sparrows and other granivorous birds, and the clumps shelter ground-dwelling insects.",
+  "sun": "Full sun",
+  "water": "Low to medium",
+  "soil": "Adaptable",
+  "flowering": "Spike-like seedheads in the warm season",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "cola-de-zorro-2.jpg",
+      "shows": "",
+      "sourceFile": "setaria.jpg",
+      "sourcePage": "",
+      "author": "",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "cola-de-zorro-1.jpg",
+      "shows": "",
+      "sourceFile": "cola.jpg",
+      "sourcePage": "",
+      "author": "",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

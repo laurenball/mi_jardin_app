@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Garden content editor</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#253022;background:#f4f7ef}
+*{box-sizing:border-box}body{margin:0;display:grid;grid-template-columns:minmax(200px,260px) 1fr;min-height:100vh}
+button,input,textarea,select{font:inherit}button{cursor:pointer}
+aside{border-right:1px solid #d8dfd2;background:white;padding:14px;overflow-y:auto;max-height:100vh;position:sticky;top:0}
+aside h1{font-size:1rem;margin:0 0 12px}
+.plant-link{display:block;width:100%;text-align:left;border:0;background:none;padding:8px 10px;border-radius:8px;color:inherit}
+.plant-link:hover{background:#eef3e9}.plant-link[aria-current="true"]{background:#334b2f;color:white}
+.plant-link small{display:block;opacity:.7;font-style:italic}
+main{padding:22px;max-width:900px}
+h2{margin:0 0 4px}.muted{color:#5d6958}
+label{display:grid;gap:6px;font-weight:650;margin:14px 0 0;font-size:.86rem}
+input,textarea,select{width:100%;border:1px solid #c6d0c0;border-radius:10px;padding:9px 10px;background:white;color:inherit}
+textarea{resize:vertical}
+fieldset{border:1px solid #dde4d6;border-radius:12px;margin:18px 0 0;padding:6px 14px 16px}
+legend{font-weight:800;padding:0 6px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:6px;margin-top:10px}
+.checks label{flex-direction:row;display:flex;align-items:center;gap:8px;font-weight:500;background:#f7f9f4;padding:7px 9px;border-radius:8px;margin:0}
+.checks input{width:auto}
+.photos{display:grid;gap:12px;margin-top:12px}
+.photo{display:grid;grid-template-columns:150px 1fr;gap:12px;border:1px solid #dde4d6;border-radius:12px;padding:10px;background:white}
+.photo img{width:150px;height:112px;object-fit:cover;border-radius:8px;background:#e8eee3}
+.photo-actions{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.bar{position:sticky;bottom:0;display:flex;gap:10px;align-items:center;padding:12px 0;background:linear-gradient(rgba(244,247,239,0),#f4f7ef 30%)}
+.primary{background:#334b2f;color:white;border:1px solid #334b2f;border-radius:999px;padding:10px 18px}
+.secondary{background:white;border:1px solid #9aa992;border-radius:999px;padding:8px 14px;color:#253022}
+.danger{background:#fff;border:1px solid #c98f84;color:#8c3a2a;border-radius:999px;padding:8px 14px}
+.status{font-weight:700}.status.error{color:#9c2f1f}.status.ok{color:#33593f}
+.warn{background:#f6f2e8;border-radius:10px;padding:10px 12px;margin-top:14px;font-size:.86rem}
+@media(max-width:760px){body{grid-template-columns:1fr}aside{position:static;max-height:none}.row,.photo{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<aside>
+  <h1>Garden content</h1>
+  <div id="list"></div>
+  <button id="add" class="secondary" style="margin-top:12px;width:100%">+ New plant</button>
+</aside>
+<main id="main"></main>
+
+<script type="module">
+const TEXT_FIELDS = [
+  ['commonName','Common name','input'], ['scientificName','Scientific name','input'],
+  ['description','Description','textarea'],
+  ['nativeStatus','Native status','input'], ['nativeRange','Native range','input'],
+  ['ecology','Habitat and ecological role','textarea'], ['hostPlant','Host plant','input'],
+  ['wildlifeNotes','Wildlife notes','textarea'],
+  ['water','Water','input'], ['soil','Soil','input'], ['size','Size','input'],
+  ['flowering','Flowering','input'], ['fruiting','Fruiting','input'], ['propagation','Propagation','textarea'],
+  ['edibleUses','Edible uses','textarea'], ['medicinalUses','Medicinal use','textarea'],
+  ['otherUses','Other uses','textarea'], ['safety','Safety','textarea'],
+  ['sources','Sources','textarea']
+];
+const SELECTS = {
+  plantType: ['', 'Tree', 'Shrub', 'Herb', 'Grass', 'Climber'],
+  layer: ['', 'Canopy', 'Fruit tree', 'Shrub', 'Herbaceous', 'Grass', 'Climber'],
+  status: ['Want', 'Looking For', 'Bought', 'Planted'],
+  priority: ['', 'High', 'Medium', 'Low']
+};
+const PURPOSES = ['Bird food','Shelter','Nesting','Hummingbirds','Butterflies','Pollinators','Edible','Medicinal tradition'];
+const MAX_W = 860, MAX_H = 1150, MIN_LONG_EDGE = 700, BUDGET = 140 * 1024;
+const SCALE_STEPS = [1, 0.86, 0.74, 0.64], QUALITY_STEPS = [0.82, 0.76, 0.7, 0.64];
+
+let plants = [], orphans = [], current = null, dirty = false;
+
+const api = async (method, path, body) => {
+  const res = await fetch(path, {method, headers: {'content-type': 'application/json'}, body: body && JSON.stringify(body)});
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || res.statusText);
+  return data;
+};
+
+async function load(selectSlug) {
+  const data = await api('GET', '/api/plants');
+  plants = data.plants; orphans = data.orphans;
+  const slug = selectSlug || current?.slug || plants[0]?.slug;
+  current = plants.find(p => p.slug === slug) || plants[0] || null;
+  dirty = false;
+  renderList(); renderEditor();
+}
+
+function renderList() {
+  document.querySelector('#list').replaceChildren(...plants.map(plant => {
+    const button = document.createElement('button');
+    button.className = 'plant-link';
+    button.setAttribute('aria-current', String(plant.slug === current?.slug));
+    button.innerHTML = `${escape(plant.commonName)}<small>${escape(plant.scientificName || '')}</small>`;
+    button.onclick = () => {
+      if (dirty && !confirm('Discard unsaved changes?')) return;
+      current = plant; dirty = false; renderList(); renderEditor();
+    };
+    return button;
+  }));
+}
+
+const escape = (v = '') => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function field(key, label, kind) {
+  const wrap = document.createElement('label');
+  wrap.textContent = label;
+  const input = document.createElement(kind === 'textarea' ? 'textarea' : 'input');
+  if (kind === 'textarea') input.rows = key === 'description' || key === 'medicinalUses' ? 4 : 3;
+  input.value = current[key] || '';
+  input.oninput = () => { current[key] = input.value; dirty = true; setStatus('Unsaved changes', ''); };
+  wrap.append(input);
+  return wrap;
+}
+
+function selectField(key, label) {
+  const wrap = document.createElement('label');
+  wrap.textContent = label;
+  const select = document.createElement('select');
+  for (const option of SELECTS[key]) {
+    const el = document.createElement('option');
+    el.value = option; el.textContent = option || 'Not set';
+    select.append(el);
+  }
+  select.value = current[key] || '';
+  select.onchange = () => { current[key] = select.value; dirty = true; setStatus('Unsaved changes', ''); };
+  wrap.append(select);
+  return wrap;
+}
+
+function photoRow(photo, index) {
+  const row = document.createElement('div');
+  row.className = 'photo';
+  const img = document.createElement('img');
+  img.src = `/assets/plants/${photo.file}?t=${Date.now()}`;
+  img.alt = photo.shows || photo.file;
+  const body = document.createElement('div');
+  const meta = [['shows','Shows'],['sourceFile','Source file'],['sourcePage','Source page'],['author','Author'],['license','License'],['licenseUrl','License URL']];
+  body.innerHTML = `<strong>${index + 1}. ${escape(photo.file)}</strong>`;
+  for (const [key, label] of meta) {
+    const wrap = document.createElement('label');
+    wrap.textContent = label;
+    const input = document.createElement('input');
+    input.value = photo[key] || '';
+    input.oninput = () => { photo[key] = input.value; dirty = true; setStatus('Unsaved changes', ''); };
+    wrap.append(input);
+    body.append(wrap);
+  }
+  const actions = document.createElement('div');
+  actions.className = 'photo-actions';
+  const button = (text, className, onclick, disabled) => {
+    const el = document.createElement('button');
+    el.textContent = text; el.className = className; el.onclick = onclick; el.disabled = Boolean(disabled);
+    return el;
+  };
+  actions.append(
+    button('↑ Earlier', 'secondary', () => movePhoto(index, -1), index === 0),
+    button('↓ Later', 'secondary', () => movePhoto(index, 1), index === current.photos.length - 1),
+    button('Remove', 'danger', () => removePhoto(index))
+  );
+  body.append(actions);
+  row.append(img, body);
+  return row;
+}
+
+function movePhoto(index, delta) {
+  const photos = current.photos;
+  [photos[index], photos[index + delta]] = [photos[index + delta], photos[index]];
+  dirty = true; renderEditor(); setStatus('Unsaved changes', '');
+}
+
+async function removePhoto(index) {
+  const photo = current.photos[index];
+  if (!confirm(`Remove ${photo.file}? The file is deleted when you save.`)) return;
+  current.photos.splice(index, 1);
+  current.removedFiles = [...(current.removedFiles || []), photo.file];
+  dirty = true; renderEditor(); setStatus('Unsaved changes', '');
+}
+
+// Fit inside the cap, then trade quality for size. If the quality floor is not
+// enough, drop the pixel count and try again: fewer pixels beat mushy ones.
+async function shrink(file) {
+  const bitmap = await createImageBitmap(file);
+  const fit = Math.min(1, MAX_W / bitmap.width, MAX_H / bitmap.height);
+  const canvas = document.createElement('canvas');
+  const context = canvas.getContext('2d');
+  let best = null;
+  for (const step of SCALE_STEPS) {
+    const width = Math.round(bitmap.width * fit * step);
+    const height = Math.round(bitmap.height * fit * step);
+    if (best && Math.max(width, height) < MIN_LONG_EDGE) break;
+    canvas.width = width;
+    canvas.height = height;
+    context.drawImage(bitmap, 0, 0, width, height);
+    for (const quality of QUALITY_STEPS) {
+      const url = canvas.toDataURL('image/jpeg', quality);
+      const bytes = Math.round((url.length - url.indexOf(',') - 1) * 3 / 4);
+      if (!best || bytes < best.bytes) best = {url, bytes, quality, w: width, h: height};
+      if (bytes <= BUDGET) { bitmap.close(); return best; }
+    }
+  }
+  bitmap.close();
+  return best;
+}
+
+async function addPhotos(fileList) {
+  for (const file of fileList) {
+    setStatus(`Resizing ${file.name}…`, '');
+    const shrunk = await shrink(file);
+    const {file: name} = await api('POST', `/api/photos/${current.slug}`, {dataUrl: shrunk.url});
+    current.photos.push({file: name, shows: '', sourceFile: file.name, sourcePage: '', author: '', license: '', licenseUrl: ''});
+    setStatus(`Added ${name} at ${shrunk.w}×${shrunk.h}, ${Math.round(shrunk.bytes / 1024)} KB`, 'ok');
+  }
+  dirty = true; renderEditor();
+}
+
+function setStatus(text, kind) {
+  const el = document.querySelector('#status');
+  if (el) { el.textContent = text; el.className = `status ${kind}`; }
+}
+
+async function save() {
+  const removed = current.removedFiles || [];
+  const payload = {...current};
+  delete payload.removedFiles;
+  try {
+    setStatus('Saving…', '');
+    const result = await api('PUT', `/api/plants/${current.slug}`, payload);
+    for (const file of removed) await api('DELETE', `/api/photos/${file}`).catch(() => {});
+    await load(current.slug);
+    setStatus(`Saved. Rebuilt ${result.built.plants} plants, ${result.built.photos} photos.`, 'ok');
+  } catch (error) {
+    setStatus(error.message, 'error');
+  }
+}
+
+async function removePlant() {
+  if (!confirm(`Delete ${current.commonName} and its photo files? This cannot be undone.`)) return;
+  await api('DELETE', `/api/plants/${current.slug}`);
+  current = null;
+  await load();
+  setStatus('Plant deleted.', 'ok');
+}
+
+function renderEditor() {
+  const main = document.querySelector('#main');
+  if (!current) { main.innerHTML = '<p class="muted">No plants yet. Add one from the left.</p>'; return; }
+  main.replaceChildren();
+  const head = document.createElement('div');
+  head.innerHTML = `<h2>${escape(current.commonName)}</h2><p class="muted">content/plants/${escape(current.slug)}.json</p>`;
+  main.append(head);
+
+  const identity = document.createElement('fieldset');
+  identity.innerHTML = '<legend>Identity</legend>';
+  const typeRow = document.createElement('div');
+  typeRow.className = 'row';
+  typeRow.append(selectField('plantType', 'Plant type'), selectField('layer', 'Garden layer'));
+  identity.append(field('commonName', 'Common name', 'input'), field('scientificName', 'Scientific name', 'input'), typeRow, field('description', 'Description', 'textarea'));
+  main.append(identity);
+
+  const ecology = document.createElement('fieldset');
+  ecology.innerHTML = '<legend>Ecology and wildlife</legend>';
+  ecology.append(field('nativeStatus', 'Native status', 'input'), field('nativeRange', 'Native range', 'input'),
+    field('ecology', 'Habitat and ecological role', 'textarea'), field('hostPlant', 'Host plant', 'input'));
+  const checks = document.createElement('div');
+  checks.className = 'checks';
+  for (const purpose of PURPOSES) {
+    const wrap = document.createElement('label');
+    const box = document.createElement('input');
+    box.type = 'checkbox';
+    box.checked = (current.purposes || []).includes(purpose);
+    box.onchange = () => {
+      const set = new Set(current.purposes || []);
+      box.checked ? set.add(purpose) : set.delete(purpose);
+      current.purposes = PURPOSES.filter(p => set.has(p));
+      dirty = true; setStatus('Unsaved changes', '');
+    };
+    wrap.append(box, document.createTextNode(purpose));
+    checks.append(wrap);
+  }
+  ecology.append(checks, field('wildlifeNotes', 'Wildlife notes', 'textarea'));
+  main.append(ecology);
+
+  const growing = document.createElement('fieldset');
+  growing.innerHTML = '<legend>Growing</legend>';
+  const sunRow = document.createElement('label');
+  sunRow.textContent = 'Sun';
+  const sun = document.createElement('select');
+  for (const option of ['', 'Full sun', 'Sun / partial shade', 'Partial shade', 'Shade']) {
+    const el = document.createElement('option');
+    el.value = option; el.textContent = option || 'Not set';
+    sun.append(el);
+  }
+  sun.value = current.sun || '';
+  sun.onchange = () => { current.sun = sun.value; dirty = true; setStatus('Unsaved changes', ''); };
+  sunRow.append(sun);
+  growing.append(sunRow);
+  for (const key of ['water','soil','size','flowering','fruiting','propagation']) {
+    const def = TEXT_FIELDS.find(f => f[0] === key);
+    growing.append(field(def[0], def[1], def[2]));
+  }
+  main.append(growing);
+
+  const uses = document.createElement('fieldset');
+  uses.innerHTML = '<legend>Uses and sources</legend>';
+  for (const key of ['edibleUses','medicinalUses','otherUses','safety','sources']) {
+    const def = TEXT_FIELDS.find(f => f[0] === key);
+    uses.append(field(def[0], def[1], def[2]));
+  }
+  main.append(uses);
+
+  const garden = document.createElement('fieldset');
+  garden.innerHTML = '<legend>My garden defaults</legend>';
+  const gardenRow = document.createElement('div');
+  gardenRow.className = 'row';
+  gardenRow.append(selectField('status', 'Status'), selectField('priority', 'Priority'));
+  garden.append(gardenRow);
+  main.append(garden);
+
+  const photos = document.createElement('fieldset');
+  photos.innerHTML = '<legend>Photos</legend>';
+  const list = document.createElement('div');
+  list.className = 'photos';
+  list.append(...(current.photos || []).map(photoRow));
+  const picker = document.createElement('input');
+  picker.type = 'file'; picker.accept = 'image/*'; picker.multiple = true;
+  picker.style.marginTop = '12px';
+  picker.onchange = () => { addPhotos([...picker.files]); picker.value = ''; };
+  photos.append(list, picker);
+  const note = document.createElement('p');
+  note.className = 'muted';
+  note.style.fontSize = '.82rem';
+  note.textContent = `Photos are resized to fit ${MAX_W}×${MAX_H} and compressed to about ${Math.round(BUDGET / 1024)} KB before upload. A photo that will not compress that far is scaled down further instead of being blurred. The first photo is the one the list shows.`;
+  photos.append(note);
+  main.append(photos);
+
+  if (orphans.length > 0) {
+    const warn = document.createElement('div');
+    warn.className = 'warn';
+    warn.textContent = `Unreferenced image files in assets/plants: ${orphans.join(', ')}`;
+    main.append(warn);
+  }
+
+  const bar = document.createElement('div');
+  bar.className = 'bar';
+  const saveButton = document.createElement('button');
+  saveButton.className = 'primary'; saveButton.textContent = 'Save and rebuild';
+  saveButton.onclick = save;
+  const deleteButton = document.createElement('button');
+  deleteButton.className = 'danger'; deleteButton.textContent = 'Delete plant';
+  deleteButton.onclick = removePlant;
+  const status = document.createElement('span');
+  status.id = 'status'; status.className = 'status';
+  bar.append(saveButton, deleteButton, status);
+  main.append(bar);
+}
+
+document.querySelector('#add').onclick = async () => {
+  const commonName = prompt('Common name for the new plant?');
+  if (!commonName) return;
+  const slug = commonName.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
+  if (!slug) { alert('That name does not make a usable file name.'); return; }
+  if (plants.some(p => p.slug === slug)) { alert('A plant with that slug already exists.'); return; }
+  await api('PUT', `/api/plants/${slug}`, {slug, commonName, status: 'Want', purposes: [], photos: []});
+  await load(slug);
+};
+
+window.addEventListener('beforeunload', event => { if (dirty) event.preventDefault(); });
+load();
+</script>
+</body>
+</html>

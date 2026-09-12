@@ -1,0 +1,54 @@
+{
+  "slug": "sen-del-campo",
+  "commonName": "Sen del campo",
+  "scientificName": "Senna corymbosa",
+  "plantType": "Shrub",
+  "layer": "Shrub",
+  "description": "Native shrub carrying brilliant yellow flowers straight through summer and autumn.",
+  "nativeStatus": "Native to southern South America",
+  "nativeRange": "Argentina, Uruguay, southern Brazil and neighboring regions",
+  "ecology": "A long-flowering shrub-layer legume that bridges the gap between the spring and late-season nectar plants.",
+  "purposes": [
+    "Butterflies",
+    "Pollinators",
+    "Hummingbirds",
+    "Medicinal tradition"
+  ],
+  "wildlifeNotes": "Attracts sulphur butterflies and bees through summer and autumn. Hummingbirds visit it too.",
+  "sun": "Full sun",
+  "water": "Low to medium",
+  "soil": "Adaptable, well-drained",
+  "flowering": "Summer into autumn",
+  "fruiting": "Slender green seed pods",
+  "medicinalUses": "The leaves are used as a gentle laxative, similar in effect to commercial senna.",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "sen-del-campo-2.jpg",
+      "shows": "Leaves and flowers",
+      "sourceFile": "Ruhland, Bernsdorfer Str. 25, Argentinische Senna, Blatt und Blüten, Sommer, 01.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Ruhland%2C_Bernsdorfer_Str._25%2C_Argentinische_Senna%2C_Blatt_und_Bl%C3%BCten%2C_Sommer%2C_01.jpg",
+      "author": "Wilhelm Zimmerling PAR",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "sen-del-campo-1.jpg",
+      "shows": "Flowering shrub",
+      "sourceFile": "Ruhland, Bernsdorfer Str. 25, Argentinische Senna, blühender Strauch, Sommer, 01.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Ruhland%2C_Bernsdorfer_Str._25%2C_Argentinische_Senna%2C_bl%C3%BChender_Strauch%2C_Sommer%2C_01.jpg",
+      "author": "Wilhelm Zimmerling PAR",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "sen-del-campo-3.jpg",
+      "shows": "Flower and seed pod",
+      "sourceFile": "Ruhland, Bernsdorfer Str. 25, Argentinische Senna, Frucht, Sommer, 01.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Ruhland%2C_Bernsdorfer_Str._25%2C_Argentinische_Senna%2C_Frucht%2C_Sommer%2C_01.jpg",
+      "author": "Wilhelm Zimmerling PAR",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

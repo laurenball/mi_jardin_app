@@ -13,7 +13,7 @@ The app now stores plants as more than a wishlist. Each record can include:
 - Human uses / Usos humanos
 - My garden / Mi jardín
 
-It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus filters by garden layer, purpose, and status. The plant list uses a photo-first mobile flow: tap a plant to expand it into a card, then open all information from that card.
+It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus filters by garden layer, purpose, and status. The plant list uses a photo-first mobile flow: tap a plant to expand it into a card, then open all information from that card. Both the card and the full view show every photo as a swipeable gallery. Photos can be added, reordered and deleted from the full view; once a record's photos are reordered or one is deleted, the app stops re-syncing its bundled photos.
 
 The list is grouped by garden layer, using the same bilingual labels as the layer filter: Canopy / Dosel, Climber / Trepadora, Fruit tree / Frutal, Grass / Gramínea, Herbaceous / Herbácea, Shrub / Arbusto. Group headings are alphabetical and plants are alphabetical by common name within each group, compared with Spanish collation so accented names sort correctly. Plants with no layer set appear in a final Other / Otras group.
 
@@ -24,6 +24,40 @@ python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
+
+## Editing the content
+
+Plant content lives in `content/plants/`, one JSON file per plant, with `content/order.json` holding the order they are written out in. Photos live in `assets/plants/`, and each photo's credit is recorded alongside it in its plant file.
+
+To edit it with a UI:
+
+```bash
+npm run admin
+```
+
+That opens a local editor at `http://localhost:4173`. It lists every plant, gives you a form for all the fields, and lets you add, reorder, delete and re-credit photos. Dropping in a photo resizes it in the browser to fit 860 by 1150 and compresses it to roughly 140 KB before it is written, so the offline cache stays small. Saving writes the content files and rebuilds the generated ones straight away. The server binds to localhost only.
+
+To rebuild without the UI, after editing the JSON by hand:
+
+```bash
+npm run build
+```
+
+To see the state of the content, including plants short on photos, photos with no credit, files nothing references, and total photo weight:
+
+```bash
+npm run check
+```
+
+Three files are generated from `content/` and should not be edited directly:
+
+- `starter-plants.js`
+- `docs/PHOTO_SOURCES.md`
+- the `PLANT_IMAGES` list in `service-worker.js`, whose cache version is bumped automatically whenever the image set changes
+
+Both commands need Node. Nothing is installed: there are no dependencies.
+
+Changes reach the app the same way any code change does. Commit, push, and the deployed site picks them up. On each device the startup sync then refreshes the stored records.
 
 ## Important data behavior
 
@@ -49,9 +83,17 @@ my-garden-app/
 ├── styles.css
 ├── app.js
 ├── db.js
-├── starter-plants.js
+├── starter-plants.js      generated from content/
 ├── manifest.webmanifest
 ├── service-worker.js
+├── package.json
+├── content/               the plant content, edited by you
+│   ├── order.json
+│   └── plants/*.json
+├── tools/
+│   ├── build.mjs          regenerates the generated files
+│   ├── check.mjs          reports on the state of the content
+│   └── admin/             the local content editor
 ├── assets/
 └── docs/
 ```

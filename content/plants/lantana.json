@@ -1,0 +1,46 @@
+{
+  "slug": "lantana",
+  "commonName": "Lantana",
+  "scientificName": "Lantana camara",
+  "plantType": "Shrub",
+  "layer": "Shrub",
+  "description": "Native to this region, despite being widely assumed exotic. The multi-coloured flower clusters are absolute butterfly and hummingbird magnets.",
+  "nativeStatus": "Regionally native, though the species is spread across the tropical and subtropical Americas. Nursery stock is often garden hybrid, so ask about provenance.",
+  "nativeRange": "Tropical and subtropical Americas, including this region",
+  "ecology": "A shrub-layer nectar source that flowers for months, followed by berries for birds.",
+  "purposes": [
+    "Bird food",
+    "Butterflies",
+    "Pollinators",
+    "Hummingbirds",
+    "Medicinal tradition"
+  ],
+  "wildlifeNotes": "One of the strongest butterfly plants available, and a reliable hummingbird draw. The berries feed birds.",
+  "sun": "Full sun",
+  "water": "Low to medium",
+  "soil": "Adaptable",
+  "flowering": "Long warm-season display",
+  "medicinalUses": "A leaf infusion is used for respiratory complaints and fever.",
+  "safety": "Leaves and unripe berries are toxic if eaten. Worth knowing where children or pets browse.",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "lantana-5.jpg",
+      "shows": "",
+      "sourceFile": "lantana.jpg",
+      "sourcePage": "",
+      "author": "",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "lantana-4.jpg",
+      "shows": "",
+      "sourceFile": "lantana-whole.jpg",
+      "sourcePage": "",
+      "author": "",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "feijoa",
+  "commonName": "Falso guayabo / Feijoa",
+  "scientificName": "Acca sellowiana",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Often assumed to be exotic, but native to southern Brazil, Uruguay and northeastern Argentina. Evergreen shrub or small tree with edible petals and aromatic green fruit that smells of pineapple, guava and mint.",
+  "nativeStatus": "Native to southern South America, though not a Pampas endemic",
+  "nativeRange": "Southern Brazil, Uruguay, parts of northeastern Argentina and Paraguay",
+  "ecology": "Performs excellently around Buenos Aires, fruiting well and standing up to the local climate. Handles clay soils, organic soils and ground near waterways.",
+  "purposes": [
+    "Bird food",
+    "Pollinators",
+    "Edible"
+  ],
+  "wildlifeNotes": "Birds and bees both work the flowers heavily, and the fruit feeds wildlife as well.",
+  "sun": "Full sun",
+  "water": "Medium",
+  "soil": "Adaptable; good in clay, organic soils and near water",
+  "flowering": "Showy flowers with fleshy petals",
+  "fruiting": "Aromatic green fruit",
+  "edibleUses": "The fruit is rich in vitamin C and unusually rich in iodine for a fruit. The petals are sweet and can be eaten straight off the tree.",
+  "sources": "Árboles nativos de Argentina, Argentina Forestal: https://www.argentinaforestal.com/2026/04/29/arboles-nativos-de-argentina/",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "feijoa-2.jpg",
+      "shows": "Flower",
+      "sourceFile": "Acca sellowiana flower 1.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Acca_sellowiana_flower_1.jpg",
+      "author": "yelod - wikimedia commons משתמש:ילוד - ויקיפדיה העיברית",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "file": "feijoa-3.jpg",
+      "shows": "Fruit, whole and cut",
+      "sourceFile": "Acca sellowiana Fruit MHNT Fronton.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Acca_sellowiana_Fruit_MHNT_Fronton.jpg",
+      "author": "Didier Descouens",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "feijoa-1.jpg",
+      "shows": "Whole tree",
+      "sourceFile": "Acca sellowiana tree.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Acca_sellowiana_tree.jpg",
+      "author": "yelod - wikimedia commons משתמש:ילוד - ויקיפדיה העיברית",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+    }
+  ]
+}

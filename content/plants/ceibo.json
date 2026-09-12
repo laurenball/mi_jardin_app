@@ -1,0 +1,55 @@
+{
+  "slug": "ceibo",
+  "commonName": "Ceibo",
+  "scientificName": "Erythrina crista-galli",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "The national flower of both Argentina and Uruguay. A spreading tree whose brilliant red flowers carry the whole spring and summer.",
+  "nativeStatus": "Native to the Río de la Plata region",
+  "nativeRange": "Argentina, Uruguay, Paraguay, southern Brazil",
+  "ecology": "Associated with wetlands, river margins and low ground. A nitrogen-fixing legume, so it improves the soil for everything planted around it.",
+  "purposes": [
+    "Hummingbirds",
+    "Pollinators",
+    "Shelter",
+    "Medicinal tradition"
+  ],
+  "wildlifeNotes": "A hummingbird magnet in spring and summer. The picaflor común (Chlorostilbon lucidus) depends heavily on it, and large native bees work the same flowers.",
+  "sun": "Full sun",
+  "water": "Medium to high",
+  "soil": "Tolerates moist and seasonally wet soils",
+  "flowering": "Spring through the warm season",
+  "medicinalUses": "In rioplatense medicine the bark tea is an astringent, antiseptic and sedative. Indigenous peoples used the bark on wounds and for toothache. The alkaloids erythraline and erysodine carry the sedative and anxiolytic action.",
+  "sources": "Sendero de flora nativa, Jardín Botánico de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/jardinbotanico/senderofloranativa",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "ceibo-2.jpg",
+      "shows": "Flowers",
+      "sourceFile": "Erythrina crista-galli (Ceibo) Inflorescence.JPG",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Erythrina_crista-galli_%28Ceibo%29_Inflorescence.JPG",
+      "author": "FidelIvanS",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    {
+      "file": "ceibo-3.jpg",
+      "shows": "Seed pods",
+      "sourceFile": "Erythrina crista-galli L. - Fruto.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Erythrina_crista-galli_L._-_Fruto.jpg",
+      "author": "Milena Calvi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "ceibo-4.jpg",
+      "shows": "",
+      "sourceFile": "ceibo-tree.jpg",
+      "sourcePage": "",
+      "author": "",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

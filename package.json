@@ -1,0 +1,13 @@
+{
+  "name": "mi-jardin-app",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "description": "Local-first native-garden field guide and planning app",
+  "scripts": {
+    "admin": "node tools/admin/server.mjs",
+    "build": "node tools/build.mjs",
+    "serve": "python3 -m http.server 8000",
+    "check": "node tools/check.mjs"
+  }
+}

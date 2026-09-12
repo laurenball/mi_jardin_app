@@ -1,0 +1,55 @@
+{
+  "slug": "salvia-guaranitica",
+  "commonName": "Salvia guaranítica",
+  "scientificName": "Salvia guaranitica",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Deep blue tubular flowers on a vigorous perennial. The single best hummingbird plant you can grow in Buenos Aires.",
+  "nativeStatus": "Native to southern South America",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Brazil",
+  "ecology": "Spreads into dense clumps and blooms for months, giving the herbaceous layer a long nectar season.",
+  "purposes": [
+    "Hummingbirds",
+    "Pollinators",
+    "Medicinal tradition"
+  ],
+  "wildlifeNotes": "Multiple observers confirm that salvia guaranítica planted in quantity produces abundant hummingbird visits right through the warm season. Plant it in a block rather than as single plants.",
+  "sun": "Sun / partial shade",
+  "water": "Medium",
+  "soil": "Adaptable, prefers reasonably drained soil",
+  "flowering": "Warm season, often for many months",
+  "propagation": "Easy from cuttings, and spreads on its own into dense clumps.",
+  "medicinalUses": "The Guaraní used it as an anti-inflammatory and for skin conditions.",
+  "sources": "Picaflores de la plaza, Aves Bonaerenses: http://avesbonaerenses.blogspot.com/2014/03/picaflores-de-la-plaza.html",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "salvia-guaranitica-2.jpg",
+      "shows": "Flower spikes",
+      "sourceFile": "(MHNT) Salvia guaranitica purple bloom - Les Martels, Giroussens Tarn.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:%28MHNT%29_Salvia_guaranitica_purple_bloom_-_Les_Martels%2C_Giroussens_Tarn.jpg",
+      "author": "Didier Descouens",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "salvia-guaranitica-1.jpg",
+      "shows": "Whole plant in flower",
+      "sourceFile": "Salvia guaranitica HabitusLeavesFlowers BotGardBln0906.JPG",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Salvia_guaranitica_HabitusLeavesFlowers_BotGardBln0906.JPG",
+      "author": "Unknown author, see file page",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "file": "salvia-guaranitica-3.jpg",
+      "shows": "Single leaf",
+      "sourceFile": "Salvia guaranitica single leaf - HNT.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Salvia_guaranitica_single_leaf_-_HNT.jpg",
+      "author": "Eric Polk",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

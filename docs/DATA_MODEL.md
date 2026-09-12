@@ -1,14 +1,31 @@
 # Plant Data Model
 
+## Where starter content lives
+
+Starter plant content is authored in `content/plants/*.json` and compiled into `starter-plants.js` by `tools/build.mjs`. The content files are the source of truth. Each photo entry there carries its own credit:
+
+```js
+{
+  file, shows, sourceFile, sourcePage, author, license, licenseUrl
+}
+```
+
+Only `file` reaches the app. The rest is used to generate `docs/PHOTO_SOURCES.md`.
+
+Fields that are empty are omitted from the compiled module rather than written as empty strings. The startup sync treats a missing field as empty, so the two are equivalent for stored records.
+
 ## Version 4
 
 Version 4 adds one optional field without changing the IndexedDB store.
 
 ```js
 {
-  sources
+  sources,
+  photosEdited
 }
 ```
+
+`photosEdited` is set the first time the user reorders or deletes a photo on a record. From then on the app stops managing that record's bundled photos, so a deleted starter photo does not come back on the next startup. Adding a photo does not set it, because appended photos survive the sync anyway.
 
 `sources` records where the information in an entry came from. It is free text, and several references can be separated with ` | `. The detail view renders it as a Sources section and turns any `http` or `https` address into a link.
 

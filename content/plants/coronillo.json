@@ -1,0 +1,47 @@
+{
+  "slug": "coronillo",
+  "commonName": "Coronillo",
+  "scientificName": "Scutia buxifolia",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Evergreen tree or large shrub with dense, spiny branches and dark purple berries. Its presence is treated as an indicator of ecosystem health.",
+  "nativeStatus": "Native to the Río de la Plata region",
+  "nativeRange": "Argentina, Uruguay, southern Brazil",
+  "ecology": "A core component of native woodland. The mariposa bandera argentina needs dense stands of it as a larval host, so scattered single plants are worth less than a group.",
+  "hostPlant": "Mariposa bandera argentina (Morpho epistrophus argentinus)",
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Nesting",
+    "Butterflies"
+  ],
+  "wildlifeNotes": "Several bird species build nests in the spiny branches, where the thorns deter predators. The dark purple berries feed celestinos, zorzal chalchalero and frutero azul among others.",
+  "sun": "Full sun",
+  "water": "Low to medium",
+  "soil": "Adaptable, well-drained",
+  "fruiting": "Dark purple berries",
+  "otherUses": "The berries yield a dark dye. The wood is extremely hard and was traditionally used for fence posts that last decades.",
+  "sources": "La biodiversidad urbana, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/noticias/la-biodiversidad-urbana-el-corazon-verde-de-la-ciudad",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "coronillo-2.jpg",
+      "shows": "Flowers and leaves",
+      "sourceFile": "Scutia buxifolia 1.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Scutia_buxifolia_1.jpg",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "coronillo-3.jpg",
+      "shows": "Branches and foliage",
+      "sourceFile": "Scutia buxifolia 433701483.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Scutia_buxifolia_433701483.jpg",
+      "author": "Florencia Luna",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    }
+  ]
+}

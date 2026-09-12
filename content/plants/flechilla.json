@@ -1,0 +1,51 @@
+{
+  "slug": "flechilla",
+  "commonName": "Flechilla",
+  "scientificName": "Nassella spp. (formerly many Stipa spp.)",
+  "plantType": "Grass",
+  "layer": "Grass",
+  "description": "The fine-leaved bunchgrasses that characterise Pampas grassland, named for the arrow-like seeds.",
+  "nativeStatus": "Many species are native to the Pampas; identify the exact species before planting",
+  "nativeRange": "Pampas and other South American grasslands, depending on species",
+  "ecology": "Native grasses are the backbone of this landscape. They feed seed-eating birds, supply nesting material and shelter ground-dwelling insects.",
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Nesting"
+  ],
+  "wildlifeNotes": "Seed for finches, sparrows and other seed-eaters, plus nesting material and habitat for ground-dwelling insects.",
+  "sun": "Full sun",
+  "water": "Low",
+  "soil": "Well suited to open, often lean grassland soils",
+  "flowering": "Seedheads through the warm season",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "flechilla-4.jpg",
+      "shows": "",
+      "sourceFile": "nassella.jpg",
+      "sourcePage": "",
+      "author": "",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "flechilla-1.jpg",
+      "shows": "Seedheads and awns",
+      "sourceFile": "Stipa neesiana.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Stipa_neesiana.jpg",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "flechilla-3.jpg",
+      "shows": "Floret detail",
+      "sourceFile": "Nassella neesiana floret1 (7370850334).jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Nassella_neesiana_floret1_%287370850334%29.jpg",
+      "author": "Harry Rose from South West Rocks, Australia",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    }
+  ]
+}

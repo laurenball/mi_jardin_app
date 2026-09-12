@@ -1,0 +1,45 @@
+{
+  "slug": "congorosa",
+  "commonName": "Congorosa",
+  "scientificName": "Monteverdia ilicifolia",
+  "plantType": "Shrub",
+  "layer": "Shrub",
+  "description": "Arguably the most pharmacologically validated native medicinal plant of the Southern Cone. A holly-like evergreen shrub, very ornamental. Older references use the name Maytenus ilicifolia.",
+  "nativeStatus": "Native to the Southern Cone",
+  "nativeRange": "Argentina, Paraguay, Uruguay, Brazil",
+  "ecology": "Evergreen shrub-layer structure with berries for birds and dense spiny foliage for cover.",
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Medicinal tradition"
+  ],
+  "wildlifeNotes": "The berries feed birds and the evergreen, spiny structure gives them protected cover.",
+  "sun": "Sun / partial shade",
+  "water": "Medium",
+  "soil": "Adaptable",
+  "propagation": "Leaves can be harvested continuously for tea once the shrub is established.",
+  "medicinalUses": "Known to the indigenous peoples of the region for hundreds of years. It is in the 4th edition of the Brazilian Pharmacopoeia and on Brazil simplified registration list for herbal medicines. A leaf and stem decoction, added to mate or drunk as tea, is used in Argentina for gastric ulcers, high blood pressure and joint pain. The active compounds maytenin, pristimerin and friedelanol show antiulcer activity comparable to ranitidine in clinical studies.",
+  "sources": "Plantas medicinales autóctonas, Todo Uruguay: https://www.todouruguay.net/plantas-medicinales-autoctonas/",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "congorosa-1.jpg",
+      "shows": "Spiny foliage",
+      "sourceFile": "Maytenus ilicifolia.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Maytenus_ilicifolia.jpg",
+      "author": "Unknown author, see file page",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "file": "congorosa-3.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Monteverdia ilicifolia. Celastracea 2 (cropped).jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Monteverdia_ilicifolia._Celastracea_2_%28cropped%29.jpg",
+      "author": "Unknown author, see file page",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "tala",
+  "commonName": "Tala",
+  "scientificName": "Celtis tala",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "The keystone tree of the Buenos Aires region. Before the city existed, tala and ceibo were the dominant trees alongside the grasses. Small to medium sized, with dense, often thorny branching and small sweet fruits.",
+  "nativeStatus": "Native to the Río de la Plata and Pampas region",
+  "nativeRange": "Argentina, Uruguay, southern Brazil and neighboring areas",
+  "ecology": "The defining tree of the talares, the native woodland of the region. Dense branching gives the canopy layer its structure, shelter and fruit. Drought tolerant and well suited to Buenos Aires soils.",
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Nesting",
+    "Edible"
+  ],
+  "wildlifeNotes": "Critical for birds. Zorzales, celestinos, calandrias and dozens of other species depend on the berries. The dense branching doubles as cover and nesting structure.",
+  "sun": "Full sun",
+  "water": "Low to medium once established",
+  "soil": "Adaptable; tolerates local soils and drought",
+  "size": "Small to medium tree",
+  "fruiting": "Small berries in the warm season",
+  "edibleUses": "The berries are small, sweet and edible, with a flavour close to dates. The Querandí and Guaraní ate them.",
+  "medicinalUses": "",
+  "otherUses": "",
+  "safety": "",
+  "sources": "Sendero de flora nativa, Jardín Botánico de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/jardinbotanico/senderofloranativa",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "tala-4.jpg",
+      "shows": "",
+      "sourceFile": "tala_fruit.jpg",
+      "sourcePage": "",
+      "author": "",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "tala-5.jpg",
+      "shows": "",
+      "sourceFile": "tala_branch.jpg",
+      "sourcePage": "",
+      "author": "",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "tala-1.jpg",
+      "shows": "Whole tree",
+      "sourceFile": "Celtis ehrenbergiana arbol.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Celtis_ehrenbergiana_arbol.jpg",
+      "author": "Arianza1",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

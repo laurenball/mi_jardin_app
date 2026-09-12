@@ -1,0 +1,43 @@
+{
+  "slug": "nangapiri",
+  "commonName": "Ñangapirí / Pitanga",
+  "scientificName": "Eugenia uniflora",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Ornamental evergreen tree of 3 to 10 metres, with fragrant white flowers and ribbed red to orange berries. The fruit is sweet-tart and strongly aromatic.",
+  "nativeStatus": "Native to northeastern Argentina and the broader subtropical Río de la Plata region",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Brazil",
+  "ecology": "Wild birds disperse the seed by eating the fruit, which is how it spreads through subtropical woodland.",
+  "hostPlant": "Skipper butterfly Phocides polybius",
+  "purposes": [
+    "Bird food",
+    "Pollinators",
+    "Butterflies",
+    "Edible",
+    "Medicinal tradition"
+  ],
+  "wildlifeNotes": "Birds eat and disperse the fruit. The fragrant white flowers draw pollinators.",
+  "sun": "Sun / partial shade",
+  "water": "Medium",
+  "soil": "Best in rich, well-drained soil",
+  "size": "Approx. 3–10 m depending on conditions",
+  "flowering": "Fragrant white flowers in spring",
+  "fruiting": "Red to orange ribbed berries",
+  "propagation": "Prefers some shelter while establishing. Once established it handles Buenos Aires cold well.",
+  "edibleUses": "Sweet-tart and aromatic, loaded with lycopene, anthocyanins and vitamin C. Eat fresh, or use for jam, liqueur or ice cream.",
+  "medicinalUses": "In Brazilian folk medicine the leaf tea is taken for diarrhoea, fever and high blood pressure. It carries significant antioxidant and antimicrobial activity.",
+  "sources": "Árboles nativos, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/arboles-nativos/nangapiri | Árboles nativos de Argentina, Argentina Forestal: https://www.argentinaforestal.com/2026/04/29/arboles-nativos-de-argentina/",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "nangapiri-3.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Pitanga (Eugenia uniflora).JPG",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Pitanga_%28Eugenia_uniflora%29.JPG",
+      "author": "Michael Hermann",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
+  ]
+}

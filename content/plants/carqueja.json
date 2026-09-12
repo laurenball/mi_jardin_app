@@ -1,0 +1,43 @@
+{
+  "slug": "carqueja",
+  "commonName": "Carqueja",
+  "scientificName": "Baccharis trimera / Baccharis articulata",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "A strange-looking plant with flat, winged green stems and no apparent leaves. One of the most important medicinal plants of the Río de la Plata.",
+  "nativeStatus": "Native to southern South America",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Brazil",
+  "ecology": "Grows in poor soils and tolerates drought, filling the herbaceous layer where little else establishes.",
+  "purposes": [
+    "Pollinators",
+    "Medicinal tradition"
+  ],
+  "wildlifeNotes": "Attracts native pollinators when flowering.",
+  "sun": "Full sun",
+  "water": "Low to medium",
+  "soil": "Tolerates poor soils",
+  "medicinalUses": "Taken as an infusion or decoction for digestive and liver-protective purposes, traditionally 2 to 3 cups daily before meals. It is also mixed straight into mate at roughly 1 part carqueja to 5 or 10 parts yerba, a common folk preparation in Argentina and Uruguay. It is hepatoprotective, anti-inflammatory, hypoglycemic and gastroprotective.",
+  "otherUses": "Several Baccharis species share the name carqueja. B. trimera and B. articulata are both used.",
+  "sources": "Carqueja, Liluama: https://liluama.pe/plantas/carqueja/",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "carqueja-3.jpg",
+      "shows": "Young shoots",
+      "sourceFile": "Baccharis trimera - Jardim Botânico de São Paulo - DSC 0149.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Baccharis_trimera_-_Jardim_Bot%C3%A2nico_de_S%C3%A3o_Paulo_-_DSC_0149.jpg",
+      "author": "Carlo Brescia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "carqueja-2.jpg",
+      "shows": "Winged stems close-up",
+      "sourceFile": "Baccharis trimera.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Baccharis_trimera.jpg",
+      "author": "Mateus Hidalgo",
+      "license": "CC BY-SA 2.5 br",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/br/deed.en"
+    }
+  ]
+}
