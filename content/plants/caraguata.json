@@ -1,0 +1,45 @@
+{
+  "slug": "caraguata",
+  "commonName": "Caraguatá",
+  "scientificName": "Eryngium horridum",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Big spiny rosette of the Pampas grassland, throwing up a branched flowering stalk well above the leaves. A structure plant rather than a pretty one.",
+  "nativeStatus": "Native to the Pampas and neighbouring grasslands",
+  "nativeRange": "Argentina, Uruguay, southern Brazil, Paraguay",
+  "ecology": "A grassland rosette that holds water at its base and creates a protected pocket at ground level. In open country these rosettes are where a lot of small animal life shelters.",
+  "purposes": [
+    "Shelter",
+    "Nesting",
+    "Bird food",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "The rosette gives ground-level cover that grassland birds use, and its dried leaf fibre is taken for nest building. The flowering stalks feed insects, then set seed.",
+  "sun": "Full sun",
+  "water": "Low",
+  "soil": "Grassland soils; tolerates heavy ground",
+  "size": "Rosette to about 1 m across, flowering stalk taller",
+  "flowering": "Branched stalk in summer",
+  "safety": "The leaf edges and tips are genuinely sharp. Keep it well away from paths.",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "caraguata-1.jpg",
+      "shows": "Rosette in grassland",
+      "sourceFile": "Caraguatá (do tupi karagûatá), Eryngium horridum - 55008371804.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Caraguat%C3%A1_%28do_tupi_karag%C3%BBat%C3%A1%29%2C_Eryngium_horridum_-_55008371804.jpg",
+      "author": "Gabriel Collares",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "file": "caraguata-2.jpg",
+      "shows": "Flowering stalk",
+      "sourceFile": "Caraguatá (do tupi karagûatá), Eryngium horridum.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Caraguat%C3%A1_%28do_tupi_karag%C3%BBat%C3%A1%29%2C_Eryngium_horridum.jpg",
+      "author": "Gabriel Collares",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    }
+  ]
+}

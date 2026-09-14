@@ -260,6 +260,30 @@ function starterRecordUpdate(plant) {
   };
 }
 
+function seedRecord(plant, index, now) {
+  const photos = (plant.photos || []).filter(Boolean);
+  return {
+    id: crypto.randomUUID(),
+    ...plant,
+    photos,
+    photo: photos[0] || null,
+    createdAt: new Date(now.getTime() - index * 1000).toISOString(),
+    updatedAt: now.toISOString(),
+    schemaVersion: SCHEMA_VERSION
+  };
+}
+
+// Seeds a starter plant the device has never held, so an existing install
+// picks up plants added to the guide, not only edits to the ones it has.
+async function addMissingStarterPlants() {
+  const known = new Set(plants.map(starterRecordFor).filter(Boolean));
+  const missing = STARTER_PLANTS.filter(starter => !known.has(starter));
+  if (missing.length === 0) return;
+  const now = new Date();
+  await addPlants(missing.map((plant, index) => seedRecord(plant, index, now)));
+  plants = await getPlants();
+}
+
 async function syncStarterRecords() {
   const updates = plants.map(starterRecordUpdate).filter(Boolean).map(updatePlant);
   if (updates.length === 0) return;
@@ -548,14 +572,6 @@ if ('serviceWorker' in navigator) {
 }
 
 plants = await getPlants();
-if (plants.length === 0) {
-  const now = new Date();
-  const seeded = STARTER_PLANTS.map((plant, i) => {
-    const photos = (plant.photos || []).filter(Boolean);
-    return {id: crypto.randomUUID(), ...plant, photos, photo: photos[0] || null, createdAt: new Date(now.getTime() - i * 1000).toISOString(), updatedAt: now.toISOString(), schemaVersion: SCHEMA_VERSION};
-  });
-  await addPlants(seeded); plants = await getPlants();
-} else {
-  await syncStarterRecords();
-}
+await addMissingStarterPlants();
+await syncStarterRecords();
 render();

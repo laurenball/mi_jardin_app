@@ -39,7 +39,9 @@ edibleUses, medicinalUses, otherUses, safety, sources
 
 Personal fields are never touched by that refresh: `status`, `priority`, `nursery`, `price`, `gardenLocation` and `notes` stay as the user left them, as do photos the user added. For the informational fields the starter record is the source of truth, so a field the starter no longer sets is cleared rather than left holding old text. That is what lets wording be corrected as well as extended.
 
-This matters because plants are seeded only into an empty database. Without the refresh, improvements to starter content would reach new installs only.
+On startup the app also seeds any starter plant the device has never held, matched by common or scientific name, so plants added to the guide reach existing installs rather than new ones only. A plant the user created themselves is never touched by either step.
+
+Both steps exist because a device seeds plants only once. Without them, new plants and corrected content would reach new installs only.
 
 ## Version 3
 

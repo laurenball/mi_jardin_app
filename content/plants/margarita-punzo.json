@@ -1,0 +1,53 @@
+{
+  "slug": "margarita-punzo",
+  "commonName": "Margarita punzó",
+  "scientificName": "Glandularia peruviana",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Low spreading native verbena with flat heads of intense scarlet flowers held just above the ground. The strongest red in the native palette.",
+  "nativeStatus": "Native to southern South America",
+  "nativeRange": "Argentina, Uruguay, southern Brazil and neighbouring regions",
+  "ecology": "A grassland groundcover of open, well-drained ground. Runs along the surface and roots as it goes, so it knits together the front of a planting.",
+  "purposes": [
+    "Butterflies",
+    "Pollinators",
+    "Hummingbirds"
+  ],
+  "wildlifeNotes": "The scarlet flowers pull in butterflies and hummingbirds, and being low it covers the ground layer that taller nectar plants leave empty.",
+  "sun": "Full sun",
+  "water": "Low",
+  "soil": "Well-drained and lean; dislikes sitting wet",
+  "size": "Low and spreading",
+  "flowering": "Spring through the warm season",
+  "propagation": "Spreads by rooting stems, and easy from cuttings.",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "margarita-punzo-1.jpg",
+      "shows": "Flower head in habitat",
+      "sourceFile": "Glandularia peruviana.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Glandularia_peruviana.jpg",
+      "author": "See file page",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
+    {
+      "file": "margarita-punzo-2.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Glandularia peruviana (18791114726).jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Glandularia_peruviana_%2818791114726%29.jpg",
+      "author": "Dick Culbert from Gibsons, B.C., Canada",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
+    {
+      "file": "margarita-punzo-3.jpg",
+      "shows": "Plant in grassland",
+      "sourceFile": "Glandularia peruviana- Soriano, Palmar, Barranca al margen de camino hacia la balsa.JPG",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Glandularia_peruviana-_Soriano%2C_Palmar%2C_Barranca_al_margen_de_camino_hacia_la_balsa.JPG",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

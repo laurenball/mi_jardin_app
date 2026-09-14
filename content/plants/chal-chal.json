@@ -1,0 +1,57 @@
+{
+  "slug": "chal-chal",
+  "commonName": "Chal-chal / Cocú",
+  "scientificName": "Allophylus edulis",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Small native tree with three-part leaves and hanging clusters of red fruit. If you plant one thing for frugivorous birds, this is the strongest candidate.",
+  "nativeStatus": "Native to the Río de la Plata region",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Brazil, Bolivia",
+  "ecology": "A understorey and edge tree of riverside and talar woodland. Fruits in high summer, when many birds are feeding young.",
+  "purposes": [
+    "Bird food",
+    "Pollinators",
+    "Shelter",
+    "Edible"
+  ],
+  "wildlifeNotes": "The red fruit is among the most sought after by frugivorous birds in the region, and the small flowers draw pollinators before it.",
+  "sun": "Sun / partial shade",
+  "water": "Medium",
+  "soil": "Adaptable, best with some depth",
+  "size": "Small tree, often 3 to 8 m",
+  "flowering": "Small cream flowers in spring",
+  "fruiting": "Red fruit in summer",
+  "edibleUses": "The small red fruits are sweet and edible fresh.",
+  "sources": "Chal chal / Cocú, Aves Argentinas: https://www.avesargentinas.org.ar/ficha-planta/chal-chalcoc%C3%BA",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "chal-chal-1.jpg",
+      "shows": "Whole tree",
+      "sourceFile": "Allophylus edulis 1.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Allophylus_edulis_1.jpg",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "chal-chal-2.jpg",
+      "shows": "Leaves",
+      "sourceFile": "Allophylus edulis (Chal Chal) en el Paisaje Protegido Valle del Lunarejo, Rivera, Uruguay.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Allophylus_edulis_%28Chal_Chal%29_en_el_Paisaje_Protegido_Valle_del_Lunarejo%2C_Rivera%2C_Uruguay.jpg",
+      "author": "Cellosuite",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "chal-chal-3.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Sapindaceae- Allophylus edulis (chal-chal) 3.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sapindaceae-_Allophylus_edulis_%28chal-chal%29_3.jpg",
+      "author": "Kristof Zyskowski & Yulia Bereshpolova",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    }
+  ]
+}

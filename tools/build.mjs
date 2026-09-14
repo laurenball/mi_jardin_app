@@ -3,7 +3,7 @@
 import {readFile, readdir, writeFile} from 'node:fs/promises';
 import {existsSync} from 'node:fs';
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
+import {fileURLToPath, pathToFileURL} from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = path.join(ROOT, 'content', 'plants');
@@ -100,7 +100,8 @@ export async function build() {
   return {plants: plants.length, photos: sw.images, cacheBumped: sw.bumped};
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+const runDirectly = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (runDirectly) {
   build().then(result => {
     console.log(`Built ${result.plants} plants, ${result.photos} photos.`);
     console.log(result.cacheBumped ? 'Service worker cache version bumped.' : 'Service worker unchanged.');

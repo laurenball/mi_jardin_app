@@ -1,0 +1,55 @@
+{
+  "slug": "verbena",
+  "commonName": "Verbena",
+  "scientificName": "Verbena bonariensis",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Tall, thin-stemmed verbena holding flat heads of small purple flowers well above its foliage. Named for Buenos Aires, and one of the hardest working nectar plants you can put in a garden.",
+  "nativeStatus": "Native to the Río de la Plata region",
+  "nativeRange": "Argentina, Uruguay, Paraguay, southern Brazil",
+  "ecology": "A grassland and open-ground perennial. Flowers for months, then sets a heavy seed crop, so it feeds insects and then birds from the same plant.",
+  "purposes": [
+    "Butterflies",
+    "Pollinators",
+    "Hummingbirds",
+    "Bird food"
+  ],
+  "wildlifeNotes": "Butterflies work it constantly through the warm season and hummingbirds visit it. Once the heads go over, small seed-eating birds strip the seed. Leave the spent stems standing for them.",
+  "sun": "Full sun",
+  "water": "Low to medium",
+  "soil": "Adaptable, tolerates poor soil",
+  "size": "Tall and narrow, to about 1.5 m",
+  "flowering": "Long warm season, well into autumn",
+  "propagation": "Self-sows freely. Move seedlings while they are small, or leave them to fill gaps.",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "verbena-1.jpg",
+      "shows": "Plant in flower",
+      "sourceFile": "Verbena bonariensis inflorescences 7th Brigade Park Chermside P1120151.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Verbena_bonariensis_inflorescences_7th_Brigade_Park_Chermside_P1120151.jpg",
+      "author": "John Robert McPherson",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "verbena-2.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Verbena bonariensis flower (01).jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Verbena_bonariensis_flower_%2801%29.jpg",
+      "author": "Gilles San Martin",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "verbena-3.jpg",
+      "shows": "Leaf",
+      "sourceFile": "Verbena bonariensis leaf (01).jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Verbena_bonariensis_leaf_%2801%29.jpg",
+      "author": "Andrea Moro",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

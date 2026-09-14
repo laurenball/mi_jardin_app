@@ -1,0 +1,55 @@
+{
+  "slug": "canelon",
+  "commonName": "Canelón",
+  "scientificName": "Myrsine laetevirens",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Evergreen tree of the talares, carrying small dark fruit packed directly along its branches. One of the steadiest bird feeders in rioplatense woodland. Older references use the name Rapanea laetevirens.",
+  "nativeStatus": "Native to the Río de la Plata region",
+  "nativeRange": "Argentina, Uruguay, Paraguay, southern Brazil",
+  "ecology": "A core tree of the talares and riverside woodland. Being evergreen it holds cover right through winter, and it fruits heavily enough to carry frugivorous birds through the lean months.",
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Nesting"
+  ],
+  "wildlifeNotes": "The dark fruits sit in tight clusters along the stems where birds can work them easily, and thrushes strip them. The dense evergreen crown doubles as cover and nest structure.",
+  "sun": "Sun / partial shade",
+  "water": "Medium",
+  "soil": "Adaptable",
+  "size": "Small to medium tree",
+  "flowering": "Small greenish flowers clustered along the branches",
+  "fruiting": "Dark purple fruit along the stems",
+  "sources": "Fichas de plantas nativas, Aves Argentinas: https://www.avesargentinas.org.ar/plantas-nativas",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "canelon-1.jpg",
+      "shows": "Dark fruit along the branches",
+      "sourceFile": "Myrsine laetevirens- Canelones, Parador Tajes, Bosque serrano al margen del Río Santa Lucía 1.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Myrsine_laetevirens-_Canelones%2C_Parador_Tajes%2C_Bosque_serrano_al_margen_del_R%C3%ADo_Santa_Luc%C3%ADa_1.jpg",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "canelon-2.jpg",
+      "shows": "Flowering branch",
+      "sourceFile": "Myrsine laetevirens 5.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Myrsine_laetevirens_5.jpg",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "canelon-3.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Flora Nativa de Uruguay Myrsine laetevirens - 1394.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Flora_Nativa_de_Uruguay_Myrsine_laetevirens_-_1394.jpg",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

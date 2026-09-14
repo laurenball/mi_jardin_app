@@ -1,0 +1,56 @@
+{
+  "slug": "espinillo",
+  "commonName": "Espinillo / Aromito",
+  "scientificName": "Vachellia caven",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Thorny native tree that covers itself in golden scented pompoms in spring. The thorns are the point: they make it one of the safest places in a garden for a small bird to nest.",
+  "nativeStatus": "Native to central and southern South America",
+  "nativeRange": "Argentina, Uruguay, Chile, Paraguay, Bolivia, southern Brazil",
+  "ecology": "The signature tree of the espinal. A nitrogen-fixing legume, so it improves the ground around it, and it is hard to kill once established.",
+  "purposes": [
+    "Nesting",
+    "Shelter",
+    "Pollinators",
+    "Butterflies"
+  ],
+  "wildlifeNotes": "The thorny crown is prime nesting habitat, protected from cats and larger predators. The scented flowers are worked hard by bees.",
+  "sun": "Full sun",
+  "water": "Low once established",
+  "soil": "Adaptable; handles poor, dry and salty ground",
+  "size": "Small tree, often 2 to 6 m",
+  "flowering": "Golden scented pompoms in spring",
+  "fruiting": "Dark curved pods",
+  "otherUses": "The wood is dense and has long been used for posts and firewood.",
+  "safety": "The paired thorns are long and sharp. Site it away from paths.",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "espinillo-1.jpg",
+      "shows": "Whole tree in flower",
+      "sourceFile": "Vachellia caven (Molina) Seigler & Ebinger - Porte.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Vachellia_caven_%28Molina%29_Seigler_%26_Ebinger_-_Porte.jpg",
+      "author": "Milena Calvi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "espinillo-2.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Reserva Cerro Pistarini - Espinillo en flor.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Reserva_Cerro_Pistarini_-_Espinillo_en_flor.jpg",
+      "author": "Diegodlh",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "file": "espinillo-3.jpg",
+      "shows": "Green pods",
+      "sourceFile": "Vachellia caven (Molina) Seigler & Ebinger - Fruto.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Vachellia_caven_%28Molina%29_Seigler_%26_Ebinger_-_Fruto.jpg",
+      "author": "Milena Calvi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

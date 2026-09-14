@@ -1,0 +1,57 @@
+{
+  "slug": "sombra-de-toro",
+  "commonName": "Sombra de toro",
+  "scientificName": "Jodina rhombifolia",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Small evergreen tree of 3 to 5 metres with thick diamond-shaped leaves, each ending in three sharp spines. It fruits red in late autumn and winter, when almost nothing else does.",
+  "nativeStatus": "Native to central and northern Argentina and neighbouring countries",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Bolivia, southern Brazil",
+  "ecology": "A tree of the espinal, talares and monte. When young it is hemiparasitic, attaching its roots to neighbouring plants and drawing part of its nutrition from them, so it establishes best near existing shrubs.",
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Nesting",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "The small greenish flowers are plain to look at but very rich in nectar, and the insects they pull in bring insectivorous birds with them. Birds eat the red fruit and spread the seed.",
+  "sun": "Full sun",
+  "water": "Low",
+  "soil": "Adaptable, well-drained",
+  "size": "3 to 5 m",
+  "flowering": "Small fragrant greenish white flowers in late autumn",
+  "fruiting": "Red fruit about 1 cm across, in winter",
+  "propagation": "Plant it near established shrubs. While young it takes part of its nutrition from their roots.",
+  "sources": "Sombra de toro, Aves Argentinas: https://www.avesargentinas.org.ar/ficha-planta/sombra-de-toro | Jodina rhombifolia, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/noticias/jodina-rhombifolia",
+  "status": "Want",
+  "priority": "High",
+  "photos": [
+    {
+      "file": "sombra-de-toro-1.jpg",
+      "shows": "Tree in fruit",
+      "sourceFile": "Jodina rhombifolia 3.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Jodina_rhombifolia_3.jpg",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "sombra-de-toro-2.jpg",
+      "shows": "Spiny leaves",
+      "sourceFile": "Jodina rhombifolia (19098155390).jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Jodina_rhombifolia_%2819098155390%29.jpg",
+      "author": "Dick Culbert from Gibsons, B.C., Canada",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
+    {
+      "file": "sombra-de-toro-3.jpg",
+      "shows": "Red fruit",
+      "sourceFile": "Jodina rhombifolia 1.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Jodina_rhombifolia_1.jpg",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

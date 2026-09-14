@@ -57,7 +57,7 @@ Three files are generated from `content/` and should not be edited directly:
 
 Both commands need Node. Nothing is installed: there are no dependencies.
 
-Changes reach the app the same way any code change does. Commit, push, and the deployed site picks them up. On each device the startup sync then refreshes the stored records.
+Changes reach the app the same way any code change does. Commit, push, and the deployed site picks them up. On each device the startup sync then refreshes the stored records and seeds any plant that device has never held.
 
 ## Important data behavior
 
