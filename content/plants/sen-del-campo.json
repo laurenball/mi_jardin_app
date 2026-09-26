@@ -21,7 +21,7 @@
   "flowering": "Summer into autumn",
   "fruiting": "Slender green seed pods",
   "medicinalUses": "The leaves are used as a gentle laxative, similar in effect to commercial senna.",
-  "status": "Want",
+  "status": "Looking For",
   "photos": [
     {
       "file": "sen-del-campo-2.jpg",
@@ -50,5 +50,7 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
-  ]
+  ],
+  "priority": "Medium",
+  "notes": "Arbusto florífero para sumar variedad. / Flowering shrub for more diversity."
 }

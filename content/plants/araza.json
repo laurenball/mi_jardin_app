@@ -17,10 +17,11 @@
   "sun": "Full sun",
   "water": "Medium",
   "soil": "Well-drained, fertile soil",
+  "size": "Altura / height: 2-8 m. Porte: arbusto grande o arbolito frutal.",
   "fruiting": "Small red or yellow fruit",
   "edibleUses": "Excellent fresh, and for juice and preserves. Native fruits like this one are being researched for nutraceutical value: they carry very high levels of antioxidant compounds linked to prevention of cardiovascular disease.",
   "sources": "Frutales originarios de Argentina y países limítrofes, Huertas Urbanas: https://www.huertasurbanas.com/2012/06/05/frutales-originarios-de-argentina-y-paises-limitrofes/",
-  "status": "Want",
+  "status": "Looking For",
   "photos": [
     {
       "file": "araza-3.jpg",
@@ -40,5 +41,7 @@
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
     }
-  ]
+  ],
+  "priority": "High",
+  "notes": "Frutal nativo para la próxima etapa. / Fruit tree for the next planting round."
 }

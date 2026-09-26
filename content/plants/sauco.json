@@ -18,30 +18,30 @@
   "sun": "Sun / partial shade",
   "water": "Medium",
   "soil": "Adaptable, likes some moisture",
-  "size": "Large shrub to small tree",
+  "size": "Altura / height: 3-6 m. Porte: arbusto grande o arbolito rápido.",
   "flowering": "Broad cream flower heads in spring and summer",
   "fruiting": "Small dark berries",
   "propagation": "Very easy from cuttings, and fast from seed.",
   "medicinalUses": "The flowers are taken as an infusion for fever and colds, a long-standing use across the region.",
   "safety": "The flowers are the part used. Raw berries and the green parts upset the stomach.",
   "sources": "Saúco, Aves Argentinas: https://www.avesargentinas.org.ar/ficha-planta/sa%C3%BAco",
-  "status": "Want",
+  "status": "Planted",
   "priority": "High",
   "photos": [
-    {
-      "file": "sauco-1.jpg",
-      "shows": "Plant in flower",
-      "sourceFile": "Sambucus australis 3.jpg",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sambucus_australis_3.jpg",
-      "author": "Andrés González",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-    },
     {
       "file": "sauco-2.jpg",
       "shows": "Flower head close-up",
       "sourceFile": "Sambucus australis 9.jpg",
       "sourcePage": "https://commons.wikimedia.org/wiki/File:Sambucus_australis_9.jpg",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "sauco-1.jpg",
+      "shows": "Plant in flower",
+      "sourceFile": "Sambucus australis 3.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sambucus_australis_3.jpg",
       "author": "Andrés González",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
@@ -55,5 +55,6 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
-  ]
+  ],
+  "notes": "Ya tenemos sauco, pero queremos agregar más. / Already planted, but we want more."
 }

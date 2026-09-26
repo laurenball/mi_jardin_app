@@ -4,7 +4,7 @@
   "scientificName": "Allophylus edulis",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Small native tree with three-part leaves and hanging clusters of red fruit. If you plant one thing for frugivorous birds, this is the strongest candidate.",
+  "description": "Native fruit tree with three-part leaves and hanging clusters of red fruit. If you plant one thing for frugivorous birds, this is the strongest candidate.",
   "nativeStatus": "Native to the Río de la Plata region",
   "nativeRange": "Argentina, Uruguay, Paraguay, Brazil, Bolivia",
   "ecology": "A understorey and edge tree of riverside and talar woodland. Fruits in high summer, when many birds are feeding young.",
@@ -18,14 +18,23 @@
   "sun": "Sun / partial shade",
   "water": "Medium",
   "soil": "Adaptable, best with some depth",
-  "size": "Small tree, often 3 to 8 m",
+  "size": "Altura / height: 4-8 m. Porte: árbol frutal pequeño, persistente o semipersistente.",
   "flowering": "Small cream flowers in spring",
   "fruiting": "Red fruit in summer",
   "edibleUses": "The small red fruits are sweet and edible fresh.",
   "sources": "Chal chal / Cocú, Aves Argentinas: https://www.avesargentinas.org.ar/ficha-planta/chal-chalcoc%C3%BA",
-  "status": "Want",
+  "status": "Looking For",
   "priority": "High",
   "photos": [
+    {
+      "file": "chal-chal-3.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Sapindaceae- Allophylus edulis (chal-chal) 3.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sapindaceae-_Allophylus_edulis_%28chal-chal%29_3.jpg",
+      "author": "Kristof Zyskowski & Yulia Bereshpolova",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
     {
       "file": "chal-chal-1.jpg",
       "shows": "Whole tree",
@@ -43,15 +52,7 @@
       "author": "Cellosuite",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-    },
-    {
-      "file": "chal-chal-3.jpg",
-      "shows": "Ripe fruit",
-      "sourceFile": "Sapindaceae- Allophylus edulis (chal-chal) 3.jpg",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sapindaceae-_Allophylus_edulis_%28chal-chal%29_3.jpg",
-      "author": "Kristof Zyskowski & Yulia Bereshpolova",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
     }
-  ]
+  ],
+  "notes": "Frutal nativo muy importante para aves; buscar próximo. / High-value bird fruit tree to source next."
 }

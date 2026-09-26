@@ -18,17 +18,8 @@
   "water": "Low",
   "soil": "Well suited to open, often lean grassland soils",
   "flowering": "Seedheads through the warm season",
-  "status": "Want",
+  "status": "Planted",
   "photos": [
-    {
-      "file": "flechilla-4.jpg",
-      "shows": "",
-      "sourceFile": "nassella.jpg",
-      "sourcePage": "",
-      "author": "",
-      "license": "",
-      "licenseUrl": ""
-    },
     {
       "file": "flechilla-1.jpg",
       "shows": "Seedheads and awns",
@@ -46,6 +37,17 @@
       "author": "Harry Rose from South West Rocks, Australia",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    },
+    {
+      "file": "flechilla-4.jpg",
+      "shows": "Grass habit",
+      "sourceFile": "nassella.jpg",
+      "sourcePage": "",
+      "author": "",
+      "license": "",
+      "licenseUrl": ""
     }
-  ]
+  ],
+  "priority": "Medium",
+  "notes": "Stipa / flechilla ya está en el santuario. / Already in the sanctuary."
 }

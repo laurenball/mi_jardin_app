@@ -21,7 +21,7 @@
   "size": "Tall and narrow, to about 1.5 m",
   "flowering": "Long warm season, well into autumn",
   "propagation": "Self-sows freely. Move seedlings while they are small, or leave them to fill gaps.",
-  "status": "Want",
+  "status": "Planted",
   "priority": "High",
   "photos": [
     {
@@ -51,5 +51,6 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
-  ]
+  ],
+  "notes": "Ya tenemos verbena en el santuario. / Already in the sanctuary."
 }

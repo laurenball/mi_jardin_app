@@ -1,6 +1,6 @@
 {
-  "name": "My Garden / Mi Jardín",
-  "short_name": "Garden / Jardín",
+  "name": "Santuario de Aves / Bird Sanctuary",
+  "short_name": "Santuario de Aves",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f4f7ef",

@@ -17,20 +17,12 @@
   "sun": "Full sun",
   "water": "Low to medium",
   "soil": "Adaptable",
+  "size": "Altura / height: 2-7 m. Porte: árbol bajo o arbolito, perenne, de copa irregular.",
   "fruiting": "Small berries",
   "edibleUses": "The berries can be used as a pepper substitute.",
   "medicinalUses": "Indigenous peoples used the resin as an antiseptic and for dental pain.",
   "status": "Want",
   "photos": [
-    {
-      "file": "molle-2.jpg",
-      "shows": "Flowers",
-      "sourceFile": "Schinus longifolius flowers.JPG",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Schinus_longifolius_flowers.JPG",
-      "author": "Andrés González",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
-    },
     {
       "file": "molle-3.jpg",
       "shows": "Ripe fruit",
@@ -39,6 +31,15 @@
       "author": "Gabriela Ruellan",
       "license": "CC BY 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+    },
+    {
+      "file": "molle-2.jpg",
+      "shows": "Flowers",
+      "sourceFile": "Schinus longifolius flowers.JPG",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Schinus_longifolius_flowers.JPG",
+      "author": "Andrés González",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
     }
   ]
 }

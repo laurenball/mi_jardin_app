@@ -18,10 +18,11 @@
   "sun": "Full sun",
   "water": "Medium to high",
   "soil": "Tolerates moist and seasonally wet soils",
+  "size": "Altura / height: 6-12 m. Porte: árbol mediano, ancho y abierto.",
   "flowering": "Spring through the warm season",
   "medicinalUses": "In rioplatense medicine the bark tea is an astringent, antiseptic and sedative. Indigenous peoples used the bark on wounds and for toothache. The alkaloids erythraline and erysodine carry the sedative and anxiolytic action.",
   "sources": "Sendero de flora nativa, Jardín Botánico de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/jardinbotanico/senderofloranativa",
-  "status": "Want",
+  "status": "Planted",
   "priority": "High",
   "photos": [
     {
@@ -44,12 +45,13 @@
     },
     {
       "file": "ceibo-4.jpg",
-      "shows": "",
+      "shows": "Whole tree in flower",
       "sourceFile": "ceibo-tree.jpg",
       "sourcePage": "",
       "author": "",
       "license": "",
       "licenseUrl": ""
     }
-  ]
+  ],
+  "notes": "Ya tenemos ceibo en el santuario. / Already in the sanctuary."
 }

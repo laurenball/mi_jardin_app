@@ -25,7 +25,7 @@
   "edibleUses": "The fruit is small but edible and aromatic, less fleshy than cultivated passionfruit.",
   "medicinalUses": "The anxiolytic effect comes from chrysin. This is one of the best-documented natural anxiolytics in the world, used in herbal medicine across South America and now in European phytotherapy.",
   "sources": "Plantas medicinales autóctonas de la Argentina, Talapampa: http://www.talapampa.com/plantas_medicinales_autoctonas_de_la_argentina.pdf",
-  "status": "Want",
+  "status": "Planted",
   "priority": "High",
   "photos": [
     {
@@ -55,5 +55,6 @@
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
     }
-  ]
+  ],
+  "notes": "Maracuyá / mburucuyá ya está en el santuario. / Already in the sanctuary."
 }

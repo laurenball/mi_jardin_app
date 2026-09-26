@@ -1,0 +1,50 @@
+{
+  "slug": "araucaria",
+  "commonName": "Araucaria / Pehuén",
+  "scientificName": "Araucaria araucana",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Conífera nativa muy alta, de tronco recto y copa escultórica en pisos. Es el árbol alto real de esta lista: un ejemplar adulto puede dominar completamente el dosel.",
+  "nativeStatus": "Nativa de Patagonia andina / Native to Andean Patagonia",
+  "nativeRange": "Argentina: Neuquén y Río Negro; también Chile",
+  "ecology": "Forma bosques montanos fríos, sobre suelos arenosos, rocosos y volcánicos bien drenados. No es una especie rioplatense: en el santuario sería un árbol de presencia y estructura, no un árbol típico del talar.",
+  "purposes": [
+    "Shelter",
+    "Nesting",
+    "Edible"
+  ],
+  "wildlifeNotes": "Aporta estructura vertical, percha y refugio permanente. Sus semillas grandes, los piñones, son alimento importante en su región de origen, aunque no cumple el mismo rol para aves frugívoras locales que tala, chal-chal o canelón.",
+  "sun": "Full sun",
+  "water": "Medium",
+  "soil": "Muy buen drenaje; evitar suelos encharcados",
+  "size": "Altura / height: hasta 50 m. Porte: árbol muy alto; necesita distancia de casas, cables y medianeras.",
+  "flowering": "Conos masculinos en primavera; especie dioica, con plantas masculinas y femeninas",
+  "fruiting": "Conos femeninos grandes con piñones comestibles; maduran lentamente",
+  "propagation": "Por semilla fresca; crecimiento lento al principio y muy longevo.",
+  "edibleUses": "Los piñones son comestibles y culturalmente importantes para pueblos originarios del sur.",
+  "safety": "Árbol de escala grande. Los conos y ramas pueden ser pesados; ubicar lejos de zonas de paso, techos y cableado.",
+  "sources": "Araucaria araucana, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/araucaria-araucana | Araucaria araucana, FAO Forest Genetic Resources: https://www.fao.org/4/k1203e/k1203e02.htm",
+  "status": "Looking For",
+  "priority": "Medium",
+  "photos": [
+    {
+      "file": "araucaria-1.jpg",
+      "shows": "Whole tree form",
+      "sourceFile": "Araucaria araucana - 17 March 2026.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Araucaria_araucana_-_17_March_2026.jpg",
+      "author": "Aethonatic",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "araucaria-2.jpg",
+      "shows": "Female cones",
+      "sourceFile": "Araucaria araucana cones.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Araucaria_araucana_cones.jpg",
+      "author": "MPF",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
+  ],
+  "notes": "Árbol muy alto para evaluar con cuidado por espacio, raíces, sombra y caída de conos. / Very tall tree; evaluate placement carefully."
+}

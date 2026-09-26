@@ -23,8 +23,17 @@
   "status": "Want",
   "photos": [
     {
+      "file": "cortadera-1.jpg",
+      "shows": "Plume-like inflorescences",
+      "sourceFile": "Herbe Pampa FR 2008.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Herbe_Pampa_FR_2008.jpg",
+      "author": "JLPC",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    {
       "file": "cortadera-4.jpg",
-      "shows": "",
+      "shows": "Plant habit and plumes",
       "sourceFile": "pampas.webp",
       "sourcePage": "",
       "author": "",

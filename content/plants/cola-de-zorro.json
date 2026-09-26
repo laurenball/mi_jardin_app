@@ -21,8 +21,17 @@
   "status": "Want",
   "photos": [
     {
+      "file": "cola-de-zorro-3.jpg",
+      "shows": "Foxtail seedhead close-up",
+      "sourceFile": "Starr-130319-2998-Setaria parviflora-seedhead-Crater Hill Kilauea Pt NWR-Kauai (25208500585).jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Starr-130319-2998-Setaria_parviflora-seedhead-Crater_Hill_Kilauea_Pt_NWR-Kauai_(25208500585).jpg",
+      "author": "Forest & Kim Starr",
+      "license": "CC BY 3.0 US",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/us/deed.en"
+    },
+    {
       "file": "cola-de-zorro-2.jpg",
-      "shows": "",
+      "shows": "Foxtail seedheads",
       "sourceFile": "setaria.jpg",
       "sourcePage": "",
       "author": "",
@@ -31,7 +40,7 @@
     },
     {
       "file": "cola-de-zorro-1.jpg",
-      "shows": "",
+      "shows": "Foxtail grass in habitat",
       "sourceFile": "cola.jpg",
       "sourcePage": "",
       "author": "",

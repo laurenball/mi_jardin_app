@@ -22,11 +22,20 @@
   "flowering": "Long warm-season display",
   "medicinalUses": "A leaf infusion is used for respiratory complaints and fever.",
   "safety": "Leaves and unripe berries are toxic if eaten. Worth knowing where children or pets browse.",
-  "status": "Want",
+  "status": "Planted",
   "photos": [
     {
+      "file": "lantana-6.jpg",
+      "shows": "Flowers and fruit together",
+      "sourceFile": "Fruits and flowers of Lantana camara 20201019.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Fruits_and_flowers_of_Lantana_camara_20201019.jpg",
+      "author": "そらみみ",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
       "file": "lantana-5.jpg",
-      "shows": "",
+      "shows": "Flowering plant",
       "sourceFile": "lantana.jpg",
       "sourcePage": "",
       "author": "",
@@ -35,12 +44,14 @@
     },
     {
       "file": "lantana-4.jpg",
-      "shows": "",
+      "shows": "Flower cluster",
       "sourceFile": "lantana-whole.jpg",
       "sourcePage": "",
       "author": "",
       "license": "",
       "licenseUrl": ""
     }
-  ]
+  ],
+  "priority": "Medium",
+  "notes": "Ya tenemos lantana en el santuario. / Already in the sanctuary."
 }

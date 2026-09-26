@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f4f7ef" />
-  <title>My Garden / Mi Jardín</title>
+  <title>Santuario de Aves / Bird Sanctuary</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
@@ -12,54 +12,54 @@
 <body>
   <header class="app-header">
     <div>
-      <p class="eyebrow">My Garden / Mi Jardín</p>
-      <h1>Plant Guide / Guía de plantas</h1>
-      <p class="header-copy">A personal guide for building a native, wildlife-friendly garden. / Una guía personal para crear un jardín nativo y amigable con la fauna.</p>
+      <p class="eyebrow">Santuario de Aves / Bird Sanctuary</p>
+      <h1>Guía de plantas / Plant Guide</h1>
+      <p class="header-copy">Una guía personal para crear y cuidar un jardín nativo amigable con la fauna. / A personal guide for building and caring for a native, wildlife-friendly garden.</p>
     </div>
-    <button id="open-form" class="primary-button">+ Add plant / Agregar planta</button>
+    <button id="open-form" class="primary-button">+ Agregar planta / Add plant</button>
   </header>
 
   <main>
-    <section class="toolbar" aria-label="Plant tools / Herramientas de plantas">
+    <section class="toolbar" aria-label="Herramientas de plantas / Plant tools">
       <label class="search-field">
-        <span class="sr-only">Search plants / Buscar plantas</span>
-        <input id="search" type="search" placeholder="Search plants / Buscar plantas…" autocomplete="off" />
+        <span class="sr-only">Buscar plantas / Search plants</span>
+        <input id="search" type="search" placeholder="Buscar plantas / Search plants…" autocomplete="off" />
       </label>
       <div class="filters">
         <label>
-          <span>Layer / Estrato</span>
+          <span>Estrato / Layer</span>
           <select id="layer-filter">
-            <option value="">All / Todos</option>
-            <option value="Canopy">Canopy / Dosel</option>
-            <option value="Fruit tree">Fruit tree / Frutal</option>
-            <option value="Shrub">Shrub / Arbusto</option>
-            <option value="Herbaceous">Herbaceous / Herbácea</option>
-            <option value="Grass">Grass / Gramínea</option>
-            <option value="Climber">Climber / Trepadora</option>
+            <option value="">Todos / All</option>
+            <option value="Canopy">Dosel / Canopy</option>
+            <option value="Fruit tree">Frutal / Fruit tree</option>
+            <option value="Shrub">Arbusto / Shrub</option>
+            <option value="Herbaceous">Herbácea / Herbaceous</option>
+            <option value="Grass">Gramínea / Grass</option>
+            <option value="Climber">Trepadora / Climber</option>
           </select>
         </label>
         <label>
-          <span>Purpose / Función</span>
+          <span>Función / Purpose</span>
           <select id="purpose-filter">
-            <option value="">All / Todas</option>
-            <option value="Bird food">Bird food / Alimento para aves</option>
-            <option value="Shelter">Shelter / Refugio</option>
-            <option value="Nesting">Nesting / Nidificación</option>
-            <option value="Hummingbirds">Hummingbirds / Picaflores</option>
-            <option value="Butterflies">Butterflies / Mariposas</option>
-            <option value="Pollinators">Pollinators / Polinizadores</option>
-            <option value="Edible">Edible / Comestible</option>
-            <option value="Medicinal tradition">Medicinal / Uso medicinal</option>
+            <option value="">Todas / All</option>
+            <option value="Bird food">Alimento para aves / Bird food</option>
+            <option value="Shelter">Refugio / Shelter</option>
+            <option value="Nesting">Nidificación / Nesting</option>
+            <option value="Hummingbirds">Picaflores / Hummingbirds</option>
+            <option value="Butterflies">Mariposas / Butterflies</option>
+            <option value="Pollinators">Polinizadores / Pollinators</option>
+            <option value="Edible">Comestible / Edible</option>
+            <option value="Medicinal tradition">Uso medicinal / Medicinal</option>
           </select>
         </label>
         <label>
-          <span>Status / Estado</span>
+          <span>Estado / Status</span>
           <select id="status-filter">
-            <option value="">All / Todos</option>
-            <option value="Want">Want / Quiero</option>
-            <option value="Looking For">Looking For / Buscando</option>
-            <option value="Bought">Bought / Comprada</option>
-            <option value="Planted">Planted / Plantada</option>
+            <option value="">Todos / All</option>
+            <option value="Want">Quiero / Want</option>
+            <option value="Looking For">Buscando / Looking for</option>
+            <option value="Bought">Comprada / Bought</option>
+            <option value="Planted">Plantada / Planted</option>
           </select>
         </label>
       </div>
@@ -67,16 +67,16 @@
 
     <section id="empty-state" class="empty-state">
       <div class="empty-icon">🌿</div>
-      <h2>Your plant guide is empty / Tu guía de plantas está vacía</h2>
-      <p>Add plants you are interested in and keep ecology, growing information, uses, and your own garden notes together. / Agrega las plantas que te interesan y guarda juntas la ecología, el cultivo, los usos y tus propias notas del jardín.</p>
-      <button id="empty-add" class="secondary-button">Add your first plant / Agrega tu primera planta</button>
+      <h2>Tu guía de plantas está vacía / Your plant guide is empty</h2>
+      <p>Agrega las plantas que te interesan y guarda juntas la ecología, los cuidados, los usos y tus notas del santuario. / Add plants you are interested in and keep ecology, care, uses, and your sanctuary notes together.</p>
+      <button id="empty-add" class="secondary-button">Agrega tu primera planta / Add your first plant</button>
     </section>
 
     <section id="no-results" class="empty-state no-results" hidden>
       <div class="empty-icon">🔍</div>
-      <h2>No plants match these filters / Ninguna planta coincide con estos filtros</h2>
-      <p>Try a different search or clear the filters to see your whole guide. / Probá otra búsqueda o limpiá los filtros para ver toda tu guía.</p>
-      <button id="clear-filters" class="secondary-button" type="button">Clear filters / Limpiar filtros</button>
+      <h2>Ninguna planta coincide con estos filtros / No plants match these filters</h2>
+      <p>Probá otra búsqueda o limpiá los filtros para ver toda tu guía. / Try a different search or clear the filters to see your whole guide.</p>
+      <button id="clear-filters" class="secondary-button" type="button">Limpiar filtros / Clear filters</button>
     </section>
 
     <section id="plant-grid" class="plant-grid" aria-live="polite"></section>
@@ -91,101 +91,101 @@
     <form id="plant-form" method="dialog">
       <div class="dialog-heading">
         <div>
-          <p class="eyebrow">New entry / Nueva entrada</p>
-          <h2>Add a plant / Agregar una planta</h2>
+          <p class="eyebrow">Nueva entrada / New entry</p>
+          <h2>Agregar una planta / Add a plant</h2>
         </div>
-        <button type="button" id="close-form" class="icon-button" aria-label="Close / Cerrar">×</button>
+        <button type="button" id="close-form" class="icon-button" aria-label="Cerrar / Close">×</button>
       </div>
 
       <details open>
-        <summary>Identity / Identidad</summary>
-        <label>Photos / Fotos<input id="photo" name="photos" type="file" accept="image/*" multiple /></label>
+        <summary>Identidad / Identity</summary>
+        <label>Fotos / Photos<input id="photo" name="photos" type="file" accept="image/*" multiple /></label>
         <div class="two-column">
-          <label>Common name / Nombre común<input name="commonName" required placeholder="e.g. Tala" /></label>
-          <label>Scientific name / Nombre científico<input name="scientificName" placeholder="e.g. Celtis tala" /></label>
+          <label>Nombre común / Common name<input name="commonName" required placeholder="ej. Tala" /></label>
+          <label>Nombre científico / Scientific name<input name="scientificName" placeholder="ej. Celtis tala" /></label>
         </div>
         <div class="two-column">
-          <label>Plant type / Tipo de planta
+          <label>Tipo de planta / Plant type
             <select name="plantType">
-              <option value="">Not set / Sin definir</option><option>Tree</option><option>Shrub</option><option>Herb</option><option>Grass</option><option>Climber</option>
+              <option value="">Sin definir / Not set</option><option value="Tree">Árbol / Tree</option><option value="Shrub">Arbusto / Shrub</option><option value="Herb">Herbácea / Herb</option><option value="Grass">Gramínea / Grass</option><option value="Climber">Trepadora / Climber</option>
             </select>
           </label>
-          <label>Garden layer / Estrato del jardín
+          <label>Estrato del jardín / Garden layer
             <select name="layer">
-              <option value="">Not set / Sin definir</option><option value="Canopy">Canopy / Dosel</option><option value="Fruit tree">Fruit tree / Frutal</option><option value="Shrub">Shrub / Arbusto</option><option value="Herbaceous">Herbaceous / Herbácea</option><option value="Grass">Grass / Gramínea</option><option value="Climber">Climber / Trepadora</option>
+              <option value="">Sin definir / Not set</option><option value="Canopy">Dosel / Canopy</option><option value="Fruit tree">Frutal / Fruit tree</option><option value="Shrub">Arbusto / Shrub</option><option value="Herbaceous">Herbácea / Herbaceous</option><option value="Grass">Gramínea / Grass</option><option value="Climber">Trepadora / Climber</option>
             </select>
           </label>
         </div>
-        <label>Description / Descripción<textarea name="description" rows="3" placeholder="What is it like? / ¿Cómo es?"></textarea></label>
+        <label>Descripción / Description<textarea name="description" rows="3" placeholder="¿Cómo es? / What is it like?"></textarea></label>
       </details>
 
       <details>
-        <summary>Native ecology / Ecología nativa</summary>
+        <summary>Ecología nativa / Native ecology</summary>
         <div class="two-column">
-          <label>Native status / Condición nativa<input name="nativeStatus" placeholder="e.g. Native to the Río de la Plata region / Nativa de la región rioplatense" /></label>
-          <label>Native range / Distribución nativa<input name="nativeRange" placeholder="e.g. Argentina, Uruguay, southern Brazil" /></label>
+          <label>Condición nativa / Native status<input name="nativeStatus" placeholder="ej. Nativa de la región rioplatense / Native to the Río de la Plata region" /></label>
+          <label>Distribución nativa / Native range<input name="nativeRange" placeholder="ej. Argentina, Uruguay, sur de Brasil" /></label>
         </div>
-        <label>Habitat & ecological role / Hábitat y función ecológica<textarea name="ecology" rows="3"></textarea></label>
-        <label>Host plant / Planta hospedera<input name="hostPlant" placeholder="Butterfly/insect species, if relevant / Especie de mariposa/insecto, si corresponde" /></label>
+        <label>Hábitat y función ecológica / Habitat & ecological role<textarea name="ecology" rows="3"></textarea></label>
+        <label>Planta hospedera / Host plant<input name="hostPlant" placeholder="Especie de mariposa/insecto, si corresponde / Butterfly or insect species, if relevant" /></label>
       </details>
 
       <details>
-        <summary>Wildlife / Fauna</summary>
+        <summary>Fauna / Wildlife</summary>
         <div class="checkbox-grid">
-          <label class="check"><input type="checkbox" name="purposes" value="Bird food" /> Bird food / Alimento para aves</label>
-          <label class="check"><input type="checkbox" name="purposes" value="Shelter" /> Shelter / Refugio</label>
-          <label class="check"><input type="checkbox" name="purposes" value="Nesting" /> Nesting / Nidificación</label>
-          <label class="check"><input type="checkbox" name="purposes" value="Hummingbirds" /> Hummingbirds / Picaflores</label>
-          <label class="check"><input type="checkbox" name="purposes" value="Butterflies" /> Butterflies / Mariposas</label>
-          <label class="check"><input type="checkbox" name="purposes" value="Pollinators" /> Pollinators / Polinizadores</label>
-          <label class="check"><input type="checkbox" name="purposes" value="Edible" /> Edible / Comestible</label>
-          <label class="check"><input type="checkbox" name="purposes" value="Medicinal tradition" /> Medicinal / Uso medicinal</label>
+          <label class="check"><input type="checkbox" name="purposes" value="Bird food" /> Alimento para aves / Bird food</label>
+          <label class="check"><input type="checkbox" name="purposes" value="Shelter" /> Refugio / Shelter</label>
+          <label class="check"><input type="checkbox" name="purposes" value="Nesting" /> Nidificación / Nesting</label>
+          <label class="check"><input type="checkbox" name="purposes" value="Hummingbirds" /> Picaflores / Hummingbirds</label>
+          <label class="check"><input type="checkbox" name="purposes" value="Butterflies" /> Mariposas / Butterflies</label>
+          <label class="check"><input type="checkbox" name="purposes" value="Pollinators" /> Polinizadores / Pollinators</label>
+          <label class="check"><input type="checkbox" name="purposes" value="Edible" /> Comestible / Edible</label>
+          <label class="check"><input type="checkbox" name="purposes" value="Medicinal tradition" /> Uso medicinal / Medicinal</label>
         </div>
-        <label>Wildlife notes / Notas sobre fauna<textarea name="wildlifeNotes" rows="3" placeholder="Fruit, nectar, shelter, nesting, specific visitors…"></textarea></label>
+        <label>Notas sobre fauna / Wildlife notes<textarea name="wildlifeNotes" rows="3" placeholder="Fruta, néctar, refugio, nidificación, visitantes específicos…"></textarea></label>
       </details>
 
       <details>
-        <summary>Growing / Cultivo</summary>
+        <summary>Cuidados / Care</summary>
         <div class="two-column">
-          <label>Sun / Sol<select name="sun"><option value="">Not set / Sin definir</option><option value="Full sun">Full sun / Pleno sol</option><option value="Sun / partial shade">Sun / partial shade / Sol y media sombra</option><option value="Partial shade">Partial shade / Media sombra</option><option value="Shade">Shade / Sombra</option></select></label>
-          <label>Water / Agua<input name="water" placeholder="Low, medium, high / Baja, media, alta" /></label>
+          <label>Sol / Sun<select name="sun"><option value="">Sin definir / Not set</option><option value="Full sun">Pleno sol / Full sun</option><option value="Sun / partial shade">Sol y media sombra / Sun and partial shade</option><option value="Partial shade">Media sombra / Partial shade</option><option value="Shade">Sombra / Shade</option></select></label>
+          <label>Agua / Water<input name="water" placeholder="Baja, media, alta / Low, medium, high" /></label>
         </div>
-        <div class="two-column"><label>Soil / Suelo<input name="soil" /></label><label>Size / Tamaño<input name="size" placeholder="Mature height × width / Altura × ancho adulto" /></label></div>
-        <div class="two-column"><label>Flowering / Floración<input name="flowering" /></label><label>Fruiting / Fructificación<input name="fruiting" /></label></div>
-        <label>Propagation / Propagación<textarea name="propagation" rows="2"></textarea></label>
+        <div class="two-column"><label>Suelo / Soil<input name="soil" /></label><label>Tamaño / Size<input name="size" placeholder="Altura × ancho adulto / Mature height × width" /></label></div>
+        <div class="two-column"><label>Floración / Flowering<input name="flowering" /></label><label>Fructificación / Fruiting<input name="fruiting" /></label></div>
+        <label>Propagación / Propagation<textarea name="propagation" rows="2"></textarea></label>
       </details>
 
       <details>
-        <summary>Human uses / Usos humanos</summary>
-        <label>Edible uses / Usos comestibles<textarea name="edibleUses" rows="2"></textarea></label>
-        <label>Medicinal use / Uso medicinal<textarea name="medicinalUses" rows="2" placeholder="How it is prepared and what it is used for / Cómo se prepara y para qué se usa"></textarea></label>
-        <label>Other traditional uses / Otros usos tradicionales<textarea name="otherUses" rows="2"></textarea></label>
-        <label>Safety / Precauciones<textarea name="safety" rows="2"></textarea></label>
+        <summary>Usos humanos / Human uses</summary>
+        <label>Usos comestibles / Edible uses<textarea name="edibleUses" rows="2"></textarea></label>
+        <label>Uso medicinal / Medicinal use<textarea name="medicinalUses" rows="2" placeholder="Cómo se prepara y para qué se usa / How it is prepared and what it is used for"></textarea></label>
+        <label>Otros usos tradicionales / Other traditional uses<textarea name="otherUses" rows="2"></textarea></label>
+        <label>Precauciones / Safety<textarea name="safety" rows="2"></textarea></label>
       </details>
 
       <details>
-        <summary>Sources / Fuentes</summary>
-        <label>Where this information came from / De dónde viene esta información<textarea name="sources" rows="3" placeholder="Links or book references, separated by |"></textarea></label>
+        <summary>Fuentes / Sources</summary>
+        <label>De dónde viene esta información / Where this information came from<textarea name="sources" rows="3" placeholder="Links o referencias, separados por |"></textarea></label>
       </details>
 
       <details open>
-        <summary>My garden / Mi jardín</summary>
+        <summary>Santuario de aves / Bird sanctuary</summary>
         <div class="two-column">
-          <label>Status / Estado<select name="status"><option value="Want">Want / Quiero</option><option value="Looking For">Looking For / Buscando</option><option value="Bought">Bought / Comprada</option><option value="Planted">Planted / Plantada</option></select></label>
-          <label>Priority / Prioridad<select name="priority"><option value="">Not set / Sin definir</option><option>High</option><option>Medium</option><option>Low</option></select></label>
+          <label>Estado / Status<select name="status"><option value="Want">Quiero / Want</option><option value="Looking For">Buscando / Looking for</option><option value="Bought">Comprada / Bought</option><option value="Planted">Plantada / Planted</option></select></label>
+          <label>Prioridad / Priority<select name="priority"><option value="">Sin definir / Not set</option><option value="High">Alta / High</option><option value="Medium">Media / Medium</option><option value="Low">Baja / Low</option></select></label>
         </div>
-        <div class="two-column"><label>Nursery or source / Vivero o fuente<input name="nursery" /></label><label>Price / Precio<input name="price" /></label></div>
-        <label>Possible garden location / Posible ubicación<input name="gardenLocation" /></label>
-        <label>My notes / Mis notas<textarea name="notes" rows="3" placeholder="Why do I want it? What should I remember? / ¿Por qué la quiero? ¿Qué quiero recordar?"></textarea></label>
+        <div class="two-column"><label>Vivero o fuente / Nursery or source<input name="nursery" /></label><label>Precio / Price<input name="price" /></label></div>
+        <label>Ubicación posible / Possible garden location<input name="gardenLocation" /></label>
+        <label>Mis notas / My notes<textarea name="notes" rows="3" placeholder="¿Por qué la quiero? ¿Qué quiero recordar? / Why do I want it? What should I remember?"></textarea></label>
       </details>
 
-      <div class="form-actions"><button type="button" id="cancel-form" class="secondary-button">Cancel / Cancelar</button><button type="submit" class="primary-button">Save plant / Guardar planta</button></div>
+      <div class="form-actions"><button type="button" id="cancel-form" class="secondary-button">Cancelar / Cancel</button><button type="submit" class="primary-button">Guardar planta / Save plant</button></div>
     </form>
   </dialog>
 
   <aside id="update-notice" class="update-notice" hidden>
-    <span>New version available / Nueva versión disponible</span>
-    <button id="update-app" class="primary-button" type="button">Update / Actualizar</button>
+    <span>Nueva versión disponible / New version available</span>
+    <button id="update-app" class="primary-button" type="button">Actualizar / Update</button>
   </aside>
 
   <script type="module" src="app.js"></script>

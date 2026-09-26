@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Garden content editor</title>
+<title>Editor de contenido del santuario</title>
 <style>
 :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#253022;background:#f4f7ef}
 *{box-sizing:border-box}body{margin:0;display:grid;grid-template-columns:minmax(200px,260px) 1fr;min-height:100vh}
@@ -39,24 +39,24 @@ legend{font-weight:800;padding:0 6px}
 </head>
 <body>
 <aside>
-  <h1>Garden content</h1>
+  <h1>Contenido del santuario</h1>
   <div id="list"></div>
-  <button id="add" class="secondary" style="margin-top:12px;width:100%">+ New plant</button>
+  <button id="add" class="secondary" style="margin-top:12px;width:100%">+ Nueva planta</button>
 </aside>
 <main id="main"></main>
 
 <script type="module">
 const TEXT_FIELDS = [
-  ['commonName','Common name','input'], ['scientificName','Scientific name','input'],
-  ['description','Description','textarea'],
-  ['nativeStatus','Native status','input'], ['nativeRange','Native range','input'],
-  ['ecology','Habitat and ecological role','textarea'], ['hostPlant','Host plant','input'],
-  ['wildlifeNotes','Wildlife notes','textarea'],
-  ['water','Water','input'], ['soil','Soil','input'], ['size','Size','input'],
-  ['flowering','Flowering','input'], ['fruiting','Fruiting','input'], ['propagation','Propagation','textarea'],
-  ['edibleUses','Edible uses','textarea'], ['medicinalUses','Medicinal use','textarea'],
-  ['otherUses','Other uses','textarea'], ['safety','Safety','textarea'],
-  ['sources','Sources','textarea']
+  ['commonName','Nombre común / Common name','input'], ['scientificName','Nombre científico / Scientific name','input'],
+  ['description','Descripción / Description','textarea'],
+  ['nativeStatus','Condición nativa / Native status','input'], ['nativeRange','Distribución nativa / Native range','input'],
+  ['ecology','Hábitat y función ecológica / Habitat and ecological role','textarea'], ['hostPlant','Planta hospedera / Host plant','input'],
+  ['wildlifeNotes','Notas sobre fauna / Wildlife notes','textarea'],
+  ['water','Agua / Water','input'], ['soil','Suelo / Soil','input'], ['size','Tamaño / Size','input'],
+  ['flowering','Floración / Flowering','input'], ['fruiting','Fructificación / Fruiting','input'], ['propagation','Propagación / Propagation','textarea'],
+  ['edibleUses','Usos comestibles / Edible uses','textarea'], ['medicinalUses','Uso medicinal / Medicinal use','textarea'],
+  ['otherUses','Otros usos / Other uses','textarea'], ['safety','Precauciones / Safety','textarea'],
+  ['sources','Fuentes / Sources','textarea']
 ];
 const SELECTS = {
   plantType: ['', 'Tree', 'Shrub', 'Herb', 'Grass', 'Climber'],
@@ -65,6 +65,36 @@ const SELECTS = {
   priority: ['', 'High', 'Medium', 'Low']
 };
 const PURPOSES = ['Bird food','Shelter','Nesting','Hummingbirds','Butterflies','Pollinators','Edible','Medicinal tradition'];
+const DISPLAY_LABELS = {
+  '': 'Sin definir / Not set',
+  'Tree': 'Árbol / Tree',
+  'Shrub': 'Arbusto / Shrub',
+  'Herb': 'Herbácea / Herb',
+  'Grass': 'Gramínea / Grass',
+  'Climber': 'Trepadora / Climber',
+  'Canopy': 'Dosel / Canopy',
+  'Fruit tree': 'Frutal / Fruit tree',
+  'Herbaceous': 'Herbácea / Herbaceous',
+  'Want': 'Quiero / Want',
+  'Looking For': 'Buscando / Looking for',
+  'Bought': 'Comprada / Bought',
+  'Planted': 'Plantada / Planted',
+  'High': 'Alta / High',
+  'Medium': 'Media / Medium',
+  'Low': 'Baja / Low',
+  'Full sun': 'Pleno sol / Full sun',
+  'Sun / partial shade': 'Sol y media sombra / Sun and partial shade',
+  'Partial shade': 'Media sombra / Partial shade',
+  'Shade': 'Sombra / Shade',
+  'Bird food': 'Alimento para aves / Bird food',
+  'Shelter': 'Refugio / Shelter',
+  'Nesting': 'Nidificación / Nesting',
+  'Hummingbirds': 'Picaflores / Hummingbirds',
+  'Butterflies': 'Mariposas / Butterflies',
+  'Pollinators': 'Polinizadores / Pollinators',
+  'Edible': 'Comestible / Edible',
+  'Medicinal tradition': 'Uso medicinal / Medicinal'
+};
 const MAX_W = 860, MAX_H = 1150, MIN_LONG_EDGE = 700, BUDGET = 140 * 1024;
 const SCALE_STEPS = [1, 0.86, 0.74, 0.64], QUALITY_STEPS = [0.82, 0.76, 0.7, 0.64];
 
@@ -93,7 +123,7 @@ function renderList() {
     button.setAttribute('aria-current', String(plant.slug === current?.slug));
     button.innerHTML = `${escape(plant.commonName)}<small>${escape(plant.scientificName || '')}</small>`;
     button.onclick = () => {
-      if (dirty && !confirm('Discard unsaved changes?')) return;
+      if (dirty && !confirm('¿Descartar cambios sin guardar? / Discard unsaved changes?')) return;
       current = plant; dirty = false; renderList(); renderEditor();
     };
     return button;
@@ -108,7 +138,7 @@ function field(key, label, kind) {
   const input = document.createElement(kind === 'textarea' ? 'textarea' : 'input');
   if (kind === 'textarea') input.rows = key === 'description' || key === 'medicinalUses' ? 4 : 3;
   input.value = current[key] || '';
-  input.oninput = () => { current[key] = input.value; dirty = true; setStatus('Unsaved changes', ''); };
+  input.oninput = () => { current[key] = input.value; dirty = true; setStatus('Cambios sin guardar / Unsaved changes', ''); };
   wrap.append(input);
   return wrap;
 }
@@ -119,11 +149,11 @@ function selectField(key, label) {
   const select = document.createElement('select');
   for (const option of SELECTS[key]) {
     const el = document.createElement('option');
-    el.value = option; el.textContent = option || 'Not set';
+    el.value = option; el.textContent = DISPLAY_LABELS[option] || option || DISPLAY_LABELS[''];
     select.append(el);
   }
   select.value = current[key] || '';
-  select.onchange = () => { current[key] = select.value; dirty = true; setStatus('Unsaved changes', ''); };
+  select.onchange = () => { current[key] = select.value; dirty = true; setStatus('Cambios sin guardar / Unsaved changes', ''); };
   wrap.append(select);
   return wrap;
 }
@@ -135,14 +165,14 @@ function photoRow(photo, index) {
   img.src = `/assets/plants/${photo.file}?t=${Date.now()}`;
   img.alt = photo.shows || photo.file;
   const body = document.createElement('div');
-  const meta = [['shows','Shows'],['sourceFile','Source file'],['sourcePage','Source page'],['author','Author'],['license','License'],['licenseUrl','License URL']];
+  const meta = [['shows','Muestra / Shows'],['sourceFile','Archivo fuente / Source file'],['sourcePage','Página fuente / Source page'],['author','Autoría / Author'],['license','Licencia / License'],['licenseUrl','URL de licencia / License URL']];
   body.innerHTML = `<strong>${index + 1}. ${escape(photo.file)}</strong>`;
   for (const [key, label] of meta) {
     const wrap = document.createElement('label');
     wrap.textContent = label;
     const input = document.createElement('input');
     input.value = photo[key] || '';
-    input.oninput = () => { photo[key] = input.value; dirty = true; setStatus('Unsaved changes', ''); };
+    input.oninput = () => { photo[key] = input.value; dirty = true; setStatus('Cambios sin guardar / Unsaved changes', ''); };
     wrap.append(input);
     body.append(wrap);
   }
@@ -154,9 +184,9 @@ function photoRow(photo, index) {
     return el;
   };
   actions.append(
-    button('↑ Earlier', 'secondary', () => movePhoto(index, -1), index === 0),
-    button('↓ Later', 'secondary', () => movePhoto(index, 1), index === current.photos.length - 1),
-    button('Remove', 'danger', () => removePhoto(index))
+    button('↑ Antes / Earlier', 'secondary', () => movePhoto(index, -1), index === 0),
+    button('↓ Después / Later', 'secondary', () => movePhoto(index, 1), index === current.photos.length - 1),
+    button('Quitar / Remove', 'danger', () => removePhoto(index))
   );
   body.append(actions);
   row.append(img, body);
@@ -166,15 +196,15 @@ function photoRow(photo, index) {
 function movePhoto(index, delta) {
   const photos = current.photos;
   [photos[index], photos[index + delta]] = [photos[index + delta], photos[index]];
-  dirty = true; renderEditor(); setStatus('Unsaved changes', '');
+  dirty = true; renderEditor(); setStatus('Cambios sin guardar / Unsaved changes', '');
 }
 
 async function removePhoto(index) {
   const photo = current.photos[index];
-  if (!confirm(`Remove ${photo.file}? The file is deleted when you save.`)) return;
+  if (!confirm(`¿Quitar ${photo.file}? El archivo se borra al guardar. / Remove ${photo.file}? The file is deleted when you save.`)) return;
   current.photos.splice(index, 1);
   current.removedFiles = [...(current.removedFiles || []), photo.file];
-  dirty = true; renderEditor(); setStatus('Unsaved changes', '');
+  dirty = true; renderEditor(); setStatus('Cambios sin guardar / Unsaved changes', '');
 }
 
 // Fit inside the cap, then trade quality for size. If the quality floor is not
@@ -205,11 +235,11 @@ async function shrink(file) {
 
 async function addPhotos(fileList) {
   for (const file of fileList) {
-    setStatus(`Resizing ${file.name}…`, '');
+    setStatus(`Redimensionando ${file.name}… / Resizing`, '');
     const shrunk = await shrink(file);
     const {file: name} = await api('POST', `/api/photos/${current.slug}`, {dataUrl: shrunk.url});
     current.photos.push({file: name, shows: '', sourceFile: file.name, sourcePage: '', author: '', license: '', licenseUrl: ''});
-    setStatus(`Added ${name} at ${shrunk.w}×${shrunk.h}, ${Math.round(shrunk.bytes / 1024)} KB`, 'ok');
+    setStatus(`Agregada ${name} a ${shrunk.w}×${shrunk.h}, ${Math.round(shrunk.bytes / 1024)} KB / Added`, 'ok');
   }
   dirty = true; renderEditor();
 }
@@ -224,44 +254,44 @@ async function save() {
   const payload = {...current};
   delete payload.removedFiles;
   try {
-    setStatus('Saving…', '');
+    setStatus('Guardando… / Saving', '');
     const result = await api('PUT', `/api/plants/${current.slug}`, payload);
     for (const file of removed) await api('DELETE', `/api/photos/${file}`).catch(() => {});
     await load(current.slug);
-    setStatus(`Saved. Rebuilt ${result.built.plants} plants, ${result.built.photos} photos.`, 'ok');
+    setStatus(`Guardado. Regeneradas ${result.built.plants} plantas y ${result.built.photos} fotos. / Saved.`, 'ok');
   } catch (error) {
     setStatus(error.message, 'error');
   }
 }
 
 async function removePlant() {
-  if (!confirm(`Delete ${current.commonName} and its photo files? This cannot be undone.`)) return;
+  if (!confirm(`¿Borrar ${current.commonName} y sus fotos? Esto no se puede deshacer. / Delete ${current.commonName} and its photo files? This cannot be undone.`)) return;
   await api('DELETE', `/api/plants/${current.slug}`);
   current = null;
   await load();
-  setStatus('Plant deleted.', 'ok');
+  setStatus('Planta borrada. / Plant deleted.', 'ok');
 }
 
 function renderEditor() {
   const main = document.querySelector('#main');
-  if (!current) { main.innerHTML = '<p class="muted">No plants yet. Add one from the left.</p>'; return; }
+  if (!current) { main.innerHTML = '<p class="muted">Todavía no hay plantas. Agregá una desde la izquierda. / No plants yet. Add one from the left.</p>'; return; }
   main.replaceChildren();
   const head = document.createElement('div');
   head.innerHTML = `<h2>${escape(current.commonName)}</h2><p class="muted">content/plants/${escape(current.slug)}.json</p>`;
   main.append(head);
 
   const identity = document.createElement('fieldset');
-  identity.innerHTML = '<legend>Identity</legend>';
+  identity.innerHTML = '<legend>Identidad / Identity</legend>';
   const typeRow = document.createElement('div');
   typeRow.className = 'row';
-  typeRow.append(selectField('plantType', 'Plant type'), selectField('layer', 'Garden layer'));
-  identity.append(field('commonName', 'Common name', 'input'), field('scientificName', 'Scientific name', 'input'), typeRow, field('description', 'Description', 'textarea'));
+  typeRow.append(selectField('plantType', 'Tipo de planta / Plant type'), selectField('layer', 'Estrato / Garden layer'));
+  identity.append(field('commonName', 'Nombre común / Common name', 'input'), field('scientificName', 'Nombre científico / Scientific name', 'input'), typeRow, field('description', 'Descripción / Description', 'textarea'));
   main.append(identity);
 
   const ecology = document.createElement('fieldset');
-  ecology.innerHTML = '<legend>Ecology and wildlife</legend>';
-  ecology.append(field('nativeStatus', 'Native status', 'input'), field('nativeRange', 'Native range', 'input'),
-    field('ecology', 'Habitat and ecological role', 'textarea'), field('hostPlant', 'Host plant', 'input'));
+  ecology.innerHTML = '<legend>Ecología y fauna / Ecology and wildlife</legend>';
+  ecology.append(field('nativeStatus', 'Condición nativa / Native status', 'input'), field('nativeRange', 'Distribución nativa / Native range', 'input'),
+    field('ecology', 'Hábitat y función ecológica / Habitat and ecological role', 'textarea'), field('hostPlant', 'Planta hospedera / Host plant', 'input'));
   const checks = document.createElement('div');
   checks.className = 'checks';
   for (const purpose of PURPOSES) {
@@ -273,26 +303,26 @@ function renderEditor() {
       const set = new Set(current.purposes || []);
       box.checked ? set.add(purpose) : set.delete(purpose);
       current.purposes = PURPOSES.filter(p => set.has(p));
-      dirty = true; setStatus('Unsaved changes', '');
+      dirty = true; setStatus('Cambios sin guardar / Unsaved changes', '');
     };
-    wrap.append(box, document.createTextNode(purpose));
+    wrap.append(box, document.createTextNode(DISPLAY_LABELS[purpose] || purpose));
     checks.append(wrap);
   }
-  ecology.append(checks, field('wildlifeNotes', 'Wildlife notes', 'textarea'));
+  ecology.append(checks, field('wildlifeNotes', 'Notas sobre fauna / Wildlife notes', 'textarea'));
   main.append(ecology);
 
   const growing = document.createElement('fieldset');
-  growing.innerHTML = '<legend>Growing</legend>';
+  growing.innerHTML = '<legend>Cuidados / Care</legend>';
   const sunRow = document.createElement('label');
-  sunRow.textContent = 'Sun';
+  sunRow.textContent = 'Sol / Sun';
   const sun = document.createElement('select');
   for (const option of ['', 'Full sun', 'Sun / partial shade', 'Partial shade', 'Shade']) {
     const el = document.createElement('option');
-    el.value = option; el.textContent = option || 'Not set';
+    el.value = option; el.textContent = DISPLAY_LABELS[option] || option || DISPLAY_LABELS[''];
     sun.append(el);
   }
   sun.value = current.sun || '';
-  sun.onchange = () => { current.sun = sun.value; dirty = true; setStatus('Unsaved changes', ''); };
+  sun.onchange = () => { current.sun = sun.value; dirty = true; setStatus('Cambios sin guardar / Unsaved changes', ''); };
   sunRow.append(sun);
   growing.append(sunRow);
   for (const key of ['water','soil','size','flowering','fruiting','propagation']) {
@@ -302,7 +332,7 @@ function renderEditor() {
   main.append(growing);
 
   const uses = document.createElement('fieldset');
-  uses.innerHTML = '<legend>Uses and sources</legend>';
+  uses.innerHTML = '<legend>Usos y fuentes / Uses and sources</legend>';
   for (const key of ['edibleUses','medicinalUses','otherUses','safety','sources']) {
     const def = TEXT_FIELDS.find(f => f[0] === key);
     uses.append(field(def[0], def[1], def[2]));
@@ -310,15 +340,15 @@ function renderEditor() {
   main.append(uses);
 
   const garden = document.createElement('fieldset');
-  garden.innerHTML = '<legend>My garden defaults</legend>';
+  garden.innerHTML = '<legend>Santuario de aves / Bird sanctuary</legend>';
   const gardenRow = document.createElement('div');
   gardenRow.className = 'row';
-  gardenRow.append(selectField('status', 'Status'), selectField('priority', 'Priority'));
+  gardenRow.append(selectField('status', 'Estado / Status'), selectField('priority', 'Prioridad / Priority'));
   garden.append(gardenRow);
   main.append(garden);
 
   const photos = document.createElement('fieldset');
-  photos.innerHTML = '<legend>Photos</legend>';
+  photos.innerHTML = '<legend>Fotos / Photos</legend>';
   const list = document.createElement('div');
   list.className = 'photos';
   list.append(...(current.photos || []).map(photoRow));
@@ -330,24 +360,24 @@ function renderEditor() {
   const note = document.createElement('p');
   note.className = 'muted';
   note.style.fontSize = '.82rem';
-  note.textContent = `Photos are resized to fit ${MAX_W}×${MAX_H} and compressed to about ${Math.round(BUDGET / 1024)} KB before upload. A photo that will not compress that far is scaled down further instead of being blurred. The first photo is the one the list shows.`;
+  note.textContent = `Las fotos se ajustan a ${MAX_W}×${MAX_H} y se comprimen a unos ${Math.round(BUDGET / 1024)} KB antes de subirse. Si una foto no llega a ese tamaño, se reduce un poco más. La primera foto es la que se muestra en la lista. / Photos are resized and compressed before upload.`;
   photos.append(note);
   main.append(photos);
 
   if (orphans.length > 0) {
     const warn = document.createElement('div');
     warn.className = 'warn';
-    warn.textContent = `Unreferenced image files in assets/plants: ${orphans.join(', ')}`;
+    warn.textContent = `Archivos de imagen sin referencia en assets/plants: ${orphans.join(', ')} / Unreferenced image files.`;
     main.append(warn);
   }
 
   const bar = document.createElement('div');
   bar.className = 'bar';
   const saveButton = document.createElement('button');
-  saveButton.className = 'primary'; saveButton.textContent = 'Save and rebuild';
+  saveButton.className = 'primary'; saveButton.textContent = 'Guardar y regenerar / Save and rebuild';
   saveButton.onclick = save;
   const deleteButton = document.createElement('button');
-  deleteButton.className = 'danger'; deleteButton.textContent = 'Delete plant';
+  deleteButton.className = 'danger'; deleteButton.textContent = 'Borrar planta / Delete plant';
   deleteButton.onclick = removePlant;
   const status = document.createElement('span');
   status.id = 'status'; status.className = 'status';
@@ -356,12 +386,12 @@ function renderEditor() {
 }
 
 document.querySelector('#add').onclick = async () => {
-  const commonName = prompt('Common name for the new plant?');
+  const commonName = prompt('Nombre común de la nueva planta / Common name for the new plant?');
   if (!commonName) return;
   const slug = commonName.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
-  if (!slug) { alert('That name does not make a usable file name.'); return; }
-  if (plants.some(p => p.slug === slug)) { alert('A plant with that slug already exists.'); return; }
+  if (!slug) { alert('Ese nombre no genera un archivo válido. / That name does not make a usable file name.'); return; }
+  if (plants.some(p => p.slug === slug)) { alert('Ya existe una planta con ese slug. / A plant with that slug already exists.'); return; }
   await api('PUT', `/api/plants/${slug}`, {slug, commonName, status: 'Want', purposes: [], photos: []});
   await load(slug);
 };

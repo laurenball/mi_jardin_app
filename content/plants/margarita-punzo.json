@@ -20,7 +20,7 @@
   "size": "Low and spreading",
   "flowering": "Spring through the warm season",
   "propagation": "Spreads by rooting stems, and easy from cuttings.",
-  "status": "Want",
+  "status": "Looking For",
   "photos": [
     {
       "file": "margarita-punzo-1.jpg",
@@ -49,5 +49,7 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
-  ]
+  ],
+  "priority": "Medium",
+  "notes": "Flor para sumar diversidad herbácea. / Flowering plant for more herbaceous diversity."
 }

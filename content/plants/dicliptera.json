@@ -18,18 +18,9 @@
   "soil": "Adaptable",
   "flowering": "Warm season",
   "propagation": "Easy in shade or partial shade; one of the simplest natives to establish.",
-  "status": "Want",
+  "status": "Looking For",
   "priority": "High",
   "photos": [
-    {
-      "file": "dicliptera-1.jpg",
-      "shows": "Plant in flower",
-      "sourceFile": "Dicliptera squarrosa in Jardin des plantes de Montpellier 01.jpg",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Dicliptera_squarrosa_in_Jardin_des_plantes_de_Montpellier_01.jpg",
-      "author": "Krzysztof Golik",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-    },
     {
       "file": "dicliptera-2.jpg",
       "shows": "Flowers close-up",
@@ -38,6 +29,16 @@
       "author": "Krzysztof Golik",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "dicliptera-1.jpg",
+      "shows": "Plant in flower",
+      "sourceFile": "Dicliptera squarrosa in Jardin des plantes de Montpellier 01.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Dicliptera_squarrosa_in_Jardin_des_plantes_de_Montpellier_01.jpg",
+      "author": "Krzysztof Golik",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
-  ]
+  ],
+  "notes": "Flor para sumar diversidad y alimento para picaflores. / Flowering plant for more hummingbird value."
 }

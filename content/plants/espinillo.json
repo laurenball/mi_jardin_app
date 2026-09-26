@@ -18,22 +18,13 @@
   "sun": "Full sun",
   "water": "Low once established",
   "soil": "Adaptable; handles poor, dry and salty ground",
-  "size": "Small tree, often 2 to 6 m",
+  "size": "Altura / height: 2-6 m. Porte: arbolito bajo, espinoso y de copa redondeada.",
   "flowering": "Golden scented pompoms in spring",
   "fruiting": "Dark curved pods",
   "otherUses": "The wood is dense and has long been used for posts and firewood.",
   "safety": "The paired thorns are long and sharp. Site it away from paths.",
   "status": "Want",
   "photos": [
-    {
-      "file": "espinillo-1.jpg",
-      "shows": "Whole tree in flower",
-      "sourceFile": "Vachellia caven (Molina) Seigler & Ebinger - Porte.jpg",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Vachellia_caven_%28Molina%29_Seigler_%26_Ebinger_-_Porte.jpg",
-      "author": "Milena Calvi",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-    },
     {
       "file": "espinillo-2.jpg",
       "shows": "Flowers close-up",
@@ -42,6 +33,15 @@
       "author": "Diegodlh",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "file": "espinillo-1.jpg",
+      "shows": "Whole tree in flower",
+      "sourceFile": "Vachellia caven (Molina) Seigler & Ebinger - Porte.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Vachellia_caven_%28Molina%29_Seigler_%26_Ebinger_-_Porte.jpg",
+      "author": "Milena Calvi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     },
     {
       "file": "espinillo-3.jpg",

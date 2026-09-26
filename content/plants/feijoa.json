@@ -17,11 +17,12 @@
   "sun": "Full sun",
   "water": "Medium",
   "soil": "Adaptable; good in clay, organic soils and near water",
+  "size": "Altura / height: 2-4 m. Porte: arbusto grande o arbolito frutal.",
   "flowering": "Showy flowers with fleshy petals",
   "fruiting": "Aromatic green fruit",
   "edibleUses": "The fruit is rich in vitamin C and unusually rich in iodine for a fruit. The petals are sweet and can be eaten straight off the tree.",
   "sources": "Árboles nativos de Argentina, Argentina Forestal: https://www.argentinaforestal.com/2026/04/29/arboles-nativos-de-argentina/",
-  "status": "Want",
+  "status": "Looking For",
   "photos": [
     {
       "file": "feijoa-2.jpg",
@@ -50,5 +51,7 @@
       "license": "CC BY-SA 3.0",
       "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
     }
-  ]
+  ],
+  "priority": "High",
+  "notes": "Frutal para sumar en la próxima etapa. / Fruit tree for the next planting round."
 }

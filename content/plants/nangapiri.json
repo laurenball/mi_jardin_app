@@ -20,16 +20,25 @@
   "sun": "Sun / partial shade",
   "water": "Medium",
   "soil": "Best in rich, well-drained soil",
-  "size": "Approx. 3–10 m depending on conditions",
+  "size": "Altura / height: 3-10 m. Porte: árbol frutal pequeño, perenne, de copa redondeada.",
   "flowering": "Fragrant white flowers in spring",
   "fruiting": "Red to orange ribbed berries",
   "propagation": "Prefers some shelter while establishing. Once established it handles Buenos Aires cold well.",
   "edibleUses": "Sweet-tart and aromatic, loaded with lycopene, anthocyanins and vitamin C. Eat fresh, or use for jam, liqueur or ice cream.",
   "medicinalUses": "In Brazilian folk medicine the leaf tea is taken for diarrhoea, fever and high blood pressure. It carries significant antioxidant and antimicrobial activity.",
   "sources": "Árboles nativos, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/arboles-nativos/nangapiri | Árboles nativos de Argentina, Argentina Forestal: https://www.argentinaforestal.com/2026/04/29/arboles-nativos-de-argentina/",
-  "status": "Want",
+  "status": "Planted",
   "priority": "High",
   "photos": [
+    {
+      "file": "nangapiri-4.jpg",
+      "shows": "Branch with flower and fruit",
+      "sourceFile": "Starr 011025-9002 Eugenia uniflora.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Starr_011025-9002_Eugenia_uniflora.jpg",
+      "author": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+    },
     {
       "file": "nangapiri-3.jpg",
       "shows": "Ripe fruit",
@@ -39,5 +48,6 @@
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
     }
-  ]
+  ],
+  "notes": "Ya tenemos uno en el santuario. / Already in the sanctuary."
 }

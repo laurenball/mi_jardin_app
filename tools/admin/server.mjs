@@ -147,6 +147,6 @@ const server = createServer(async (req, res) => {
 });
 
 server.listen(PORT, '127.0.0.1', () => {
-  console.log(`Garden content editor: http://localhost:${PORT}`);
+  console.log(`Editor de contenido del santuario / Garden content editor: http://localhost:${PORT}`);
   console.log('Edits write to content/plants and assets/plants, then rebuild the app files.');
 });

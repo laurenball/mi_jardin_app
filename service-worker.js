@@ -1,5 +1,7 @@
-const CACHE_NAME = 'my-garden-shell-v33';
+const CACHE_NAME = 'santuario-de-aves-shell-v36';
 const PLANT_IMAGES = [
+  './assets/plants/araucaria-1.jpg',
+  './assets/plants/araucaria-2.jpg',
   './assets/plants/araza-2.jpg',
   './assets/plants/araza-3.jpg',
   './assets/plants/canelon-1.jpg',
@@ -17,10 +19,12 @@ const PLANT_IMAGES = [
   './assets/plants/chal-chal-3.jpg',
   './assets/plants/cola-de-zorro-1.jpg',
   './assets/plants/cola-de-zorro-2.jpg',
+  './assets/plants/cola-de-zorro-3.jpg',
   './assets/plants/congorosa-1.jpg',
   './assets/plants/congorosa-3.jpg',
   './assets/plants/coronillo-2.jpg',
   './assets/plants/coronillo-3.jpg',
+  './assets/plants/cortadera-1.jpg',
   './assets/plants/cortadera-4.jpg',
   './assets/plants/dicliptera-1.jpg',
   './assets/plants/dicliptera-2.jpg',
@@ -35,6 +39,7 @@ const PLANT_IMAGES = [
   './assets/plants/flechilla-4.jpg',
   './assets/plants/lantana-4.jpg',
   './assets/plants/lantana-5.jpg',
+  './assets/plants/lantana-6.jpg',
   './assets/plants/marcela-1.jpg',
   './assets/plants/marcela-2.jpg',
   './assets/plants/marcela-3.jpg',
@@ -44,6 +49,7 @@ const PLANT_IMAGES = [
   './assets/plants/molle-2.jpg',
   './assets/plants/molle-3.jpg',
   './assets/plants/nangapiri-3.jpg',
+  './assets/plants/nangapiri-4.jpg',
   './assets/plants/pasionaria-1.jpg',
   './assets/plants/pasionaria-2.jpg',
   './assets/plants/pasionaria-3.jpg',
@@ -62,6 +68,7 @@ const PLANT_IMAGES = [
   './assets/plants/tala-1.jpg',
   './assets/plants/tala-4.jpg',
   './assets/plants/tala-5.jpg',
+  './assets/plants/tala-6.jpg',
   './assets/plants/verbena-1.jpg',
   './assets/plants/verbena-2.jpg',
   './assets/plants/verbena-3.jpg'
