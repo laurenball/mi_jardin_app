@@ -5,7 +5,7 @@
   "plantType": "Tree",
   "layer": "Canopy",
   "description": "Conífera nativa muy alta, de tronco recto y copa escultórica en pisos. Es el árbol alto real de esta lista: un ejemplar adulto puede dominar completamente el dosel.",
-  "nativeStatus": "Nativa de Patagonia andina / Native to Andean Patagonia",
+  "nativeStatus": "Nativa de Patagonia andina",
   "nativeRange": "Argentina: Neuquén y Río Negro; también Chile",
   "ecology": "Forma bosques montanos fríos, sobre suelos arenosos, rocosos y volcánicos bien drenados. No es una especie rioplatense: en el sanctuario sería un árbol de presencia y estructura, no un árbol típico del talar.",
   "purposes": [
@@ -14,10 +14,10 @@
     "Edible"
   ],
   "wildlifeNotes": "Aporta estructura vertical, percha y refugio permanente. Sus semillas grandes, los piñones, son alimento importante en su región de origen, aunque no cumple el mismo rol para aves frugívoras locales que tala, chal-chal o canelón.",
-  "sun": "Full sun",
-  "water": "Medium",
+  "sun": "Pleno sol",
+  "water": "Media",
   "soil": "Muy buen drenaje; evitar suelos encharcados",
-  "size": "Altura / height: hasta 50 m. Porte: árbol muy alto; necesita distancia de casas, cables y medianeras.",
+  "size": "Altura: hasta 50 m. Porte: árbol muy alto; necesita distancia de casas, cables y medianeras.",
   "flowering": "Conos masculinos en primavera; especie dioica, con plantas masculinas y femeninas",
   "fruiting": "Conos femeninos grandes con piñones comestibles; maduran lentamente",
   "propagation": "Por semilla fresca; crecimiento lento al principio y muy longevo.",

@@ -4,20 +4,20 @@
   "scientificName": "Setaria spp.",
   "plantType": "Grass",
   "layer": "Grass",
-  "description": "Foxtail grasses, named for the dense cylindrical seedheads. The common name covers several species.",
-  "nativeStatus": "Some Setaria are native and others introduced; verify the exact species",
-  "nativeRange": "Depends on species",
-  "ecology": "Native grasses are the backbone of this landscape. They feed seed-eating birds, supply nesting material and shelter ground-dwelling insects.",
+  "description": "Gramíneas llamadas cola de zorro por sus espigas densas y cilíndricas. El nombre común abarca varias especies. / Foxtail grasses, named for the dense cylindrical seedheads. The common name covers several species.",
+  "nativeStatus": "Algunas Setaria son nativas y otras introducidas; verificar la especie exacta",
+  "nativeRange": "Depende de la especie",
+  "ecology": "Las gramíneas nativas son la base de este paisaje. Alimentan aves semilleras, aportan material de nidificación y refugian insectos del suelo. / Native grasses are the backbone of this landscape. They feed seed-eating birds, supply nesting material and shelter ground-dwelling insects.",
   "purposes": [
     "Bird food",
     "Shelter",
     "Nesting"
   ],
-  "wildlifeNotes": "The seedheads feed finches, sparrows and other granivorous birds, and the clumps shelter ground-dwelling insects.",
-  "sun": "Full sun",
-  "water": "Low to medium",
+  "wildlifeNotes": "Las espigas alimentan jilgueros, chingolos y otras aves granívoras, y las matas refugian insectos del suelo. / The seedheads feed finches, sparrows and other granivorous birds, and the clumps shelter ground-dwelling insects.",
+  "sun": "Pleno sol",
+  "water": "Baja a media",
   "soil": "Adaptable",
-  "flowering": "Spike-like seedheads in the warm season",
+  "flowering": "Espigas en la estación cálida",
   "status": "Want",
   "photos": [
     {
