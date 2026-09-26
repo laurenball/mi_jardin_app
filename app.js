@@ -10,8 +10,6 @@ const grid = document.querySelector('#plant-grid');
 const emptyState = document.querySelector('#empty-state');
 const noResults = document.querySelector('#no-results');
 const searchInput = document.querySelector('#search');
-const layerFilter = document.querySelector('#layer-filter');
-const purposeFilter = document.querySelector('#purpose-filter');
 const statusFilter = document.querySelector('#status-filter');
 const updateNotice = document.querySelector('#update-notice');
 const updateButton = document.querySelector('#update-app');
@@ -39,11 +37,6 @@ const STARTER_INFO_FIELDS = ['description','nativeStatus','nativeRange','ecology
   'sun','water','soil','size','flowering','fruiting','propagation','edibleUses','medicinalUses','otherUses','safety','sources',
   'status','priority','notes'];
 const UNGROUPED_LABEL = 'Otras / Other';
-const INVENTORY_GROUPS = [
-  {key: 'have', title: 'Lo que tenemos / What we have', subtitle: 'Plantadas y compradas / Planted and bought', statuses: ['Planted', 'Bought']},
-  {key: 'missing', title: 'Lo que falta / What we need', subtitle: 'Deseadas y en búsqueda / Wanted and being sourced', statuses: ['Looking For', 'Want']},
-  {key: 'other', title: 'Sin estado', subtitle: 'Sin clasificar / Not classified', statuses: []}
-];
 const LAYER_ORDER = ['Canopy', 'Fruit tree', 'Shrub', 'Climber', 'Grass', 'Herbaceous'];
 const nameCollator = new Intl.Collator(['es', 'en'], {sensitivity: 'base', numeric: true});
 
@@ -369,18 +362,25 @@ function groupLabel(plant) {
   return plant.layer ? displayValue('layer', plant.layer) : UNGROUPED_LABEL;
 }
 
-function inventoryGroupFor(plant) {
-  return INVENTORY_GROUPS.find(group => group.statuses.includes(plant.status)) || INVENTORY_GROUPS.find(group => group.key === 'other');
+function hasPlant(plant) {
+  return ['Planted', 'Bought'].includes(plant.status);
+}
+
+function wantsPlant(plant) {
+  if (['Want', 'Looking For'].includes(plant.status)) return true;
+  return hasPlant(plant) && /\b(want|queremos|querer|agregar mas|agregar más|sumar mas|sumar más)\b/i.test(plant.notes || '');
 }
 
 function statusRank(plant) {
-  const group = inventoryGroupFor(plant);
-  const groupRank = {have: 0, missing: 1, other: 2};
-  return groupRank[group?.key] ?? 2;
+  if (hasPlant(plant)) return 0;
+  if (wantsPlant(plant)) return 1;
+  return 2;
 }
 
 function statusClass(plant) {
-  return `status-${inventoryGroupFor(plant)?.key || 'other'}`;
+  if (hasPlant(plant)) return 'status-have';
+  if (wantsPlant(plant)) return 'status-missing';
+  return 'status-other';
 }
 
 function groupPlants(list) {
@@ -533,11 +533,10 @@ function render() {
   cleanupObjectUrls();
   const query = searchInput.value.trim().toLowerCase();
   const visiblePlants = plants.filter(plant => {
-    const purposes = plantPurposes(plant);
     return searchableText(plant).includes(query)
-      && (!layerFilter.value || plant.layer === layerFilter.value)
-      && (!purposeFilter.value || purposes.includes(purposeFilter.value))
-      && (!statusFilter.value || plant.status === statusFilter.value);
+      && (!statusFilter.value
+        || (statusFilter.value === 'have' && hasPlant(plant))
+        || (statusFilter.value === 'want' && wantsPlant(plant)));
   });
   if (expandedPlantId && !visiblePlants.some(plant => plant.id === expandedPlantId)) expandedPlantId = null;
   grid.className = 'plant-grid view-photos';
@@ -566,10 +565,10 @@ form.addEventListener('submit', async (event) => {
 
 for (const id of ['open-form','empty-add']) document.querySelector(`#${id}`).addEventListener('click', openForm);
 for (const id of ['close-form','cancel-form']) document.querySelector(`#${id}`).addEventListener('click', closeForm);
-for (const input of [searchInput, layerFilter, purposeFilter, statusFilter]) input.addEventListener(input.tagName === 'INPUT' ? 'input' : 'change', render);
+for (const input of [searchInput, statusFilter]) input.addEventListener(input.tagName === 'INPUT' ? 'input' : 'change', render);
 document.querySelector('#clear-filters').addEventListener('click', () => {
   searchInput.value = '';
-  for (const filter of [layerFilter, purposeFilter, statusFilter]) filter.value = '';
+  statusFilter.value = '';
   render();
 });
 function activateGridTarget(target) {
