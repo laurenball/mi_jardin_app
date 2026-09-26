@@ -24,19 +24,19 @@ let reloadForUpdate = false;
 let reloading = false;
 
 const DISPLAY_LABELS = {
-  status: {'Want':'Quiero / Want','Looking For':'Buscando / Looking for','Bought':'Comprada / Bought','Planted':'Plantada / Planted'},
-  sun: {'Full sun':'Pleno sol / Full sun','Sun / partial shade':'Sol y media sombra / Sun and partial shade','Partial shade':'Media sombra / Partial shade','Shade':'Sombra / Shade'},
-  layer: {'Canopy':'Dosel / Canopy','Fruit tree':'Frutal / Fruit tree','Shrub':'Arbusto / Shrub','Herbaceous':'Herbácea / Herbaceous','Grass':'Gramínea / Grass','Climber':'Trepadora / Climber'},
-  purpose: {'Bird food':'Alimento para aves / Bird food','Shelter':'Refugio / Shelter','Nesting':'Nidificación / Nesting','Hummingbirds':'Picaflores / Hummingbirds','Butterflies':'Mariposas / Butterflies','Pollinators':'Polinizadores / Pollinators','Edible':'Comestible / Edible','Medicinal tradition':'Uso medicinal / Medicinal'},
-  priority: {'High':'Alta / High','Medium':'Media / Medium','Low':'Baja / Low'},
-  plantType: {'Tree':'Árbol / Tree','Shrub':'Arbusto / Shrub','Herb':'Herbácea / Herb','Grass':'Gramínea / Grass','Climber':'Trepadora / Climber'}
+  status: {'Want':'Quiero','Looking For':'Buscando','Bought':'Comprada','Planted':'Plantada'},
+  sun: {'Full sun':'Pleno sol','Sun / partial shade':'Sol y media sombra','Partial shade':'Media sombra','Shade':'Sombra'},
+  layer: {'Canopy':'Dosel','Fruit tree':'Frutal','Shrub':'Arbusto','Herbaceous':'Herbácea','Grass':'Gramínea','Climber':'Trepadora'},
+  purpose: {'Bird food':'Alimento para aves','Shelter':'Refugio','Nesting':'Nidificación','Hummingbirds':'Picaflores','Butterflies':'Mariposas','Pollinators':'Polinizadores','Edible':'Comestible','Medicinal tradition':'Uso medicinal'},
+  priority: {'High':'Alta','Medium':'Media','Low':'Baja'},
+  plantType: {'Tree':'Árbol','Shrub':'Arbusto','Herb':'Herbácea','Grass':'Gramínea','Climber':'Trepadora'}
 };
 
 const SCHEMA_VERSION = 4;
 const STARTER_INFO_FIELDS = ['description','nativeStatus','nativeRange','ecology','hostPlant','purposes','wildlifeNotes',
   'sun','water','soil','size','flowering','fruiting','propagation','edibleUses','medicinalUses','otherUses','safety','sources',
   'status','priority','notes'];
-const UNGROUPED_LABEL = 'Otras / Other';
+const UNGROUPED_LABEL = 'Otras';
 const LAYER_ORDER = ['Canopy', 'Fruit tree', 'Shrub', 'Climber', 'Grass', 'Herbaceous'];
 const nameCollator = new Intl.Collator(['es', 'en'], {sensitivity: 'base', numeric: true});
 
@@ -46,6 +46,20 @@ function closeForm() { dialog.close(); }
 function cleanupObjectUrls() { objectUrls.forEach(URL.revokeObjectURL); objectUrls = []; }
 function cleanupBrowseObjectUrls() { browseObjectUrls.forEach(URL.revokeObjectURL); browseObjectUrls = []; }
 function escapeHtml(value = '') { return String(value).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c])); }
+function translationPair(value = '') {
+  const text = String(value).trim();
+  const index = text.lastIndexOf(' / ');
+  if (index <= 0) return null;
+  const translation = text.slice(index + 3).trim();
+  if (!/^[A-Z¿¡]/.test(translation)) return null;
+  return {primary: text.slice(0, index).trim(), translation};
+}
+function textWithTranslation(value = '') {
+  const pair = translationPair(value);
+  if (!pair) return escapeHtml(value);
+  return `<span class="translated-text">${escapeHtml(pair.primary)}</span>
+    <button type="button" class="translate-button" data-primary="${escapeHtml(pair.primary)}" data-translation="${escapeHtml(pair.translation)}">Traducir</button>`;
+}
 function plantPurposes(plant) {
   return plant.purposes || (plant.wildlifeValue ? [plant.wildlifeValue] : []);
 }
@@ -78,7 +92,7 @@ function photoMarkup(plant, className = 'plant-photo', bucket = objectUrls) {
 
 function infoRow(label, value) {
   if (!value) return '';
-  return `<div class="info-row"><span>${escapeHtml(label)}</span><p>${escapeHtml(value)}</p></div>`;
+  return `<div class="info-row"><span>${escapeHtml(label)}</span><p>${textWithTranslation(value)}</p></div>`;
 }
 
 function linkify(value) {
@@ -194,7 +208,7 @@ async function removePhoto(index) {
   if (!plant) return;
   const photos = plantPhotos(plant);
   if (index < 0 || index >= photos.length) return;
-  if (!window.confirm('¿Borrar esta foto? / Delete this photo?')) return;
+  if (!window.confirm('¿Borrar esta foto?')) return;
   await saveActivePlantPhotos(photos.filter((_, i) => i !== index));
 }
 
@@ -300,13 +314,13 @@ function sectionHtml(title, rows) {
 
 function careRows(plant) {
   return [
-    ['Sol / Sun', displayValue('sun', plant.sun)],
-    ['Agua / Water', plant.water],
-    ['Suelo / Soil', plant.soil],
-    ['Tamaño / Size', plant.size],
-    ['Floración / Flowering', plant.flowering],
-    ['Fructificación / Fruiting', plant.fruiting],
-    ['Propagación / Propagation', plant.propagation]
+    ['Sol', displayValue('sun', plant.sun)],
+    ['Agua', plant.water],
+    ['Suelo', plant.soil],
+    ['Tamaño', plant.size],
+    ['Floración', plant.flowering],
+    ['Fructificación', plant.fruiting],
+    ['Propagación', plant.propagation]
   ];
 }
 
@@ -325,29 +339,29 @@ function careStrip(plant, limit = 3) {
 
 function plantSections(plant) {
   return [
-    sectionHtml('Cuidados / Care', careRows(plant).map(([label, value]) => infoRow(label, value))),
-    sectionHtml('Sanctuario de Aves / Bird sanctuary', [
-      infoRow('Estado / Status', displayValue('status', plant.status)),
-      infoRow('Prioridad / Priority', displayValue('priority', plant.priority)),
-      infoRow('Vivero / Nursery', plant.nursery),
-      infoRow('Precio / Price', plant.price),
-      infoRow('Ubicación / Garden location', plant.gardenLocation),
-      infoRow('Notas / Notes', plant.notes)
+    sectionHtml('Cuidados', careRows(plant).map(([label, value]) => infoRow(label, value))),
+    sectionHtml('Sanctuario de Aves', [
+      infoRow('Estado', displayValue('status', plant.status)),
+      infoRow('Prioridad', displayValue('priority', plant.priority)),
+      infoRow('Vivero', plant.nursery),
+      infoRow('Precio', plant.price),
+      infoRow('Ubicación', plant.gardenLocation),
+      infoRow('Notas', plant.notes)
     ]),
-    sectionHtml('Ecología nativa / Native ecology', [
-      infoRow('Nativa / Native', plant.nativeStatus),
-      infoRow('Distribución / Range', plant.nativeRange),
-      infoRow('Ecología / Ecology', plant.ecology),
-      infoRow('Hospedera / Host plant', plant.hostPlant)
+    sectionHtml('Ecología nativa', [
+      infoRow('Nativa', plant.nativeStatus),
+      infoRow('Distribución', plant.nativeRange),
+      infoRow('Ecología', plant.ecology),
+      infoRow('Hospedera', plant.hostPlant)
     ]),
-    sectionHtml('Usos humanos / Human uses', [
-      infoRow('Comestible / Edible', plant.edibleUses),
-      infoRow('Uso medicinal / Medicinal use', plant.medicinalUses),
-      infoRow('Otros usos / Other uses', plant.otherUses),
-      infoRow('Precauciones / Safety', plant.safety)
+    sectionHtml('Usos humanos', [
+      infoRow('Comestible', plant.edibleUses),
+      infoRow('Uso medicinal', plant.medicinalUses),
+      infoRow('Otros usos', plant.otherUses),
+      infoRow('Precauciones', plant.safety)
     ]),
-    sectionHtml('Fuentes / Sources', [
-      linkRow('Referencia / Reference', String(plant.sources || '').split(' | ').join('\n'))
+    sectionHtml('Fuentes', [
+      linkRow('Referencia', String(plant.sources || '').split(' | ').join('\n'))
     ])
   ].join('');
 }
@@ -426,7 +440,7 @@ function photoPlant(plant) {
   article.setAttribute('role', 'button');
   article.tabIndex = 0;
   article.dataset.plantId = plant.id;
-  article.setAttribute('aria-label', `Expandir ${plant.commonName} / Expand ${plant.commonName}`);
+  article.setAttribute('aria-label', `Expandir ${plant.commonName}`);
   article.innerHTML = `${photoMarkup(plant, 'plant-thumb')}
     <div>
       <h3>${escapeHtml(plant.commonName)}</h3>
@@ -454,15 +468,15 @@ function cardForPlant(plant) {
           ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
         </div>
         <div class="card-title-aside">
-          ${photoCount > 1 ? `<span class="photo-count">${photoCount} fotos / photos</span>` : ''}
-          <button type="button" class="icon-button card-close-button" data-action="collapse" aria-label="Cerrar tarjeta / Close card">×</button>
+          ${photoCount > 1 ? `<span class="photo-count">${photoCount} fotos</span>` : ''}
+          <button type="button" class="icon-button card-close-button" data-action="collapse" aria-label="Cerrar tarjeta">×</button>
         </div>
       </div>
       ${tags ? `<div class="meta">${tags}</div>` : ''}
       ${facts ? `<ul class="fact-list">${facts}</ul>` : ''}
-      ${plant.description ? `<p>${escapeHtml(plant.description)}</p>` : ''}
-      ${plant.wildlifeNotes ? `<p class="wildlife-callout">${escapeHtml(plant.wildlifeNotes)}</p>` : ''}
-      <button type="button" class="primary-button card-more-button" data-action="all-info" data-plant-id="${escapeHtml(plant.id)}">Toda la información / All information</button>
+      ${plant.description ? `<p>${textWithTranslation(plant.description)}</p>` : ''}
+      ${plant.wildlifeNotes ? `<p class="wildlife-callout">${textWithTranslation(plant.wildlifeNotes)}</p>` : ''}
+      <button type="button" class="primary-button card-more-button" data-action="all-info" data-plant-id="${escapeHtml(plant.id)}">Toda la información</button>
     </div>`;
   return article;
 }
@@ -471,10 +485,10 @@ function photoControls(index, total) {
   const button = (action, label, symbol, disabled) =>
     `<button type="button" class="photo-button" data-action="${action}" data-index="${index}" aria-label="${escapeHtml(label)}"${disabled ? ' disabled' : ''}>${symbol}</button>`;
   return `<div class="photo-controls">
-    ${button('photo-earlier', 'Mover foto antes / Move photo earlier', '‹', index === 0)}
+    ${button('photo-earlier', 'Mover foto antes', '‹', index === 0)}
     <span class="photo-position">${index + 1}/${total}</span>
-    ${button('photo-later', 'Mover foto después / Move photo later', '›', index === total - 1)}
-    ${button('photo-remove', 'Borrar foto / Delete photo', '×', false)}
+    ${button('photo-later', 'Mover foto después', '›', index === total - 1)}
+    ${button('photo-remove', 'Borrar foto', '×', false)}
   </div>`;
 }
 
@@ -492,9 +506,9 @@ function detailPlant(plant) {
   return `
     <div class="dialog-toolbar">
       <div class="dialog-actions">
-        <button type="button" class="secondary-button" data-action="add-photos">Agregar fotos / Add photos</button>
+        <button type="button" class="secondary-button" data-action="add-photos">Agregar fotos</button>
       </div>
-      <button type="button" class="icon-button" data-action="close" aria-label="Cerrar / Close">×</button>
+      <button type="button" class="icon-button" data-action="close" aria-label="Cerrar">×</button>
     </div>
     <div class="plant-detail full-detail">
       ${galleryMarkup(plant, browseObjectUrls, true)}
@@ -508,8 +522,8 @@ function detailPlant(plant) {
         </header>
         ${tags ? `<div class="meta">${tags}</div>` : ''}
         ${careStrip(plant, 4)}
-        ${plant.description ? `<p>${escapeHtml(plant.description)}</p>` : ''}
-        ${plant.wildlifeNotes ? `<p class="wildlife-callout">${escapeHtml(plant.wildlifeNotes)}</p>` : ''}
+        ${plant.description ? `<p>${textWithTranslation(plant.description)}</p>` : ''}
+        ${plant.wildlifeNotes ? `<p class="wildlife-callout">${textWithTranslation(plant.wildlifeNotes)}</p>` : ''}
         <div class="detail-sections">${plantSections(plant)}</div>
       </div>
     </div>`;
@@ -586,6 +600,16 @@ function activateGridTarget(target) {
 }
 
 grid.addEventListener('click', event => { activateGridTarget(event.target); });
+document.addEventListener('click', event => {
+  const button = event.target.closest('.translate-button');
+  if (!button) return;
+  const text = button.closest('p')?.querySelector('.translated-text');
+  if (!text) return;
+  const showingTranslation = button.dataset.showingTranslation === 'true';
+  text.textContent = showingTranslation ? button.dataset.primary : button.dataset.translation;
+  button.textContent = showingTranslation ? 'Traducir' : 'Ver español';
+  button.dataset.showingTranslation = String(!showingTranslation);
+});
 grid.addEventListener('keydown', event => {
   if (event.key !== 'Enter' && event.key !== ' ') return;
   if (event.target.closest('button')) return;
