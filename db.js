@@ -1,5 +1,5 @@
-const DB_NAME = 'santuario-de-aves';
-const LEGACY_DB_NAME = ['my', 'garden'].join('-');
+const DB_NAME = 'sanctuario-de-aves';
+const LEGACY_DB_NAMES = [['san', 'tuario', 'de', 'aves'].join('-'), ['my', 'garden'].join('-')];
 const DB_VERSION = 1;
 const PLANT_STORE = 'plants';
 let databasePromise;
@@ -50,12 +50,17 @@ function writePlants(db, plants) {
 
 async function migrateLegacyDatabase(db) {
   if (await countPlants(db) > 0) return;
-  const legacyDb = await openRawDatabase(LEGACY_DB_NAME);
-  try {
-    const legacyPlants = await readPlants(legacyDb);
-    if (legacyPlants.length > 0) await writePlants(db, legacyPlants);
-  } finally {
-    legacyDb.close();
+  for (const legacyName of LEGACY_DB_NAMES) {
+    const legacyDb = await openRawDatabase(legacyName);
+    try {
+      const legacyPlants = await readPlants(legacyDb);
+      if (legacyPlants.length > 0) {
+        await writePlants(db, legacyPlants);
+        return;
+      }
+    } finally {
+      legacyDb.close();
+    }
   }
 }
 

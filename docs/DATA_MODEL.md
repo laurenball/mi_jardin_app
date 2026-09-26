@@ -37,7 +37,7 @@ sun, water, soil, size, flowering, fruiting, propagation,
 edibleUses, medicinalUses, otherUses, safety, sources
 ```
 
-The starter record is the source of truth for the informational fields and for the current sanctuary labels: `status`, `priority`, and `notes`. That lets the app re-sort the sanctuary as the real planting plan changes. Operational fields such as `nursery`, `price`, and `gardenLocation` are left alone, as are photos the user added. If a starter-managed field is no longer set in the source content, it is cleared rather than left holding old text.
+The starter record is the source of truth for the informational fields and for the current Sanctuario labels: `status`, `priority`, and `notes`. That lets the app re-sort the Sanctuario as the real planting plan changes. Operational fields such as `nursery`, `price`, and `gardenLocation` are left alone, as are photos the user added. If a starter-managed field is no longer set in the source content, it is cleared rather than left holding old text.
 
 On startup the app also seeds any starter plant the device has never held, matched by common or scientific name, so plants added to the guide reach existing installs rather than new ones only. A plant the user created themselves is never touched by either step.
 

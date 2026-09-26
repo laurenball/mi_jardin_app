@@ -74,7 +74,7 @@ async function updateServiceWorker(plants) {
   const block = `const PLANT_IMAGES = [\n${images.map(image => `  '${image}'`).join(',\n')}\n];`;
   let next = current.replace(/const PLANT_IMAGES = \[[\s\S]*?\];/, block);
   if (next !== current) {
-    next = next.replace(/santuario-de-aves-shell-v(\d+)/g, (_, n) => `santuario-de-aves-shell-v${Number(n) + 1}`);
+    next = next.replace(/sanctuario-de-aves-shell-v(\d+)/g, (_, n) => `sanctuario-de-aves-shell-v${Number(n) + 1}`);
   }
   await writeFile(file, next);
   return {images: images.length, bumped: next !== current};

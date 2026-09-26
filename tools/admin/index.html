@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Editor de contenido del santuario</title>
+<title>Editor de contenido del sanctuario</title>
 <style>
 :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#253022;background:#f4f7ef}
 *{box-sizing:border-box}body{margin:0;display:grid;grid-template-columns:minmax(200px,260px) 1fr;min-height:100vh}
@@ -39,7 +39,7 @@ legend{font-weight:800;padding:0 6px}
 </head>
 <body>
 <aside>
-  <h1>Contenido del santuario</h1>
+  <h1>Contenido del sanctuario</h1>
   <div id="list"></div>
   <button id="add" class="secondary" style="margin-top:12px;width:100%">+ Nueva planta</button>
 </aside>
@@ -340,7 +340,7 @@ function renderEditor() {
   main.append(uses);
 
   const garden = document.createElement('fieldset');
-  garden.innerHTML = '<legend>Santuario de aves / Bird sanctuary</legend>';
+  garden.innerHTML = '<legend>Sanctuario de Aves / Bird sanctuary</legend>';
   const gardenRow = document.createElement('div');
   gardenRow.className = 'row';
   gardenRow.append(selectField('status', 'Estado / Status'), selectField('priority', 'Prioridad / Priority'));

@@ -333,7 +333,7 @@ function careStrip(plant, limit = 3) {
 function plantSections(plant) {
   return [
     sectionHtml('Cuidados / Care', careRows(plant).map(([label, value]) => infoRow(label, value))),
-    sectionHtml('Santuario de aves / Bird sanctuary', [
+    sectionHtml('Sanctuario de Aves / Bird sanctuary', [
       infoRow('Estado / Status', displayValue('status', plant.status)),
       infoRow('Prioridad / Priority', displayValue('priority', plant.priority)),
       infoRow('Vivero / Nursery', plant.nursery),

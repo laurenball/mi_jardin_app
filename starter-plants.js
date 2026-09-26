@@ -9,7 +9,7 @@ export const STARTER_PLANTS = [
     description: 'Conífera nativa muy alta, de tronco recto y copa escultórica en pisos. Es el árbol alto real de esta lista: un ejemplar adulto puede dominar completamente el dosel.',
     nativeStatus: 'Nativa de Patagonia andina / Native to Andean Patagonia',
     nativeRange: 'Argentina: Neuquén y Río Negro; también Chile',
-    ecology: 'Forma bosques montanos fríos, sobre suelos arenosos, rocosos y volcánicos bien drenados. No es una especie rioplatense: en el santuario sería un árbol de presencia y estructura, no un árbol típico del talar.',
+    ecology: 'Forma bosques montanos fríos, sobre suelos arenosos, rocosos y volcánicos bien drenados. No es una especie rioplatense: en el sanctuario sería un árbol de presencia y estructura, no un árbol típico del talar.',
     purposes: ['Shelter','Nesting','Edible'],
     wildlifeNotes: 'Aporta estructura vertical, percha y refugio permanente. Sus semillas grandes, los piñones, son alimento importante en su región de origen, aunque no cumple el mismo rol para aves frugívoras locales que tala, chal-chal o canelón.',
     sun: 'Full sun',
@@ -70,7 +70,7 @@ export const STARTER_PLANTS = [
     sources: 'Sendero de flora nativa, Jardín Botánico de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/jardinbotanico/senderofloranativa',
     status: 'Planted',
     priority: 'High',
-    notes: 'Ya tenemos ceibo en el santuario. / Already in the sanctuary.'
+    notes: 'Ya tenemos ceibo en el sanctuario. / Already in the sanctuary.'
   },
   {
     commonName: 'Coronillo',
@@ -141,7 +141,7 @@ export const STARTER_PLANTS = [
     sources: 'Árboles nativos, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/arboles-nativos/nangapiri | Árboles nativos de Argentina, Argentina Forestal: https://www.argentinaforestal.com/2026/04/29/arboles-nativos-de-argentina/',
     status: 'Planted',
     priority: 'High',
-    notes: 'Ya tenemos uno en el santuario. / Already in the sanctuary.'
+    notes: 'Ya tenemos uno en el sanctuario. / Already in the sanctuary.'
   },
   {
     commonName: 'Falso guayabo / Feijoa',
@@ -295,7 +295,7 @@ export const STARTER_PLANTS = [
     safety: 'Leaves and unripe berries are toxic if eaten. Worth knowing where children or pets browse.',
     status: 'Planted',
     priority: 'Medium',
-    notes: 'Ya tenemos lantana en el santuario. / Already in the sanctuary.'
+    notes: 'Ya tenemos lantana en el sanctuario. / Already in the sanctuary.'
   },
   {
     commonName: 'Salvia guaranítica',
@@ -318,7 +318,7 @@ export const STARTER_PLANTS = [
     sources: 'Picaflores de la plaza, Aves Bonaerenses: http://avesbonaerenses.blogspot.com/2014/03/picaflores-de-la-plaza.html',
     status: 'Planted',
     priority: 'High',
-    notes: 'Ya tenemos salvia en el santuario. / Already in the sanctuary.'
+    notes: 'Ya tenemos salvia en el sanctuario. / Already in the sanctuary.'
   },
   {
     commonName: 'Pasionaria / Mburucuyá',
@@ -344,7 +344,7 @@ export const STARTER_PLANTS = [
     sources: 'Plantas medicinales autóctonas de la Argentina, Talapampa: http://www.talapampa.com/plantas_medicinales_autoctonas_de_la_argentina.pdf',
     status: 'Planted',
     priority: 'High',
-    notes: 'Maracuyá / mburucuyá ya está en el santuario. / Already in the sanctuary.'
+    notes: 'Maracuyá / mburucuyá ya está en el sanctuario. / Already in the sanctuary.'
   },
   {
     commonName: 'Fosforito / Bandera española',
@@ -405,7 +405,7 @@ export const STARTER_PLANTS = [
     flowering: 'Seedheads through the warm season',
     status: 'Planted',
     priority: 'Medium',
-    notes: 'Stipa / flechilla ya está en el santuario. / Already in the sanctuary.'
+    notes: 'Stipa / flechilla ya está en el sanctuario. / Already in the sanctuary.'
   },
   {
     commonName: 'Cola de zorro',
@@ -562,7 +562,7 @@ export const STARTER_PLANTS = [
     propagation: 'Self-sows freely. Move seedlings while they are small, or leave them to fill gaps.',
     status: 'Planted',
     priority: 'High',
-    notes: 'Ya tenemos verbena en el santuario. / Already in the sanctuary.'
+    notes: 'Ya tenemos verbena en el sanctuario. / Already in the sanctuary.'
   },
   {
     commonName: 'Margarita punzó',

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'santuario-de-aves-shell-v36';
+const CACHE_NAME = 'sanctuario-de-aves-shell-v36';
 const PLANT_IMAGES = [
   './assets/plants/araucaria-1.jpg',
   './assets/plants/araucaria-2.jpg',
