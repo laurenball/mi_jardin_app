@@ -1,5 +1,5 @@
-// Local content editor for the garden guide. Run with: npm run admin
-// Binds to localhost only. Nothing here ships with the app.
+// Editor local de contenido. Ejecutar con: npm run admin
+// Escucha solo en localhost. Nada de esto se publica con la app.
 import {createServer} from 'node:http';
 import {readFile, writeFile, unlink, readdir} from 'node:fs/promises';
 import {existsSync} from 'node:fs';
@@ -31,7 +31,7 @@ function readBody(req) {
     const chunks = [];
     req.on('data', chunk => {
       size += chunk.length;
-      if (size > MAX_BODY) { reject(new Error('Body too large')); req.destroy(); return; }
+      if (size > MAX_BODY) { reject(new Error('El cuerpo de la solicitud es demasiado grande')); req.destroy(); return; }
       chunks.push(chunk);
     });
     req.on('end', () => {
@@ -55,7 +55,7 @@ async function listPlants() {
 }
 
 async function writePlant(plant) {
-  if (!SAFE_SLUG.test(plant.slug || '')) throw new Error(`Bad slug: ${plant.slug}`);
+  if (!SAFE_SLUG.test(plant.slug || '')) throw new Error(`Slug inválido: ${plant.slug}`);
   const file = path.join(CONTENT, `${plant.slug}.json`);
   await writeFile(file, JSON.stringify(plant, null, 2) + '\n');
   const orderFile = path.join(ROOT, 'content', 'order.json');
@@ -72,7 +72,7 @@ async function nextPhotoName(slug) {
     const name = `${slug}-${n}.jpg`;
     if (!existing.has(name)) return name;
   }
-  throw new Error('Too many photos for one plant');
+  throw new Error('Demasiadas fotos para una planta');
 }
 
 async function unreferencedPhotos() {
@@ -83,7 +83,7 @@ async function unreferencedPhotos() {
 
 async function serveStatic(res, filePath, fallbackDir) {
   const full = path.join(fallbackDir, filePath);
-  if (!full.startsWith(fallbackDir) || !existsSync(full)) return send(res, 404, {error: 'Not found'});
+  if (!full.startsWith(fallbackDir) || !existsSync(full)) return send(res, 404, {error: 'No encontrado'});
   send(res, 200, await readFile(full), TYPES[path.extname(full)] || 'application/octet-stream');
 }
 
@@ -102,13 +102,13 @@ const server = createServer(async (req, res) => {
     }
     if (req.method === 'PUT' && route.startsWith('/api/plants/')) {
       const plant = await readBody(req);
-      if (plant.slug !== route.slice('/api/plants/'.length)) return send(res, 400, {error: 'Slug mismatch'});
+      if (plant.slug !== route.slice('/api/plants/'.length)) return send(res, 400, {error: 'El slug no coincide'});
       await writePlant(plant);
       return send(res, 200, {ok: true, built: await build()});
     }
     if (req.method === 'DELETE' && route.startsWith('/api/plants/')) {
       const slug = route.slice('/api/plants/'.length);
-      if (!SAFE_SLUG.test(slug)) return send(res, 400, {error: 'Bad slug'});
+      if (!SAFE_SLUG.test(slug)) return send(res, 400, {error: 'Slug inválido'});
       const plant = JSON.parse(await readFile(path.join(CONTENT, `${slug}.json`), 'utf8'));
       await unlink(path.join(CONTENT, `${slug}.json`));
       for (const photo of plant.photos || []) {
@@ -123,30 +123,30 @@ const server = createServer(async (req, res) => {
     }
     if (req.method === 'POST' && route.startsWith('/api/photos/')) {
       const slug = route.slice('/api/photos/'.length);
-      if (!SAFE_SLUG.test(slug)) return send(res, 400, {error: 'Bad slug'});
+      if (!SAFE_SLUG.test(slug)) return send(res, 400, {error: 'Slug inválido'});
       const {dataUrl} = await readBody(req);
       const match = /^data:image\/jpeg;base64,([A-Za-z0-9+/=]+)$/.exec(dataUrl || '');
-      if (!match) return send(res, 400, {error: 'Expected a JPEG data URL'});
+      if (!match) return send(res, 400, {error: 'Se esperaba una URL de datos JPEG'});
       const name = await nextPhotoName(slug);
       await writeFile(path.join(PHOTO_DIR, name), Buffer.from(match[1], 'base64'));
       return send(res, 200, {file: name});
     }
     if (req.method === 'DELETE' && route.startsWith('/api/photos/')) {
       const file = path.basename(route);
-      if (!SAFE_FILE.test(file)) return send(res, 400, {error: 'Bad file name'});
+      if (!SAFE_FILE.test(file)) return send(res, 400, {error: 'Nombre de archivo inválido'});
       if (existsSync(path.join(PHOTO_DIR, file))) await unlink(path.join(PHOTO_DIR, file));
       return send(res, 200, {ok: true});
     }
     if (req.method === 'POST' && route === '/api/build') {
       return send(res, 200, {built: await build()});
     }
-    return send(res, 404, {error: 'Not found'});
+    return send(res, 404, {error: 'No encontrado'});
   } catch (error) {
     send(res, 500, {error: error.message});
   }
 });
 
 server.listen(PORT, '127.0.0.1', () => {
-  console.log(`Editor de contenido del sanctuario / Garden content editor: http://localhost:${PORT}`);
-  console.log('Edits write to content/plants and assets/plants, then rebuild the app files.');
+  console.log(`Editor de contenido del sanctuario: http://localhost:${PORT}`);
+  console.log('Los cambios se guardan en content/plants y assets/plants, y después regeneran los archivos de la app.');
 });
