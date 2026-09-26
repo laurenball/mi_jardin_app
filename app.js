@@ -44,6 +44,7 @@ const INVENTORY_GROUPS = [
   {key: 'missing', title: 'Lo que falta / What we need', subtitle: 'Deseadas y en búsqueda / Wanted and being sourced', statuses: ['Looking For', 'Want']},
   {key: 'other', title: 'Sin estado', subtitle: 'Sin clasificar / Not classified', statuses: []}
 ];
+const LAYER_ORDER = ['Canopy', 'Fruit tree', 'Shrub', 'Climber', 'Grass', 'Herbaceous'];
 const nameCollator = new Intl.Collator(['es', 'en'], {sensitivity: 'base', numeric: true});
 
 function displayValue(group, value) { return DISPLAY_LABELS[group]?.[value] || value || ''; }
@@ -368,6 +369,20 @@ function groupLabel(plant) {
   return plant.layer ? displayValue('layer', plant.layer) : UNGROUPED_LABEL;
 }
 
+function inventoryGroupFor(plant) {
+  return INVENTORY_GROUPS.find(group => group.statuses.includes(plant.status)) || INVENTORY_GROUPS.find(group => group.key === 'other');
+}
+
+function statusRank(plant) {
+  const group = inventoryGroupFor(plant);
+  const groupRank = {have: 0, missing: 1, other: 2};
+  return groupRank[group?.key] ?? 2;
+}
+
+function statusClass(plant) {
+  return `status-${inventoryGroupFor(plant)?.key || 'other'}`;
+}
+
 function groupPlants(list) {
   const priorityRank = {High: 0, Medium: 1, Low: 2};
   const groups = new Map();
@@ -378,11 +393,18 @@ function groupPlants(list) {
   }
   for (const items of groups.values()) {
     items.sort((a, b) =>
-      (priorityRank[a.priority] ?? 3) - (priorityRank[b.priority] ?? 3)
+      statusRank(a) - statusRank(b)
+      || (priorityRank[a.priority] ?? 3) - (priorityRank[b.priority] ?? 3)
       || nameCollator.compare(a.commonName || '', b.commonName || ''));
   }
-  return [...groups.entries()].sort(([a], [b]) =>
-    (a === UNGROUPED_LABEL) - (b === UNGROUPED_LABEL) || nameCollator.compare(a, b));
+  return [...groups.entries()].sort(([aLabel, aItems], [bLabel, bItems]) => {
+    const aLayer = aItems[0]?.layer;
+    const bLayer = bItems[0]?.layer;
+    return (aLabel === UNGROUPED_LABEL) - (bLabel === UNGROUPED_LABEL)
+      || (LAYER_ORDER.indexOf(aLayer) === -1 ? 99 : LAYER_ORDER.indexOf(aLayer))
+        - (LAYER_ORDER.indexOf(bLayer) === -1 ? 99 : LAYER_ORDER.indexOf(bLayer))
+      || nameCollator.compare(aLabel, bLabel);
+  });
 }
 
 function layerGroupSection(label, items) {
@@ -398,41 +420,9 @@ function layerGroupSection(label, items) {
   return section;
 }
 
-function inventoryGroupFor(plant) {
-  return INVENTORY_GROUPS.find(group => group.statuses.includes(plant.status)) || INVENTORY_GROUPS.find(group => group.key === 'other');
-}
-
-function inventorySections(list) {
-  return INVENTORY_GROUPS.map(group => {
-    const items = list.filter(plant => inventoryGroupFor(plant).key === group.key);
-    const shouldShowEmpty = !statusFilter.value && list.length > 0 && (group.key === 'have' || group.key === 'missing');
-    if (items.length === 0 && !shouldShowEmpty) return null;
-    const section = document.createElement('section');
-    section.className = `inventory-section inventory-${group.key}`;
-    const header = document.createElement('header');
-    header.className = 'inventory-heading';
-    header.innerHTML = `<div>
-        <h2>${escapeHtml(group.title)}</h2>
-        <p>${escapeHtml(group.subtitle)}</p>
-      </div>
-      <span>${items.length}</span>`;
-    if (items.length === 0) {
-      const empty = document.createElement('p');
-      empty.className = 'inventory-empty';
-      empty.textContent = group.key === 'have'
-        ? 'Todavía no hay plantas compradas o plantadas. / No bought or planted plants yet.'
-        : 'No hay plantas pendientes por conseguir. / No plants waiting to be sourced.';
-      section.append(header, empty);
-    } else {
-      section.append(header, ...groupPlants(items).map(([label, plantsInLayer]) => layerGroupSection(label, plantsInLayer)));
-    }
-    return section;
-  }).filter(Boolean);
-}
-
 function photoPlant(plant) {
   const article = document.createElement('article');
-  article.className = 'photo-plant';
+  article.className = `photo-plant ${statusClass(plant)}`;
   article.setAttribute('role', 'button');
   article.tabIndex = 0;
   article.dataset.plantId = plant.id;
@@ -441,14 +431,13 @@ function photoPlant(plant) {
     <div>
       <h3>${escapeHtml(plant.commonName)}</h3>
       ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
-      ${careStrip(plant, 3)}
     </div>`;
   return article;
 }
 
 function cardForPlant(plant) {
   const article = document.createElement('article');
-  article.className = 'plant-card expanded-card';
+  article.className = `plant-card expanded-card ${statusClass(plant)}`;
   const tags = tagMarkup(plant);
   const facts = [
     displayValue('sun', plant.sun),
@@ -470,7 +459,6 @@ function cardForPlant(plant) {
         </div>
       </div>
       ${tags ? `<div class="meta">${tags}</div>` : ''}
-      ${careStrip(plant, 4)}
       ${facts ? `<ul class="fact-list">${facts}</ul>` : ''}
       ${plant.description ? `<p>${escapeHtml(plant.description)}</p>` : ''}
       ${plant.wildlifeNotes ? `<p class="wildlife-callout">${escapeHtml(plant.wildlifeNotes)}</p>` : ''}
@@ -553,7 +541,7 @@ function render() {
   });
   if (expandedPlantId && !visiblePlants.some(plant => plant.id === expandedPlantId)) expandedPlantId = null;
   grid.className = 'plant-grid view-photos';
-  grid.replaceChildren(...inventorySections(visiblePlants));
+  grid.replaceChildren(...groupPlants(visiblePlants).map(([label, plantsInLayer]) => layerGroupSection(label, plantsInLayer)));
   emptyState.hidden = plants.length > 0;
   noResults.hidden = plants.length === 0 || visiblePlants.length > 0;
 }
