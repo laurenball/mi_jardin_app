@@ -1,0 +1,46 @@
+{
+  "slug": "nangapiri-negro",
+  "commonName": "Ñangapirí negro",
+  "scientificName": "Eugenia repanda",
+  "plantType": "Shrub",
+  "layer": "Fruit tree",
+  "description": "Arbusto o arbolito nativo de la familia de las mirtáceas, con floración blanca y frutos negros comestibles. / Native myrtle-family shrub or small tree with white flowers and edible black fruit.",
+  "nativeStatus": "Nativo del sudeste de Sudamérica",
+  "nativeRange": "Argentina, Uruguay, sur de Brasil y regiones vecinas",
+  "purposes": [
+    "Bird food",
+    "Edible",
+    "Pollinators",
+    "Shelter"
+  ],
+  "wildlifeNotes": "Los frutos oscuros son una buena oferta para aves frugívoras. / The dark fruit is a good offering for fruit-eating birds.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Fértil y bien drenado",
+  "size": "Arbusto o arbolito",
+  "flowering": "Flores blancas",
+  "fruiting": "Frutos negros",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Pariente frutal del ñangapirí común. / Fruiting relative of the common pitanga.",
+  "photos": [
+    {
+      "file": "nangapiri-negro-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Eugenia repanda flowers",
+      "sourcePage": "https://growingfruit.org/t/pitanga-jambo-eugenia-repanda/63508",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "nangapiri-negro-2.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Eugenia repanda fruit",
+      "sourcePage": "https://www.bellamytrees.com/sold-out-species/p/eugenia-repanda-1",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

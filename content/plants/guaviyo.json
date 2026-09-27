@@ -1,0 +1,48 @@
+{
+  "slug": "guaviyo",
+  "commonName": "Guaviyú / Guaviyo",
+  "scientificName": "Myrcianthes pungens",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Árbol frutal nativo, perenne, de follaje brillante y frutos oscuros dulces. Muy valioso para jardín comestible y para aves. / Native evergreen fruit tree with glossy foliage and sweet dark fruit. Very valuable for an edible garden and for birds.",
+  "nativeStatus": "Nativo del norte argentino y la región rioplatense ampliada",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Bolivia y Brasil",
+  "purposes": [
+    "Bird food",
+    "Edible",
+    "Pollinators",
+    "Shelter"
+  ],
+  "wildlifeNotes": "Los frutos negros son comestibles y consumidos por fauna nativa; la copa perenne suma refugio. / The black fruit is edible and eaten by native wildlife; the evergreen crown adds cover.",
+  "sun": "Pleno sol",
+  "water": "Media",
+  "soil": "Fértil y bien drenado",
+  "size": "Árbol pequeño a mediano; puede superar 10 m con los años",
+  "flowering": "Flores blancas de mirtácea",
+  "fruiting": "Bayas oscuras comestibles",
+  "edibleUses": "Frutos dulces para comer frescos. / Sweet fruit for fresh eating.",
+  "sources": "Guaviyú, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/myrcianthes-pungens",
+  "status": "Looking For",
+  "priority": "High",
+  "notes": "Frutal nativo prioritario. / Priority native fruit tree.",
+  "photos": [
+    {
+      "file": "guaviyo-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Guaviyú flowers",
+      "sourcePage": "https://uruguay1.blogspot.com/2010/11/guaviyu-myrcianthes-pungens.html",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "guaviyo-2.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Myrcianthes pungens branch with berries",
+      "sourcePage": "https://www.inaturalist.org/es/taxa/440878-Myrcianthes-pungens",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

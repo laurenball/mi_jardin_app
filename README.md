@@ -13,9 +13,9 @@ The app now stores plants as more than a wishlist. Each record can include:
 - Usos humanos / Human uses
 - Sanctuario de Aves / Bird sanctuary
 
-It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus search and a simple status filter for all plants, plants we want, and plants we have. The primary screen groups plants by type first, with plants already in the Sanctuario shown before plants still to source, and uses lighter card styling only for plants we want but do not have yet. A plant can appear in both the Want and Have filter views when it is already planted but we still want more of it. Tap a plant to expand it into a card, then open all information from that card. Both the card and the full view show every photo as a swipeable gallery. Photos can be added, reordered and deleted from the full view; once a record's photos are reordered or one is deleted, the app stops re-syncing its bundled photos.
+It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus search and a status filter for all plants, plants we have, active wants, and other reference plants. The primary screen groups plants into Have, Want, and Other first, so someday plants can live in the guide without crowding the next-to-source list. Tap a plant to expand it into a card, then open all information from that card. Both the card and the full view show every photo as a swipeable gallery. Photos can be added, reordered and deleted from the full view; once a record's photos are reordered or one is deleted, the app stops re-syncing its bundled photos.
 
-The list is grouped by garden layer: Dosel / Canopy, Frutal / Fruit tree, Arbusto / Shrub, Trepadora / Climber, Gramínea / Grass, Herbácea / Herbaceous. Within each group, planted or bought plants come first, then wanted plants, then unclassified plants. Plants with no layer set appear in a final Otras / Other group.
+Within each status group, the list is sorted by garden layer: Dosel / Canopy, Frutal / Fruit tree, Arbusto / Shrub, Trepadora / Climber, Gramínea / Grass, Herbácea / Herbaceous.
 
 ## Run locally
 

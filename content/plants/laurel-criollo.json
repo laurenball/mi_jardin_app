@@ -1,0 +1,42 @@
+{
+  "slug": "laurel-criollo",
+  "commonName": "Laurel criollo",
+  "scientificName": "Ocotea acutifolia",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Árbol perenne nativo, de follaje aromático y frutos pequeños oscuros sobre una cúpula carnosa. / Native evergreen tree with aromatic foliage and small dark fruits held on a fleshy cup.",
+  "nativeStatus": "Nativo del norte y centro-este de Argentina y países vecinos",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Bolivia y Brasil",
+  "ecology": "Árbol de bosques ribereños y selvas marginales, importante como refugio y alimento para aves frugívoras. / Tree of riverside woods and marginal forests, important as shelter and food for fruit-eating birds.",
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Nesting"
+  ],
+  "wildlifeNotes": "Los frutos de laurácea son valiosos para aves frugívoras, y la copa perenne suma refugio. / Laurel-family fruits are valuable for fruit-eating birds, and the evergreen crown adds shelter.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Fértil, con algo de humedad y buen drenaje",
+  "size": "Árbol mediano a grande",
+  "flowering": "Flores pequeñas verdosas",
+  "fruiting": "Frutos oscuros sobre cúpulas rojizas",
+  "status": "Other",
+  "priority": "Low",
+  "photos": [
+    {
+      "file": "laurel-criollo-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Ocotea acutifolia flowers",
+      "sourcePage": "https://archivo.infojardin.com/tema/laurel-criollo-ocotea-acutifolia.426638/",
+      "author": "See source page"
+    },
+    {
+      "file": "laurel-criollo-2.jpg",
+      "shows": "Fruit",
+      "sourceFile": "Laurel criollo fruit",
+      "sourcePage": "https://enraizando.mitiendanube.com/productos/laurel-criollo-ocotea-acutifolia/",
+      "author": "Enraizando"
+    }
+  ],
+  "notes": "Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority."
+}

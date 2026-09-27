@@ -1,0 +1,42 @@
+{
+  "slug": "mercurio",
+  "commonName": "Mercurio",
+  "scientificName": "Modiolastrum gilliesii",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Herbácea nativa de la familia de las malvas, baja y florífera. Útil para sumar flores chicas y cubrir suelo entre plantas mayores. / Native mallow-family herb, low and flowering. Useful for small flowers and soil cover between larger plants.",
+  "nativeStatus": "Nativa de Argentina y regiones vecinas",
+  "nativeRange": "Argentina, Uruguay y zonas cercanas",
+  "purposes": [
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Flores accesibles para abejas y otros polinizadores chicos. / Flowers accessible to bees and other small pollinators.",
+  "sun": "Pleno sol",
+  "water": "Baja a media",
+  "soil": "Adaptable, bien drenado",
+  "size": "Herbácea baja",
+  "flowering": "Flores rosadas a lilas",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Cubresuelo herbáceo nativo. / Native herbaceous groundcover.",
+  "photos": [
+    {
+      "file": "mercurio-1.jpg",
+      "shows": "Flower close-up",
+      "sourceFile": "Modiolastrum gilliesii flower",
+      "sourcePage": "https://sib.gob.ar/especies/modiolastrum-gilliesii",
+      "author": "Maximiliano Ceballos",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "mercurio-2.jpg",
+      "shows": "Plant in flower",
+      "sourceFile": "Modiolastrum gilliesii flower and leaves",
+      "sourcePage": "https://identify.plantnet.org/es/k-world-flora/species/Modiolastrum%20gilliesii%20%28Steud.%29%20Krapov./data",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "ubajay",
+  "commonName": "Ubajay",
+  "scientificName": "Hexachlamys edulis",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Frutal nativo de mirtácea, de copa densa y frutos amarillos grandes, aromáticos y comestibles. / Native myrtle-family fruit tree with a dense crown and large yellow, aromatic edible fruits.",
+  "nativeStatus": "Nativo del litoral argentino y países vecinos",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Bolivia y Brasil",
+  "ecology": "Árbol de monte ribereño y selvas marginales; aporta flores para insectos, frutos y refugio. / Tree of riverside woodland and marginal forests; offers flowers for insects, fruit and shelter.",
+  "purposes": [
+    "Edible",
+    "Bird food",
+    "Pollinators",
+    "Shelter"
+  ],
+  "wildlifeNotes": "Los frutos amarillos pueden atraer aves y mamíferos frugívoros; las flores de mirtácea sostienen polinizadores. / Yellow fruits can attract fruit-eating birds and mammals; myrtle-family flowers support pollinators.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Fértil, con humedad moderada y buen drenaje",
+  "size": "Árbol frutal mediano",
+  "flowering": "Flores blancas de mirtácea",
+  "fruiting": "Frutos amarillos aromáticos",
+  "edibleUses": "Fruto comestible, jugoso y ácido, usado fresco o en dulces. / Edible juicy tart fruit, used fresh or in preserves.",
+  "status": "Other",
+  "priority": "Low",
+  "photos": [
+    {
+      "file": "ubajay-1.jpg",
+      "shows": "Flower and new growth",
+      "sourceFile": "Hexachlamys edulis flower and new growth",
+      "sourcePage": "https://tropical.theferns.info/image.php?id=Hexachlamys+edulis",
+      "author": "Sérgio Bordignon"
+    },
+    {
+      "file": "ubajay-2.jpg",
+      "shows": "Ripe fruit close-up",
+      "sourceFile": "Hexachlamys edulis ripe fruit",
+      "sourcePage": "https://tropical.theferns.info/image.php?id=Hexachlamys+edulis",
+      "author": "walterrrrr"
+    }
+  ],
+  "notes": "Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority."
+}

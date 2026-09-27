@@ -1,0 +1,46 @@
+{
+  "slug": "mato-guayabo-colorado",
+  "commonName": "Mato / Guayabo colorado",
+  "scientificName": "Myrcianthes cisplatensis",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Árbol o arbusto nativo, perenne, de la familia de las mirtáceas. Aporta flores para insectos y frutos para aves. / Native evergreen shrub or tree in the myrtle family. Offers flowers for insects and fruit for birds.",
+  "nativeStatus": "Nativo de la región rioplatense y zonas cercanas",
+  "nativeRange": "Argentina, Uruguay, sur de Brasil y Paraguay",
+  "purposes": [
+    "Bird food",
+    "Pollinators",
+    "Shelter",
+    "Edible"
+  ],
+  "wildlifeNotes": "Sus flores son melíferas y los frutos carnosos ayudan a atraer aves frugívoras. / Its flowers are bee-friendly and the fleshy fruits help draw fruit-eating birds.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Adaptable, con buen drenaje",
+  "size": "Arbusto grande o arbolito",
+  "flowering": "Flores blancas",
+  "fruiting": "Frutos rojizos a oscuros",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Mirtácea nativa para el estrato frutal. / Native myrtle-family plant for the fruiting layer.",
+  "photos": [
+    {
+      "file": "mato-guayabo-colorado-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Myrcianthes cisplatensis flower",
+      "sourcePage": "https://florauruguaya.org/taxonomias/myrcianthes-cisplatensis",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "mato-guayabo-colorado-2.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Mato / Guayabo colorado fruit clusters",
+      "sourcePage": "https://viverochurrinche.empretienda.com.ar/arboles/matoguayabo-colorado-myrcianthes-cisplatensis",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "araza-amarillo",
+  "commonName": "Arazá amarillo",
+  "scientificName": "Psidium cattleianum",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Forma de arazá de fruto amarillo, dulce-ácido y perfumado. Complementa al arazá rojo con otra cosecha de fruta nativa. / Yellow-fruited form of arazá, sweet-tart and fragrant. Complements red arazá with another native fruit crop.",
+  "nativeStatus": "Nativo del sudeste de Sudamérica, fuera del núcleo pampeano",
+  "nativeRange": "Brasil y regiones subtropicales vecinas de Sudamérica",
+  "purposes": [
+    "Edible",
+    "Bird food",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Frutos para aves frugívoras y flores para polinizadores. / Fruit for fruit-eating birds and flowers for pollinators.",
+  "sun": "Pleno sol",
+  "water": "Media",
+  "soil": "Fértil y bien drenado",
+  "size": "Arbusto grande o arbolito, 2-8 m",
+  "flowering": "Flores blancas",
+  "fruiting": "Frutos amarillos aromáticos",
+  "edibleUses": "Fruto fresco, jugos y conservas. / Fresh fruit, juice and preserves.",
+  "status": "Looking For",
+  "priority": "High",
+  "notes": "Entrada separada para buscar la forma amarilla. / Separate entry to source the yellow form.",
+  "photos": [
+    {
+      "file": "araza-amarillo-1.jpg",
+      "shows": "Yellow fruit",
+      "sourceFile": "Starr-170727-0522-Psidium cattleianum-yellow fruit form-Makamakaole-Maui - Flickr - Starr Environmental.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Starr-170727-0522-Psidium_cattleianum-yellow_fruit_form-Makamakaole-Maui_-_Flickr_-_Starr_Environmental.jpg",
+      "author": "Forest & Kim Starr",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "araza-2.jpg",
+      "shows": "Flowers and leaves",
+      "sourceFile": "Psidium cattleyanum flowers - Kanagawa 2026 May 30 various 01.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Psidium_cattleyanum_flowers_-_Kanagawa_2026_May_30_various_01.jpg",
+      "author": "Nesnad",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    }
+  ]
+}

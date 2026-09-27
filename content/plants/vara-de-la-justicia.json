@@ -1,0 +1,44 @@
+{
+  "slug": "vara-de-la-justicia",
+  "commonName": "Vara de la justicia",
+  "scientificName": "Justicia carnea",
+  "plantType": "Shrub",
+  "layer": "Shrub",
+  "description": "Arbusto o subarbusto de sombra luminosa, con espigas rosadas de flores tubulares. Excelente candidato para picaflores en rincones protegidos. / Shrub or subshrub for bright shade, with pink spikes of tubular flowers. A strong hummingbird candidate in protected corners.",
+  "nativeStatus": "Nativa de Sudamérica tropical y subtropical",
+  "nativeRange": "Brasil, Paraguay, nordeste argentino y regiones vecinas",
+  "purposes": [
+    "Hummingbirds",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Flores tubulares rosadas adecuadas para picaflores. / Pink tubular flowers suited to hummingbirds.",
+  "sun": "Media sombra",
+  "water": "Media",
+  "soil": "Fértil, con humedad moderada",
+  "size": "Arbusto o herbácea leñosa de 1-2 m",
+  "flowering": "Espigas rosadas durante la estación cálida",
+  "propagation": "Fácil por esquejes. / Easy from cuttings.",
+  "status": "Looking For",
+  "priority": "High",
+  "notes": "Nectarífera para picaflores en sombra clara. / Hummingbird nectar plant for bright shade.",
+  "photos": [
+    {
+      "file": "vara-de-la-justicia-1.jpg",
+      "shows": "Flower head close-up",
+      "sourceFile": "Brazilian plume flower",
+      "sourcePage": "https://ladybirdnursery.com.au/products/brazilian-plume-flower-justicia-carnea",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "vara-de-la-justicia-2.jpg",
+      "shows": "Flowering plant",
+      "sourceFile": "Justicia carnea plant",
+      "sourcePage": "https://www.plantitude.co.ke/products/justicia-carnea-brazilian-plume",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

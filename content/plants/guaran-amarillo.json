@@ -1,0 +1,41 @@
+{
+  "slug": "guaran-amarillo",
+  "commonName": "Guarán amarillo / Lapachillo",
+  "scientificName": "Tecoma stans",
+  "plantType": "Tree",
+  "layer": "Shrub",
+  "description": "Arbusto grande o arbolito de floración amarilla muy vistosa, con racimos de trompetas y vainas largas. / Large shrub or small tree with very showy yellow trumpet flowers and long pods.",
+  "nativeStatus": "Nativa de América tropical y subtropical; presente en el norte argentino",
+  "nativeRange": "Argentina, Bolivia, Paraguay, Brasil y gran parte de América tropical",
+  "ecology": "Planta de bordes, claros y sitios abiertos, con floración abundante para polinizadores. / A plant of edges, clearings and open sites, with abundant flowers for pollinators.",
+  "purposes": [
+    "Pollinators",
+    "Hummingbirds"
+  ],
+  "wildlifeNotes": "Las flores tubulares amarillas son visitadas por abejas, mariposas y picaflores. / The yellow tubular flowers are visited by bees, butterflies and hummingbirds.",
+  "sun": "Pleno sol",
+  "water": "Baja a media",
+  "soil": "Adaptable y bien drenado",
+  "size": "Arbusto grande o arbolito de 2-6 m",
+  "flowering": "Racimos de flores amarillas en estación cálida",
+  "fruiting": "Vainas largas y angostas",
+  "status": "Other",
+  "priority": "Low",
+  "photos": [
+    {
+      "file": "guaran-amarillo-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Tecoma stans flor",
+      "sourcePage": "https://www.estilosdeco.com/tecoma-stans/",
+      "author": "See source page"
+    },
+    {
+      "file": "guaran-amarillo-2.jpg",
+      "shows": "Seed pods",
+      "sourceFile": "Tecoma stans pods",
+      "sourcePage": "https://keyserver.lucidcentral.org/weeds/data/media/Html/tecoma_stans.htm",
+      "author": "Sheldon Navie"
+    }
+  ],
+  "notes": "Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority."
+}

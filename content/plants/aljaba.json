@@ -1,0 +1,44 @@
+{
+  "slug": "aljaba",
+  "commonName": "Aljaba",
+  "scientificName": "Fuchsia magellanica",
+  "plantType": "Shrub",
+  "layer": "Shrub",
+  "description": "Fuchsia nativa de clima fresco, con flores colgantes rojas y violetas. Un clásico para picaflores si tiene humedad y algo de reparo. / Native cool-climate fuchsia with hanging red and violet flowers. A classic for hummingbirds if given moisture and some shelter.",
+  "nativeStatus": "Nativa de la Patagonia y el sur de Chile y Argentina",
+  "nativeRange": "Chile y Argentina austral",
+  "purposes": [
+    "Hummingbirds",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Flores péndulas y tubulares muy valiosas para picaflores. / Pendant tubular flowers are very valuable for hummingbirds.",
+  "sun": "Media sombra",
+  "water": "Media",
+  "soil": "Fértil, fresco y drenado",
+  "size": "Arbusto de 1-3 m según sitio",
+  "flowering": "Flores rojas y violetas durante la estación cálida",
+  "propagation": "Fácil por esquejes. / Easy from cuttings.",
+  "status": "Looking For",
+  "priority": "High",
+  "notes": "Picaflores en sombra fresca. / Hummingbird plant for cool bright shade.",
+  "photos": [
+    {
+      "file": "aljaba-1.jpg",
+      "shows": "Flowers and berries",
+      "sourceFile": "Fuchsia berries and flowers",
+      "sourcePage": "https://gardenofeaden.blogspot.com/2016/07/are-fuchsia-berries-edible.html",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "aljaba-2.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Fuchsia magellanica flowers",
+      "sourcePage": "https://www.tradewindsfruit.com/fuchsia-magellanica-hardy-fuchsia-seeds",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

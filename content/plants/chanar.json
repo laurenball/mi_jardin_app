@@ -1,0 +1,47 @@
+{
+  "slug": "chanar",
+  "commonName": "Chañar",
+  "scientificName": "Geoffroea decorticans",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Árbol nativo de corteza verde exfoliante, floración amarilla y frutos dulces. Muy resistente a sequía una vez establecido. / Native tree with peeling green bark, yellow flowers and sweet fruit. Very drought-resistant once established.",
+  "nativeStatus": "Nativo de regiones secas de Argentina y países vecinos",
+  "nativeRange": "Argentina, Bolivia, Chile, Paraguay y Uruguay",
+  "purposes": [
+    "Edible",
+    "Pollinators",
+    "Bird food",
+    "Shelter"
+  ],
+  "wildlifeNotes": "La floración amarilla atrae insectos y los frutos aportan alimento. / The yellow bloom attracts insects and the fruit adds food.",
+  "sun": "Pleno sol",
+  "water": "Baja",
+  "soil": "Tolera suelos secos, pobres y alcalinos",
+  "size": "Árbol pequeño a mediano",
+  "flowering": "Flores amarillas en primavera",
+  "fruiting": "Frutos dulces",
+  "edibleUses": "Frutos para arrope y preparaciones tradicionales. / Fruit for syrup and traditional preparations.",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Árbol frutal de secano para diversidad. / Dryland fruit tree for diversity.",
+  "photos": [
+    {
+      "file": "chanar-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Chañar flor Geoffroea decorticans",
+      "sourcePage": "https://humedaldearica.cl/chanar/",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "chanar-2.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Chañar fruit",
+      "sourcePage": "https://www.flickr.com/photos/monicairis/6719386705",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

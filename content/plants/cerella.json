@@ -1,0 +1,46 @@
+{
+  "slug": "cerella",
+  "commonName": "Cerella",
+  "scientificName": "Eugenia involucrata",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Frutal nativo de mirtácea, también conocido como cereza de monte o cereza del Río Grande. Produce frutos rojos a oscuros, dulces y aromáticos. / Native myrtle-family fruit tree, also known as cherry of the Rio Grande. Produces red to dark, sweet aromatic fruit.",
+  "nativeStatus": "Nativa del sudeste de Sudamérica",
+  "nativeRange": "Argentina, Uruguay, Brasil y Paraguay",
+  "purposes": [
+    "Edible",
+    "Bird food",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Frutos atractivos para aves y flores útiles para polinizadores. / Fruit is attractive to birds and flowers are useful for pollinators.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Fértil, drenado y con algo de humedad",
+  "size": "Arbusto grande o arbolito",
+  "flowering": "Flores blancas",
+  "fruiting": "Frutos rojos a morado oscuro",
+  "edibleUses": "Fruta de consumo fresco y dulces. / Fruit for fresh eating and preserves.",
+  "status": "Looking For",
+  "priority": "High",
+  "notes": "Frutal nativo para buscar. / Native fruit tree to source.",
+  "photos": [
+    {
+      "file": "cerella-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Eugenia involucrata flowers",
+      "sourcePage": "https://florademisiones.blogspot.com/2019/10/eugenia-involucrata-dc.html",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "cerella-2.jpg",
+      "shows": "Ripening fruit",
+      "sourceFile": "Eugenia involucrata CEREJEIRA FotoDarioNiz",
+      "sourcePage": "https://floradeluruguay.blogspot.com/2010/11/cerejeira.html",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

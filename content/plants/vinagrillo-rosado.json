@@ -1,0 +1,47 @@
+{
+  "slug": "vinagrillo-rosado",
+  "commonName": "Vinagrillo rosado",
+  "scientificName": "Oxalis articulata",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Herbácea baja con hojas de trébol y flores rosadas en tallos finos. Hace manchones prolijos y suma floración al piso del jardín. / Low herb with clover-like leaves and pink flowers on fine stems. Makes neat patches and adds flowering at ground level.",
+  "nativeStatus": "Nativa de Sudamérica; presente en la región pampeana",
+  "nativeRange": "Argentina, Uruguay, sur de Brasil y regiones vecinas",
+  "purposes": [
+    "Pollinators",
+    "Edible"
+  ],
+  "wildlifeNotes": "Las flores son visitadas por polinizadores pequeños. / The flowers are visited by small pollinators.",
+  "sun": "Sol y media sombra",
+  "water": "Baja a media",
+  "soil": "Bien drenado; tolera suelos arenosos y de jardín",
+  "size": "Baja, hasta alrededor de 30 cm",
+  "flowering": "Primavera, verano y otoño",
+  "propagation": "Por semillas y división de tubérculos. / By seed and division of tubers.",
+  "edibleUses": "Hojas y tallos tienen sabor ácido; usar sólo ocasionalmente. / Leaves and stems are sour; use only occasionally.",
+  "safety": "Contiene oxalatos, por lo que no conviene consumirla en cantidad. / Contains oxalates, so it should not be eaten in quantity.",
+  "sources": "Vinagrillo rosado, CONICET: https://ri.conicet.gov.ar/bitstream/handle/11336/159301/CONICET_Digital_Nro.f1f78818-825a-43f8-af40-6e7ec47e1485_A.pdf",
+  "status": "Planted",
+  "priority": "Medium",
+  "notes": "Ya lo tenemos en el sanctuario. / Already in the sanctuary.",
+  "photos": [
+    {
+      "file": "vinagrillo-rosado-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "(MHNT) Oxalis articulata - Flowers.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:(MHNT)_Oxalis_articulata_-_Flowers.jpg",
+      "author": "See file page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "vinagrillo-rosado-2.jpg",
+      "shows": "Plant habit in flower",
+      "sourceFile": "(MHNT) Oxalis articulata - Habit.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:(MHNT)_Oxalis_articulata_-_Habit.jpg",
+      "author": "See file page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

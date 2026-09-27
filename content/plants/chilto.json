@@ -1,0 +1,47 @@
+{
+  "slug": "chilto",
+  "commonName": "Chilto / Tomate de árbol",
+  "scientificName": "Solanum betaceum",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Arbolito o arbusto de hojas grandes, flores claras y frutos ovales comestibles. Da un toque casi tropical dentro del estrato frutal. / Small tree or shrub with large leaves, pale flowers and edible oval fruit. Adds an almost tropical note to the fruiting layer.",
+  "nativeStatus": "Nativo de zonas tropicales y subtropicales andinas de Sudamérica",
+  "nativeRange": "Desde los Andes tropicales hasta el noroeste argentino",
+  "purposes": [
+    "Edible",
+    "Pollinators",
+    "Bird food"
+  ],
+  "wildlifeNotes": "Las flores sostienen polinizadores y los frutos pueden ser aprovechados por fauna frugívora. / The flowers support pollinators and the fruit can feed fruit-eating wildlife.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Fértil, drenado y protegido de heladas fuertes",
+  "size": "Arbusto grande o arbolito, hasta alrededor de 4 m",
+  "flowering": "Flores blanco-rosadas agrupadas",
+  "fruiting": "Frutos ovales rojos, anaranjados o amarillos",
+  "edibleUses": "Fruto comestible, ácido y aromático, usado fresco, en jugos y dulces. / Edible tart aromatic fruit, used fresh, in juices and preserves.",
+  "sources": "Chilto, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/solanum-betaceum",
+  "status": "Looking For",
+  "priority": "High",
+  "notes": "Frutal para buscar. / Fruit plant to source.",
+  "photos": [
+    {
+      "file": "chilto-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Close-up flower of Tamarillo.jpg",
+      "sourcePage": "https://www.healthbenefitstimes.com/tamarillo/",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "chilto-2.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Solanum betaceum sweet red form fruit photo",
+      "sourcePage": "https://www.ebay.com/itm/362495167244",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

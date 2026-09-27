@@ -1,0 +1,42 @@
+{
+  "slug": "tipa-blanca",
+  "commonName": "Tipa blanca",
+  "scientificName": "Tipuana tipu",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Árbol nativo grande, de copa amplia, floración amarilla abundante y frutos alados tipo sámara. / Large native tree with a broad crown, abundant yellow bloom and winged samara-like fruits.",
+  "nativeStatus": "Nativa del noroeste argentino y Bolivia",
+  "nativeRange": "Bolivia, noroeste argentino y regiones vecinas",
+  "ecology": "Árbol de gran porte que da sombra, flores para insectos y estructura alta. / Large-canopy tree that gives shade, flowers for insects and tall structure.",
+  "purposes": [
+    "Pollinators",
+    "Shelter",
+    "Nesting"
+  ],
+  "wildlifeNotes": "La floración amarilla atrae polinizadores y la copa madura ofrece refugio y sitios de nidificación. / The yellow bloom attracts pollinators and the mature crown offers shelter and nesting structure.",
+  "sun": "Pleno sol",
+  "water": "Media",
+  "soil": "Profundo y bien drenado",
+  "size": "Árbol grande; puede superar 15 m",
+  "flowering": "Flores amarillas en primavera y verano",
+  "fruiting": "Frutos alados tipo sámara",
+  "status": "Other",
+  "priority": "Low",
+  "photos": [
+    {
+      "file": "tipa-blanca-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Tipuana tipu flowers",
+      "sourcePage": "https://articulo.mercadolibre.com.ar/MLA-1506668138-tipa-blanca-tipuana-tipu-arbol-nativo-semillas-_JM",
+      "author": "See source page"
+    },
+    {
+      "file": "tipa-blanca-2.jpg",
+      "shows": "Winged fruit",
+      "sourceFile": "Tipuhana tipu.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tipuhana_tipu.jpg",
+      "author": "See file page"
+    }
+  ],
+  "notes": "Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority."
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "mistol",
+  "commonName": "Mistol",
+  "scientificName": "Sarcomphalus mistol",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Árbol nativo de regiones secas, espinoso, con frutos dulces tradicionales. Excelente para sumar estructura, alimento y tolerancia a sequía. / Native dry-region tree, thorny, with traditional sweet fruit. Excellent for structure, food and drought tolerance.",
+  "nativeStatus": "Nativo del Chaco, Espinal y regiones secas de Argentina",
+  "nativeRange": "Argentina, Bolivia, Paraguay y regiones vecinas",
+  "purposes": [
+    "Bird food",
+    "Edible",
+    "Shelter",
+    "Nesting"
+  ],
+  "wildlifeNotes": "Frutos comestibles para fauna y ramas espinosas que dan refugio. / Edible fruit for wildlife and thorny branches for shelter.",
+  "sun": "Pleno sol",
+  "water": "Baja",
+  "soil": "Tolera suelos pobres y secos",
+  "size": "Árbol pequeño a mediano",
+  "flowering": "Flores pequeñas",
+  "fruiting": "Drupas dulces",
+  "edibleUses": "Frutos para comer frescos o en preparaciones tradicionales. / Fruit for fresh eating or traditional preparations.",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Frutal seco y estructural. / Dryland fruit and structure tree.",
+  "photos": [
+    {
+      "file": "mistol-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Sarcomphalus mistol flower cluster",
+      "sourcePage": "https://inaturalist.nz/taxa/1127919-Sarcomphalus-mistol",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "mistol-2.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Mistol fruits",
+      "sourcePage": "https://enraizando.mitiendanube.com/productos/mistol-sarcomphalus-mistol-ex-ziziphus-mistol/",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

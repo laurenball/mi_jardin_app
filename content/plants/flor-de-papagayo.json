@@ -1,0 +1,44 @@
+{
+  "slug": "flor-de-papagayo",
+  "commonName": "Flor de papagayo",
+  "scientificName": "Alstroemeria psittacina",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Herbácea rizomatosa con flores rojas y verdes muy distintivas. Aporta color fuerte y una textura diferente al estrato herbáceo. / Rhizomatous herb with distinctive red and green flowers. Adds strong color and a different texture to the herbaceous layer.",
+  "nativeStatus": "Nativa de Sudamérica",
+  "nativeRange": "Argentina, Brasil, Paraguay y regiones vecinas",
+  "purposes": [
+    "Pollinators",
+    "Hummingbirds"
+  ],
+  "wildlifeNotes": "Flores tubulares y vistosas para polinizadores y potencial visita de picaflores. / Showy tubular flowers for pollinators and possible hummingbird visits.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Fértil y bien drenado",
+  "size": "Herbácea de porte medio",
+  "flowering": "Flores rojas y verdes en estación cálida",
+  "propagation": "Por división de rizomas. / By rhizome division.",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Flor herbácea para sumar color. / Herbaceous flower for stronger color.",
+  "photos": [
+    {
+      "file": "flor-de-papagayo-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Alstroemeria psittacina flower",
+      "sourcePage": "https://www.promessedefleurs.it/bulbi-estivi/bulbi-estivi-per-varieta/alstroemeria-giglio-del-peru/alstroemeria-psittacina.html",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "flor-de-papagayo-2.jpg",
+      "shows": "Flowering plant",
+      "sourceFile": "Alstroemeria psittacina blooms",
+      "sourcePage": "https://ortel.nz/products/alstroemeria-hookeri",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

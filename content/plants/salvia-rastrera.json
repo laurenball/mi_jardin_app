@@ -1,0 +1,44 @@
+{
+  "slug": "salvia-rastrera",
+  "commonName": "Salvia rastrera",
+  "scientificName": "Salvia procurrens",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Salvia nativa baja y rastrera, con flores azuladas a violetas. Ideal para cubrir suelo con una nectarífera discreta. / Low creeping native salvia with bluish to violet flowers. Ideal for covering ground with a quiet nectar plant.",
+  "nativeStatus": "Nativa del sur de Sudamérica",
+  "nativeRange": "Argentina, Uruguay, Brasil y regiones vecinas",
+  "purposes": [
+    "Pollinators",
+    "Hummingbirds"
+  ],
+  "wildlifeNotes": "Las salvias sostienen polinizadores y algunas visitas de picaflores. / Salvias support pollinators and occasional hummingbird visits.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Adaptable, con buen drenaje",
+  "size": "Baja y rastrera",
+  "flowering": "Flores azuladas a violetas",
+  "propagation": "Enraíza por tallos rastreros. / Roots from creeping stems.",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Cubresuelo nectarífero. / Nectar groundcover.",
+  "photos": [
+    {
+      "file": "salvia-rastrera-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Salvia procurrens flowers",
+      "sourcePage": "https://purasalvia.com.ar/catalogo/salvia-procurrens/",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "salvia-rastrera-2.jpg",
+      "shows": "Flowers and leaves",
+      "sourceFile": "Salvia procurrens in bloom",
+      "sourcePage": "https://www.greenonline.com.ar/productos/salvia-procurrens/",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

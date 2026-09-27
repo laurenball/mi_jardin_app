@@ -1,0 +1,45 @@
+{
+  "slug": "lagrima-de-reina",
+  "commonName": "Lágrima de reina",
+  "scientificName": "Billbergia nutans",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Bromelia resistente, de rosetas angostas y flores colgantes rosadas, verdes y violetas. Funciona bien bajo árboles y en media sombra. / Tough bromeliad with narrow rosettes and hanging pink, green and violet flowers. Works well under trees and in partial shade.",
+  "nativeStatus": "Nativa del sur de Sudamérica",
+  "nativeRange": "Brasil, Paraguay, Uruguay, Argentina y regiones vecinas",
+  "purposes": [
+    "Pollinators",
+    "Hummingbirds",
+    "Shelter"
+  ],
+  "wildlifeNotes": "Las flores colgantes atraen polinizadores; las rosetas suman microhábitat bajo la plantación. / Hanging flowers attract pollinators; the rosettes add microhabitat under plantings.",
+  "sun": "Media sombra",
+  "water": "Baja a media",
+  "soil": "Muy drenado; buena en macizos bajo árboles",
+  "size": "Rosetas bajas a medianas",
+  "flowering": "Flores colgantes rosadas, verdes y violetas",
+  "propagation": "Por división de hijuelos. / By division of offsets.",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Bromelia para sombra clara y textura. / Bromeliad for bright shade and texture.",
+  "photos": [
+    {
+      "file": "lagrima-de-reina-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Billbergia nutans flowers",
+      "sourcePage": "https://engage-the-exotic.com/nature/billbergia-nutans",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "lagrima-de-reina-2.jpg",
+      "shows": "Plant habit in flower",
+      "sourceFile": "Billbergia nutans hanging bromeliad",
+      "sourcePage": "https://tropiflora.com/products/billbergia-nutans",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

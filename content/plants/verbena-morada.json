@@ -1,0 +1,44 @@
+{
+  "slug": "verbena-morada",
+  "commonName": "Verbena morada",
+  "scientificName": "Glandularia tenera",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Verbena nativa baja, de porte extendido y cabezuelas moradas. Una buena compañera rastrera para mariposas y polinizadores. / Low native verbena with a spreading habit and purple flower heads. A good creeping companion for butterflies and pollinators.",
+  "nativeStatus": "Nativa del sur de Sudamérica",
+  "nativeRange": "Argentina, Uruguay, Brasil, Paraguay y regiones vecinas",
+  "purposes": [
+    "Butterflies",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Las flores de verbena son visitadas por mariposas y otros polinizadores. / Verbena flowers are visited by butterflies and other pollinators.",
+  "sun": "Pleno sol",
+  "water": "Baja a media",
+  "soil": "Bien drenado",
+  "size": "Baja y extendida",
+  "flowering": "Flores moradas durante la estación cálida",
+  "propagation": "Por esquejes y acodos naturales. / By cuttings and natural layering.",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Verbena rastrera morada para mariposas. / Purple creeping verbena for butterflies.",
+  "photos": [
+    {
+      "file": "verbena-morada-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Glandularia tenera flowers",
+      "sourcePage": "https://www.plant-world-seeds.com/products/glandularia-tenera-seeds",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "verbena-morada-2.jpg",
+      "shows": "Flowering groundcover",
+      "sourceFile": "Margarita morada flowering mat",
+      "sourcePage": "https://www.germinandonativas.com/product-page/margarita-morada-glandularia-tenera",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

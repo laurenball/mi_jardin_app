@@ -1,0 +1,42 @@
+{
+  "slug": "fumo-bravo",
+  "commonName": "Fumo bravo",
+  "scientificName": "Solanum granulosoleprosum",
+  "plantType": "Tree",
+  "layer": "Shrub",
+  "description": "Arbusto grande o arbolito pionero, de hojas grisáceas y racimos de flores lilas seguidas por bayas. / Pioneer shrub or small tree with greyish leaves and clusters of lilac flowers followed by berries.",
+  "nativeStatus": "Nativo del sur de Sudamérica",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Brasil y regiones vecinas",
+  "ecology": "Especie rápida de bordes, claros y sitios disturbados; útil para estructura temprana y alimento de fauna. / A fast species of edges, clearings and disturbed sites; useful for early structure and wildlife food.",
+  "purposes": [
+    "Bird food",
+    "Pollinators",
+    "Shelter"
+  ],
+  "wildlifeNotes": "Las flores atraen polinizadores y las bayas son aprovechadas por aves. / The flowers attract pollinators and the berries are used by birds.",
+  "sun": "Pleno sol",
+  "water": "Media",
+  "soil": "Adaptable; buena en suelos removidos",
+  "size": "Arbusto grande o arbolito rápido",
+  "flowering": "Flores lilas en racimos",
+  "fruiting": "Bayas pequeñas",
+  "status": "Other",
+  "priority": "Low",
+  "photos": [
+    {
+      "file": "fumo-bravo-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Fumo bravo flowers",
+      "sourcePage": "https://www.ecoregistros.org/site/imagen.php?id=603193",
+      "author": "EcoRegistros"
+    },
+    {
+      "file": "fumo-bravo-2.jpg",
+      "shows": "Flowers and foliage",
+      "sourceFile": "Fumo bravo plant",
+      "sourcePage": "https://www.ecoregistros.org/site/imagen.php?id=451776",
+      "author": "EcoRegistros"
+    }
+  ],
+  "notes": "Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority."
+}

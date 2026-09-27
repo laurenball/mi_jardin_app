@@ -1,0 +1,45 @@
+{
+  "slug": "talilla",
+  "commonName": "Talilla",
+  "scientificName": "Lycium cestroides",
+  "plantType": "Shrub",
+  "layer": "Shrub",
+  "description": "Arbusto nativo de ramas finas, floración violeta y bayas pequeñas. Útil para refugio, borde y alimento de aves. / Native shrub with fine branches, violet flowers and small berries. Useful for shelter, edges and bird food.",
+  "nativeStatus": "Nativa del sur de Sudamérica",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Bolivia, Brasil y regiones vecinas",
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Las bayas alimentan aves y la ramificación densa da refugio. / Berries feed birds and dense branching gives cover.",
+  "sun": "Pleno sol",
+  "water": "Baja a media",
+  "soil": "Adaptable; tolera sequía una vez establecida",
+  "size": "Arbusto mediano",
+  "flowering": "Flores violetas",
+  "fruiting": "Bayas pequeñas",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Arbusto nativo para borde y fauna. / Native shrub for edges and wildlife.",
+  "photos": [
+    {
+      "file": "talilla-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Lycium cestroides flowers",
+      "sourcePage": "https://archivo.infojardin.com/tema/arbusto-nativo-de-cordoba-argentina.351779/",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "talilla-2.jpg",
+      "shows": "Flowers and ripe fruit",
+      "sourceFile": "Talilla flowers and fruit",
+      "sourcePage": "https://plantasbonaerenses.blogspot.com/",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

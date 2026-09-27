@@ -1,0 +1,42 @@
+{
+  "slug": "malva-del-campo",
+  "commonName": "Malva del campo",
+  "scientificName": "Modiolastrum malvifolium",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Herbácea nativa baja, de hojas redondeadas y flores malváceas rosadas a lilas. Buena para naturalizar el borde del cantero. / Low native herb with rounded leaves and pink to lilac mallow flowers. Good for naturalizing bed edges.",
+  "nativeStatus": "Nativa del sur de Sudamérica",
+  "nativeRange": "Argentina, Uruguay y regiones vecinas",
+  "purposes": [
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Flores abiertas para polinizadores pequeños. / Open flowers for small pollinators.",
+  "sun": "Pleno sol",
+  "water": "Baja a media",
+  "soil": "Adaptable, bien drenado",
+  "size": "Baja y extendida",
+  "flowering": "Flores rosadas a lilas",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Herbácea nativa para el frente de plantación. / Native herb for the planting front.",
+  "photos": [
+    {
+      "file": "malva-del-campo-1.jpg",
+      "shows": "Flower close-up",
+      "sourceFile": "Modiolastrum malvifolium flower",
+      "sourcePage": "https://identify.plantnet.org/pt-br/the-plant-list/species/Modiolastrum%20malvifolium%20%28Griseb.%29%20K.%20Schum./data",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "malva-del-campo-2.jpg",
+      "shows": "Plant in flower",
+      "sourceFile": "Malva del Campo flower",
+      "sourcePage": "https://enraizando.mitiendanube.com/productos/malva-del-campo-modiolastrum-malvifolium/",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "araza-rojo",
+  "commonName": "Arazá rojo",
+  "scientificName": "Psidium cattleianum",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Forma de arazá de fruto rojo, aromático y comestible. Arbusto grande o arbolito muy útil para un jardín de frutas nativas. / Red-fruited form of arazá, aromatic and edible. A large shrub or small tree for a native fruit garden.",
+  "nativeStatus": "Nativo del sudeste de Sudamérica, fuera del núcleo pampeano",
+  "nativeRange": "Brasil y regiones subtropicales vecinas de Sudamérica",
+  "purposes": [
+    "Edible",
+    "Bird food",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Frutos para aves frugívoras y flores para polinizadores. / Fruit for fruit-eating birds and flowers for pollinators.",
+  "sun": "Pleno sol",
+  "water": "Media",
+  "soil": "Fértil y bien drenado",
+  "size": "Arbusto grande o arbolito, 2-8 m",
+  "flowering": "Flores blancas",
+  "fruiting": "Frutos rojos aromáticos",
+  "edibleUses": "Fruto fresco, jugos y conservas. / Fresh fruit, juice and preserves.",
+  "status": "Looking For",
+  "priority": "High",
+  "notes": "Entrada separada para buscar la forma roja. / Separate entry to source the red form.",
+  "photos": [
+    {
+      "file": "araza-rojo-1.jpg",
+      "shows": "Red fruit",
+      "sourceFile": "Starr-031002-0034-Psidium cattleianum-red fruits-Piiholo-Maui (24044745684).jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Starr-031002-0034-Psidium_cattleianum-red_fruits-Piiholo-Maui_(24044745684).jpg",
+      "author": "Forest & Kim Starr",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "araza-2.jpg",
+      "shows": "Flowers and leaves",
+      "sourceFile": "Psidium cattleyanum flowers - Kanagawa 2026 May 30 various 01.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Psidium_cattleyanum_flowers_-_Kanagawa_2026_May_30_various_01.jpg",
+      "author": "Nesnad",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    }
+  ]
+}

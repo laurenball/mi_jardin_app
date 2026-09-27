@@ -1,0 +1,46 @@
+{
+  "slug": "guayaba",
+  "commonName": "Guayaba",
+  "scientificName": "Psidium guajava",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Frutal tropical americano de mirtácea, con flores blancas y frutos perfumados. En Buenos Aires conviene ubicarlo en un sitio protegido. / Tropical American myrtle-family fruit tree with white flowers and fragrant fruit. Around Buenos Aires it wants a protected spot.",
+  "nativeStatus": "Nativa de América tropical; cultivada ampliamente",
+  "nativeRange": "América tropical y subtropical",
+  "purposes": [
+    "Edible",
+    "Bird food",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Flores visitadas por polinizadores y frutos atractivos para aves. / Flowers are visited by pollinators and fruit attracts birds.",
+  "sun": "Pleno sol",
+  "water": "Media",
+  "soil": "Fértil, drenado y protegido de heladas fuertes",
+  "size": "Arbusto grande o arbolito",
+  "flowering": "Flores blancas",
+  "fruiting": "Frutos amarillos, rosados o blancos según variedad",
+  "edibleUses": "Fruta fresca, jugos, dulces y jaleas. / Fresh fruit, juice, sweets and jellies.",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Frutal para un rincón cálido y protegido. / Fruit tree for a warm protected corner.",
+  "photos": [
+    {
+      "file": "guayaba-1.jpg",
+      "shows": "Flower and young fruit",
+      "sourceFile": "Guava flower and pollination",
+      "sourcePage": "https://www.ebay.com.au/itm/283957626434",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "guayaba-2.jpg",
+      "shows": "Ripe fruit on tree",
+      "sourceFile": "Psidium guajava fruiting tree",
+      "sourcePage": "https://www.jardimseco.com/online-store-algarve/Psidium-guajava-p180624770",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "iochroma",
+  "commonName": "Iochroma",
+  "scientificName": "Eriolarynx australis",
+  "plantType": "Shrub",
+  "layer": "Shrub",
+  "description": "Arbusto andino con flores tubulares violetas colgantes. Tiene mucho valor ornamental y nectarífero para picaflores. / Andean shrub with hanging violet tubular flowers. Very ornamental and valuable as hummingbird nectar.",
+  "nativeStatus": "Nativa del noroeste argentino y regiones andinas vecinas",
+  "nativeRange": "Argentina y Bolivia",
+  "purposes": [
+    "Hummingbirds",
+    "Pollinators"
+  ],
+  "wildlifeNotes": "Las flores largas y tubulares son muy adecuadas para picaflores. / The long tubular flowers are well suited to hummingbirds.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Fértil, drenado y protegido de heladas fuertes",
+  "size": "Arbusto grande",
+  "flowering": "Flores violetas tubulares",
+  "propagation": "Por esquejes o semillas. / By cuttings or seed.",
+  "status": "Looking For",
+  "priority": "High",
+  "notes": "Nectarífera andina para picaflores. / Andean hummingbird nectar plant.",
+  "photos": [
+    {
+      "file": "iochroma-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Iochroma australe flowers",
+      "sourcePage": "https://jardin-secrets.com/iochrome-australe.html",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "iochroma-2.jpg",
+      "shows": "Flowering shrub",
+      "sourceFile": "Iochroma australe trumpet flower shrub",
+      "sourcePage": "https://www.specialplants.net/shop/seeds/iochroma_australe/",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

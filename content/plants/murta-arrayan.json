@@ -1,0 +1,46 @@
+{
+  "slug": "murta-arrayan",
+  "commonName": "Murta / Arrayán",
+  "scientificName": "Myrceugenia glaucescens",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Mirtácea nativa de porte chico a mediano, con flores blancas y frutos carnosos. Buena para diversificar el estrato de frutales nativos. / Native myrtle-family shrub or small tree with white flowers and fleshy fruit. Good for diversifying the native fruiting layer.",
+  "nativeStatus": "Nativa del sudeste de Sudamérica",
+  "nativeRange": "Argentina, Uruguay, sur de Brasil y regiones vecinas",
+  "purposes": [
+    "Bird food",
+    "Pollinators",
+    "Edible",
+    "Shelter"
+  ],
+  "wildlifeNotes": "Las flores atraen polinizadores y los frutos suman alimento para aves. / The flowers attract pollinators and the fruit adds bird food.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Fértil, con buen drenaje y algo de humedad",
+  "size": "Arbusto grande o arbolito",
+  "flowering": "Flores blancas",
+  "fruiting": "Frutos carnosos",
+  "status": "Looking For",
+  "priority": "Medium",
+  "notes": "Frutal nativo para sumar diversidad de mirtáceas. / Native fruiting myrtle to add diversity.",
+  "photos": [
+    {
+      "file": "murta-arrayan-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Murta flower",
+      "sourcePage": "https://uruguay1.blogspot.com/2010/12/murta-myrceugenia-glaucescens.html",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "murta-arrayan-2.jpg",
+      "shows": "Ripening fruit",
+      "sourceFile": "MURTA myrceugenia glaucescens FotoDarioNiz",
+      "sourcePage": "https://floradeluruguay.blogspot.com/2010/06/murta.html",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

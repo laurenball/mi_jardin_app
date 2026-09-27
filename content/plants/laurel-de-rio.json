@@ -1,0 +1,42 @@
+{
+  "slug": "laurel-de-rio",
+  "commonName": "Laurel de río",
+  "scientificName": "Nectandra angustifolia",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Laurel nativo de zonas ribereñas, con hojas angostas, flores pequeñas y frutos elípticos. / Native riverside laurel with narrow leaves, small flowers and elliptical fruits.",
+  "nativeStatus": "Nativo de la región rioplatense y zonas subtropicales vecinas",
+  "nativeRange": "Argentina, Uruguay, Paraguay y Brasil",
+  "ecology": "Propio de bosques ribereños; aporta follaje perenne, refugio y frutos para aves. / A riverside woodland tree; adds evergreen foliage, shelter and fruit for birds.",
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Nesting"
+  ],
+  "wildlifeNotes": "Los frutos son parte del recurso de aves frugívoras en monte ribereño. / The fruits are part of the food resource for fruit-eating birds in riverside woodland.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Fértil, fresco y con buen drenaje",
+  "size": "Árbol mediano",
+  "flowering": "Flores pequeñas amarillentas",
+  "fruiting": "Frutos verdes a oscuros",
+  "status": "Other",
+  "priority": "Low",
+  "photos": [
+    {
+      "file": "laurel-de-rio-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Nectandra angustifolia flowers",
+      "sourcePage": "https://www.inaturalist.org/taxa/570830-Nectandra-angustifolia",
+      "author": "iNaturalist contributor"
+    },
+    {
+      "file": "laurel-de-rio-2.jpg",
+      "shows": "Fruit and leaves",
+      "sourceFile": "Nectandra angustifolia fruits",
+      "sourcePage": "https://www.inaturalist.org/taxa/570830-Nectandra-angustifolia",
+      "author": "iNaturalist contributor"
+    }
+  ],
+  "notes": "Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority."
+}
