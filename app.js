@@ -1,5 +1,5 @@
 import { addPlant, addPlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=39';
+import { STARTER_PLANTS } from './starter-plants.js?v=40';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -38,11 +38,6 @@ const STARTER_INFO_FIELDS = ['description','nativeStatus','nativeRange','ecology
   'status','priority','notes'];
 const UNGROUPED_LABEL = 'Otras';
 const LAYER_ORDER = ['Canopy', 'Fruit tree', 'Shrub', 'Climber', 'Grass', 'Herbaceous'];
-const INVENTORY_BUCKETS = [
-  {key: 'have', title: 'Tenemos', description: 'Plantadas o compradas'},
-  {key: 'want', title: 'Queremos', description: 'Prioridad activa para buscar o sumar'},
-  {key: 'other', title: 'Otros', description: 'Interesantes para referencia o para algún día'}
-];
 const nameCollator = new Intl.Collator(['es', 'en'], {sensitivity: 'base', numeric: true});
 
 function displayValue(group, value) { return DISPLAY_LABELS[group]?.[value] || value || ''; }
@@ -408,33 +403,39 @@ function statusClass(plant) {
   return 'status-other';
 }
 
-function sortPlants(list) {
+function groupPlants(list) {
   const priorityRank = {High: 0, Medium: 1, Low: 2};
-  return [...list].sort((a, b) => {
-    const aLayerRank = LAYER_ORDER.indexOf(a.layer) === -1 ? 99 : LAYER_ORDER.indexOf(a.layer);
-    const bLayerRank = LAYER_ORDER.indexOf(b.layer) === -1 ? 99 : LAYER_ORDER.indexOf(b.layer);
-    return aLayerRank - bLayerRank
+  const groups = new Map();
+  for (const plant of list) {
+    const label = groupLabel(plant);
+    if (!groups.has(label)) groups.set(label, []);
+    groups.get(label).push(plant);
+  }
+  for (const items of groups.values()) {
+    items.sort((a, b) =>
+      statusRank(a) - statusRank(b)
       || (priorityRank[a.priority] ?? 3) - (priorityRank[b.priority] ?? 3)
-      || nameCollator.compare(a.commonName || '', b.commonName || '');
+      || nameCollator.compare(a.commonName || '', b.commonName || ''));
+  }
+  return [...groups.entries()].sort(([aLabel, aItems], [bLabel, bItems]) => {
+    const aLayer = aItems[0]?.layer;
+    const bLayer = bItems[0]?.layer;
+    return (aLabel === UNGROUPED_LABEL) - (bLabel === UNGROUPED_LABEL)
+      || (LAYER_ORDER.indexOf(aLayer) === -1 ? 99 : LAYER_ORDER.indexOf(aLayer))
+        - (LAYER_ORDER.indexOf(bLayer) === -1 ? 99 : LAYER_ORDER.indexOf(bLayer))
+      || nameCollator.compare(aLabel, bLabel);
   });
 }
 
-function inventorySection(bucket, items) {
+function layerGroupSection(label, items) {
   const section = document.createElement('section');
-  section.className = `inventory-section inventory-${bucket.key === 'want' ? 'missing' : bucket.key}`;
-  const heading = document.createElement('div');
-  heading.className = 'inventory-heading';
-  heading.innerHTML = `<div><h2>${bucket.title}</h2><p>${bucket.description}</p></div><span>${items.length}</span>`;
+  section.className = 'plant-group';
+  const heading = document.createElement('h2');
+  heading.className = 'group-heading';
+  heading.textContent = label;
   const list = document.createElement('div');
   list.className = 'plant-group-items';
-  if (items.length === 0) {
-    const empty = document.createElement('p');
-    empty.className = 'inventory-empty';
-    empty.textContent = 'Nada por acá todavía.';
-    list.append(empty);
-  } else {
-    list.append(...sortPlants(items).map(plant => plant.id === expandedPlantId ? cardForPlant(plant) : photoPlant(plant)));
-  }
+  list.append(...items.map(plant => plant.id === expandedPlantId ? cardForPlant(plant) : photoPlant(plant)));
   section.append(heading, list);
   return section;
 }
@@ -560,13 +561,7 @@ function render() {
   });
   if (expandedPlantId && !visiblePlants.some(plant => plant.id === expandedPlantId)) expandedPlantId = null;
   grid.className = 'plant-grid view-photos';
-  if (visiblePlants.length === 0) {
-    grid.replaceChildren();
-  } else {
-    grid.replaceChildren(...INVENTORY_BUCKETS
-      .filter(bucket => !statusFilter.value || bucket.key === statusFilter.value)
-      .map(bucket => inventorySection(bucket, visiblePlants.filter(plant => inventoryBucket(plant) === bucket.key))));
-  }
+  grid.replaceChildren(...groupPlants(visiblePlants).map(([label, plantsInLayer]) => layerGroupSection(label, plantsInLayer)));
   emptyState.hidden = plants.length > 0;
   noResults.hidden = plants.length === 0 || visiblePlants.length > 0;
 }

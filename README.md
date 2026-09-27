@@ -13,9 +13,9 @@ The app now stores plants as more than a wishlist. Each record can include:
 - Usos humanos / Human uses
 - Sanctuario de Aves / Bird sanctuary
 
-It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus search and a status filter for all plants, plants we have, active wants, and other reference plants. The primary screen groups plants into Have, Want, and Other first, so someday plants can live in the guide without crowding the next-to-source list. Tap a plant to expand it into a card, then open all information from that card. Both the card and the full view show every photo as a swipeable gallery. Photos can be added, reordered and deleted from the full view; once a record's photos are reordered or one is deleted, the app stops re-syncing its bundled photos.
+It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus search and a status filter for all plants, plants we have, active wants, and other reference plants. The primary screen groups plants by garden layer. Have, Want, and Other are filter choices, so someday plants can live in the guide without crowding the next-to-source list. Tap a plant to expand it into a card, then open all information from that card. Both the card and the full view show every photo as a swipeable gallery. Photos can be added, reordered and deleted from the full view; once a record's photos are reordered or one is deleted, the app stops re-syncing its bundled photos.
 
-Within each status group, the list is sorted by garden layer: Dosel / Canopy, Frutal / Fruit tree, Arbusto / Shrub, Trepadora / Climber, Gramínea / Grass, Herbácea / Herbaceous.
+Garden layer groups appear in this order: Dosel / Canopy, Frutal / Fruit tree, Arbusto / Shrub, Trepadora / Climber, Gramínea / Grass, Herbácea / Herbaceous. Within each layer, plants we have appear first, followed by active wants and then other plants.
 
 ## Run locally
 
