@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sanctuario-de-aves-shell-v46';
+const CACHE_NAME = 'sanctuario-de-aves-shell-v47';
 const PLANT_IMAGES = [
   './assets/plants/aljaba-1.jpg',
   './assets/plants/aljaba-2.jpg',
@@ -59,6 +59,8 @@ const PLANT_IMAGES = [
   './assets/plants/guayaba-2.jpg',
   './assets/plants/iochroma-1.jpg',
   './assets/plants/iochroma-2.jpg',
+  './assets/plants/jacaranda-1.jpg',
+  './assets/plants/jacaranda-2.jpg',
   './assets/plants/lagrima-de-reina-1.jpg',
   './assets/plants/lagrima-de-reina-2.jpg',
   './assets/plants/lantana-4.jpg',
@@ -90,6 +92,9 @@ const PLANT_IMAGES = [
   './assets/plants/nangapiri-4.jpg',
   './assets/plants/nangapiri-negro-1.jpg',
   './assets/plants/nangapiri-negro-2.jpg',
+  './assets/plants/ombu-1.jpg',
+  './assets/plants/ombu-2.jpg',
+  './assets/plants/ombu-3.jpg',
   './assets/plants/pasionaria-1.jpg',
   './assets/plants/pasionaria-2.jpg',
   './assets/plants/pasionaria-3.jpg',
@@ -134,7 +139,7 @@ const BIRD_IMAGES = [
   'paloma-picazuro', 'picaflor-bronceado', 'picaflor-verde', 'pitiayumi', 'ratona',
   'tero', 'torcaza', 'tordo-musico', 'tordo-renegrido', 'zorzal-colorado'
 ].map(slug => `./assets/birds/${slug}.jpg`);
-const APP_SHELL = ['./','./index.html','./birds.html','./birds.js?v=2','./styles.css?v=45','./app.js?v=43','./db.js','./starter-plants.js?v=43','./manifest.webmanifest','./assets/icon.svg', ...BIRD_IMAGES];
+const APP_SHELL = ['./','./index.html','./birds.html','./birds.js?v=2','./styles.css?v=45','./app.js?v=44','./db.js','./starter-plants.js?v=44','./manifest.webmanifest','./assets/icon.svg', ...BIRD_IMAGES];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)));

@@ -135,6 +135,11 @@ Each plant entry carries up to three photos chosen to show the whole plant, its 
 | `assets/plants/iochroma-2.jpg` | Iochroma | Flowering shrub | [Iochroma australe trumpet flower shrub](https://www.specialplants.net/shop/seeds/iochroma_australe/) | See source page |  |
 | `assets/plants/aljaba-1.jpg` | Aljaba | Flowers and berries | [Fuchsia berries and flowers](https://gardenofeaden.blogspot.com/2016/07/are-fuchsia-berries-edible.html) | See source page |  |
 | `assets/plants/aljaba-2.jpg` | Aljaba | Flowers close-up | [Fuchsia magellanica flowers](https://www.tradewindsfruit.com/fuchsia-magellanica-hardy-fuchsia-seeds) | See source page |  |
+| `assets/plants/ombu-1.jpg` | Ombú | Swollen trunk base and crown | [Ombú (Phytolacca dioica).jpg](https://commons.wikimedia.org/wiki/File:Omb%C3%BA_(Phytolacca_dioica).jpg) | Rjcastillo | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+| `assets/plants/ombu-2.jpg` | Ombú | Leaves and flower clusters | [Phytolacca dioica Leaves & flowers Rhodes City.jpg](https://commons.wikimedia.org/wiki/File:Phytolacca_dioica_Leaves_%26_flowers_Rhodes_City.jpg) | Awinch1001 | [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| `assets/plants/ombu-3.jpg` | Ombú | Fruit clusters | [Phytolacca dioica Fruits.jpg](https://commons.wikimedia.org/wiki/File:Phytolacca_dioica_Fruits.jpg) | IKAl | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) |
+| `assets/plants/jacaranda-1.jpg` | Jacarandá | Whole tree in bloom | [Jacaranda tree (Jacaranda mimosifolia) in bloom, Miguel Bombarda Avenue, Lisbon, Portugal julesvernex2.jpg](https://commons.wikimedia.org/wiki/File:Jacaranda_tree_(Jacaranda_mimosifolia)_in_bloom,_Miguel_Bombarda_Avenue,_Lisbon,_Portugal_julesvernex2.jpg) | Jules Verne Times Two | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+| `assets/plants/jacaranda-2.jpg` | Jacarandá | Leaves and flowers | [Jacaranda mimosifolia 3994.jpg](https://commons.wikimedia.org/wiki/File:Jacaranda_mimosifolia_3994.jpg) | Anna Anichkova | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) |
 
 Notes
 

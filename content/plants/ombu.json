@@ -1,0 +1,51 @@
+{
+  "slug": "ombu",
+  "commonName": "Ombú",
+  "scientificName": "Phytolacca dioica",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Planta arborescente de copa amplia y base del tronco muy ensanchada. Sus racimos colgantes de flores claras dan paso a frutos carnosos. / A large tree-like plant with a broad crown and a striking swollen trunk base; pale flower clusters are followed by fleshy fruit.",
+  "nativeStatus": "Nativo de la región rioplatense",
+  "nativeRange": "Argentina (incluida Buenos Aires), Uruguay, Paraguay y sur de Brasil",
+  "ecology": "Da sombra y estructura al jardín. Sus flores reciben polinizadores y sus frutos alimentan aves. Necesita mucho espacio para la copa y la base del tronco. / Provides shade and garden structure; pollinators visit the flowers and birds eat the fruit. Allow ample room for its crown and trunk base.",
+  "purposes": ["Bird food", "Shelter", "Pollinators"],
+  "wildlifeNotes": "Se ha observado al benteveo comer sus frutos. Las flores reciben abejorros y la copa puede ofrecer refugio. / Great Kiskadees have been observed eating the fruit; bumblebees visit the flowers and the crown can provide shelter.",
+  "sun": "Pleno sol",
+  "water": "Media",
+  "soil": "Bien drenado; reservar un lugar amplio lejos de construcciones",
+  "size": "Gran porte, aproximadamente 7-15 m de alto; copa y base muy extendidas",
+  "flowering": "Primavera",
+  "fruiting": "Verano",
+  "propagation": "Por semillas",
+  "sources": "Gobierno de la Ciudad de Buenos Aires, Ombú: https://buenosaires.gob.ar/gcaba_historico/espaciopublicoehigieneurbana/ciudad-verde/parque-de-la-ciudad/ombu | De la Peña y Pensiero, Las plantas como recurso alimenticio de las aves (UNL/CONICET): https://ri.conicet.gov.ar/bitstream/handle/11336/110320/CONICET_Digital_Nro.554bc8f2-fcbc-47a2-af93-6eb6fb654f1a_A.pdf?isAllowed=y&sequence=2",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "ombu-1.jpg",
+      "shows": "Swollen trunk base and crown",
+      "sourceFile": "Ombú (Phytolacca dioica).jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Omb%C3%BA_(Phytolacca_dioica).jpg",
+      "author": "Rjcastillo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "ombu-2.jpg",
+      "shows": "Leaves and flower clusters",
+      "sourceFile": "Phytolacca dioica Leaves & flowers Rhodes City.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Phytolacca_dioica_Leaves_%26_flowers_Rhodes_City.jpg",
+      "author": "Awinch1001",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+    },
+    {
+      "file": "ombu-3.jpg",
+      "shows": "Fruit clusters",
+      "sourceFile": "Phytolacca dioica Fruits.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Phytolacca_dioica_Fruits.jpg",
+      "author": "IKAl",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "jacaranda",
+  "commonName": "Jacarandá",
+  "scientificName": "Jacaranda mimosifolia",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Árbol de hojas finamente divididas y floración azul violácea muy visible en primavera. Sus frutos son cápsulas redondeadas y planas. / A tree with finely divided leaves, showy blue-violet spring flowers and round, flat seed capsules.",
+  "nativeStatus": "Nativo del noroeste argentino; cultivado en Buenos Aires",
+  "nativeRange": "Yungas del noroeste argentino y otras zonas subtropicales de Sudamérica",
+  "ecology": "Forma una copa amplia que da sombra ligera. Las flores ofrecen recursos a polinizadores; en su distribución natural forma parte de la selva pedemontana y del bosque de transición. / Its broad crown provides light shade and its flowers support pollinators; in its native range it grows in piedmont forest and transition woodland.",
+  "purposes": ["Pollinators", "Hummingbirds", "Shelter"],
+  "wildlifeNotes": "Se han registrado abejas y picaflores visitando sus flores. / Bees and hummingbirds have been recorded visiting its flowers.",
+  "sun": "Pleno sol",
+  "water": "Media; regar durante períodos secos mientras se establece",
+  "soil": "Bien drenado",
+  "size": "Árbol mediano a grande, aproximadamente 8-20 m de alto",
+  "flowering": "Primavera, a menudo antes de que rebrote el follaje",
+  "fruiting": "Cápsulas redondeadas y planas con semillas aladas",
+  "sources": "Argentina.gob.ar, Árboles: https://www.argentina.gob.ar/node/492317 | Universidad Nacional de La Plata, descripción de Jacaranda mimosifolia: https://www.bfa.fcnym.unlp.edu.ar/catalogo/doc_num.php?explnum_id=4861 | University of Florida IFAS, Jacaranda mimosifolia: https://ask.ifas.ufl.edu/publication/ST317 | Estudio de visitantes florales: https://zenodo.org/records/18319137",
+  "status": "Want",
+  "photos": [
+    {
+      "file": "jacaranda-1.jpg",
+      "shows": "Whole tree in bloom",
+      "sourceFile": "Jacaranda tree (Jacaranda mimosifolia) in bloom, Miguel Bombarda Avenue, Lisbon, Portugal julesvernex2.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Jacaranda_tree_(Jacaranda_mimosifolia)_in_bloom,_Miguel_Bombarda_Avenue,_Lisbon,_Portugal_julesvernex2.jpg",
+      "author": "Jules Verne Times Two",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "jacaranda-2.jpg",
+      "shows": "Leaves and flowers",
+      "sourceFile": "Jacaranda mimosifolia 3994.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Jacaranda_mimosifolia_3994.jpg",
+      "author": "Anna Anichkova",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
+  ]
+}
