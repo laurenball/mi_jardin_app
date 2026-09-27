@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=41';
+import { STARTER_PLANTS } from './starter-plants.js?v=43';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -37,7 +37,7 @@ const STARTER_INFO_FIELDS = ['description','nativeStatus','nativeRange','ecology
   'sun','water','soil','size','flowering','fruiting','propagation','edibleUses','medicinalUses','otherUses','safety','sources',
   'status','priority','notes'];
 const UNGROUPED_LABEL = 'Otras';
-const LAYER_ORDER = ['Canopy', 'Fruit tree', 'Shrub', 'Climber', 'Grass', 'Herbaceous'];
+const LAYER_ORDER = ['Herbaceous', 'Grass', 'Shrub', 'Climber', 'Fruit tree', 'Canopy'];
 const nameCollator = new Intl.Collator(['es', 'en'], {sensitivity: 'base', numeric: true});
 
 function displayValue(group, value) { return DISPLAY_LABELS[group]?.[value] || value || ''; }

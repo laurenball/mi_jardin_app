@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sanctuario-de-aves-shell-v41';
+const CACHE_NAME = 'sanctuario-de-aves-shell-v43';
 const PLANT_IMAGES = [
   './assets/plants/aljaba-1.jpg',
   './assets/plants/aljaba-2.jpg',
@@ -128,7 +128,7 @@ const PLANT_IMAGES = [
   './assets/plants/vinagrillo-rosado-1.jpg',
   './assets/plants/vinagrillo-rosado-2.jpg'
 ];
-const APP_SHELL = ['./','./index.html','./styles.css','./app.js?v=41','./db.js','./starter-plants.js?v=41','./manifest.webmanifest','./assets/icon.svg'];
+const APP_SHELL = ['./','./index.html','./styles.css?v=42','./app.js?v=43','./db.js','./starter-plants.js?v=43','./manifest.webmanifest','./assets/icon.svg'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)));

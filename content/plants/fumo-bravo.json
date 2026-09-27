@@ -3,8 +3,8 @@
   "commonName": "Fumo bravo",
   "scientificName": "Solanum granulosoleprosum",
   "plantType": "Tree",
-  "layer": "Shrub",
-  "description": "Arbusto grande o arbolito pionero, de hojas grisáceas y racimos de flores lilas seguidas por bayas. / Pioneer shrub or small tree with greyish leaves and clusters of lilac flowers followed by berries.",
+  "layer": "Canopy",
+  "description": "Árbol pionero de hojas grisáceas y racimos de flores lilas seguidas por bayas. / Pioneer tree with greyish leaves and clusters of lilac flowers followed by berries.",
   "nativeStatus": "Nativo del sur de Sudamérica",
   "nativeRange": "Argentina, Uruguay, Paraguay, Brasil y regiones vecinas",
   "ecology": "Especie rápida de bordes, claros y sitios disturbados; útil para estructura temprana y alimento de fauna. / A fast species of edges, clearings and disturbed sites; useful for early structure and wildlife food.",
@@ -17,7 +17,7 @@
   "sun": "Pleno sol",
   "water": "Media",
   "soil": "Adaptable; buena en suelos removidos",
-  "size": "Arbusto grande o arbolito rápido",
+  "size": "Árbol de crecimiento rápido",
   "flowering": "Flores lilas en racimos",
   "fruiting": "Bayas pequeñas",
   "status": "Want",
@@ -38,5 +38,5 @@
       "author": "EcoRegistros"
     }
   ],
-  "notes": "Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority."
+  "notes": "Árbol que queremos sumar al jardín. / A tree we want to add to the garden."
 }
