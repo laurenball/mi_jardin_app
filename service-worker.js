@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sanctuario-de-aves-shell-v44';
+const CACHE_NAME = 'sanctuario-de-aves-shell-v45';
 const PLANT_IMAGES = [
   './assets/plants/aljaba-1.jpg',
   './assets/plants/aljaba-2.jpg',
@@ -128,7 +128,13 @@ const PLANT_IMAGES = [
   './assets/plants/vinagrillo-rosado-1.jpg',
   './assets/plants/vinagrillo-rosado-2.jpg'
 ];
-const APP_SHELL = ['./','./index.html','./birds.html','./styles.css?v=43','./app.js?v=43','./db.js','./starter-plants.js?v=43','./manifest.webmanifest','./assets/icon.svg'];
+const BIRD_IMAGES = [
+  'benteveo', 'calandria-grande', 'carpintero-real', 'chimango', 'chinchero-chico',
+  'chingolo', 'cotorra', 'golondrina-domestica', 'hornero', 'jilguero-dorado',
+  'paloma-picazuro', 'picaflor-bronceado', 'picaflor-verde', 'pitiayumi', 'ratona',
+  'tero', 'torcaza', 'tordo-musico', 'tordo-renegrido', 'zorzal-colorado'
+].map(slug => `./assets/birds/${slug}.jpg`);
+const APP_SHELL = ['./','./index.html','./birds.html','./birds.js?v=1','./styles.css?v=44','./app.js?v=43','./db.js','./starter-plants.js?v=43','./manifest.webmanifest','./assets/icon.svg', ...BIRD_IMAGES];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)));
