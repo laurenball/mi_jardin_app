@@ -53,7 +53,7 @@ Three files are generated from `content/` and should not be edited directly:
 
 - `starter-plants.js`
 - `docs/PHOTO_SOURCES.md`
-- the `PLANT_IMAGES` list in `service-worker.js`, whose cache version is bumped automatically whenever the image set changes
+- the `PLANT_IMAGES` list in `service-worker.js`; the app URL and cache version advance whenever plant content changes
 
 Both commands need Node. Nothing is installed: there are no dependencies.
 
@@ -67,7 +67,7 @@ Existing Version 1 plant records remain compatible.
 
 New records can store multiple photos in `photos`; the first image is also saved as `photo` so older single-photo records and code paths remain compatible. Photos can also be added later from a plant detail view.
 
-Starter plant photos are bundled in `assets/plants/` and credited in `docs/PHOTO_SOURCES.md`. Each starter plant carries photos chosen to show the best identifying features first. On startup the app re-syncs bundled photos and the written content of starter records, so an older install picks up added images, expanded text, and the current Sanctuario labels for status, priority, and notes. Photos the user took themselves are kept and stay after the bundled ones, and fields such as nursery, price, and garden location are never overwritten.
+Starter plant photos are bundled in `assets/plants/` and credited in `docs/PHOTO_SOURCES.md`. Each starter plant carries photos chosen to show the best identifying features first. Photos are cached as they are viewed for offline use. On startup the app re-syncs bundled photos and the written content of starter records, so an older install picks up added images, expanded text, and the current Sanctuario labels for status, priority, and notes. Photos the user took themselves are kept and stay after the bundled ones, and fields such as nursery, price, and garden location are never overwritten.
 
 Each entry can also record where its information came from. The Sources field takes free text, separates several references with ` | `, and renders web addresses as links in the detail view.
 

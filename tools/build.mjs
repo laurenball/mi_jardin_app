@@ -67,17 +67,36 @@ function photoSources(plants) {
   ].join('\n');
 }
 
-async function updateServiceWorker(plants) {
+async function updateServiceWorker(plants, version) {
   const file = path.join(ROOT, 'service-worker.js');
   const current = await readFile(file, 'utf8');
   const images = plants.flatMap(plant => (plant.photos || []).map(photo => `./assets/plants/${photo.file}`)).sort();
   const block = `const PLANT_IMAGES = [\n${images.map(image => `  '${image}'`).join(',\n')}\n];`;
   let next = current.replace(/const PLANT_IMAGES = \[[\s\S]*?\];/, block);
+  if (version) {
+    next = next.replace(/app\.js\?v=\d+/, `app.js?v=${version}`)
+      .replace(/starter-plants\.js\?v=\d+/, `starter-plants.js?v=${version}`);
+  }
   if (next !== current) {
     next = next.replace(/sanctuario-de-aves-shell-v(\d+)/g, (_, n) => `sanctuario-de-aves-shell-v${Number(n) + 1}`);
   }
   await writeFile(file, next);
   return {images: images.length, bumped: next !== current};
+}
+
+async function updateAppVersion() {
+  const appFile = path.join(ROOT, 'app.js');
+  const indexFile = path.join(ROOT, 'index.html');
+  const app = await readFile(appFile, 'utf8');
+  const index = await readFile(indexFile, 'utf8');
+  const current = app.match(/starter-plants\.js\?v=(\d+)/)?.[1];
+  if (!current || !index.includes(`app.js?v=${current}`)) {
+    throw new Error('App and starter plant version URLs do not match.');
+  }
+  const next = String(Number(current) + 1);
+  await writeFile(appFile, app.replace(`starter-plants.js?v=${current}`, `starter-plants.js?v=${next}`));
+  await writeFile(indexFile, index.replace(`app.js?v=${current}`, `app.js?v=${next}`));
+  return next;
 }
 
 function checkPhotos(plants) {
@@ -94,9 +113,13 @@ export async function build() {
   const plants = await loadPlants();
   const missing = checkPhotos(plants);
   if (missing.length > 0) throw new Error(`Missing photo files:\n  ${missing.join('\n  ')}`);
-  await writeFile(path.join(ROOT, 'starter-plants.js'), starterModule(plants));
+  const starterFile = path.join(ROOT, 'starter-plants.js');
+  const starter = starterModule(plants);
+  const contentChanged = !existsSync(starterFile) || await readFile(starterFile, 'utf8') !== starter;
+  const version = contentChanged ? await updateAppVersion() : null;
+  await writeFile(starterFile, starter);
   await writeFile(path.join(ROOT, 'docs', 'PHOTO_SOURCES.md'), photoSources(plants));
-  const sw = await updateServiceWorker(plants);
+  const sw = await updateServiceWorker(plants, version);
   return {plants: plants.length, photos: sw.images, cacheBumped: sw.bumped};
 }
 

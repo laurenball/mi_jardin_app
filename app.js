@@ -1,5 +1,5 @@
 import { addPlant, addPlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js';
+import { STARTER_PLANTS } from './starter-plants.js?v=39';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
