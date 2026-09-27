@@ -1,5 +1,5 @@
-import { addPlant, addPlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=40';
+import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
+import { STARTER_PLANTS } from './starter-plants.js?v=41';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -68,12 +68,49 @@ function plantPhotos(plant) {
   return photos.length > 0 ? photos : (plant.photo ? [plant.photo] : []);
 }
 function starterRecordFor(plant) {
-  const commonName = String(plant.commonName || '').toLowerCase();
-  const scientificName = String(plant.scientificName || '').toLowerCase();
-  return STARTER_PLANTS.find(starter =>
-    String(starter.commonName || '').toLowerCase() === commonName
-    || String(starter.scientificName || '').toLowerCase() === scientificName
-  );
+  const commonName = String(plant.commonName || '').trim().toLowerCase();
+  const byName = STARTER_PLANTS.find(starter => String(starter.commonName || '').trim().toLowerCase() === commonName);
+  if (byName) return byName;
+  const scientificName = String(plant.scientificName || '').trim().toLowerCase();
+  if (!scientificName) return null;
+  const matches = STARTER_PLANTS.filter(starter => String(starter.scientificName || '').trim().toLowerCase() === scientificName);
+  return matches.length === 1 ? matches[0] : null;
+}
+
+function hasPersonalPlantData(plant) {
+  return Boolean(plant.nursery || plant.price || plant.gardenLocation || plant.photosEdited
+    || (plant.photo && (typeof plant.photo !== 'string' || !isBundledPhoto(plant.photo)))
+    || plantPhotos(plant).some(photo => typeof photo !== 'string' || !isBundledPhoto(photo)));
+}
+
+async function cleanupRepeatedStarterPlants() {
+  const duplicates = new Map();
+  const idsToDelete = [];
+  for (const plant of plants) {
+    if (String(plant.commonName || '').trim().toLowerCase() === 'arazá'
+      && String(plant.scientificName || '').trim().toLowerCase() === 'psidium cattleianum'
+      && !hasPersonalPlantData(plant)
+      && plantPhotos(plant).some(isBundledPhoto)) {
+      idsToDelete.push(plant.id);
+      continue;
+    }
+    const starter = starterRecordFor(plant);
+    if (!starter || plant.commonName !== starter.commonName) continue;
+    const key = `${plant.commonName}\0${plant.scientificName}`;
+    if (!duplicates.has(key)) duplicates.set(key, []);
+    duplicates.get(key).push(plant);
+  }
+  for (const copies of duplicates.values()) {
+    if (copies.length < 2) continue;
+    copies.sort((a, b) => Number(hasPersonalPlantData(b)) - Number(hasPersonalPlantData(a))
+      || String(a.createdAt || '').localeCompare(String(b.createdAt || '')));
+    for (const extra of copies.slice(1)) {
+      if (!hasPersonalPlantData(extra)) idsToDelete.push(extra.id);
+    }
+  }
+  if (idsToDelete.length === 0) return;
+  await deletePlants(idsToDelete);
+  plants = await getPlants();
 }
 function starterPhotosFor(plant) {
   return (starterRecordFor(plant)?.photos || []).filter(Boolean);
@@ -381,8 +418,7 @@ function hasPlant(plant) {
 }
 
 function wantsPlant(plant) {
-  if (['Want', 'Looking For'].includes(plant.status)) return true;
-  return hasPlant(plant) && /\b(want|queremos|querer|agregar mas|agregar más|sumar mas|sumar más)\b/i.test(plant.notes || '');
+  return ['Want', 'Looking For'].includes(plant.status);
 }
 
 function statusRank(plant) {
@@ -399,7 +435,7 @@ function inventoryBucket(plant) {
 
 function statusClass(plant) {
   if (hasPlant(plant)) return 'status-have';
-  if (wantsPlant(plant)) return 'status-missing';
+  if (wantsPlant(plant)) return 'status-want';
   return 'status-other';
 }
 
@@ -653,6 +689,7 @@ if ('serviceWorker' in navigator) {
 }
 
 plants = await getPlants();
+await cleanupRepeatedStarterPlants();
 await addMissingStarterPlants();
 await syncStarterRecords();
 render();

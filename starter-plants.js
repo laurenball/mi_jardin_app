@@ -22,7 +22,7 @@ export const STARTER_PLANTS = [
     edibleUses: 'Los piñones son comestibles y culturalmente importantes para pueblos originarios del sur.',
     safety: 'Árbol de escala grande. Los conos y ramas pueden ser pesados; ubicar lejos de zonas de paso, techos y cableado.',
     sources: 'Araucaria araucana, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/araucaria-araucana | Araucaria araucana, FAO Forest Genetic Resources: https://www.fao.org/4/k1203e/k1203e02.htm',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Árbol muy alto para evaluar con cuidado por espacio, raíces, sombra y caída de conos. / Very tall tree; evaluate placement carefully.'
   },
@@ -45,7 +45,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Bayas pequeñas en la estación cálida',
     edibleUses: 'Las bayas son pequeñas, dulces y comestibles, con sabor cercano al dátil. Querandíes y guaraníes las comían. / The berries are small, sweet and edible, with a flavour close to dates. The Querandí and Guaraní ate them.',
     sources: 'Sendero de flora nativa, Jardín Botánico de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/jardinbotanico/senderofloranativa',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Próximo árbol clave para conseguir. / Next key tree to source.'
   },
@@ -92,7 +92,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos morado oscuro',
     otherUses: 'Los frutos dan un tinte oscuro. La madera es extremadamente dura y se usó tradicionalmente para postes de alambrado de larga duración. / The berries yield a dark dye. The wood is extremely hard and was traditionally used for fence posts that last decades.',
     sources: 'La biodiversidad urbana, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/noticias/la-biodiversidad-urbana-el-corazon-verde-de-la-ciudad',
-    status: 'Want',
+    status: 'Other',
     priority: 'High'
   },
   {
@@ -114,7 +114,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Bayas pequeñas',
     edibleUses: 'Las bayas pueden usarse como sustituto de la pimienta. / The berries can be used as a pepper substitute.',
     medicinalUses: 'Pueblos originarios usaban la resina como antiséptico y para dolor dental. / Indigenous peoples used the resin as an antiseptic and for dental pain.',
-    status: 'Want'
+    status: 'Other'
   },
   {
     commonName: 'Ñangapirí / Pitanga',
@@ -163,32 +163,9 @@ export const STARTER_PLANTS = [
     fruiting: 'Fruto verde aromático',
     edibleUses: 'El fruto es rico en vitamina C y excepcionalmente rico en yodo para una fruta. Los pétalos son dulces y se pueden comer directamente del árbol. / The fruit is rich in vitamin C and unusually rich in iodine for a fruit. The petals are sweet and can be eaten straight off the tree.',
     sources: 'Árboles nativos de Argentina, Argentina Forestal: https://www.argentinaforestal.com/2026/04/29/arboles-nativos-de-argentina/',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Frutal para sumar en la próxima etapa. / Fruit tree for the next planting round.'
-  },
-  {
-    commonName: 'Arazá',
-    scientificName: 'Psidium cattleianum',
-    plantType: 'Tree',
-    layer: 'Fruit tree',
-    photos: ['./assets/plants/araza-3.jpg', './assets/plants/araza-2.jpg'],
-    description: 'Pariente de la guayaba, nativo de la región, con frutos pequeños y muy aromáticos en formas rojas o amarillas. / A guava relative native to the region, with small, intensely aromatic fruit in red or yellow forms.',
-    nativeStatus: 'Nativo del sudeste de Sudamérica, fuera del núcleo pampeano',
-    nativeRange: 'Brasil y regiones subtropicales vecinas de Sudamérica',
-    ecology: 'Árbol bajo de sotobosque y borde, fructífero, propio de selvas subtropicales; las aves frugívoras dispersan sus semillas. / A fruiting understorey and edge tree of subtropical woodland, spread by fruit-eating birds.',
-    purposes: ['Bird food','Pollinators','Edible'],
-    wildlifeNotes: 'Las aves frugívoras comen sus frutos con facilidad. Las flores atraen polinizadores. / Fruit-eating birds take the berries readily. The flowers draw pollinators.',
-    sun: 'Pleno sol',
-    water: 'Media',
-    soil: 'Suelo fértil y bien drenado',
-    size: 'Altura: 2-8 m. Porte: arbusto grande o arbolito frutal.',
-    fruiting: 'Frutos pequeños rojos o amarillos',
-    edibleUses: 'Excelente fresco, en jugos y en conservas. Frutos nativos como este se investigan por su valor nutracéutico: tienen niveles muy altos de compuestos antioxidantes vinculados con la prevención cardiovascular. / Excellent fresh, and for juice and preserves. Native fruits like this one are being researched for nutraceutical value: they carry very high levels of antioxidant compounds linked to prevention of cardiovascular disease.',
-    sources: 'Frutales originarios de Argentina y países limítrofes, Huertas Urbanas: https://www.huertasurbanas.com/2012/06/05/frutales-originarios-de-argentina-y-paises-limitrofes/',
-    status: 'Looking For',
-    priority: 'High',
-    notes: 'Frutal nativo para la próxima etapa. / Fruit tree for the next planting round.'
   },
   {
     commonName: 'Arazá rojo',
@@ -208,7 +185,7 @@ export const STARTER_PLANTS = [
     flowering: 'Flores blancas',
     fruiting: 'Frutos rojos aromáticos',
     edibleUses: 'Fruto fresco, jugos y conservas. / Fresh fruit, juice and preserves.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Entrada separada para buscar la forma roja. / Separate entry to source the red form.'
   },
@@ -230,7 +207,7 @@ export const STARTER_PLANTS = [
     flowering: 'Flores blancas',
     fruiting: 'Frutos amarillos aromáticos',
     edibleUses: 'Fruto fresco, jugos y conservas. / Fresh fruit, juice and preserves.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Entrada separada para buscar la forma amarilla. / Separate entry to source the yellow form.'
   },
@@ -252,7 +229,7 @@ export const STARTER_PLANTS = [
     flowering: 'Flores blancas',
     fruiting: 'Frutos amarillos, rosados o blancos según variedad',
     edibleUses: 'Fruta fresca, jugos, dulces y jaleas. / Fresh fruit, juice, sweets and jellies.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Frutal para un rincón cálido y protegido. / Fruit tree for a warm protected corner.'
   },
@@ -275,7 +252,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos ovales rojos, anaranjados o amarillos',
     edibleUses: 'Fruto comestible, ácido y aromático, usado fresco, en jugos y dulces. / Edible tart aromatic fruit, used fresh, in juices and preserves.',
     sources: 'Chilto, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/solanum-betaceum',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Frutal para buscar. / Fruit plant to source.'
   },
@@ -298,7 +275,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Bayas oscuras comestibles',
     edibleUses: 'Frutos dulces para comer frescos. / Sweet fruit for fresh eating.',
     sources: 'Guaviyú, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/myrcianthes-pungens',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Frutal nativo prioritario. / Priority native fruit tree.'
   },
@@ -319,7 +296,7 @@ export const STARTER_PLANTS = [
     size: 'Arbusto grande o arbolito',
     flowering: 'Flores blancas',
     fruiting: 'Frutos carnosos',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Frutal nativo para sumar diversidad de mirtáceas. / Native fruiting myrtle to add diversity.'
   },
@@ -340,7 +317,7 @@ export const STARTER_PLANTS = [
     size: 'Arbusto grande o arbolito',
     flowering: 'Flores blancas',
     fruiting: 'Frutos rojizos a oscuros',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Mirtácea nativa para el estrato frutal. / Native myrtle-family plant for the fruiting layer.'
   },
@@ -362,7 +339,7 @@ export const STARTER_PLANTS = [
     flowering: 'Flores blancas',
     fruiting: 'Frutos rojos a morado oscuro',
     edibleUses: 'Fruta de consumo fresco y dulces. / Fruit for fresh eating and preserves.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Frutal nativo para buscar. / Native fruit tree to source.'
   },
@@ -383,7 +360,7 @@ export const STARTER_PLANTS = [
     size: 'Arbusto o arbolito',
     flowering: 'Flores blancas',
     fruiting: 'Frutos negros',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Pariente frutal del ñangapirí común. / Fruiting relative of the common pitanga.'
   },
@@ -405,7 +382,7 @@ export const STARTER_PLANTS = [
     flowering: 'Flores pequeñas',
     fruiting: 'Drupas dulces',
     edibleUses: 'Frutos para comer frescos o en preparaciones tradicionales. / Fruit for fresh eating or traditional preparations.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Frutal seco y estructural. / Dryland fruit and structure tree.'
   },
@@ -427,7 +404,7 @@ export const STARTER_PLANTS = [
     flowering: 'Flores amarillas en primavera',
     fruiting: 'Frutos dulces',
     edibleUses: 'Frutos para arrope y preparaciones tradicionales. / Fruit for syrup and traditional preparations.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Árbol frutal de secano para diversidad. / Dryland fruit tree for diversity.'
   },
@@ -472,7 +449,7 @@ export const STARTER_PLANTS = [
     propagation: 'Una vez establecido el arbusto, las hojas pueden cosecharse de forma continua para té. / Leaves can be harvested continuously for tea once the shrub is established.',
     medicinalUses: 'Conocida por pueblos originarios de la región desde hace cientos de años. Figura en la cuarta edición de la Farmacopea Brasileña y en la lista brasileña de registro simplificado de fitoterápicos. En Argentina se usa una decocción de hojas y tallos, agregada al mate o bebida como té, para úlceras gástricas, presión alta y dolor articular. Los compuestos maytenina, pristimerina y friedelanol muestran actividad antiulcerosa comparable a la ranitidina en estudios clínicos. / Known to the indigenous peoples of the region for hundreds of years. It is in the 4th edition of the Brazilian Pharmacopoeia and on Brazil simplified registration list for herbal medicines. A leaf and stem decoction, added to mate or drunk as tea, is used in Argentina for gastric ulcers, high blood pressure and joint pain. The active compounds maytenin, pristimerin and friedelanol show antiulcer activity comparable to ranitidine in clinical studies.',
     sources: 'Plantas medicinales autóctonas, Todo Uruguay: https://www.todouruguay.net/plantas-medicinales-autoctonas/',
-    status: 'Want',
+    status: 'Other',
     priority: 'High'
   },
   {
@@ -493,7 +470,7 @@ export const STARTER_PLANTS = [
     medicinalUses: 'Se toma en infusión o decocción para usos digestivos y protectores del hígado, tradicionalmente 2 a 3 tazas diarias antes de las comidas. También se mezcla directamente con la yerba, aproximadamente 1 parte de carqueja cada 5 a 10 partes de yerba, una preparación popular en Argentina y Uruguay. Es hepatoprotectora, antiinflamatoria, hipoglucemiante y gastroprotectora. / Taken as an infusion or decoction for digestive and liver-protective purposes, traditionally 2 to 3 cups daily before meals. It is also mixed straight into mate at roughly 1 part carqueja to 5 or 10 parts yerba, a common folk preparation in Argentina and Uruguay. It is hepatoprotective, anti-inflammatory, hypoglycemic and gastroprotective.',
     otherUses: 'Varias especies de Baccharis comparten el nombre carqueja. B. trimera y B. articulata se usan tradicionalmente. / Several Baccharis species share the name carqueja. B. trimera and B. articulata are both used.',
     sources: 'Carqueja, Liluama: https://liluama.pe/plantas/carqueja/',
-    status: 'Want'
+    status: 'Other'
   },
   {
     commonName: 'Marcela',
@@ -513,7 +490,7 @@ export const STARTER_PLANTS = [
     medicinalUses: 'Se usa para molestias digestivas y como antiséptica, antiinflamatoria y antioxidante. Su actividad digestiva, antimicrobiana y antiviral frente a varios patógenos humanos proviene de ácidos cafeoilquínicos y flavonoides. Es hipoglucemiante y reduce significativamente el daño cerebral por accidentes cerebrovasculares. Pueblos originarios la usaban macerada para reducir peso corporal. / Used for digestive complaints, and as an antiseptic, anti-inflammatory and antioxidant. Its digestive, antimicrobial and antiviral activity against several human pathogens comes from caffeoylquinic acids and flavonoids. It is hypoglycemic, and significantly reduces brain damage from cerebrovascular accidents. Indigenous peoples used it macerated to reduce body weight.',
     otherUses: 'Las flores secas conservan su perfume durante años. Tradicionalmente se colgaban en placares y se ponían debajo de almohadas. / The dried flowers keep their fragrance for years. Traditionally hung in closets and placed under pillows.',
     sources: 'Plantas medicinales autóctonas, Todo Uruguay: https://www.todouruguay.net/plantas-medicinales-autoctonas/ | Hierbas medicinales de Argentina, Enlace Crítico: https://www.enlacecritico.com/salud/hierbas-medicinales-de-argentina/',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Flor medicinal y de polinizadores para sumar variedad. / Flowering medicinal and pollinator plant.'
   },
@@ -535,7 +512,7 @@ export const STARTER_PLANTS = [
     flowering: 'Verano a otoño',
     fruiting: 'Vainas verdes delgadas',
     medicinalUses: 'Las hojas se usan como laxante suave, similar en efecto a la senna comercial. / The leaves are used as a gentle laxative, similar in effect to commercial senna.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Arbusto florífero para sumar variedad. / Flowering shrub for more diversity.'
   },
@@ -627,7 +604,7 @@ export const STARTER_PLANTS = [
     soil: 'Adaptable',
     flowering: 'Estación cálida',
     propagation: 'Fácil en sombra o media sombra; una de las nativas más simples de establecer. / Easy in shade or partial shade; one of the simplest natives to establish.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Flor para sumar diversidad y alimento para picaflores. / Flowering plant for more hummingbird value.'
   },
@@ -649,7 +626,7 @@ export const STARTER_PLANTS = [
     size: 'Mata grande; requiere bastante espacio',
     flowering: 'Plumas altas a fines de verano y otoño',
     safety: 'Los bordes de las hojas cortan. Ubicarla lejos de senderos y lugares donde la gente pueda rozarla. / The leaf edges cut. Site it away from paths and places where people brush past.',
-    status: 'Want'
+    status: 'Other'
   },
   {
     commonName: 'Flechilla',
@@ -687,7 +664,7 @@ export const STARTER_PLANTS = [
     water: 'Baja a media',
     soil: 'Adaptable',
     flowering: 'Espigas en la estación cálida',
-    status: 'Want'
+    status: 'Other'
   },
   {
     commonName: 'Canelón',
@@ -708,7 +685,7 @@ export const STARTER_PLANTS = [
     flowering: 'Flores pequeñas verdosas agrupadas sobre las ramas',
     fruiting: 'Frutos morado oscuro sobre los tallos',
     sources: 'Fichas de plantas nativas, Aves Argentinas: https://www.avesargentinas.org.ar/plantas-nativas',
-    status: 'Want',
+    status: 'Other',
     priority: 'High'
   },
   {
@@ -731,7 +708,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos rojos en verano',
     edibleUses: 'Los frutos rojos pequeños son dulces y comestibles frescos. / The small red fruits are sweet and edible fresh.',
     sources: 'Chal chal / Cocú, Aves Argentinas: https://www.avesargentinas.org.ar/ficha-planta/chal-chalcoc%C3%BA',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Frutal nativo muy importante para aves; buscar próximo. / High-value bird fruit tree to source next.'
   },
@@ -781,7 +758,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Vainas oscuras y curvas',
     otherUses: 'La madera es densa y se usó durante mucho tiempo para postes y leña. / The wood is dense and has long been used for posts and firewood.',
     safety: 'Las espinas pares son largas y filosas. Ubicar lejos de senderos. / The paired thorns are long and sharp. Site it away from paths.',
-    status: 'Want'
+    status: 'Other'
   },
   {
     commonName: 'Sombra de toro',
@@ -803,7 +780,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Fruto rojo de alrededor de 1 cm en invierno',
     propagation: 'Plantalo cerca de arbustos establecidos. De joven toma parte de su nutrición de sus raíces. / Plant it near established shrubs. While young it takes part of its nutrition from their roots.',
     sources: 'Sombra de toro, Aves Argentinas: https://www.avesargentinas.org.ar/ficha-planta/sombra-de-toro | Jodina rhombifolia, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/noticias/jodina-rhombifolia',
-    status: 'Want',
+    status: 'Other',
     priority: 'High'
   },
   {
@@ -846,7 +823,7 @@ export const STARTER_PLANTS = [
     size: 'Arbusto grande o arbolito rápido',
     flowering: 'Flores lilas en racimos',
     fruiting: 'Bayas pequeñas',
-    status: 'Other',
+    status: 'Want',
     priority: 'Low',
     notes: 'Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority.'
   },
@@ -955,7 +932,7 @@ export const STARTER_PLANTS = [
     size: 'Baja y extendida',
     flowering: 'Flores moradas durante la estación cálida',
     propagation: 'Por esquejes y acodos naturales. / By cuttings and natural layering.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Verbena rastrera morada para mariposas. / Purple creeping verbena for butterflies.'
   },
@@ -976,7 +953,7 @@ export const STARTER_PLANTS = [
     size: 'Baja y rastrera',
     flowering: 'Flores azuladas a violetas',
     propagation: 'Enraíza por tallos rastreros. / Roots from creeping stems.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Cubresuelo nectarífero. / Nectar groundcover.'
   },
@@ -1021,7 +998,7 @@ export const STARTER_PLANTS = [
     size: 'Herbácea de porte medio',
     flowering: 'Flores rojas y verdes en estación cálida',
     propagation: 'Por división de rizomas. / By rhizome division.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Flor herbácea para sumar color. / Herbaceous flower for stronger color.'
   },
@@ -1042,7 +1019,7 @@ export const STARTER_PLANTS = [
     size: 'Rosetas bajas a medianas',
     flowering: 'Flores colgantes rosadas, verdes y violetas',
     propagation: 'Por división de hijuelos. / By division of offsets.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Bromelia para sombra clara y textura. / Bromeliad for bright shade and texture.'
   },
@@ -1062,7 +1039,7 @@ export const STARTER_PLANTS = [
     soil: 'Adaptable, bien drenado',
     size: 'Baja y extendida',
     flowering: 'Flores rosadas a lilas',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Herbácea nativa para el frente de plantación. / Native herb for the planting front.'
   },
@@ -1082,7 +1059,7 @@ export const STARTER_PLANTS = [
     soil: 'Adaptable, bien drenado',
     size: 'Herbácea baja',
     flowering: 'Flores rosadas a lilas',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Cubresuelo herbáceo nativo. / Native herbaceous groundcover.'
   },
@@ -1102,7 +1079,7 @@ export const STARTER_PLANTS = [
     soil: 'Fértil y drenado',
     size: 'Herbácea baja a media',
     flowering: 'Flores moradas',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Herbácea morada para diversidad fina. / Purple herb for fine-grained diversity.'
   },
@@ -1124,7 +1101,7 @@ export const STARTER_PLANTS = [
     size: 'Baja y rastrera',
     flowering: 'Primavera y estación cálida',
     propagation: 'Se extiende enraizando tallos y prende fácil por esquejes. / Spreads by rooting stems, and easy from cuttings.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Flor para sumar diversidad herbácea. / Flowering plant for more herbaceous diversity.'
   },
@@ -1146,7 +1123,7 @@ export const STARTER_PLANTS = [
     size: 'Roseta de hasta 1 m de ancho; vara floral más alta',
     flowering: 'Vara ramificada en verano',
     safety: 'Los bordes y puntas de las hojas son realmente filosos. Conviene ubicarla lejos de senderos. / The leaf edges and tips are genuinely sharp. Keep it well away from paths.',
-    status: 'Want'
+    status: 'Other'
   },
   {
     commonName: 'Vara de la justicia',
@@ -1165,7 +1142,7 @@ export const STARTER_PLANTS = [
     size: 'Arbusto o herbácea leñosa de 1-2 m',
     flowering: 'Espigas rosadas durante la estación cálida',
     propagation: 'Fácil por esquejes. / Easy from cuttings.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Nectarífera para picaflores en sombra clara. / Hummingbird nectar plant for bright shade.'
   },
@@ -1186,7 +1163,7 @@ export const STARTER_PLANTS = [
     size: 'Arbusto mediano',
     flowering: 'Flores violetas',
     fruiting: 'Bayas pequeñas',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Arbusto nativo para borde y fauna. / Native shrub for edges and wildlife.'
   },
@@ -1207,7 +1184,7 @@ export const STARTER_PLANTS = [
     size: 'Arbusto grande',
     flowering: 'Flores violetas tubulares',
     propagation: 'Por esquejes o semillas. / By cuttings or seed.',
-    status: 'Looking For',
+    status: 'Other',
     priority: 'High',
     notes: 'Nectarífera andina para picaflores. / Andean hummingbird nectar plant.'
   },
@@ -1228,7 +1205,7 @@ export const STARTER_PLANTS = [
     size: 'Arbusto de 1-3 m según sitio',
     flowering: 'Flores rojas y violetas durante la estación cálida',
     propagation: 'Fácil por esquejes. / Easy from cuttings.',
-    status: 'Looking For',
+    status: 'Want',
     priority: 'High',
     notes: 'Picaflores en sombra fresca. / Hummingbird plant for cool bright shade.'
   }

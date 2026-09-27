@@ -101,6 +101,18 @@ export async function updatePlant(plant) {
   });
 }
 
+export async function deletePlants(ids) {
+  const db = await openDatabase();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(PLANT_STORE, 'readwrite');
+    const store = tx.objectStore(PLANT_STORE);
+    ids.forEach(id => store.delete(id));
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error);
+  });
+}
+
 export async function getPlants() {
   const db = await openDatabase();
   const result = await readPlants(db);
