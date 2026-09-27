@@ -64,9 +64,9 @@ const BIRDS = [
 
 const guide = document.querySelector('#bird-guide');
 const groups = new Map();
-for (const [index, bird] of BIRDS.entries()) {
+for (const bird of BIRDS) {
   if (!groups.has(bird.group)) groups.set(bird.group, []);
-  groups.get(bird.group).push({...bird, rank:index + 1});
+  groups.get(bird.group).push(bird);
 }
 
 for (const [index, [name, birds]] of [...groups].entries()) {
@@ -84,11 +84,10 @@ for (const [index, [name, birds]] of [...groups].entries()) {
     const card = document.createElement('article');
     card.className = 'bird-card';
     card.innerHTML = `
-      <img class="bird-photo" src="./assets/birds/${bird.slug}.jpg" alt="${bird.name}" loading="lazy" decoding="async" width="160" height="160" />
+      <img class="bird-photo" src="./assets/birds/${bird.slug}.jpg" alt="${bird.name}" loading="lazy" decoding="async" width="96" height="96" />
       <div class="bird-card-body">
-        <div class="bird-card-heading"><div><p class="bird-rank">${bird.rank} · Orden de visitas</p><h3>${bird.name}</h3><p class="scientific">${bird.scientific}</p></div><span class="detail-type">${bird.diet}</span></div>
-        <p>${bird.food}</p>
-        <details class="bird-details"><summary>Cómo reconocerlo</summary><p>${bird.identify}</p><p class="bird-source">Identificación: <a href="https://ebird.org/species/${bird.code}" target="_blank" rel="noopener noreferrer">eBird / Merlin</a> · Foto: <a href="https://macaulaylibrary.org/asset/${bird.photo}" target="_blank" rel="noopener noreferrer">Macaulay Library ML${bird.photo}</a></p></details>
+        <h3>${bird.name}</h3><p class="scientific">${bird.scientific}</p>
+        <details class="bird-details"><summary>Alimentación e identificación</summary><div class="bird-details-content"><span class="detail-type">${bird.diet}</span><p><strong>Qué come.</strong> ${bird.food}</p><p><strong>Cómo reconocerlo.</strong> ${bird.identify}</p><p class="bird-source">Identificación: <a href="https://ebird.org/species/${bird.code}" target="_blank" rel="noopener noreferrer">eBird / Merlin</a> · Foto: <a href="https://macaulaylibrary.org/asset/${bird.photo}" target="_blank" rel="noopener noreferrer">Macaulay Library ML${bird.photo}</a></p></div></details>
       </div>`;
     items.append(card);
   }
