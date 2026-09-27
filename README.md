@@ -15,6 +15,8 @@ The app now stores plants as more than a wishlist. Each record can include:
 
 It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus search and a status filter for all plants, plants we have, active wants, and other reference plants. The primary screen groups plants by garden layer. Have, Want, and Other are filter choices, so someday plants can live in the guide without crowding the next-to-source list. Tap a plant to expand it into a card, then open all information from that card. Both the card and the full view show every photo as a swipeable gallery. Photos can be added, reordered and deleted from the full view; once a record's photos are reordered or one is deleted, the app stops re-syncing its bundled photos.
 
+The Aves page starts with four visitors: Chingolo, Benteveo, Chimango, and Picaflor verde. They are grouped by their main food type and shown in the initial visit order provided for the garden. Each card has identification notes and a source. Bird entries currently live in `birds.html`.
+
 Garden layer groups appear smallest first: Herbácea / Herbaceous, Gramínea / Grass, Arbusto / Shrub, Trepadora / Climber, Frutal / Fruit tree, Dosel / Canopy. Within each layer, plants we have appear first, followed by active wants and then other plants.
 
 ## Run locally
@@ -80,6 +82,7 @@ Spanish appears first in app-facing text, with English shown after it where usef
 ```text
 Sanctuario/
 ├── index.html
+├── birds.html
 ├── styles.css
 ├── app.js
 ├── db.js
