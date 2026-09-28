@@ -1,0 +1,21 @@
+{
+  "slug": "tacuaruzu",
+  "commonName": "Tacuaruzú / Tacuara brava",
+  "scientificName": "Guadua chacoensis",
+  "plantType": "Grass",
+  "layer": "Grass",
+  "description": "Bambú leñoso nativo de gran porte que forma macizos de cañas. El nombre tacuara brava también se usa para otras especies: confirmar el nombre científico al conseguirla. / Large native woody bamboo forming stands of canes. The name tacuara brava is also used for other species: confirm the scientific name when sourcing it.",
+  "nativeStatus": "Nativa del norte argentino; no propia del pastizal pampeano",
+  "nativeRange": "Norte de Argentina, Paraguay, Bolivia y sur de Brasil",
+  "ecology": "Crece en ambientes subtropicales; requiere bastante espacio para desarrollar sus cañas. / Grows in subtropical habitats and needs room for its canes.",
+  "purposes": ["Shelter", "Nesting"],
+  "wildlifeNotes": "Los macizos de cañas pueden ofrecer cobertura y estructura a la fauna. / Stands of canes can provide cover and structure for wildlife.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "soil": "Con humedad y buen drenaje",
+  "size": "Bambú de gran porte; prever espacio para el macizo.",
+  "safety": "Las cañas pueden ocupar mucho espacio; ubicar lejos de senderos estrechos.",
+  "sources": "Guadua chacoensis, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1093255-2 | Plan de Gestión del Parque Nacional Iberá, SIB: https://sib.gob.ar/archivos/PG_PNIbera.pdf",
+  "status": "Other",
+  "photos": [{"file": "tacuaruzu-1.jpg", "shows": "Bamboo canes", "sourceFile": "Guadua chacoensis.JPG", "sourcePage": "https://commons.wikimedia.org/wiki/File:Guadua_chacoensis.JPG", "author": "CHUCAO", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"}]
+}

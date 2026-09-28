@@ -1,0 +1,22 @@
+{
+  "slug": "butia-yatay",
+  "commonName": "Yatay / Butiá yatay",
+  "scientificName": "Butia yatay",
+  "plantType": "Palm",
+  "layer": "Fruit tree",
+  "description": "Palmera nativa de hojas arqueadas y frutos carnosos agridulces. Es característica de los palmares del litoral argentino. / Native palm with arching leaves and fleshy sweet-tart fruit, characteristic of palm groves in northeastern Argentina.",
+  "nativeStatus": "Nativa del nordeste argentino y del litoral",
+  "nativeRange": "Nordeste de Argentina, Uruguay y sur de Brasil",
+  "ecology": "Forma palmares en suelos arenosos, como los del Parque Nacional El Palmar. / Forms palm groves on sandy soils, as in El Palmar National Park.",
+  "purposes": ["Bird food", "Edible", "Shelter"],
+  "wildlifeNotes": "Sus frutos alimentan cotorras, ñandúes y otros animales. / Its fruit feeds parakeets, rheas and other animals.",
+  "sun": "Pleno sol",
+  "water": "Baja a media",
+  "soil": "Preferentemente arenoso y bien drenado",
+  "fruiting": "Frutos carnosos agridulces",
+  "edibleUses": "El fruto agridulce es comestible. / The sweet-tart fruit is edible.",
+  "sources": "Butia yatay, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:38727-2 | Parque Nacional El Palmar, Parques Nacionales Argentina: https://www.argentina.gob.ar/node/390219",
+  "status": "Planted",
+  "notes": "Ya tenemos yatay en el sanctuario. / Already in the sanctuary.",
+  "photos": [{"file": "butia-yatay-1.jpg", "shows": "Palm", "sourceFile": "Butia yatay.jpg", "sourcePage": "https://commons.wikimedia.org/wiki/File:Butia_yatay.jpg", "author": "Andrés González", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"}]
+}

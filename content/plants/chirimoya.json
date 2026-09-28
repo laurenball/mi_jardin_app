@@ -1,0 +1,20 @@
+{
+  "slug": "chirimoya",
+  "commonName": "Chirimoya",
+  "scientificName": "Annona cherimola",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Arbolito frutal andino de frutos verdes con pulpa blanca dulce. / Small Andean fruit tree with green fruit and sweet white pulp.",
+  "nativeStatus": "Nativa del oeste de Sudamérica; exótica en Buenos Aires",
+  "nativeRange": "Bolivia, Colombia, Ecuador y Perú",
+  "ecology": "Frutal de origen tropical andino; conviene evaluar un lugar soleado y resguardado del frío en Buenos Aires. / Fruit tree from the tropical Andes; a sunny site protected from cold should be considered around Buenos Aires.",
+  "purposes": ["Edible", "Pollinators"],
+  "sun": "Pleno sol",
+  "water": "Media",
+  "soil": "Fértil y bien drenado",
+  "fruiting": "Frutos verdes con pulpa blanca",
+  "edibleUses": "La pulpa del fruto maduro se come fresca. / The ripe fruit pulp is eaten fresh.",
+  "sources": "Annona cherimola, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/927235-1",
+  "status": "Want",
+  "photos": [{"file": "chirimoya-1.jpg", "shows": "Fruit on tree", "sourceFile": "Annona cherimola Brazil.jpg", "sourcePage": "https://commons.wikimedia.org/wiki/File:Annona_cherimola_Brazil.jpg", "author": "Marcelo RosaMelo", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"}]
+}

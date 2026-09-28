@@ -1,0 +1,21 @@
+{
+  "slug": "lapacho-heptaphyllus",
+  "commonName": "Lapacho rosado / Lapacho negro",
+  "scientificName": "Handroanthus heptaphyllus",
+  "plantType": "Tree",
+  "layer": "Canopy",
+  "description": "Árbol caducifolio del nordeste argentino con una floración rosada abundante antes de que aparezcan las hojas. / Deciduous tree from northeastern Argentina with abundant pink flowers before the leaves emerge.",
+  "nativeStatus": "Nativo del nordeste argentino; no propio de la Pampa",
+  "nativeRange": "Nordeste de Argentina y regiones vecinas de Sudamérica",
+  "purposes": ["Pollinators", "Hummingbirds", "Shelter"],
+  "wildlifeNotes": "Sus flores atraen aves, abejas y mariposas. / Its flowers attract birds, bees and butterflies.",
+  "sun": "Pleno sol",
+  "water": "Media",
+  "soil": "Bien drenado",
+  "size": "Altura: 5–25 m (según sitio y madurez).",
+  "flowering": "Primavera, antes de la brotación de las hojas",
+  "fruiting": "Cápsulas con semillas",
+  "sources": "Lapacho rosado, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/arboles-nativos/lapacho-rosado | Handroanthus heptaphyllus, SIB Parques Nacionales: https://sib.gob.ar/especies/handroanthus-heptaphyllus",
+  "status": "Other",
+  "photos": [{"file": "lapacho-heptaphyllus-1.jpg", "shows": "Pink flowers", "sourceFile": "Handroanthus heptaphyllus flowers.jpg", "sourcePage": "https://commons.wikimedia.org/wiki/File:Handroanthus_heptaphyllus_flowers.jpg", "author": "João Medeiros", "license": "CC BY 2.0", "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"}]
+}

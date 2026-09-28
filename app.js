@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=46';
+import { STARTER_PLANTS } from './starter-plants.js?v=47';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -30,7 +30,7 @@ const DISPLAY_LABELS = {
   layer: {'Canopy':'Dosel','Fruit tree':'Frutal','Shrub':'Arbusto','Herbaceous':'Herbácea','Groundcover':'Cubresuelo','Grass':'Gramínea','Climber':'Trepadora'},
   purpose: {'Bird food':'Alimento para aves','Shelter':'Refugio','Nesting':'Nidificación','Hummingbirds':'Picaflores','Butterflies':'Mariposas','Pollinators':'Polinizadores','Edible':'Comestible','Medicinal tradition':'Uso medicinal'},
   priority: {'High':'Alta','Medium':'Media','Low':'Baja'},
-  plantType: {'Tree':'Árbol','Shrub':'Arbusto','Herb':'Herbácea','Grass':'Gramínea','Climber':'Trepadora'}
+  plantType: {'Tree':'Árbol','Palm':'Palmera','Shrub':'Arbusto','Herb':'Herbácea','Grass':'Gramínea','Climber':'Trepadora'}
 };
 
 const SCHEMA_VERSION = 4;

@@ -1,0 +1,20 @@
+{
+  "slug": "guanabana",
+  "commonName": "Guanábana",
+  "scientificName": "Annona muricata",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Árbol frutal tropical de hojas perennes y frutos grandes, verdes y de pulpa blanca. / Tropical evergreen fruit tree with large green fruits and white pulp.",
+  "nativeStatus": "Nativa de América tropical; exótica en Buenos Aires",
+  "nativeRange": "Del sur de México a Venezuela y Perú",
+  "ecology": "Especie de clima tropical húmedo. En Buenos Aires necesitaría un lugar muy protegido del frío. / Species of wet tropical climates. Around Buenos Aires it would need a site well protected from cold.",
+  "purposes": ["Edible", "Pollinators"],
+  "sun": "Pleno sol",
+  "water": "Media a alta",
+  "soil": "Fértil y bien drenado",
+  "fruiting": "Frutos verdes grandes con pulpa blanca comestible",
+  "edibleUses": "La pulpa del fruto maduro se come fresca o en bebidas. / The ripe fruit pulp is eaten fresh or used in drinks.",
+  "sources": "Annona muricata, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/14308-2",
+  "status": "Want",
+  "photos": [{"file": "guanabana-1.jpg", "shows": "Fruit on tree", "sourceFile": "Fruto de Annona muricata.jpg", "sourcePage": "https://commons.wikimedia.org/wiki/File:Fruto_de_Annona_muricata.jpg", "author": "JOAN", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"}]
+}

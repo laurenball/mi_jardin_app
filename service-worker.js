@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sanctuario-de-aves-shell-v49';
+const CACHE_NAME = 'sanctuario-de-aves-shell-v50';
 const PLANT_IMAGES = [
   './assets/plants/aljaba-1.jpg',
   './assets/plants/aljaba-2.jpg',
@@ -8,6 +8,7 @@ const PLANT_IMAGES = [
   './assets/plants/araza-2.jpg',
   './assets/plants/araza-amarillo-1.jpg',
   './assets/plants/araza-rojo-1.jpg',
+  './assets/plants/butia-yatay-1.jpg',
   './assets/plants/canelon-1.jpg',
   './assets/plants/canelon-2.jpg',
   './assets/plants/canelon-3.jpg',
@@ -27,6 +28,7 @@ const PLANT_IMAGES = [
   './assets/plants/chanar-2.jpg',
   './assets/plants/chilto-1.jpg',
   './assets/plants/chilto-2.jpg',
+  './assets/plants/chirimoya-1.jpg',
   './assets/plants/cola-de-zorro-1.jpg',
   './assets/plants/cola-de-zorro-2.jpg',
   './assets/plants/cola-de-zorro-3.jpg',
@@ -51,6 +53,7 @@ const PLANT_IMAGES = [
   './assets/plants/flor-de-papagayo-2.jpg',
   './assets/plants/fumo-bravo-1.jpg',
   './assets/plants/fumo-bravo-2.jpg',
+  './assets/plants/guanabana-1.jpg',
   './assets/plants/guaran-amarillo-1.jpg',
   './assets/plants/guaran-amarillo-2.jpg',
   './assets/plants/guaviyo-1.jpg',
@@ -66,6 +69,7 @@ const PLANT_IMAGES = [
   './assets/plants/lantana-4.jpg',
   './assets/plants/lantana-5.jpg',
   './assets/plants/lantana-6.jpg',
+  './assets/plants/lapacho-heptaphyllus-1.jpg',
   './assets/plants/laurel-criollo-1.jpg',
   './assets/plants/laurel-criollo-2.jpg',
   './assets/plants/laurel-de-rio-1.jpg',
@@ -113,6 +117,7 @@ const PLANT_IMAGES = [
   './assets/plants/sombra-de-toro-1.jpg',
   './assets/plants/sombra-de-toro-2.jpg',
   './assets/plants/sombra-de-toro-3.jpg',
+  './assets/plants/tacuaruzu-1.jpg',
   './assets/plants/tala-1.jpg',
   './assets/plants/tala-4.jpg',
   './assets/plants/tala-5.jpg',
@@ -139,7 +144,7 @@ const BIRD_IMAGES = [
   'paloma-picazuro', 'picaflor-bronceado', 'picaflor-verde', 'pitiayumi', 'ratona',
   'tero', 'torcaza', 'tordo-musico', 'tordo-renegrido', 'zorzal-colorado'
 ].map(slug => `./assets/birds/${slug}.jpg`);
-const APP_SHELL = ['./','./index.html','./birds.html','./birds.js?v=2','./styles.css?v=46','./app.js?v=46','./db.js','./starter-plants.js?v=46','./manifest.webmanifest','./assets/icon.svg', ...BIRD_IMAGES];
+const APP_SHELL = ['./','./index.html','./birds.html','./birds.js?v=2','./styles.css?v=46','./app.js?v=47','./db.js','./starter-plants.js?v=47','./manifest.webmanifest','./assets/icon.svg', ...BIRD_IMAGES];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)));
