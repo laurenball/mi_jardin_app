@@ -8,12 +8,16 @@
   "nativeStatus": "Nativo de la región rioplatense",
   "nativeRange": "Argentina (incluida Buenos Aires), Uruguay, Paraguay y sur de Brasil",
   "ecology": "Da sombra y estructura al jardín. Sus flores reciben polinizadores y sus frutos alimentan aves. Necesita mucho espacio para la copa y la base del tronco. / Provides shade and garden structure; pollinators visit the flowers and birds eat the fruit. Allow ample room for its crown and trunk base.",
-  "purposes": ["Bird food", "Shelter", "Pollinators"],
+  "purposes": [
+    "Bird food",
+    "Shelter",
+    "Pollinators"
+  ],
   "wildlifeNotes": "Se ha observado al benteveo comer sus frutos. Las flores reciben abejorros y la copa puede ofrecer refugio. / Great Kiskadees have been observed eating the fruit; bumblebees visit the flowers and the crown can provide shelter.",
   "sun": "Pleno sol",
   "water": "Media",
   "soil": "Bien drenado; reservar un lugar amplio lejos de construcciones",
-  "size": "Gran porte, aproximadamente 7-15 m de alto; copa y base muy extendidas",
+  "size": "Altura: 7–15 m; ancho: 10–20 m (aprox. en madurez).",
   "flowering": "Primavera",
   "fruiting": "Verano",
   "propagation": "Por semillas",

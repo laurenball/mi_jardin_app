@@ -2,12 +2,12 @@
   "slug": "carqueja",
   "commonName": "Carqueja",
   "scientificName": "Baccharis trimera / Baccharis articulata",
-  "plantType": "Herb",
-  "layer": "Herbaceous",
+  "plantType": "Shrub",
+  "layer": "Shrub",
   "description": "Planta de aspecto extraño, con tallos verdes planos y alados, sin hojas evidentes. Es una de las medicinales más importantes del Río de la Plata. / A strange-looking plant with flat, winged green stems and no apparent leaves. One of the most important medicinal plants of the Río de la Plata.",
   "nativeStatus": "Nativa del sur de Sudamérica",
   "nativeRange": "Argentina, Uruguay, Paraguay, Brazil",
-  "ecology": "Crece en suelos pobres y tolera sequía, llenando el estrato herbáceo donde pocas plantas se establecen. / Grows in poor soils and tolerates drought, filling the herbaceous layer where little else establishes.",
+  "ecology": "Crece en suelos pobres y tolera sequía, aportando estructura de arbusto bajo donde pocas plantas se establecen. / Grows in poor soils and tolerates drought, adding low-shrub structure where little else establishes.",
   "purposes": [
     "Pollinators",
     "Medicinal tradition"
@@ -39,5 +39,6 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
-  ]
+  ],
+  "size": "Altura: 0,5–1,2 m; ancho: 0,4–0,8 m (aprox. en madurez)."
 }

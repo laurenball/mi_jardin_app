@@ -7,7 +7,7 @@
   <title>Sanctuario de Aves</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=45" />
+  <link rel="stylesheet" href="styles.css?v=46" />
 </head>
 <body>
   <nav class="site-nav" aria-label="Secciones">
@@ -37,6 +37,16 @@
             <option value="have">Tenemos</option>
             <option value="want">Queremos</option>
             <option value="other">Otros</option>
+          </select>
+        </label>
+        <label>
+          <span>Luz</span>
+          <select id="sun-filter">
+            <option value="">Todas</option>
+            <option value="Full sun">Pleno sol</option>
+            <option value="Sun / partial shade">Sol y media sombra</option>
+            <option value="Partial shade">Media sombra</option>
+            <option value="Shade">Sombra</option>
           </select>
         </label>
       </div>
@@ -89,7 +99,7 @@
           </label>
           <label>Estrato del jardín
             <select name="layer">
-              <option value="">Sin definir</option><option value="Canopy">Dosel</option><option value="Fruit tree">Frutal</option><option value="Shrub">Arbusto</option><option value="Herbaceous">Herbácea</option><option value="Grass">Gramínea</option><option value="Climber">Trepadora</option>
+              <option value="">Sin definir</option><option value="Canopy">Dosel</option><option value="Fruit tree">Frutal</option><option value="Shrub">Arbusto</option><option value="Herbaceous">Herbácea</option><option value="Groundcover">Cubresuelo</option><option value="Grass">Gramínea</option><option value="Climber">Trepadora</option>
             </select>
           </label>
         </div>
@@ -165,6 +175,6 @@
     <button id="update-app" class="primary-button" type="button">Actualizar</button>
   </aside>
 
-  <script type="module" src="app.js?v=45"></script>
+  <script type="module" src="app.js?v=46"></script>
 </body>
 </html>

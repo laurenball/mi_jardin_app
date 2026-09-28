@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=45';
+import { STARTER_PLANTS } from './starter-plants.js?v=46';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -11,6 +11,7 @@ const emptyState = document.querySelector('#empty-state');
 const noResults = document.querySelector('#no-results');
 const searchInput = document.querySelector('#search');
 const statusFilter = document.querySelector('#status-filter');
+const sunFilter = document.querySelector('#sun-filter');
 const updateNotice = document.querySelector('#update-notice');
 const updateButton = document.querySelector('#update-app');
 let plants = [];
@@ -26,21 +27,24 @@ let reloading = false;
 const DISPLAY_LABELS = {
   status: {'Want':'Quiero','Looking For':'Buscando','Bought':'Comprada','Planted':'Plantada','Other':'Otro'},
   sun: {'Full sun':'Pleno sol','Sun / partial shade':'Sol y media sombra','Partial shade':'Media sombra','Shade':'Sombra'},
-  layer: {'Canopy':'Dosel','Fruit tree':'Frutal','Shrub':'Arbusto','Herbaceous':'Herbácea','Grass':'Gramínea','Climber':'Trepadora'},
+  layer: {'Canopy':'Dosel','Fruit tree':'Frutal','Shrub':'Arbusto','Herbaceous':'Herbácea','Groundcover':'Cubresuelo','Grass':'Gramínea','Climber':'Trepadora'},
   purpose: {'Bird food':'Alimento para aves','Shelter':'Refugio','Nesting':'Nidificación','Hummingbirds':'Picaflores','Butterflies':'Mariposas','Pollinators':'Polinizadores','Edible':'Comestible','Medicinal tradition':'Uso medicinal'},
   priority: {'High':'Alta','Medium':'Media','Low':'Baja'},
   plantType: {'Tree':'Árbol','Shrub':'Arbusto','Herb':'Herbácea','Grass':'Gramínea','Climber':'Trepadora'}
 };
 
 const SCHEMA_VERSION = 4;
-const STARTER_INFO_FIELDS = ['description','nativeStatus','nativeRange','ecology','hostPlant','purposes','wildlifeNotes',
+const STARTER_INFO_FIELDS = ['plantType','layer','description','nativeStatus','nativeRange','ecology','hostPlant','purposes','wildlifeNotes',
   'sun','water','soil','size','flowering','fruiting','propagation','edibleUses','medicinalUses','otherUses','safety','sources',
   'status','priority','notes'];
 const UNGROUPED_LABEL = 'Otras';
-const LAYER_ORDER = ['Herbaceous', 'Grass', 'Shrub', 'Climber', 'Fruit tree', 'Canopy'];
+const LAYER_ORDER = ['Groundcover', 'Herbaceous', 'Grass', 'Shrub', 'Climber', 'Fruit tree', 'Canopy'];
 const nameCollator = new Intl.Collator(['es', 'en'], {sensitivity: 'base', numeric: true});
 
 function displayValue(group, value) { return DISPLAY_LABELS[group]?.[value] || value || ''; }
+function canonicalSun(value) {
+  return ({'Pleno sol':'Full sun','Sol y media sombra':'Sun / partial shade','Media sombra':'Partial shade','Sombra':'Shade'})[value] || value || '';
+}
 function openForm() { form.reset(); dialog.showModal(); }
 function closeForm() { dialog.close(); }
 function cleanupObjectUrls() { objectUrls.forEach(URL.revokeObjectURL); objectUrls = []; }
@@ -590,6 +594,7 @@ function render() {
   const query = searchInput.value.trim().toLowerCase();
   const visiblePlants = plants.filter(plant => {
     return searchableText(plant).includes(query)
+      && (!sunFilter.value || canonicalSun(plant.sun) === sunFilter.value)
       && (!statusFilter.value
         || (statusFilter.value === 'have' && hasPlant(plant))
         || (statusFilter.value === 'want' && wantsPlant(plant))
@@ -622,10 +627,11 @@ form.addEventListener('submit', async (event) => {
 
 for (const id of ['open-form','empty-add']) document.querySelector(`#${id}`).addEventListener('click', openForm);
 for (const id of ['close-form','cancel-form']) document.querySelector(`#${id}`).addEventListener('click', closeForm);
-for (const input of [searchInput, statusFilter]) input.addEventListener(input.tagName === 'INPUT' ? 'input' : 'change', render);
+for (const input of [searchInput, statusFilter, sunFilter]) input.addEventListener(input.tagName === 'INPUT' ? 'input' : 'change', render);
 document.querySelector('#clear-filters').addEventListener('click', () => {
   searchInput.value = '';
   statusFilter.value = '';
+  sunFilter.value = '';
   render();
 });
 function activateGridTarget(target) {
