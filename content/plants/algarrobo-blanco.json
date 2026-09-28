@@ -9,7 +9,15 @@
     "Edible"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "algarrobo-blanco-1.jpg",
+      "shows": "Vainas maduras de algarrobo blanco",
+      "sourceFile": "Algarrobo blanco, Enraizando",
+      "sourcePage": "https://enraizando.mitiendanube.com/productos/algarrobo-blanco-neltuma-alba-ex-prosopis-alba/",
+      "author": "Ver página de origen"
+    }
+  ],
   "fruitSizeGroup": "Needs space",
   "size": "Altura natural sin poda: 8–15+ m.",
   "sizeManagement": "Tamaño mantenido orientativo: 5–8 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",

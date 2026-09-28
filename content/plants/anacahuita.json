@@ -9,7 +9,15 @@
     "Bird food"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "anacahuita-1.jpg",
+      "shows": "Frutos de anacahuita en diferentes estados de maduración",
+      "sourceFile": "Anacahuita, Aves Argentinas",
+      "sourcePage": "https://www.avesargentinas.org.ar/ficha-planta/anacahuita",
+      "author": "Ver página de origen"
+    }
+  ],
   "canopySizeGroup": "Medium",
   "size": "Altura natural sin poda: 5–12 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 4–6 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",

@@ -9,7 +9,15 @@
     "Edible"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "guavira-1.jpg",
+      "shows": "Frutos maduros de guavirá en la rama",
+      "sourceFile": "Guabiroba, Instituto Rã-bugio",
+      "sourcePage": "https://www.ra-bugio.org.br/ver_especie.php?id=1101",
+      "author": "Germano Woehl Junior"
+    }
+  ],
   "fruitSizeGroup": "Needs regular pruning",
   "size": "Altura natural sin poda: 5–10+ m.",
   "sizeManagement": "Tamaño mantenido orientativo: 4–6 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",

@@ -9,7 +9,15 @@
     "Edible"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "piquillin-1.jpg",
+      "shows": "Frutos maduros de piquillín",
+      "sourceFile": "Condalia microphylla-fruto4.jpg",
+      "sourcePage": "https://florabonaerense.blogspot.com/2015/09/piquillin-condalia-microphylla.html",
+      "author": "Héctor Omar Troiani"
+    }
+  ],
   "fruitSizeGroup": "Naturally small",
   "size": "Altura natural sin poda: 1–2,5 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 1–2 m. Naturalmente menor de 5 m; no requiere poda para alcanzar ese límite.",

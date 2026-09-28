@@ -9,7 +9,15 @@
     "Edible"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "yvapority-1.jpg",
+      "shows": "Frutos de yvapority en la rama",
+      "sourceFile": "Plinia rivularis, Flora Digital UFSC",
+      "sourcePage": "https://floradigital.ufsc.br/open_sp.php?img=13633",
+      "author": "João Augusto Bagatini"
+    }
+  ],
   "fruitSizeGroup": "Needs space",
   "size": "Altura natural sin poda: 10–18 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 5–8 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",

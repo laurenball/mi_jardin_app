@@ -9,7 +9,15 @@
     "Edible"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "araticu-1.jpg",
+      "shows": "Fruto maduro de araticú",
+      "sourceFile": "Annona emarginata fruit",
+      "sourcePage": "https://florademisiones.blogspot.com/2021/07/annona-emarginata-schltdl-h-rainer.html",
+      "author": "Ver página de origen"
+    }
+  ],
   "fruitSizeGroup": "Easy to keep small",
   "size": "Altura natural sin poda: 2–6 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 2–4 m. Puede mantenerse por debajo de 5 m con recortes moderados.",

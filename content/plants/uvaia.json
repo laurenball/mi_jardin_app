@@ -9,7 +9,15 @@
     "Edible"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "uvaia-1.jpg",
+      "shows": "Fruto maduro de uvaia en la rama",
+      "sourceFile": "Muda de uvaia Eugenia pyriformis",
+      "sourcePage": "https://www.floralondrina.com.br/muda-de-uvaia-eugenia-pyriformis/",
+      "author": "Flora Londrina Viveiro"
+    }
+  ],
   "fruitSizeGroup": "Needs regular pruning",
   "size": "Altura natural sin poda: 4–10 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 3–5 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",

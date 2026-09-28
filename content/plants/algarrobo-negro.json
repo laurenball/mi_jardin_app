@@ -9,7 +9,15 @@
     "Edible"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "algarrobo-negro-1.jpg",
+      "shows": "Vainas de algarrobo negro",
+      "sourceFile": "Prosopis nigra seed pods",
+      "sourcePage": "https://archivo.infojardin.com/tema/algarrobo-negro-prosopis-nigra-hieron.532898/",
+      "author": "Ver página de origen"
+    }
+  ],
   "fruitSizeGroup": "Needs space",
   "size": "Altura natural sin poda: 8–15 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 5–8 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",

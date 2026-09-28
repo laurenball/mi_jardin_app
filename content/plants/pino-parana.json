@@ -9,7 +9,15 @@
     "Edible"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "pino-parana-1.jpg",
+      "shows": "Cono abierto y piñones de pino Paraná",
+      "sourceFile": "Pinhão, Governo do Paraná",
+      "sourcePage": "https://www.parana.pr.gov.br/aen/Noticia/IAT-libera-colheita-e-venda-do-pinhao-mas-reforca-condicao-de-maturacao",
+      "author": "Governo do Paraná"
+    }
+  ],
   "canopySizeGroup": "Large",
   "size": "Altura natural sin poda: 20–30+ m (hasta ~40 m).",
   "sizeManagement": "No se puede reducir sensatamente a menos de 5 m mediante poda; reservar espacio para su altura natural.",

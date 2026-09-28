@@ -1,7 +1,11 @@
-const CACHE_NAME = 'sanctuario-de-aves-shell-v55';
+const CACHE_NAME = 'sanctuario-de-aves-shell-v56';
 const PLANT_IMAGES = [
+  './assets/plants/algarrobo-blanco-1.jpg',
+  './assets/plants/algarrobo-negro-1.jpg',
   './assets/plants/aljaba-1.jpg',
   './assets/plants/aljaba-2.jpg',
+  './assets/plants/anacahuita-1.jpg',
+  './assets/plants/araticu-1.jpg',
   './assets/plants/araucaria-1.jpg',
   './assets/plants/araucaria-2.jpg',
   './assets/plants/araza-2.jpg',
@@ -56,6 +60,7 @@ const PLANT_IMAGES = [
   './assets/plants/guanabana-1.jpg',
   './assets/plants/guaran-amarillo-1.jpg',
   './assets/plants/guaran-amarillo-2.jpg',
+  './assets/plants/guavira-1.jpg',
   './assets/plants/guaviyo-1.jpg',
   './assets/plants/guaviyo-2.jpg',
   './assets/plants/guayaba-1.jpg',
@@ -102,6 +107,9 @@ const PLANT_IMAGES = [
   './assets/plants/pasionaria-1.jpg',
   './assets/plants/pasionaria-2.jpg',
   './assets/plants/pasionaria-3.jpg',
+  './assets/plants/pindo-1.jpg',
+  './assets/plants/pino-parana-1.jpg',
+  './assets/plants/piquillin-1.jpg',
   './assets/plants/salvia-guaranitica-1.jpg',
   './assets/plants/salvia-guaranitica-2.jpg',
   './assets/plants/salvia-guaranitica-3.jpg',
@@ -114,6 +122,7 @@ const PLANT_IMAGES = [
   './assets/plants/sen-del-campo-1.jpg',
   './assets/plants/sen-del-campo-2.jpg',
   './assets/plants/sen-del-campo-3.jpg',
+  './assets/plants/siete-capotes-1.jpg',
   './assets/plants/sombra-de-toro-1.jpg',
   './assets/plants/sombra-de-toro-2.jpg',
   './assets/plants/sombra-de-toro-3.jpg',
@@ -128,6 +137,7 @@ const PLANT_IMAGES = [
   './assets/plants/tipa-blanca-2.jpg',
   './assets/plants/ubajay-1.jpg',
   './assets/plants/ubajay-2.jpg',
+  './assets/plants/uvaia-1.jpg',
   './assets/plants/vara-de-la-justicia-1.jpg',
   './assets/plants/vara-de-la-justicia-2.jpg',
   './assets/plants/verbena-1.jpg',
@@ -136,7 +146,8 @@ const PLANT_IMAGES = [
   './assets/plants/verbena-morada-1.jpg',
   './assets/plants/verbena-morada-2.jpg',
   './assets/plants/vinagrillo-rosado-1.jpg',
-  './assets/plants/vinagrillo-rosado-2.jpg'
+  './assets/plants/vinagrillo-rosado-2.jpg',
+  './assets/plants/yvapority-1.jpg'
 ];
 const BIRD_IMAGES = [
   'benteveo', 'calandria-grande', 'carpintero-real', 'chimango', 'chinchero-chico',
@@ -144,7 +155,7 @@ const BIRD_IMAGES = [
   'paloma-picazuro', 'picaflor-bronceado', 'picaflor-verde', 'pitiayumi', 'ratona',
   'tero', 'torcaza', 'tordo-musico', 'tordo-renegrido', 'zorzal-colorado'
 ].map(slug => `./assets/birds/${slug}.jpg`);
-const APP_SHELL = ['./','./index.html','./birds.html','./birds.js?v=2','./styles.css?v=47','./app.js?v=52','./db.js','./starter-plants.js?v=52','./manifest.webmanifest','./assets/icon.svg', ...BIRD_IMAGES];
+const APP_SHELL = ['./','./index.html','./birds.html','./birds.js?v=2','./styles.css?v=47','./app.js?v=53','./db.js','./starter-plants.js?v=53','./manifest.webmanifest','./assets/icon.svg', ...BIRD_IMAGES];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)));

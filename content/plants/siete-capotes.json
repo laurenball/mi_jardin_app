@@ -9,7 +9,15 @@
     "Edible"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "siete-capotes-1.jpg",
+      "shows": "Frutos maduros de siete capotes",
+      "sourceFile": "Campomanesia guazumifolia, Flora Digital UFSC",
+      "sourcePage": "https://floradigital.ufsc.br/open_sp.php?img=5828",
+      "author": "Djeison Fernando de Souza"
+    }
+  ],
   "fruitSizeGroup": "Needs regular pruning",
   "size": "Altura natural sin poda: 4–10 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 3–5 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",

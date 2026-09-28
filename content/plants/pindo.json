@@ -9,7 +9,15 @@
     "Edible"
   ],
   "status": "Other",
-  "photos": [],
+  "photos": [
+    {
+      "file": "pindo-1.jpg",
+      "shows": "Racimo de frutos maduros de pindó",
+      "sourceFile": "PINDO Syagrus romanzoffiana foto Dario Niz.jpg",
+      "sourcePage": "https://floradeluruguay.blogspot.com/2010/05/pindo.html",
+      "author": "Darío Niz"
+    }
+  ],
   "fruitSizeGroup": "Needs space",
   "size": "Altura natural sin poda: 10–20+ m.",
   "sizeManagement": "No se puede reducir sensatamente a menos de 5 m mediante poda; reservar espacio para su altura natural.",
