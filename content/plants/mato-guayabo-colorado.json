@@ -17,10 +17,10 @@
   "sun": "Sol y media sombra",
   "water": "Media",
   "soil": "Adaptable, con buen drenaje",
-  "fruitSizeGroup": "Easy to keep small",
-  "sizeManagement": "Arbusto o arbolito que tolera la poda; puede mantenerse como seto o ejemplar compacto.",
-  "sources": "Guayabo colorado, Vivero Laguna del Chajá: https://viverodelchaja.com.uy/producto/guayabo-colorado/",
-  "size": "Altura: 3–7 m; ancho: 2–5 m (aprox. en madurez).",
+  "fruitSizeGroup": "Needs space",
+  "sizeManagement": "Puede alcanzar 8–10 m y formar copa globosa; darle espacio. No hay evidencia suficiente aquí para prometer que se mantiene pequeño fácilmente.",
+  "sources": "Guayabo colorado, Vivero Laguna del Chajá: https://viverodelchaja.com.uy/producto/guayabo-colorado/ | Manual de flora indígena, Jardín Botánico de Montevideo: https://jardinbotanico.montevideo.gub.uy/sites/jardinbotanico.montevideo.gub.uy/files/eventos/descargas/manual_del_curso_de_flora_indigena_0.pdf | Flora de Entre Ríos, fichas técnicas: https://aprender.entrerios.edu.ar/wp-content/uploads/2025/06/Flora-de-Entre-Rios_fichas-Tecnicas.pdf",
+  "size": "Altura: 8–10 m (sin poda, según sitio).",
   "flowering": "Flores blancas",
   "fruiting": "Frutos rojizos a oscuros",
   "status": "Other",
@@ -45,5 +45,6 @@
       "license": "",
       "licenseUrl": ""
     }
-  ]
+  ],
+  "edibleUses": "Fruto comestible; una ficha provincial de Entre Ríos registra su uso en dulces. No encontré atribución fiable de ese uso a un pueblo indígena concreto. / Edible fruit; an Entre Ríos provincial guide records its use in preserves. No reliable attribution of that use to a specific Indigenous people was found."
 }

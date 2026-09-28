@@ -8,7 +8,10 @@
   "nativeStatus": "Nativa del oeste de Sudamérica; exótica en Buenos Aires",
   "nativeRange": "Bolivia, Colombia, Ecuador y Perú",
   "ecology": "Frutal de origen tropical andino; conviene evaluar un lugar soleado y resguardado del frío en Buenos Aires. / Fruit tree from the tropical Andes; a sunny site protected from cold should be considered around Buenos Aires.",
-  "purposes": ["Edible", "Pollinators"],
+  "purposes": [
+    "Edible",
+    "Pollinators"
+  ],
   "sun": "Pleno sol",
   "water": "Media",
   "soil": "Fértil y bien drenado",
@@ -16,8 +19,18 @@
   "fruitSizeGroup": "Needs regular pruning",
   "sizeManagement": "Puede formarse baja para cosechar, pero requiere poda y formación regulares; sin manejo puede superar 7 m.",
   "fruiting": "Frutos verdes con pulpa blanca",
-  "edibleUses": "La pulpa del fruto maduro se come fresca. / The ripe fruit pulp is eaten fresh.",
-  "sources": "Annona cherimola, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/927235-1 | Cherimoya, UC Cooperative Extension: https://ucanr.edu/county/cooperative-extension-ventura-county/cherimoya",
+  "edibleUses": "La pulpa madura se come fresca, separando cáscara y semillas. Un estudio botánico e histórico documenta la chirimoya como alimento en el Perú prehispánico, sin atribuir una receta o un pueblo concreto. / Ripe pulp is eaten fresh, separating the peel and seeds. A botanical and historical study documents cherimoya as food in pre-Hispanic Peru without assigning a recipe or naming a particular people.",
+  "sources": "Annona cherimola, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/927235-1 | Cherimoya, UC Cooperative Extension: https://ucanr.edu/county/cooperative-extension-ventura-county/cherimoya | Estudio histórico-botánico de chirimoya en Perú prehispánico: https://www.scielo.org.pe/scielo.php?pid=S2413-32992017000200013&script=sci_arttext",
   "status": "Want",
-  "photos": [{"file": "chirimoya-1.jpg", "shows": "Fruit on tree", "sourceFile": "Annona cherimola Brazil.jpg", "sourcePage": "https://commons.wikimedia.org/wiki/File:Annona_cherimola_Brazil.jpg", "author": "Marcelo RosaMelo", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"}]
+  "photos": [
+    {
+      "file": "chirimoya-1.jpg",
+      "shows": "Fruit on tree",
+      "sourceFile": "Annona cherimola Brazil.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Annona_cherimola_Brazil.jpg",
+      "author": "Marcelo RosaMelo",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ]
 }

@@ -1,0 +1,25 @@
+# Plant size and food-use review
+
+Reviewed 28 September 2026. Plant heights are approximate mature potential, not predicted size at the sanctuary. Soil, water, exposure, provenance and pruning change actual height. The previous width ranges across the catalog were generic planning estimates without species-specific support, so they were removed from the plant cards. Do not use these height ranges as planting clearances; check the spread and root habit of an actual nursery plant before siting it.
+
+The catalog contains broad genus-level entries for **Setaria spp.** and **Nassella spp.** Their former numerical heights were removed because a genus-level name cannot support a species-specific range. Other height ranges outside the fruit and canopy groups remain planning approximations; they have not each been validated against a species-specific botanical source.
+
+## Size decisions that changed
+
+| Plant | Reviewed natural height | Garden implication | Source |
+| --- | --- | --- | --- |
+| Murta, *Myrceugenia glaucescens* | about 4–5 m | Naturally small shrub; moved from “Needs space” | [Jardín Botánico de Montevideo, flora indígena manual](https://jardinbotanico.montevideo.gub.uy/sites/jardinbotanico.montevideo.gub.uy/files/eventos/descargas/manual_del_curso_de_flora_indigena_0.pdf) |
+| Guaviyú, *Myrcianthes pungens* | up to 15 m; 20 m reported | Needs room for a large tree, even if a young plant looks compact | [Montevideo manual](https://jardinbotanico.montevideo.gub.uy/sites/jardinbotanico.montevideo.gub.uy/files/eventos/descargas/manual_del_curso_de_flora_indigena_0.pdf), [Uruguay traditional-knowledge survey](https://www.gub.uy/agencia-uruguaya-cooperacion-internacional/sites/agencia-uruguaya-cooperacion-internacional/files/documentos/publicaciones/undp-uy-Nagoya_conocimentos_tradicionales_final.pdf) |
+| Mato, *Myrcianthes cisplatensis* | up to 8–10 m | Moved from “Easy to keep small” to “Needs space”; the former pruning claim lacked a firm basis | [Montevideo manual](https://jardinbotanico.montevideo.gub.uy/sites/jardinbotanico.montevideo.gub.uy/files/eventos/descargas/manual_del_curso_de_flora_indigena_0.pdf) |
+| Chal-chal, *Allophylus edulis* | up to 10 m | Allow room for a medium tree | [Montevideo manual](https://jardinbotanico.montevideo.gub.uy/sites/jardinbotanico.montevideo.gub.uy/files/eventos/descargas/manual_del_curso_de_flora_indigena_0.pdf) |
+| Ñangapirí, *Eugenia uniflora* | usually 4–6 m; can vary | Can be trained as a hedge or small tree | [Montevideo manual](https://jardinbotanico.montevideo.gub.uy/sites/jardinbotanico.montevideo.gub.uy/files/eventos/descargas/manual_del_curso_de_flora_indigena_0.pdf) |
+| Guanábana, *Annona muricata* | about 8–9 m unpruned | Short orchard form needs regular pruning; cold is a separate constraint | [Kew](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:14308-2/general-information), [UF/IFAS](https://ask.ifas.ufl.edu/publication/HS1387) |
+| Ubajay, *Eugenia myrcianthes* (syn. *Hexachlamys edulis*) | about 8–12 m | Reserve tree space despite Kew describing the species as a shrub | [Universidad de la República botanical description](https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/36481/1/LegrandDiego.pdf), [Kew taxonomy](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98707-2) |
+
+“Needs regular pruning” means a short harvest height depends on repeated care. “Naturally small” means a plant normally stays a shrub or small tree without that work. No palm or Guaviyú is classed as easy to keep small. Height is not a proxy for crown width or root spread.
+
+## Food-use attribution
+
+Plant cards distinguish culinary uses from Indigenous use. A regional recipe is not automatically an Indigenous recipe, and a native plant name is not evidence of use by a named people. The Argentine food-code background records named peoples for **chañar** and **chal-chal**, Guaraní consumption of **cerella**, and unnamed Indigenous communities for **guaviyú**. A [Wichí community processing project](https://www.argentina.gob.ar/node/177953) documents mistol and chañar flour. [Yatay regulation](https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-30-2025-413920/texto) reports archaeological evidence of consumption by Indigenous populations of Entre Ríos without naming a people. [Chilto guidance](https://www.argentina.gob.ar/sites/default/files/triptico_chilto_pdf_final.pdf) documents cultivation by Indigenous populations. [Chirimoya research](https://www.scielo.org.pe/scielo.php?pid=S2413-32992017000200013&script=sci_arttext) and [archaeobotanical research mentioning guanábana](https://pmc.ncbi.nlm.nih.gov/articles/PMC10465486/) document pre-Hispanic food use in Peru. For other fruit cards, the source supports regional eating but not a specific Indigenous attribution.
+
+The Uruguay study describes **local traditional knowledge**; it should not be presented as testimony from Indigenous communities unless that is separately established. Where food use itself is sparsely documented, the card states the uncertainty instead of inventing preparations.

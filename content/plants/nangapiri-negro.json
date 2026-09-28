@@ -19,7 +19,7 @@
   "soil": "Fértil y bien drenado",
   "fruitSizeGroup": "Naturally small",
   "sizeManagement": "Arbusto o arbolito de 1,5–4 m; buena opción de poco porte sin poda de contención.",
-  "size": "Altura: 1,5–4 m; ancho: 1,5–3 m (aprox. en madurez).",
+  "size": "Altura: 1,5–4 m (altura aproximada; varía con el sitio).",
   "flowering": "Flores blancas",
   "fruiting": "Frutos negros",
   "status": "Other",
@@ -44,5 +44,7 @@
       "license": "",
       "licenseUrl": ""
     }
-  ]
+  ],
+  "edibleUses": "Frutos comestibles que pueden comerse frescos. No encontré una preparación ni un uso indígena específico bien documentados para Eugenia repanda; no confundirlo con la pitanga (E. uniflora). / Edible fruit can be eaten fresh. No well-documented preparation or specific Indigenous use was found for Eugenia repanda; it should not be confused with pitanga (E. uniflora).",
+  "sources": "Ñangapirí negro, guía de plantas nativas: https://nativas.lanacion.com.ar/plantas/planta/Eugenia_repanda"
 }

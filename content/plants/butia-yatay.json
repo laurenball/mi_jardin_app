@@ -8,7 +8,11 @@
   "nativeStatus": "Nativa del nordeste argentino y del litoral",
   "nativeRange": "Nordeste de Argentina, Uruguay y sur de Brasil",
   "ecology": "Forma palmares en suelos arenosos, como los del Parque Nacional El Palmar. / Forms palm groves on sandy soils, as in El Palmar National Park.",
-  "purposes": ["Bird food", "Edible", "Shelter"],
+  "purposes": [
+    "Bird food",
+    "Edible",
+    "Shelter"
+  ],
   "wildlifeNotes": "Sus frutos alimentan cotorras, ñandúes y otros animales. / Its fruit feeds parakeets, rheas and other animals.",
   "sun": "Pleno sol",
   "water": "Baja a media",
@@ -17,9 +21,19 @@
   "fruitSizeGroup": "Needs space",
   "sizeManagement": "Palmera que puede alcanzar 12–20 m; la poda de hojas no reduce la altura del tronco.",
   "fruiting": "Frutos carnosos agridulces",
-  "edibleUses": "El fruto agridulce es comestible. / The sweet-tart fruit is edible.",
-  "sources": "Butia yatay, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:38727-2 | Parque Nacional El Palmar, Parques Nacionales Argentina: https://www.argentina.gob.ar/node/390219 | Palmera yatay, Parques Nacionales Argentina: https://www.argentina.gob.ar/sites/default/files/2024/09/folleto_flora_-_pn_el_palmar.pdf",
+  "edibleUses": "Fruto fresco y pulpa para jugos, dulces, licores, cerveza y helado en Entre Ríos. La normativa argentina informa vestigios de consumo por poblaciones originarias de Entre Ríos, sin identificar pueblos ni preparaciones concretas. / Fruit is eaten fresh; its pulp is used for juice, preserves, liqueur, beer and ice cream in Entre Ríos. Argentine regulations report evidence of consumption by Indigenous populations in Entre Ríos without naming peoples or specific preparations.",
+  "sources": "Butia yatay, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:38727-2 | Parque Nacional El Palmar, Parques Nacionales Argentina: https://www.argentina.gob.ar/node/390219 | Palmera yatay, Parques Nacionales Argentina: https://www.argentina.gob.ar/sites/default/files/2024/09/folleto_flora_-_pn_el_palmar.pdf | Código Alimentario Argentino (Yatay): https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-30-2025-413920/texto | Parque Nacional El Palmar (uso local): https://www.argentina.gob.ar/noticias/el-parque-nacional-el-palmar-lanzo-un-proyecto-para-el-buen-uso-de-la-palmera-yatay",
   "status": "Planted",
   "notes": "Ya tenemos yatay en el sanctuario. / Already in the sanctuary.",
-  "photos": [{"file": "butia-yatay-1.jpg", "shows": "Palm", "sourceFile": "Butia yatay.jpg", "sourcePage": "https://commons.wikimedia.org/wiki/File:Butia_yatay.jpg", "author": "Andrés González", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"}]
+  "photos": [
+    {
+      "file": "butia-yatay-1.jpg",
+      "shows": "Palm",
+      "sourceFile": "Butia yatay.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Butia_yatay.jpg",
+      "author": "Andrés González",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ]
 }

@@ -19,10 +19,10 @@
   "soil": "Tolera suelos pobres y secos",
   "fruitSizeGroup": "Needs space",
   "sizeManagement": "Árbol de copa amplia de hasta unos 10 m; reservar espacio para su ancho adulto.",
-  "size": "Altura: 4–10 m; ancho: 4–8 m (aprox. en madurez).",
+  "size": "Altura: 4–10 m (altura aproximada; varía con el sitio).",
   "flowering": "Flores pequeñas",
   "fruiting": "Drupas dulces",
-  "edibleUses": "Frutos para comer frescos o en preparaciones tradicionales. / Fruit for fresh eating or traditional preparations.",
+  "edibleUses": "Frutos frescos, en arrope o molidos como harina. Comunidades wichí del Chaco salteño recolectan mistol y participan en su procesamiento como harina; no se debe atribuirles toda receta regional de mistol. / Fruit is eaten fresh, made into syrup or milled into flour. Wichí communities in Salta’s Chaco collect mistol and participate in processing its flour; this does not attribute every regional mistol recipe to them.",
   "status": "Other",
   "priority": "Medium",
   "notes": "Frutal seco y estructural. / Dryland fruit and structure tree.",
@@ -45,5 +45,6 @@
       "license": "",
       "licenseUrl": ""
     }
-  ]
+  ],
+  "sources": "Procesamiento de frutos por comunidades wichí: https://www.argentina.gob.ar/node/177953"
 }

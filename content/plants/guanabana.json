@@ -8,16 +8,29 @@
   "nativeStatus": "Nativa de América tropical; exótica en Buenos Aires",
   "nativeRange": "Del sur de México a Venezuela y Perú",
   "ecology": "Especie de clima tropical húmedo. En Buenos Aires necesitaría un lugar muy protegido del frío. / Species of wet tropical climates. Around Buenos Aires it would need a site well protected from cold.",
-  "purposes": ["Edible", "Pollinators"],
+  "purposes": [
+    "Edible",
+    "Pollinators"
+  ],
   "sun": "Pleno sol",
   "water": "Media a alta",
   "soil": "Fértil y bien drenado",
-  "size": "Altura: 8–10 m sin poda (aprox. en madurez).",
+  "size": "Altura: unos 8–9 m sin poda; en cultivo se mantiene menor.",
   "fruitSizeGroup": "Needs regular pruning",
-  "sizeManagement": "En cultivo se mantiene a unos 2,5–3,5 m con poda anual o semestral; sin manejo puede rondar 8–10 m. Además necesita protección del frío.",
+  "sizeManagement": "Puede mantenerse alrededor de 2,5–3,5 m con poda anual o semestral; sin manejo puede alcanzar unos 8–9 m. Necesita protección del frío.",
   "fruiting": "Frutos verdes grandes con pulpa blanca comestible",
-  "edibleUses": "La pulpa del fruto maduro se come fresca o en bebidas. / The ripe fruit pulp is eaten fresh or used in drinks.",
-  "sources": "Annona muricata, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/14308-2 | Annona muricata, Kew: https://powo.science.kew.org/taxon/14308-2 | Fruit tree maintenance heights, UF/IFAS Extension: https://ask.ifas.ufl.edu/publication/HS1387",
+  "edibleUses": "Pulpa madura fresca, en jugos y batidos; se separan cáscara y semillas. Restos de guanábana en sitios arqueológicos de Áspero y Caral muestran uso alimentario prehispánico en Perú, sin precisar una preparación ni un pueblo actual. / Ripe pulp is eaten fresh or in juice and smoothies, separating peel and seeds. Soursop remains at Áspero and Caral archaeological sites show pre-Hispanic food use in Peru without specifying a preparation or a present-day people.",
+  "sources": "Annona muricata, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/14308-2 | Annona muricata, Kew: https://powo.science.kew.org/taxon/14308-2 | Fruit tree maintenance heights, UF/IFAS Extension: https://ask.ifas.ufl.edu/publication/HS1387 | Arqueobotánica de Áspero y Caral: https://pmc.ncbi.nlm.nih.gov/articles/PMC10465486/",
   "status": "Want",
-  "photos": [{"file": "guanabana-1.jpg", "shows": "Fruit on tree", "sourceFile": "Fruto de Annona muricata.jpg", "sourcePage": "https://commons.wikimedia.org/wiki/File:Fruto_de_Annona_muricata.jpg", "author": "JOAN", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"}]
+  "photos": [
+    {
+      "file": "guanabana-1.jpg",
+      "shows": "Fruit on tree",
+      "sourceFile": "Fruto de Annona muricata.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Fruto_de_Annona_muricata.jpg",
+      "author": "JOAN",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ]
 }

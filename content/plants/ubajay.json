@@ -1,10 +1,10 @@
 {
   "slug": "ubajay",
   "commonName": "Ubajay",
-  "scientificName": "Hexachlamys edulis",
+  "scientificName": "Eugenia myrcianthes",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Frutal nativo de mirtácea, de copa densa y frutos amarillos grandes, aromáticos y comestibles. / Native myrtle-family fruit tree with a dense crown and large yellow, aromatic edible fruits.",
+  "description": "Frutal nativo de mirtácea, también citado como Hexachlamys edulis, de copa densa y frutos amarillos aromáticos. / Native myrtle-family fruit tree, also cited as Hexachlamys edulis, with a dense crown and aromatic yellow fruit.",
   "nativeStatus": "Nativo del litoral argentino y países vecinos",
   "nativeRange": "Argentina, Uruguay, Paraguay, Bolivia y Brasil",
   "ecology": "Árbol de monte ribereño y selvas marginales; aporta flores para insectos, frutos y refugio. / Tree of riverside woodland and marginal forests; offers flowers for insects, fruit and shelter.",
@@ -19,11 +19,11 @@
   "water": "Media",
   "soil": "Fértil, con humedad moderada y buen drenaje",
   "fruitSizeGroup": "Needs space",
-  "sizeManagement": "Árbol de hasta unos 10 m; conviene darle espacio para desarrollarse.",
-  "size": "Altura: 4–10 m; ancho: 3–7 m (aprox. en madurez).",
+  "sizeManagement": "Arbusto grande o árbol que puede alcanzar unos 8–12 m; darle espacio y no planearlo como frutal compacto.",
+  "size": "Altura: 8–12 m (según sitio).",
   "flowering": "Flores blancas de mirtácea",
   "fruiting": "Frutos amarillos aromáticos",
-  "edibleUses": "Fruto comestible, jugoso y ácido, usado fresco o en dulces. / Edible juicy tart fruit, used fresh or in preserves.",
+  "edibleUses": "Frutos agridulces consumidos frescos, en jugos, compotas, mermeladas y vinagres. La fuente registra estos usos regionales sin atribuirlos a un pueblo indígena concreto. / Sweet-tart fruit is eaten fresh or used for juice, compotes, preserves and vinegar. The source records these regional uses without attributing them to a specific Indigenous people.",
   "status": "Other",
   "priority": "Low",
   "photos": [
@@ -42,5 +42,6 @@
       "author": "walterrrrr"
     }
   ],
-  "notes": "Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority."
+  "notes": "Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority.",
+  "sources": "Código Alimentario Argentino (antecedentes de uso): https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-36-2025-414767/texto | Eugenia myrcianthes, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98707-2 | Descripción botánica, Universidad de la República: https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/36481/1/LegrandDiego.pdf"
 }

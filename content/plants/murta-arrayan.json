@@ -17,12 +17,12 @@
   "sun": "Sol y media sombra",
   "water": "Media",
   "soil": "Fértil, con buen drenaje y algo de humedad",
-  "fruitSizeGroup": "Needs space",
-  "sizeManagement": "Arbusto o arbolito que puede llegar a unos 6 m; reservarle lugar para crecer sin depender de podas fuertes.",
-  "size": "Altura: 3–7 m; ancho: 2–5 m (aprox. en madurez).",
+  "fruitSizeGroup": "Naturally small",
+  "sizeManagement": "Arbusto muy ramificado de unos 4–5 m; normalmente no necesita podas fuertes para seguir siendo pequeño.",
+  "size": "Altura: 4–5 m (arbusto adulto; varía con el sitio).",
   "flowering": "Flores blancas",
   "fruiting": "Frutos carnosos",
-  "sources": "Murta, Aves Argentinas: https://www.avesargentinas.org.ar/ficha-planta/murta",
+  "sources": "Murta, Aves Argentinas: https://www.avesargentinas.org.ar/ficha-planta/murta | Manual de flora indígena, Jardín Botánico de Montevideo: https://jardinbotanico.montevideo.gub.uy/sites/jardinbotanico.montevideo.gub.uy/files/eventos/descargas/manual_del_curso_de_flora_indigena_0.pdf",
   "status": "Other",
   "priority": "Medium",
   "notes": "Frutal nativo para sumar diversidad de mirtáceas. / Native fruiting myrtle to add diversity.",
@@ -45,5 +45,6 @@
       "license": "",
       "licenseUrl": ""
     }
-  ]
+  ],
+  "edibleUses": "Las bayas se describen como comestibles, pero no encontré una preparación culinaria documentada ni un uso alimentario atribuible a un pueblo indígena concreto. / Berries are reported edible, but no documented recipe or food use attributable to a specific Indigenous people was found."
 }
