@@ -17,7 +17,7 @@ It includes starter entries for the plants we identified for the Buenos Aires-ar
 
 The Aves page lists twenty visitors, grouped by their main food type. Within each group, birds follow the initial visit order provided for the garden. Each compact card has a local Cornell Macaulay Library photo; one disclosure opens its food and identification notes and links to its eBird/Merlin species page and exact photo record. Bird entries live in `birds.js`; photos live in `assets/birds/` and are cached for offline use.
 
-Garden layer groups appear smallest first: Herbácea / Herbaceous, Gramínea / Grass, Arbusto / Shrub, Trepadora / Climber, Frutal / Fruit tree, Dosel / Canopy. Within each layer, plants we have appear first, followed by active wants and then other plants.
+Garden layer groups appear smallest first: Herbácea / Herbaceous, Gramínea / Grass, Arbusto / Shrub, Trepadora / Climber, Frutal / Fruit tree, Dosel / Canopy. Within each layer, active wants appear first, followed by plants we have and then other plants.
 
 ## Run locally
 
