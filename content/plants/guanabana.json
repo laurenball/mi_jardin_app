@@ -12,9 +12,12 @@
   "sun": "Pleno sol",
   "water": "Media a alta",
   "soil": "Fértil y bien drenado",
+  "size": "Altura: 8–10 m sin poda (aprox. en madurez).",
+  "fruitSizeGroup": "Needs regular pruning",
+  "sizeManagement": "En cultivo se mantiene a unos 2,5–3,5 m con poda anual o semestral; sin manejo puede rondar 8–10 m. Además necesita protección del frío.",
   "fruiting": "Frutos verdes grandes con pulpa blanca comestible",
   "edibleUses": "La pulpa del fruto maduro se come fresca o en bebidas. / The ripe fruit pulp is eaten fresh or used in drinks.",
-  "sources": "Annona muricata, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/14308-2",
+  "sources": "Annona muricata, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/14308-2 | Annona muricata, Kew: https://powo.science.kew.org/taxon/14308-2 | Fruit tree maintenance heights, UF/IFAS Extension: https://ask.ifas.ufl.edu/publication/HS1387",
   "status": "Want",
   "photos": [{"file": "guanabana-1.jpg", "shows": "Fruit on tree", "sourceFile": "Fruto de Annona muricata.jpg", "sourcePage": "https://commons.wikimedia.org/wiki/File:Fruto_de_Annona_muricata.jpg", "author": "JOAN", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"}]
 }

@@ -52,15 +52,17 @@ const TEXT_FIELDS = [
   ['nativeStatus','Condición nativa','input'], ['nativeRange','Distribución nativa','input'],
   ['ecology','Hábitat y función ecológica','textarea'], ['hostPlant','Planta hospedera','input'],
   ['wildlifeNotes','Notas sobre fauna','textarea'],
-  ['water','Agua','input'], ['soil','Suelo','input'], ['size','Tamaño','input'],
+  ['water','Agua','input'], ['soil','Suelo','input'], ['size','Tamaño','input'], ['sizeManagement','Cómo mantener el tamaño','input'],
   ['flowering','Floración','input'], ['fruiting','Fructificación','input'], ['propagation','Propagación','textarea'],
   ['edibleUses','Usos comestibles','textarea'], ['medicinalUses','Uso medicinal','textarea'],
   ['otherUses','Otros usos','textarea'], ['safety','Precauciones','textarea'],
   ['sources','Fuentes','textarea']
 ];
 const SELECTS = {
-  plantType: ['', 'Tree', 'Shrub', 'Herb', 'Grass', 'Climber'],
+  plantType: ['', 'Tree', 'Palm', 'Shrub', 'Herb', 'Grass', 'Climber'],
   layer: ['', 'Canopy', 'Fruit tree', 'Shrub', 'Herbaceous', 'Groundcover', 'Grass', 'Climber'],
+  fruitSizeGroup: ['', 'Naturally small', 'Easy to keep small', 'Needs regular pruning', 'Needs space'],
+  canopySizeGroup: ['', 'Small', 'Medium', 'Large'],
   status: ['Want', 'Looking For', 'Other', 'Bought', 'Planted'],
   priority: ['', 'High', 'Medium', 'Low']
 };
@@ -72,8 +74,16 @@ const DISPLAY_LABELS = {
   'Herb': 'Herbácea',
   'Grass': 'Gramínea',
   'Climber': 'Trepadora',
+  'Palm': 'Palmera',
   'Canopy': 'Dosel',
   'Fruit tree': 'Frutal',
+  'Naturally small': 'Pequeños por naturaleza',
+  'Easy to keep small': 'Fáciles de mantener chicos',
+  'Needs regular pruning': 'Chicos solo con poda regular',
+  'Needs space': 'Necesitan espacio',
+  'Small': 'Árboles bajos',
+  'Medium': 'Árboles medianos',
+  'Large': 'Árboles grandes',
   'Herbaceous': 'Herbácea',
   'Groundcover': 'Cubresuelo',
   'Want': 'Quiero',
@@ -327,7 +337,9 @@ function renderEditor() {
   sun.onchange = () => { current.sun = sun.value; dirty = true; setStatus('Cambios sin guardar', ''); };
   sunRow.append(sun);
   growing.append(sunRow);
-  for (const key of ['water','soil','size','flowering','fruiting','propagation']) {
+  growing.append(selectField('fruitSizeGroup', 'Grupo de tamaño frutal'));
+  growing.append(selectField('canopySizeGroup', 'Grupo de tamaño del dosel'));
+  for (const key of ['water','soil','size','sizeManagement','flowering','fruiting','propagation']) {
     const def = TEXT_FIELDS.find(f => f[0] === key);
     growing.append(field(def[0], def[1], def[2]));
   }

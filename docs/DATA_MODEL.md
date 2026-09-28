@@ -29,11 +29,13 @@ Version 4 adds one optional field without changing the IndexedDB store.
 
 `sources` records where the information in an entry came from. It is free text, and several references can be separated with ` | `. The detail view renders it as a Sources section and turns any `http` or `https` address into a link.
 
+Frutal entries carry `fruitSizeGroup` (`Naturally small`, `Easy to keep small`, `Needs regular pruning`, or `Needs space`), while Dosel entries carry `canopySizeGroup` (`Small`, `Medium`, or `Large`). These determine size subsections on the plant list. Both use `sizeManagement` to explain the pruning or space needed. `size` describes approximate mature growth without size control. Unclassified entries appear under "Tamaño por clasificar".
+
 Starter records now also carry their descriptive content in the app rather than only in a first seeding. On startup the app refreshes the informational fields of records that match a starter plant, so an existing install receives corrected or expanded text:
 
 ```text
 plantType, layer, description, nativeStatus, nativeRange, ecology, hostPlant, purposes, wildlifeNotes,
-sun, water, soil, size, flowering, fruiting, propagation,
+sun, water, soil, size, fruitSizeGroup, canopySizeGroup, sizeManagement, flowering, fruiting, propagation,
 edibleUses, medicinalUses, otherUses, safety, sources
 ```
 

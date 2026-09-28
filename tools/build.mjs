@@ -10,7 +10,7 @@ const CONTENT = path.join(ROOT, 'content', 'plants');
 const PHOTO_DIR = path.join(ROOT, 'assets', 'plants');
 
 const PLANT_FIELDS = ['commonName','scientificName','plantType','layer','description','nativeStatus','nativeRange',
-  'ecology','hostPlant','purposes','wildlifeNotes','sun','water','soil','size','flowering','fruiting','propagation',
+  'ecology','hostPlant','purposes','wildlifeNotes','sun','water','soil','size','fruitSizeGroup','canopySizeGroup','sizeManagement','flowering','fruiting','propagation',
   'edibleUses','medicinalUses','otherUses','safety','sources','status','priority','notes'];
 
 export async function loadPlants() {

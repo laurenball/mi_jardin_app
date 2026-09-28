@@ -9,6 +9,12 @@ const PHOTO_DIR = path.join(ROOT, 'assets', 'plants');
 const BUDGET_KB = 200;
 
 const plants = await loadPlants();
+const fruitSizeGroups = new Set(['Naturally small', 'Easy to keep small', 'Needs regular pruning', 'Needs space']);
+const incompleteFruitSizes = plants.filter(plant => plant.layer === 'Fruit tree'
+  && (!fruitSizeGroups.has(plant.fruitSizeGroup) || !plant.size || !plant.sizeManagement));
+const canopySizeGroups = new Set(['Small', 'Medium', 'Large']);
+const incompleteCanopySizes = plants.filter(plant => plant.layer === 'Canopy'
+  && (!canopySizeGroups.has(plant.canopySizeGroup) || !plant.size || !plant.sizeManagement));
 const used = new Map();
 for (const plant of plants) for (const photo of plant.photos || []) used.set(photo.file, plant);
 
@@ -42,10 +48,13 @@ const report = (label, items, hint) => {
 };
 
 report('Plants with no photo', noPhotos.map(p => p.commonName), 'add one in the editor');
+report('Frutales missing size guidance', incompleteFruitSizes.map(p => p.commonName), 'set size, fruitSizeGroup and sizeManagement');
+report('Dosel missing size guidance', incompleteCanopySizes.map(p => p.commonName), 'set size, canopySizeGroup and sizeManagement');
 report('Plants with only one photo', onePhoto.map(p => p.commonName), 'a second view helps identification');
 report('Referenced files that are missing', missingFiles, 'the build will fail until these are fixed');
 report('Files nothing references', orphans, 'safe to delete');
 report(`Photos over ${BUDGET_KB} KB`, heavy, 'only worth caring about if the offline download gets slow');
 
-const problems = missingFiles.length + noPhotos.length;
+const problems = missingFiles.length + noPhotos.length + incompleteFruitSizes.length + incompleteCanopySizes.length;
 console.log(problems === 0 ? '\nNothing broken.\n' : `\n${problems} thing(s) need fixing.\n`);
+if (problems) process.exitCode = 1;

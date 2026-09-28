@@ -12,9 +12,12 @@
   "sun": "Pleno sol",
   "water": "Media",
   "soil": "Fértil y bien drenado",
+  "size": "Altura: 7–9 m sin poda (aprox. en madurez).",
+  "fruitSizeGroup": "Needs regular pruning",
+  "sizeManagement": "Puede formarse baja para cosechar, pero requiere poda y formación regulares; sin manejo puede superar 7 m.",
   "fruiting": "Frutos verdes con pulpa blanca",
   "edibleUses": "La pulpa del fruto maduro se come fresca. / The ripe fruit pulp is eaten fresh.",
-  "sources": "Annona cherimola, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/927235-1",
+  "sources": "Annona cherimola, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/927235-1 | Cherimoya, UC Cooperative Extension: https://ucanr.edu/county/cooperative-extension-ventura-county/cherimoya",
   "status": "Want",
   "photos": [{"file": "chirimoya-1.jpg", "shows": "Fruit on tree", "sourceFile": "Annona cherimola Brazil.jpg", "sourcePage": "https://commons.wikimedia.org/wiki/File:Annona_cherimola_Brazil.jpg", "author": "Marcelo RosaMelo", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"}]
 }

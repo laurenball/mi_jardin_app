@@ -7,7 +7,7 @@
   <title>Sanctuario de Aves</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=46" />
+  <link rel="stylesheet" href="styles.css?v=47" />
 </head>
 <body>
   <nav class="site-nav" aria-label="Secciones">
@@ -138,6 +138,26 @@
           <label>Agua<input name="water" placeholder="Baja, media, alta" /></label>
         </div>
         <div class="two-column"><label>Suelo<input name="soil" /></label><label>Tamaño<input name="size" placeholder="Altura x ancho adulto" /></label></div>
+        <div class="two-column">
+          <label>Grupo de tamaño frutal
+            <select name="fruitSizeGroup">
+              <option value="">Sin clasificar</option>
+              <option value="Naturally small">Pequeños por naturaleza</option>
+              <option value="Easy to keep small">Fáciles de mantener chicos</option>
+              <option value="Needs regular pruning">Chicos solo con poda regular</option>
+              <option value="Needs space">Necesitan espacio</option>
+            </select>
+          </label>
+          <label>Cómo mantener el tamaño<input name="sizeManagement" placeholder="Porte natural y poda necesaria" /></label>
+        </div>
+        <label>Grupo de tamaño del dosel
+          <select name="canopySizeGroup">
+            <option value="">Sin clasificar</option>
+            <option value="Small">Árboles bajos</option>
+            <option value="Medium">Árboles medianos</option>
+            <option value="Large">Árboles grandes</option>
+          </select>
+        </label>
         <div class="two-column"><label>Floración<input name="flowering" /></label><label>Fructificación<input name="fruiting" /></label></div>
         <label>Propagación<textarea name="propagation" rows="2"></textarea></label>
       </details>
@@ -175,6 +195,6 @@
     <button id="update-app" class="primary-button" type="button">Actualizar</button>
   </aside>
 
-  <script type="module" src="app.js?v=47"></script>
+  <script type="module" src="app.js?v=48"></script>
 </body>
 </html>

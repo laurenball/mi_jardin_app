@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=47';
+import { STARTER_PLANTS } from './starter-plants.js?v=48';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -30,15 +30,30 @@ const DISPLAY_LABELS = {
   layer: {'Canopy':'Dosel','Fruit tree':'Frutal','Shrub':'Arbusto','Herbaceous':'Herbácea','Groundcover':'Cubresuelo','Grass':'Gramínea','Climber':'Trepadora'},
   purpose: {'Bird food':'Alimento para aves','Shelter':'Refugio','Nesting':'Nidificación','Hummingbirds':'Picaflores','Butterflies':'Mariposas','Pollinators':'Polinizadores','Edible':'Comestible','Medicinal tradition':'Uso medicinal'},
   priority: {'High':'Alta','Medium':'Media','Low':'Baja'},
-  plantType: {'Tree':'Árbol','Palm':'Palmera','Shrub':'Arbusto','Herb':'Herbácea','Grass':'Gramínea','Climber':'Trepadora'}
+  plantType: {'Tree':'Árbol','Palm':'Palmera','Shrub':'Arbusto','Herb':'Herbácea','Grass':'Gramínea','Climber':'Trepadora'},
+  fruitSizeGroup: {'Naturally small':'Pequeños por naturaleza','Easy to keep small':'Fáciles de mantener chicos','Needs regular pruning':'Chicos solo con poda regular','Needs space':'Necesitan espacio'},
+  canopySizeGroup: {'Small':'Árboles bajos','Medium':'Árboles medianos','Large':'Árboles grandes'}
 };
 
 const SCHEMA_VERSION = 4;
 const STARTER_INFO_FIELDS = ['plantType','layer','description','nativeStatus','nativeRange','ecology','hostPlant','purposes','wildlifeNotes',
-  'sun','water','soil','size','flowering','fruiting','propagation','edibleUses','medicinalUses','otherUses','safety','sources',
+  'sun','water','soil','size','fruitSizeGroup','canopySizeGroup','sizeManagement','flowering','fruiting','propagation','edibleUses','medicinalUses','otherUses','safety','sources',
   'status','priority','notes'];
 const UNGROUPED_LABEL = 'Otras';
 const LAYER_ORDER = ['Groundcover', 'Herbaceous', 'Grass', 'Shrub', 'Climber', 'Fruit tree', 'Canopy'];
+const FRUIT_SIZE_ORDER = ['Naturally small', 'Easy to keep small', 'Needs regular pruning', 'Needs space'];
+const FRUIT_SIZE_DESCRIPTIONS = {
+  'Naturally small': 'Porte bajo sin poda de contención.',
+  'Easy to keep small': 'Crecen más, pero toleran recortes moderados.',
+  'Needs regular pruning': 'Pueden quedar bajos si se forman y podan de manera continua.',
+  'Needs space': 'Planificar el tamaño adulto; no contar con mantenerlos chicos.'
+};
+const CANOPY_SIZE_ORDER = ['Small', 'Medium', 'Large'];
+const CANOPY_SIZE_DESCRIPTIONS = {
+  Small: 'Altura adulta aproximada de 2–7 m; mirar también el ancho.',
+  Medium: 'Pueden llegar a unos 10–15 m; reservar lugar para la copa.',
+  Large: 'Árboles altos o muy anchos; no se mantienen chicos con poda sencilla.'
+};
 const nameCollator = new Intl.Collator(['es', 'en'], {sensitivity: 'base', numeric: true});
 
 function displayValue(group, value) { return DISPLAY_LABELS[group]?.[value] || value || ''; }
@@ -359,6 +374,7 @@ function careRows(plant) {
     ['Agua', plant.water],
     ['Suelo', plant.soil],
     ['Tamaño', plant.size],
+    ['Cómo mantener el tamaño', plant.sizeManagement],
     ['Floración', plant.flowering],
     ['Fructificación', plant.fruiting],
     ['Propagación', plant.propagation]
@@ -409,7 +425,7 @@ function plantSections(plant) {
 
 function tagMarkup(plant, limit = 4) {
   const purposes = plantPurposes(plant);
-  return [displayValue('status', plant.status), displayValue('priority', plant.priority), displayValue('layer', plant.layer), ...purposes.slice(0, limit).map(v => displayValue('purpose', v))]
+  return [displayValue('status', plant.status), displayValue('priority', plant.priority), displayValue('layer', plant.layer), displayValue('fruitSizeGroup', plant.fruitSizeGroup), displayValue('canopySizeGroup', plant.canopySizeGroup), ...purposes.slice(0, limit).map(v => displayValue('purpose', v))]
     .filter(Boolean).map(v => `<span class="tag">${escapeHtml(v)}</span>`).join('');
 }
 
@@ -473,10 +489,35 @@ function layerGroupSection(label, items) {
   const heading = document.createElement('h2');
   heading.className = 'group-heading';
   heading.textContent = label;
-  const list = document.createElement('div');
-  list.className = 'plant-group-items';
-  list.append(...items.map(plant => plant.id === expandedPlantId ? cardForPlant(plant) : photoPlant(plant)));
-  section.append(heading, list);
+  section.append(heading);
+  const layer = items[0]?.layer;
+  const sizeOrder = layer === 'Fruit tree' ? FRUIT_SIZE_ORDER : layer === 'Canopy' ? CANOPY_SIZE_ORDER : null;
+  if (sizeOrder) {
+    const field = layer === 'Fruit tree' ? 'fruitSizeGroup' : 'canopySizeGroup';
+    const descriptions = layer === 'Fruit tree' ? FRUIT_SIZE_DESCRIPTIONS : CANOPY_SIZE_DESCRIPTIONS;
+    for (const group of [...sizeOrder, 'Unclassified']) {
+      const plantsInGroup = items.filter(plant => (sizeOrder.includes(plant[field]) ? plant[field] : 'Unclassified') === group);
+      if (plantsInGroup.length === 0) continue;
+      const subSection = document.createElement('section');
+      subSection.className = 'size-section';
+      const subHeading = document.createElement('h3');
+      subHeading.className = 'size-heading';
+      subHeading.textContent = group === 'Unclassified' ? 'Tamaño por clasificar' : displayValue(field, group);
+      const description = document.createElement('p');
+      description.className = 'size-description';
+      description.textContent = descriptions[group] || 'Agregá un grupo de tamaño para ubicar estas plantas.';
+      const list = document.createElement('div');
+      list.className = 'plant-group-items';
+      list.append(...plantsInGroup.map(plant => plant.id === expandedPlantId ? cardForPlant(plant) : photoPlant(plant)));
+      subSection.append(subHeading, description, list);
+      section.append(subSection);
+    }
+  } else {
+    const list = document.createElement('div');
+    list.className = 'plant-group-items';
+    list.append(...items.map(plant => plant.id === expandedPlantId ? cardForPlant(plant) : photoPlant(plant)));
+    section.append(list);
+  }
   return section;
 }
 
@@ -491,6 +532,7 @@ function photoPlant(plant) {
     <div>
       <h3>${escapeHtml(plant.commonName)}</h3>
       ${plant.scientificName ? `<p class="scientific">${escapeHtml(plant.scientificName)}</p>` : ''}
+      ${['Fruit tree', 'Canopy'].includes(plant.layer) && plant.size ? `<p class="plant-size-summary">${escapeHtml(plant.size)}</p>` : ''}
     </div>`;
   return article;
 }
@@ -521,6 +563,7 @@ function cardForPlant(plant) {
       ${tags ? `<div class="meta">${tags}</div>` : ''}
       ${facts ? `<ul class="fact-list">${facts}</ul>` : ''}
       ${plant.description ? `<p>${textWithTranslation(plant.description)}</p>` : ''}
+      ${plant.sizeManagement ? `<p class="size-management">${escapeHtml(plant.sizeManagement)}</p>` : ''}
       ${plant.wildlifeNotes ? `<p class="wildlife-callout">${textWithTranslation(plant.wildlifeNotes)}</p>` : ''}
       <button type="button" class="primary-button card-more-button" data-action="all-info" data-plant-id="${escapeHtml(plant.id)}">Toda la información</button>
     </div>`;
@@ -616,7 +659,7 @@ form.addEventListener('submit', async (event) => {
   const plant = {
     id: crypto.randomUUID(), commonName: value('commonName'), scientificName: value('scientificName'), plantType: value('plantType'), layer: value('layer'), description: value('description'),
     nativeStatus: value('nativeStatus'), nativeRange: value('nativeRange'), ecology: value('ecology'), hostPlant: value('hostPlant'), purposes: data.getAll('purposes'), wildlifeNotes: value('wildlifeNotes'),
-    sun: value('sun'), water: value('water'), soil: value('soil'), size: value('size'), flowering: value('flowering'), fruiting: value('fruiting'), propagation: value('propagation'),
+    sun: value('sun'), water: value('water'), soil: value('soil'), size: value('size'), fruitSizeGroup: value('fruitSizeGroup'), canopySizeGroup: value('canopySizeGroup'), sizeManagement: value('sizeManagement'), flowering: value('flowering'), fruiting: value('fruiting'), propagation: value('propagation'),
     edibleUses: value('edibleUses'), medicinalUses: value('medicinalUses'), otherUses: value('otherUses'), safety: value('safety'),
     sources: value('sources'),
     status: value('status'), priority: value('priority'), nursery: value('nursery'), price: value('price'), gardenLocation: value('gardenLocation'), notes: value('notes'),

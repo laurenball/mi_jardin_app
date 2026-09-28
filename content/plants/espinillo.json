@@ -18,6 +18,8 @@
   "sun": "Pleno sol",
   "water": "Baja una vez establecido",
   "soil": "Adaptable; soporta suelos pobres, secos y salinos",
+  "canopySizeGroup": "Small",
+  "sizeManagement": "Árbol de 3–7 m; ocupa menos altura que otros árboles de dosel, pero su copa espinosa necesita espacio lateral.",
   "size": "Altura: 3–7 m; ancho: 3–7 m (aprox. en madurez).",
   "flowering": "Pompones dorados perfumados en primavera",
   "fruiting": "Vainas oscuras y curvas",

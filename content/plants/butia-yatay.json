@@ -13,9 +13,12 @@
   "sun": "Pleno sol",
   "water": "Baja a media",
   "soil": "Preferentemente arenoso y bien drenado",
+  "size": "Altura: 12–20 m (aprox. en madurez).",
+  "fruitSizeGroup": "Needs space",
+  "sizeManagement": "Palmera que puede alcanzar 12–20 m; la poda de hojas no reduce la altura del tronco.",
   "fruiting": "Frutos carnosos agridulces",
   "edibleUses": "El fruto agridulce es comestible. / The sweet-tart fruit is edible.",
-  "sources": "Butia yatay, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:38727-2 | Parque Nacional El Palmar, Parques Nacionales Argentina: https://www.argentina.gob.ar/node/390219",
+  "sources": "Butia yatay, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:38727-2 | Parque Nacional El Palmar, Parques Nacionales Argentina: https://www.argentina.gob.ar/node/390219 | Palmera yatay, Parques Nacionales Argentina: https://www.argentina.gob.ar/sites/default/files/2024/09/folleto_flora_-_pn_el_palmar.pdf",
   "status": "Planted",
   "notes": "Ya tenemos yatay en el sanctuario. / Already in the sanctuary.",
   "photos": [{"file": "butia-yatay-1.jpg", "shows": "Palm", "sourceFile": "Butia yatay.jpg", "sourcePage": "https://commons.wikimedia.org/wiki/File:Butia_yatay.jpg", "author": "Andrés González", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"}]
