@@ -369,7 +369,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos ovales rojos, anaranjados o amarillos',
     edibleUses: 'Fruto maduro en fresco, jugos y dulces; suele retirarse la cáscara amarga. Una publicación oficial argentina indica que fue domesticado y cultivado por poblaciones originarias andinas y que sigue integrando la alimentación de comunidades locales. / Ripe fruit is eaten fresh or made into juice and preserves; the bitter skin is often removed. An Argentine government publication says Andean Indigenous populations domesticated and cultivated it, and local communities still eat it.',
     sources: 'Chilto, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/solanum-betaceum | Chilto, Secretaría de Ambiente de Argentina: https://www.argentina.gob.ar/sites/default/files/triptico_chilto_pdf_final.pdf',
-    status: 'Other',
+    status: 'Want',
     priority: 'High',
     notes: 'Frutal para buscar. / Fruit plant to source. Ezeiza: Sitio protegido. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.'
   },
@@ -570,9 +570,9 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos amarillos aromáticos',
     edibleUses: 'Frutos agridulces consumidos frescos, en jugos, compotas, mermeladas y vinagres. La fuente registra estos usos regionales sin atribuirlos a un pueblo indígena concreto. / Sweet-tart fruit is eaten fresh or used for juice, compotes, preserves and vinegar. The source records these regional uses without attributing them to a specific Indigenous people.',
     sources: 'Código Alimentario Argentino (antecedentes de uso): https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-36-2025-414767/texto | Eugenia myrcianthes, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98707-2 | Descripción botánica, Universidad de la República: https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/36481/1/LegrandDiego.pdf',
-    status: 'Other',
+    status: 'Want',
     priority: 'Low',
-    notes: 'Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority. Ezeiza: Excelente. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.'
+    notes: 'Frutal para buscar cuando haya lugar para su copa. / Fruit tree to source when there is room for its crown. Ezeiza: Excelente. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.'
   },
   {
     commonName: 'Congorosa',
@@ -1494,7 +1494,7 @@ export const STARTER_PLANTS = [
     sizeManagement: 'Tamaño mantenido orientativo: 3–5 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.',
     fruiting: 'Fruto amarillo muy aromático y agridulce',
     edibleUses: 'Fruto amarillo muy aromático y agridulce',
-    status: 'Other',
+    status: 'Want',
     notes: 'Ezeiza: Vale la pena probar. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.'
   },
   {
@@ -1534,15 +1534,38 @@ export const STARTER_PLANTS = [
     plantType: 'Tree',
     layer: 'Fruit tree',
     photos: ['./assets/plants/guavira-1.jpg'],
-    description: 'Guavirá / guabiroba (Campomanesia xanthocarpa). Fruto amarillo aromático; fresco, jugo y mermelada.',
+    description: 'Guabiroba de porte arbóreo (Campomanesia xanthocarpa), distinta de la guavira del campo (C. adamantium). Ambas reciben los nombres guavira, guabiroba o gabiroba; mirar el nombre científico al buscar plantines. Fruto amarillo aromático; fresco, jugo y mermelada.',
     purposes: ['Edible'],
-    size: 'Altura natural sin poda: 5–10+ m.',
+    size: 'Altura natural sin poda: 5–10+ m; fuentes describen ejemplares de hasta 15–20 m.',
     fruitSizeGroup: 'Needs regular pruning',
     sizeManagement: 'Tamaño mantenido orientativo: 4–6 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.',
     fruiting: 'Fruto amarillo aromático; fresco, jugo y mermelada',
     edibleUses: 'Fruto amarillo aromático; fresco, jugo y mermelada',
+    sources: 'Campomanesia xanthocarpa, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:273998-2 | Guabiroba, ICMBio: https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/pan-lagoas-do-sul/1-ciclo/produtos/2024-pan-lagoas-do-sul-acao3-26-projeto-reposicao-florestal-em-aldeia-indigena.pdf',
     status: 'Other',
-    notes: 'Ezeiza: Vale la pena probar. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.'
+    notes: 'Ezeiza: Vale la pena probar. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación. Fuentes botánicas describen esta especie como árbol que puede llegar a 15–20 m; no confundirla con Campomanesia adamantium, arbusto de 0,3–2 m.'
+  },
+  {
+    commonName: 'Guavira del campo / guabiroba del Cerrado',
+    scientificName: 'Campomanesia adamantium',
+    plantType: 'Shrub',
+    layer: 'Fruit tree',
+    photos: ['./assets/plants/guavira-del-campo-1.jpg'],
+    description: 'Arbusto frutal bajo del Cerrado de Brasil y Paraguay. También llamado guavira, gabiroba o guabiroba; es una especie distinta de la guabiroba arbórea Campomanesia xanthocarpa.',
+    nativeStatus: 'Nativa de Brasil y Paraguay; no es una especie local de Ezeiza',
+    nativeRange: 'Sur, sudeste y centro-oeste de Brasil; Paraguay',
+    purposes: ['Edible','Pollinators'],
+    sun: 'Pleno sol',
+    soil: 'Bien drenado; especie de ambientes abiertos del Cerrado',
+    size: 'Altura natural sin poda: 0,3–2 m.',
+    fruitSizeGroup: 'Naturally small',
+    sizeManagement: 'Se mantiene naturalmente muy por debajo de 5 m; no necesita poda de contención.',
+    flowering: 'Flores blancas',
+    fruiting: 'Frutos redondos de unos 2–2,5 cm, amarillos al madurar',
+    edibleUses: 'Frutos aromáticos consumidos frescos o en jugos y conservas.',
+    sources: 'Campomanesia adamantium, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60466515-2 | Fenología y tamaño, Revista de Ciências Agrárias: https://scielo.pt/scielo.php?pid=S0871-018X2020000100105&script=sci_arttext | Ecología y tamaño, Diversity: https://repositorio.bc.ufg.br/bitstreams/4afed67a-f9e0-4ea0-b98f-88c430dc1cb4/download | Uso de los frutos, UFMS: https://repositorio.ufms.br/handle/123456789/6425?mode=full',
+    status: 'Want',
+    notes: 'Probar como frutal experimental en Ezeiza; su procedencia es el Cerrado, no el talar local. Comprar como Campomanesia adamantium para evitar confusión con C. xanthocarpa.'
   },
   {
     commonName: 'Yvapority',

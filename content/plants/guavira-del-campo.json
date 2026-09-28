@@ -1,0 +1,34 @@
+{
+  "slug": "guavira-del-campo",
+  "commonName": "Guavira del campo / guabiroba del Cerrado",
+  "scientificName": "Campomanesia adamantium",
+  "plantType": "Shrub",
+  "layer": "Fruit tree",
+  "description": "Arbusto frutal bajo del Cerrado de Brasil y Paraguay. También llamado guavira, gabiroba o guabiroba; es una especie distinta de la guabiroba arbórea Campomanesia xanthocarpa.",
+  "nativeStatus": "Nativa de Brasil y Paraguay; no es una especie local de Ezeiza",
+  "nativeRange": "Sur, sudeste y centro-oeste de Brasil; Paraguay",
+  "purposes": [
+    "Edible",
+    "Pollinators"
+  ],
+  "sun": "Pleno sol",
+  "soil": "Bien drenado; especie de ambientes abiertos del Cerrado",
+  "size": "Altura natural sin poda: 0,3–2 m.",
+  "fruitSizeGroup": "Naturally small",
+  "sizeManagement": "Se mantiene naturalmente muy por debajo de 5 m; no necesita poda de contención.",
+  "flowering": "Flores blancas",
+  "fruiting": "Frutos redondos de unos 2–2,5 cm, amarillos al madurar",
+  "edibleUses": "Frutos aromáticos consumidos frescos o en jugos y conservas.",
+  "sources": "Campomanesia adamantium, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60466515-2 | Fenología y tamaño, Revista de Ciências Agrárias: https://scielo.pt/scielo.php?pid=S0871-018X2020000100105&script=sci_arttext | Ecología y tamaño, Diversity: https://repositorio.bc.ufg.br/bitstreams/4afed67a-f9e0-4ea0-b98f-88c430dc1cb4/download | Uso de los frutos, UFMS: https://repositorio.ufms.br/handle/123456789/6425?mode=full",
+  "status": "Want",
+  "notes": "Probar como frutal experimental en Ezeiza; su procedencia es el Cerrado, no el talar local. Comprar como Campomanesia adamantium para evitar confusión con C. xanthocarpa.",
+  "photos": [
+    {
+      "file": "guavira-del-campo-1.jpg",
+      "shows": "Frutos de guavira del campo en el arbusto",
+      "sourceFile": "Campomanesia adamantium, Flora do Brasil",
+      "sourcePage": "https://imagemcampo.jbrj.gov.br/producao/imagens_de_campo/304349633.jpg",
+      "author": "Itayguara R. Costa"
+    }
+  ]
+}

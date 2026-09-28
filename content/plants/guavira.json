@@ -4,7 +4,7 @@
   "scientificName": "Campomanesia xanthocarpa",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Guavirá / guabiroba (Campomanesia xanthocarpa). Fruto amarillo aromático; fresco, jugo y mermelada.",
+  "description": "Guabiroba de porte arbóreo (Campomanesia xanthocarpa), distinta de la guavira del campo (C. adamantium). Ambas reciben los nombres guavira, guabiroba o gabiroba; mirar el nombre científico al buscar plantines. Fruto amarillo aromático; fresco, jugo y mermelada.",
   "purposes": [
     "Edible"
   ],
@@ -19,9 +19,10 @@
     }
   ],
   "fruitSizeGroup": "Needs regular pruning",
-  "size": "Altura natural sin poda: 5–10+ m.",
+  "size": "Altura natural sin poda: 5–10+ m; fuentes describen ejemplares de hasta 15–20 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 4–6 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
   "fruiting": "Fruto amarillo aromático; fresco, jugo y mermelada",
   "edibleUses": "Fruto amarillo aromático; fresco, jugo y mermelada",
-  "notes": "Ezeiza: Vale la pena probar. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación."
+  "notes": "Ezeiza: Vale la pena probar. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación. Fuentes botánicas describen esta especie como árbol que puede llegar a 15–20 m; no confundirla con Campomanesia adamantium, arbusto de 0,3–2 m.",
+  "sources": "Campomanesia xanthocarpa, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:273998-2 | Guabiroba, ICMBio: https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/pan-lagoas-do-sul/1-ciclo/produtos/2024-pan-lagoas-do-sul-acao3-26-projeto-reposicao-florestal-em-aldeia-indigena.pdf"
 }

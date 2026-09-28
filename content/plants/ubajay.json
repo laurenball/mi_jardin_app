@@ -24,7 +24,7 @@
   "flowering": "Flores blancas de mirtácea",
   "fruiting": "Frutos amarillos aromáticos",
   "edibleUses": "Frutos agridulces consumidos frescos, en jugos, compotas, mermeladas y vinagres. La fuente registra estos usos regionales sin atribuirlos a un pueblo indígena concreto. / Sweet-tart fruit is eaten fresh or used for juice, compotes, preserves and vinegar. The source records these regional uses without attributing them to a specific Indigenous people.",
-  "status": "Other",
+  "status": "Want",
   "priority": "Low",
   "photos": [
     {
@@ -42,6 +42,6 @@
       "author": "walterrrrr"
     }
   ],
-  "notes": "Referencia para algún día, no prioridad activa. / Reference plant for someday, not an active priority. Ezeiza: Excelente. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "notes": "Frutal para buscar cuando haya lugar para su copa. / Fruit tree to source when there is room for its crown. Ezeiza: Excelente. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.",
   "sources": "Código Alimentario Argentino (antecedentes de uso): https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-36-2025-414767/texto | Eugenia myrcianthes, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98707-2 | Descripción botánica, Universidad de la República: https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/36481/1/LegrandDiego.pdf"
 }
