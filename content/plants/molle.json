@@ -18,8 +18,8 @@
   "water": "Baja a media",
   "soil": "Adaptable",
   "canopySizeGroup": "Small",
-  "sizeManagement": "Árbol de 2–7 m; naturalmente de porte bajo a mediano, aunque su copa puede extenderse bastante.",
-  "size": "Altura: 2–7 m (altura aproximada; varía con el sitio).",
+  "sizeManagement": "Tamaño mantenido orientativo: 2,5–5 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
+  "size": "Altura natural sin poda: 2–8 m.",
   "fruiting": "Bayas pequeñas",
   "edibleUses": "Las bayas pueden usarse como sustituto de la pimienta. / The berries can be used as a pepper substitute.",
   "medicinalUses": "Pueblos originarios usaban la resina como antiséptico y para dolor dental. / Indigenous peoples used the resin as an antiseptic and for dental pain.",
@@ -43,5 +43,6 @@
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
     }
-  ]
+  ],
+  "notes": "Ezeiza: Excelente. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 1/5. Tamaños orientativos aportados en la tabla de planificación."
 }

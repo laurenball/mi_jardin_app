@@ -20,8 +20,8 @@
   "water": "Baja a media",
   "soil": "Adaptable, bien drenado",
   "canopySizeGroup": "Medium",
-  "sizeManagement": "Puede crecer como arbusto grande o árbol de hasta 10 m; reservar espacio para su copa y ramificación espinosa.",
-  "size": "Altura: 3–10 m (altura aproximada; varía con el sitio).",
+  "sizeManagement": "Tamaño mantenido orientativo: 4–6 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
+  "size": "Altura natural sin poda: 5–12+ m.",
   "fruiting": "Frutos morado oscuro",
   "otherUses": "Los frutos dan un tinte oscuro. La madera es extremadamente dura y se usó tradicionalmente para postes de alambrado de larga duración. / The berries yield a dark dye. The wood is extremely hard and was traditionally used for fence posts that last decades.",
   "sources": "La biodiversidad urbana, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/noticias/la-biodiversidad-urbana-el-corazon-verde-de-la-ciudad",
@@ -46,5 +46,6 @@
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
     }
-  ]
+  ],
+  "notes": "Ezeiza: Excelente; local. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 2/5. Tamaños orientativos aportados en la tabla de planificación."
 }

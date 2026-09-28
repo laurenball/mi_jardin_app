@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=51';
+import { STARTER_PLANTS } from './starter-plants.js?v=52';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -31,7 +31,7 @@ const DISPLAY_LABELS = {
   purpose: {'Bird food':'Alimento para aves','Shelter':'Refugio','Nesting':'Nidificación','Hummingbirds':'Picaflores','Butterflies':'Mariposas','Pollinators':'Polinizadores','Edible':'Comestible','Medicinal tradition':'Uso medicinal'},
   priority: {'High':'Alta','Medium':'Media','Low':'Baja'},
   plantType: {'Tree':'Árbol','Palm':'Palmera','Shrub':'Arbusto','Herb':'Herbácea','Grass':'Gramínea','Climber':'Trepadora'},
-  fruitSizeGroup: {'Naturally small':'Pequeños por naturaleza','Easy to keep small':'Fáciles de mantener chicos','Needs regular pruning':'Chicos solo con poda regular','Needs space':'Necesitan espacio'},
+  fruitSizeGroup: {'Naturally small':'Hasta 5 m por naturaleza','Easy to keep small':'Hasta 5 m con recortes leves','Needs regular pruning':'Hasta 5 m con poda regular','Needs space':'Necesitan espacio'},
   canopySizeGroup: {'Small':'Árboles bajos','Medium':'Árboles medianos','Large':'Árboles grandes'}
 };
 
@@ -43,10 +43,10 @@ const UNGROUPED_LABEL = 'Otras';
 const LAYER_ORDER = ['Groundcover', 'Herbaceous', 'Grass', 'Shrub', 'Climber', 'Fruit tree', 'Canopy'];
 const FRUIT_SIZE_ORDER = ['Naturally small', 'Easy to keep small', 'Needs regular pruning', 'Needs space'];
 const FRUIT_SIZE_DESCRIPTIONS = {
-  'Naturally small': 'Porte bajo sin poda de contención.',
-  'Easy to keep small': 'Crecen más, pero toleran recortes moderados.',
-  'Needs regular pruning': 'Pueden quedar bajos si se forman y podan de manera continua.',
-  'Needs space': 'Planificar el tamaño adulto; no contar con mantenerlos chicos.'
+  'Naturally small': 'Su altura natural suele quedar dentro de los 5 m sin poda de contención.',
+  'Easy to keep small': 'Pueden superar 5 m sin poda, pero toleran recortes moderados para mantenerse cerca de ese límite.',
+  'Needs regular pruning': 'Pueden superar 5 m sin poda; requieren formación y recortes regulares para mantenerse cerca de ese límite.',
+  'Needs space': 'No contar con mantenerlos hasta 5 m; planificar su tamaño adulto.'
 };
 const CANOPY_SIZE_ORDER = ['Small', 'Medium', 'Large'];
 const CANOPY_SIZE_DESCRIPTIONS = {

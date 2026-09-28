@@ -19,8 +19,8 @@
   "water": "Baja a media una vez establecido",
   "soil": "Adaptable; tolera suelos locales y sequía",
   "canopySizeGroup": "Medium",
-  "sizeManagement": "Puede alcanzar 12 m y formar una copa amplia; no planearlo como arbolito compacto.",
-  "size": "Altura: 5–12 m (altura aproximada; varía con el sitio).",
+  "sizeManagement": "Tamaño mantenido orientativo: 3–6 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
+  "size": "Altura natural sin poda: 4–10+ m.",
   "fruiting": "Bayas pequeñas en la estación cálida",
   "edibleUses": "Las bayas son pequeñas, dulces y comestibles, con sabor cercano al dátil. Querandíes y guaraníes las comían. / The berries are small, sweet and edible, with a flavour close to dates. The Querandí and Guaraní ate them.",
   "medicinalUses": "",
@@ -67,5 +67,5 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
   ],
-  "notes": "Próximo árbol clave para conseguir. / Next key tree to source."
+  "notes": "Próximo árbol clave para conseguir. / Next key tree to source. Ezeiza: Excelente; local. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 2/5. Tamaños orientativos aportados en la tabla de planificación."
 }

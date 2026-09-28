@@ -18,8 +18,8 @@
   "water": "Media",
   "soil": "Muy buen drenaje; evitar suelos encharcados",
   "canopySizeGroup": "Large",
-  "sizeManagement": "Con 20–50 m de altura potencial, no es práctico mantenerla pequeña por poda.",
-  "size": "Altura: 20–50 m (altura aproximada; varía con el sitio).",
+  "sizeManagement": "No se puede reducir sensatamente a menos de 5 m mediante poda; reservar espacio para su altura natural.",
+  "size": "Altura natural sin poda: 20–40+ m (excepcionalmente ~50 m).",
   "flowering": "Conos masculinos en primavera; especie dioica, con plantas masculinas y femeninas",
   "fruiting": "Conos femeninos grandes con piñones comestibles; maduran lentamente",
   "propagation": "Por semilla fresca; crecimiento lento al principio y muy longevo.",
@@ -48,5 +48,5 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
     }
   ],
-  "notes": "Árbol muy alto para evaluar con cuidado por espacio, raíces, sombra y caída de conos. / Very tall tree; evaluate placement carefully."
+  "notes": "Árbol muy alto para evaluar con cuidado por espacio, raíces, sombra y caída de conos. / Very tall tree; evaluate placement carefully. Ezeiza: Calor y sitio son la preocupación. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación."
 }

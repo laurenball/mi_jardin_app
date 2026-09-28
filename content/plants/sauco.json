@@ -3,7 +3,7 @@
   "commonName": "Sauco",
   "scientificName": "Sambucus australis",
   "plantType": "Shrub",
-  "layer": "Shrub",
+  "layer": "Fruit tree",
   "description": "Sauco nativo de crecimiento rápido, con grandes cabezuelas de flores crema seguidas por bayas pequeñas y oscuras. Llena rápido una plantación nueva mientras los árboles más lentos se establecen. / Fast-growing native elder with broad heads of cream flowers followed by small dark berries. It fills a new planting quickly while the slower trees establish.",
   "nativeStatus": "Nativo del sur de Sudamérica",
   "nativeRange": "Argentina, Uruguay, Paraguay, southern Brazil",
@@ -12,17 +12,19 @@
     "Bird food",
     "Pollinators",
     "Shelter",
+    "Edible",
     "Medicinal tradition"
   ],
   "wildlifeNotes": "Las aves comen fácilmente sus bayas oscuras. Las cabezuelas amplias de flores sostienen muchos insectos, que atraen aves insectívoras. / Birds take the dark berries readily. The wide flower heads carry a lot of insects, which is what brings the insectivorous birds in.",
   "sun": "Sol y media sombra",
   "water": "Media",
   "soil": "Adaptable; prefiere algo de humedad",
-  "size": "Altura: 3–6 m (altura aproximada; varía con el sitio).",
+  "size": "Altura natural sin poda: 3–6 m.",
   "flowering": "Cabezuelas crema en primavera y verano",
   "fruiting": "Bayas pequeñas y oscuras",
   "propagation": "Muy fácil por esquejes y rápido desde semilla. / Very easy from cuttings, and fast from seed.",
   "medicinalUses": "Las flores se toman en infusión para fiebre y resfríos, un uso tradicional extendido en la región. / The flowers are taken as an infusion for fever and colds, a long-standing use across the region.",
+  "edibleUses": "Las bayas cocidas se usan para mermelada, jalea y jarabe; no consumirlas crudas. / Cooked berries are used for jam, jelly and syrup; do not eat them raw.",
   "safety": "La parte usada son las flores. Las bayas crudas y las partes verdes pueden causar malestar estomacal. / The flowers are the part used. Raw berries and the green parts upset the stomach.",
   "sources": "Saúco, Aves Argentinas: https://www.avesargentinas.org.ar/ficha-planta/sa%C3%BAco",
   "status": "Planted",
@@ -56,5 +58,7 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
   ],
-  "notes": "Ya tenemos sauco, pero queremos agregar más. / Already planted, but we want more."
+  "notes": "Ya tenemos sauco, pero queremos agregar más. / Already planted, but we want more. Ezeiza: Excelente. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "fruitSizeGroup": "Easy to keep small",
+  "sizeManagement": "Tamaño mantenido orientativo: 2–4 m. Puede mantenerse por debajo de 5 m con recortes moderados."
 }
