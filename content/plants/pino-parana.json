@@ -4,7 +4,7 @@
   "scientificName": "Araucaria angustifolia",
   "plantType": "Tree",
   "layer": "Canopy",
-  "description": "Pino Paraná (Araucaria angustifolia). Piñones grandes comestibles.",
+  "description": "Araucaria brasileña de tronco recto y copa adulta en forma de paraguas. Los grandes piñones comestibles maduran dentro de conos pesados. / A Brazilian araucaria with a straight trunk and umbrella-shaped adult crown. Large edible seeds ripen in heavy cones.",
   "purposes": [
     "Edible"
   ],
@@ -22,6 +22,10 @@
   "size": "Altura natural sin poda: 20–30+ m (hasta ~40 m).",
   "sizeManagement": "No se puede reducir sensatamente a menos de 5 m mediante poda; reservar espacio para su altura natural.",
   "fruiting": "Piñones grandes comestibles",
-  "edibleUses": "Piñones grandes comestibles",
-  "notes": "Ezeiza: Bueno. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación."
+  "edibleUses": "Los piñones se cuecen o asan y también se muelen para harina. Son parte central de la alimentación y la vida cultural kaingang del sur de Brasil. / The large seeds are boiled or roasted, or ground into flour. They are central to Kaingang food and culture in southern Brazil.",
+  "notes": "Ezeiza: Bueno. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "ecology": "Forma bosques de araucaria del sur de Brasil y áreas vecinas. Necesita espacio de árbol grande y, para obtener piñones, ejemplares femeninos polinizados por masculinos. / It forms araucaria forests in southern Brazil and nearby regions. It needs room to become a large tree; seed crops require female trees pollinated by males.",
+  "wildlifeNotes": "Los piñones alimentan aves y mamíferos de su región; la copa alta aporta perchas y refugio. / Seeds feed birds and mammals in its native range; the high crown provides perches and cover.",
+  "safety": "Los conos maduros son pesados y caen desde altura: ubicar lejos de senderos, techos y lugares de reunión. / Heavy ripe cones fall from height; plant away from paths, roofs and gathering places.",
+  "sources": "Pinhão y alimentación kaingang, Fiocruz: https://raca.fiocruz.br/index.php/raca/article/view/216 | Araucaria angustifolia, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:17518-2"
 }

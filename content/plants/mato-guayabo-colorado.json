@@ -4,7 +4,7 @@
   "scientificName": "Myrcianthes cisplatensis",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Árbol o arbusto nativo, perenne, de la familia de las mirtáceas. Aporta flores para insectos y frutos para aves. / Native evergreen shrub or tree in the myrtle family. Offers flowers for insects and fruit for birds.",
+  "description": "Mirtácea perenne de corteza y follaje atractivos, flores blancas y frutos oscuros. También se llama guayabo colorado; en Entre Ríos se registró el uso de su fruta para dulces. / An evergreen myrtle with attractive bark and foliage, white flowers and dark fruit. Called guayabo colorado; its fruit has been used in preserves in Entre Ríos.",
   "nativeStatus": "Nativo de la región rioplatense y zonas cercanas",
   "nativeRange": "Argentina, Uruguay, sur de Brasil y Paraguay",
   "purposes": [
@@ -46,5 +46,6 @@
       "licenseUrl": ""
     }
   ],
-  "edibleUses": "Fruto comestible; una ficha provincial de Entre Ríos registra su uso en dulces. No encontré atribución fiable de ese uso a un pueblo indígena concreto. / Edible fruit; an Entre Ríos provincial guide records its use in preserves. No reliable attribution of that use to a specific Indigenous people was found."
+  "edibleUses": "El fruto maduro es comestible y se ha usado para hacer dulces en Entre Ríos. / The ripe fruit is edible and has been used to make preserves in Entre Ríos.",
+  "ecology": "Integra montes y bosques ribereños del litoral. La copa densa puede servir de refugio y las flores y frutos conectan insectos polinizadores con aves frugívoras. / Grows in woods and riverside forest of the Litoral. Its dense crown shelters birds, while flowers and fruit feed insects and fruit-eating birds."
 }

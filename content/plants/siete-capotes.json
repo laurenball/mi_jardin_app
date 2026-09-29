@@ -4,7 +4,7 @@
   "scientificName": "Campomanesia guazumifolia",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Siete capotes (Campomanesia guazumifolia). Fruto aromático; fresco o en conservas.",
+  "description": "Arbolito de hojas ásperas y frutos redondos amarillos, dulces y perfumados. El nombre alude a la corteza que se desprende en capas. / A small tree with rough leaves and sweet fragrant yellow round fruit. Its name refers to bark that peels in layers.",
   "purposes": [
     "Edible"
   ],
@@ -22,6 +22,11 @@
   "size": "Altura natural sin poda: 4–10 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 3–5 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
   "fruiting": "Fruto aromático; fresco o en conservas",
-  "edibleUses": "Fruto aromático; fresco o en conservas",
-  "notes": "Ezeiza: Vale la pena probar. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación."
+  "edibleUses": "Los frutos maduros se comen frescos cerca del árbol y se transforman en pulpa, mermelada, dulce, jugo o helado porque duran poco tras la cosecha. / Ripe fruit is eaten fresh near the tree, or made into pulp, jam, sweets, juice and ice cream because it keeps poorly after harvest.",
+  "notes": "Ezeiza: Vale la pena probar. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "ecology": "Especie de bosques del nordeste; tolera suelos húmedos y sus frutos atraen aves. También se ha ensayado junto a yerbales misioneros como frutal nativo. / A northeastern woodland species that tolerates moist soil and feeds birds. It has also been tried alongside yerba plantations in Misiones as a native fruit tree.",
+  "wildlifeNotes": "Los frutos alimentan aves y otros animales; las flores son visitadas por abejas. / Fruit feeds birds and other animals; bees visit the flowers.",
+  "medicinalUses": "En la medicina popular del sur de Brasil se prepara infusión de hojas para molestias digestivas; también se registró su uso como fortificante entre pueblos de Paraná y Santa Catarina. / In southern Brazilian folk medicine, leaves are steeped for digestive discomfort. A tonic use among peoples of Paraná and Santa Catarina is also recorded.",
+  "otherUses": "La madera se usó para leña y para cabos de herramientas. / The wood has been used for firewood and tool handles.",
+  "sources": "Sete capotes, Embrapa: https://www.embrapa.br/en/web/agencia-de-informacao-tecnologica/tematicas/especies-arboreas-brasileiras/myrtaceae/campomanesia/sete-capotes-campomanesia-guazumifolia-/produtos-e-utilizacoes | Frutales nativos de Misiones, UNLP: https://sedici.unlp.edu.ar/handle/10915/197552"
 }

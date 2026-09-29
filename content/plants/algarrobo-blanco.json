@@ -4,7 +4,7 @@
   "scientificName": "Neltuma alba",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Algarrobo blanco (Neltuma alba). Vainas dulces; harina y añapa.",
+  "description": "Árbol del Chaco y el Espinal de hojas finamente divididas y largas vainas claras. La algarroba dulce sirve como alimento y como recurso de la fauna del monte. / A Chaco and Espinal tree with finely divided leaves and long pale pods. Its sweet algarroba feeds people and woodland wildlife.",
   "purposes": [
     "Edible"
   ],
@@ -22,6 +22,9 @@
   "size": "Altura natural sin poda: 8–15+ m.",
   "sizeManagement": "Tamaño mantenido orientativo: 5–8 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
   "fruiting": "Vainas dulces; harina y añapa",
-  "edibleUses": "Vainas dulces; harina y añapa",
-  "notes": "Ezeiza: Bueno. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación."
+  "edibleUses": "Las vainas maduras se secan y muelen para harina y patay; remojadas dan la bebida sin alcohol llamada añapa y fermentadas, aloja. Comunidades wichí de Salta procesan hoy harina de algarroba. / Mature pods are dried and ground into flour and patay; soaked pods make the nonalcoholic drink añapa, and fermented pods make aloja. Wichí communities in Salta still process algarroba flour.",
+  "notes": "Ezeiza: Bueno. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "ecology": "Se adapta a ambientes cálidos con estaciones secas. Da sombra, fija nitrógeno y ofrece flores a insectos y vainas a mamíferos y aves. / It adapts to warm regions with dry seasons, giving shade, flowers for insects and pods for birds and mammals.",
+  "wildlifeNotes": "Las flores sostienen insectos; las vainas caídas alimentan fauna y la copa sirve de reparo. / Flowers support insects; fallen pods feed wildlife and the canopy provides shelter.",
+  "sources": "Procesamiento wichí de algarroba, mistol y chañar: https://www.argentina.gob.ar/node/177953 | Recetario wichí Alimentos que nos dan vida: https://www.argentina.gob.ar/sites/default/files/2020/09/recetario_alimentos_que_nos_dan_vida.pdf"
 }

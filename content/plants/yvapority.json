@@ -4,7 +4,7 @@
   "scientificName": "Plinia rivularis",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Yvapority (Plinia rivularis). Fruto dulce y carnoso.",
+  "description": "Mirtácea de fruto redondo rojizo a morado, que crece en racimos entre hojas brillantes. También aparece escrito yvaporití, vaporit’í o guaporait’í. / A myrtle with shiny leaves and round reddish-purple fruit in clusters. Its name is also written yvaporití, vaporit’í or guaporait’í.",
   "purposes": [
     "Edible"
   ],
@@ -22,6 +22,9 @@
   "size": "Altura natural sin poda: 10–18 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 5–8 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
   "fruiting": "Fruto dulce y carnoso",
-  "edibleUses": "Fruto dulce y carnoso",
-  "notes": "Ezeiza: Experimental. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación."
+  "edibleUses": "El fruto maduro se come fresco; un relevamiento de familias de Misiones lo registra como fruta silvestre de picoteo. / Ripe fruit is eaten fresh; a survey of Misiones families records it as a wild fruit gathered for snacking.",
+  "notes": "Ezeiza: Experimental. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "ecology": "Árbol de bosques subtropicales del nordeste; el fruto blando se aprovecha cerca del sitio de recolección. / A northeastern subtropical forest tree whose soft fruit is best used near the harvest site.",
+  "wildlifeNotes": "Los frutos carnosos ofrecen alimento a aves y otros animales frugívoros. / Fleshy fruit feeds birds and other fruit-eating animals.",
+  "sources": "Plinia rivularis en Misiones, relevamiento de frutos silvestres: https://pmc.ncbi.nlm.nih.gov/articles/PMC4673098/ | Plinia rivularis, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:942130-1"
 }

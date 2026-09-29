@@ -4,7 +4,7 @@
   "scientificName": "Annona emarginata",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Araticú / chirimoya del monte (Annona emarginata). Fruto pequeño parecido a la chirimoya.",
+  "description": "Araticú pequeño de la familia de las anonáceas, con hojas simples y frutos amarillos segmentados de pocos centímetros. Es Annona emarginata, llamada antes Rollinia emarginata; no es la chirimoya cultivada. / A small custard apple relative with simple leaves and segmented yellow fruits a few centimeters wide. Annona emarginata was formerly called Rollinia emarginata; it differs from cultivated cherimoya.",
   "purposes": [
     "Edible"
   ],
@@ -22,6 +22,9 @@
   "size": "Altura natural sin poda: 2–6 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 2–4 m. Puede mantenerse por debajo de 5 m con recortes moderados.",
   "fruiting": "Fruto pequeño parecido a la chirimoya",
-  "edibleUses": "Fruto pequeño parecido a la chirimoya",
-  "notes": "Ezeiza: Experimental. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación. Es una especie distinta de Annona cherimola."
+  "edibleUses": "La pulpa del fruto maduro es dulce y se come fresca; es un fruto pequeño, para cosecha de cercanía más que para almacenamiento. / The sweet pulp of the ripe fruit is eaten fresh. The small fruit is best harvested close to home.",
+  "notes": "Ezeiza: Experimental. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación. Es una especie distinta de Annona cherimola.",
+  "ecology": "Arbolito de ambientes cálidos del norte argentino y países vecinos. En Ezeiza conviene ensayarlo en un lugar soleado y resguardado, sin tratarlo como un frutal ya probado localmente. / A small tree from warm parts of northern Argentina and nearby countries. In Ezeiza, try a sunny sheltered position as an experimental fruit tree.",
+  "wildlifeNotes": "Las flores y los frutos pueden aportar recursos a insectos y animales frugívoros en su región de origen. / Flowers and fruit can feed insects and fruit-eating animals in its native range.",
+  "sources": "Annona emarginata, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77080779-1 | Araticú, SIB Parques Nacionales: https://sib.gob.ar/especies/rollinia-emarginata | Rollinia emarginata, Embrapa Pantanal: https://www.cpap.embrapa.br/plantas/ficha.php?especie=Rollinia+emarginata+Schl."
 }

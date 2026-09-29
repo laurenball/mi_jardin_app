@@ -4,7 +4,7 @@
   "scientificName": "Myrceugenia glaucescens",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Mirtácea nativa de porte chico a mediano, con flores blancas y frutos carnosos. Buena para diversificar el estrato de frutales nativos. / Native myrtle-family shrub or small tree with white flowers and fleshy fruit. Good for diversifying the native fruiting layer.",
+  "description": "Mirtácea perenne de bosques del litoral, con flores blancas y frutos pequeños carnosos. Su papel principal en el jardín es sostener insectos y aves, con una pequeña cosecha posible para probar. / An evergreen Litoral myrtle with white flowers and small fleshy fruit. In gardens it mainly supports insects and birds, with a small crop to sample.",
   "nativeStatus": "Nativa del sudeste de Sudamérica",
   "nativeRange": "Argentina, Uruguay, sur de Brasil y regiones vecinas",
   "purposes": [
@@ -46,5 +46,6 @@
       "licenseUrl": ""
     }
   ],
-  "edibleUses": "Las bayas se describen como comestibles, pero no encontré una preparación culinaria documentada ni un uso alimentario atribuible a un pueblo indígena concreto. / Berries are reported edible, but no documented recipe or food use attributable to a specific Indigenous people was found."
+  "edibleUses": "Los pequeños frutos carnosos se describen como comestibles. Su mejor uso en el jardín es probarlos maduros, frescos, sin contar con una cosecha abundante para procesar. / The small fleshy fruits are described as edible. Try them ripe and fresh; do not expect a large crop for processing.",
+  "ecology": "Prefiere suelo que conserve algo de humedad y reparo durante el establecimiento. Puede ocupar el estrato de arbustos altos o arbolitos. / Prefers soil that retains some moisture and shelter while establishing. Fits the tall shrub or small tree layer."
 }

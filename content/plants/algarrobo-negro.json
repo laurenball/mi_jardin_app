@@ -4,7 +4,7 @@
   "scientificName": "Neltuma nigra",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Algarrobo negro (Neltuma nigra). Vainas dulces; harina y bebidas.",
+  "description": "Algarrobo chaqueño de hojas bipinnadas y vainas oscuras, dulces y nutritivas. La madera es muy densa; el fruto pertenece a la misma tradición alimentaria de las algarrobas nativas. / A Chaco algarrobo with bipinnate leaves and dark, sweet, nutritious pods. Its dense wood and fruit have long been used locally.",
   "purposes": [
     "Edible"
   ],
@@ -22,6 +22,10 @@
   "size": "Altura natural sin poda: 8–15 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 5–8 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
   "fruiting": "Vainas dulces; harina y bebidas",
-  "edibleUses": "Vainas dulces; harina y bebidas",
-  "notes": "Ezeiza: Bueno. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación."
+  "edibleUses": "Las vainas maduras se comen o se secan y muelen para harina; con algarroba se elaboran patay, añapa y aloja. En el Chaco salteño comunidades wichí mantienen la recolección y el procesamiento de estos frutos. / Mature pods are eaten or dried and ground into flour. Algarroba is used for patay, añapa and aloja; Wichí communities in the Salta Chaco continue collecting and processing it.",
+  "notes": "Ezeiza: Bueno. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "ecology": "Árbol de zonas cálidas del Gran Chaco y el Espinal. Aporta sombra, flores para insectos y vainas para animales del monte. / A tree of warm parts of the Gran Chaco and Espinal, providing shade, flowers for insects and pods for wildlife.",
+  "wildlifeNotes": "Las flores atraen insectos y las vainas alimentan fauna; su copa brinda refugio. / Flowers attract insects, pods feed wildlife and the crown offers shelter.",
+  "otherUses": "La madera dura se ha usado en muebles, pisos y postes. / The hard wood has been used for furniture, floors and posts.",
+  "sources": "Neltuma nigra, SIB Parques Nacionales: https://sib.gob.ar/especies/neltuma-nigra | Procesamiento wichí de algarroba: https://www.argentina.gob.ar/node/177953"
 }

@@ -4,7 +4,7 @@
   "scientificName": "Eugenia repanda",
   "plantType": "Shrub",
   "layer": "Fruit tree",
-  "description": "Arbusto o arbolito nativo de la familia de las mirtáceas, con floración blanca y frutos negros comestibles. / Native myrtle-family shrub or small tree with white flowers and edible black fruit.",
+  "description": "Arbusto o arbolito de mirtácea con flores blancas y frutos negros maduros. Se llama ñangapirí negro, aunque es una especie distinta de la pitanga roja. / A myrtle shrub or small tree with white flowers and black ripe fruit. It is called black ñangapirí but differs from red pitanga.",
   "nativeStatus": "Nativo del sudeste de Sudamérica",
   "nativeRange": "Argentina, Uruguay, sur de Brasil y regiones vecinas",
   "purposes": [
@@ -45,6 +45,7 @@
       "licenseUrl": ""
     }
   ],
-  "edibleUses": "Frutos comestibles que pueden comerse frescos. No encontré una preparación ni un uso indígena específico bien documentados para Eugenia repanda; no confundirlo con la pitanga (E. uniflora). / Edible fruit can be eaten fresh. No well-documented preparation or specific Indigenous use was found for Eugenia repanda; it should not be confused with pitanga (E. uniflora).",
-  "sources": "Ñangapirí negro, guía de plantas nativas: https://nativas.lanacion.com.ar/plantas/planta/Eugenia_repanda"
+  "edibleUses": "Los frutos negros maduros se comen frescos. Es Eugenia repanda: no conviene atribuirle las recetas o el sabor de la pitanga roja (E. uniflora) solo por el nombre compartido. / Ripe black fruits are eaten fresh. This is Eugenia repanda; recipes and flavor of red pitanga (E. uniflora) should not be assumed to apply.",
+  "sources": "Ñangapirí negro, guía de plantas nativas: https://nativas.lanacion.com.ar/plantas/planta/Eugenia_repanda",
+  "ecology": "Integra bosques cálidos y húmedos del nordeste. Para Ezeiza conviene un lugar resguardado y observar su respuesta a las heladas. / Native to warm moist northeastern forests. In Ezeiza, give it shelter and observe how it handles frosts."
 }

@@ -4,7 +4,7 @@
   "scientificName": "Syagrus romanzoffiana",
   "plantType": "Palm",
   "layer": "Fruit tree",
-  "description": "Pindó / jerivá (Syagrus romanzoffiana). Frutos anaranjados carnosos.",
+  "description": "Palmera nativa de hojas plumosas y grandes racimos colgantes de frutos amarillo-anaranjados. El fruto tiene una pulpa dulce pero fibrosa alrededor de una semilla dura. / A native feather-leaved palm with large hanging clusters of yellow-orange fruits. Sweet but fibrous pulp surrounds a hard seed.",
   "purposes": [
     "Edible"
   ],
@@ -22,6 +22,10 @@
   "size": "Altura natural sin poda: 10–20+ m.",
   "sizeManagement": "No se puede reducir sensatamente a menos de 5 m mediante poda; reservar espacio para su altura natural.",
   "fruiting": "Frutos anaranjados carnosos",
-  "edibleUses": "Frutos anaranjados carnosos",
-  "notes": "Ezeiza: Bueno. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación."
+  "edibleUses": "La pulpa se come fresca o se separa para jugo y dulce. El cogollo y otras partes también tuvieron usos alimentarios entre guaraníes del Bosque Atlántico, aunque extraer el cogollo mata la palmera. / The pulp is eaten fresh or made into juice and sweets. Guaraní peoples of the Atlantic Forest also used the palm heart and other parts as food, though removing the palm heart kills the palm.",
+  "notes": "Ezeiza: Bueno. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "ecology": "Integra bosques y bordes húmedos del nordeste y del litoral; los racimos maduros concentran alimento para fauna. / Grows in woods and moist edges of the northeast and Litoral; ripe fruit clusters provide concentrated wildlife food.",
+  "wildlifeNotes": "Los frutos atraen aves y otros animales; las hojas y el tronco ofrecen estructura y sitios de descanso. / Birds and other animals eat the fruit; leaves and trunk add structure and resting places.",
+  "otherUses": "Entre guaraníes del Bosque Atlántico se registran usos de hojas, tallo, espatas y frutos; la palmera fue aprovechada como recurso integral. / Guaraní uses of the leaves, stem, flower sheaths and fruit are recorded; the palm served as a resource in many ways.",
+  "sources": "Usos guaraníes del pindó, CONICET: https://repositoriosdigitales.sicyt.gob.ar/vufind/Record/CONICETDig_d4e86cda0386e8cb1d4b0885a0d02105 | Pindó, UFMS Sabores do Cerrado: https://sabores.ufms.br/indice-de-frutos/pindo/"
 }

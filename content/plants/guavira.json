@@ -4,7 +4,7 @@
   "scientificName": "Campomanesia xanthocarpa",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Guabiroba de porte arbóreo (Campomanesia xanthocarpa), distinta de la guavira del campo (C. adamantium). Ambas reciben los nombres guavira, guabiroba o gabiroba; mirar el nombre científico al buscar plantines. Fruto amarillo aromático; fresco, jugo y mermelada.",
+  "description": "Guabiroba de porte arbóreo, de flores blancas y frutos amarillo-anaranjados, jugosos y aromáticos. Comparte los nombres guavira y gabiroba con otras Campomanesia, incluida la guavira del campo (C. adamantium), que es un arbusto mucho más bajo. / A tree-sized guabiroba with white flowers and juicy, fragrant yellow-orange fruit. It shares the names guavira and gabiroba with other Campomanesia, including the much shorter C. adamantium.",
   "purposes": [
     "Edible"
   ],
@@ -22,7 +22,9 @@
   "size": "Altura natural sin poda: 5–10+ m; fuentes describen ejemplares de hasta 15–20 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 4–6 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
   "fruiting": "Fruto amarillo aromático; fresco, jugo y mermelada",
-  "edibleUses": "Fruto amarillo aromático; fresco, jugo y mermelada",
+  "edibleUses": "Se come fresca al pie del árbol; también se hace pulpa congelada, mermelada, dulce, jugo, helado y licor. En Misiones hay recolección y elaboración local. / Eat it fresh by the tree, or make frozen pulp, jam, sweets, juice, ice cream and liqueur. Fruit is still gathered and processed locally in Misiones.",
   "notes": "Ezeiza: Vale la pena probar. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación. Fuentes botánicas describen esta especie como árbol que puede llegar a 15–20 m; no confundirla con Campomanesia adamantium, arbusto de 0,3–2 m.",
-  "sources": "Campomanesia xanthocarpa, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:273998-2 | Guabiroba, ICMBio: https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/pan-lagoas-do-sul/1-ciclo/produtos/2024-pan-lagoas-do-sul-acao3-26-projeto-reposicao-florestal-em-aldeia-indigena.pdf"
+  "sources": "Guabiroba, IMiBio Misiones: https://imibio.misiones.gob.ar/es/ampliar/biodiversidad-y-alimentacion/guabiroba-campomanesia-xanthcarpa | Frutales nativos de Misiones, UNLP: https://sedici.unlp.edu.ar/handle/10915/197552 | Campomanesia xanthocarpa, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:273998-2",
+  "ecology": "Frutal de los bosques del nordeste argentino y países vecinos. En Misiones se estudia para diversificar yerbales y restaurar selva con cosecha de frutos nativos. / A fruit tree of northeastern Argentine forests. In Misiones it is studied for diversifying yerba plantations and restoring forest with native fruit.",
+  "wildlifeNotes": "Las flores son visitadas por polinizadores y los frutos alimentan aves y otros animales del bosque. / Pollinators visit the flowers; birds and other woodland animals eat the fruit."
 }

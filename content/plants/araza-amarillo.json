@@ -21,7 +21,7 @@
   "size": "Altura: 2–6 m (altura aproximada; varía con el sitio).",
   "flowering": "Flores blancas",
   "fruiting": "Frutos amarillos aromáticos",
-  "edibleUses": "Frutos frescos, jugos y conservas. El uso culinario está documentado en la región, pero no encontré una práctica atribuible con seguridad a un pueblo indígena concreto para esta forma amarilla. / Fruit is eaten fresh or made into juice and preserves. Regional culinary use is documented, but no practice could be confidently attributed to a specific Indigenous people for this yellow form.",
+  "edibleUses": "El fruto amarillo maduro se come fresco o se convierte en jugo, pulpa, dulce y mermelada. Es una fruta blanda para cosechar y usar pronto. / Ripe yellow fruit is eaten fresh or made into juice, pulp, sweets and jam. Use this soft fruit soon after picking.",
   "sources": "Psidium cattleianum, UF/IFAS Extension: https://edis.ifas.ufl.edu/publication/ST529",
   "status": "Other",
   "priority": "High",
@@ -45,5 +45,6 @@
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
     }
-  ]
+  ],
+  "ecology": "Mirtácea de ambientes cálidos y húmedos; en Ezeiza conviene un lugar soleado y protegido de heladas fuertes. Florece para insectos y fructifica para aves y personas. / A myrtle of warm humid habitats. In Ezeiza give it sun and shelter from hard frost; flowers feed insects and fruit feeds birds and people."
 }

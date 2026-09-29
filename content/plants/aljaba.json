@@ -4,14 +4,14 @@
   "scientificName": "Fuchsia magellanica",
   "plantType": "Shrub",
   "layer": "Shrub",
-  "description": "Fuchsia nativa de clima fresco, con flores colgantes rojas y violetas. Un clásico para picaflores si tiene humedad y algo de reparo. / Native cool-climate fuchsia with hanging red and violet flowers. A classic for hummingbirds if given moisture and some shelter.",
+  "description": "Arbusto de bosques frescos y húmedos, con flores colgantes rojas y violetas. En Ezeiza necesita media sombra, suelo que no se seque y reparo del calor fuerte. / A shrub of cool, moist forests with hanging red and purple flowers. In Ezeiza it needs partial shade, moisture and protection from strong heat.",
   "nativeStatus": "Nativa de la Patagonia y el sur de Chile y Argentina",
   "nativeRange": "Chile y Argentina austral",
   "purposes": [
     "Hummingbirds",
     "Pollinators"
   ],
-  "wildlifeNotes": "Flores péndulas y tubulares muy valiosas para picaflores. / Pendant tubular flowers are very valuable for hummingbirds.",
+  "wildlifeNotes": "Las flores colgantes dan néctar a picaflores; los frutos carnosos pueden ser aprovechados por aves. / Hanging flowers provide nectar for hummingbirds; birds may eat the fleshy berries.",
   "sun": "Media sombra",
   "water": "Media",
   "soil": "Fértil, fresco y drenado",
@@ -40,5 +40,7 @@
       "license": "",
       "licenseUrl": ""
     }
-  ]
+  ],
+  "ecology": "Forma sotobosque y bordes en el sur de Argentina y Chile. Conviene plantarla bajo árboles claros y proteger sus raíces con cobertura vegetal. / It grows in forest understory and edges in southern Argentina and Chile. Plant beneath an open canopy and mulch the roots.",
+  "edibleUses": "Los frutos maduros, morados y blandos, son comestibles; se pueden probar frescos en pequeña cosecha. / The soft, ripe purple berries are edible and can be sampled fresh in a small harvest."
 }

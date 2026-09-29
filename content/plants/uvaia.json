@@ -4,7 +4,7 @@
   "scientificName": "Eugenia pyriformis",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Uvaia / uvalha (Eugenia pyriformis). Fruto amarillo muy aromático y agridulce.",
+  "description": "Mirtácea de frutos amarillos muy fragantes, redondos o levemente piriformes. La pulpa agridulce es blanda y se aprovecha mejor apenas cosechada. / A myrtle with very fragrant yellow, round to slightly pear-shaped fruit. Soft sweet-tart pulp is best used just after picking.",
   "purposes": [
     "Edible"
   ],
@@ -22,6 +22,9 @@
   "size": "Altura natural sin poda: 4–10 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 3–5 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
   "fruiting": "Fruto amarillo muy aromático y agridulce",
-  "edibleUses": "Fruto amarillo muy aromático y agridulce",
-  "notes": "Ezeiza: Vale la pena probar. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación."
+  "edibleUses": "Se come fresca y, en Misiones, también cocida en compota. Su perfume intenso la hace útil para pulpa, jugos y conservas. / It is eaten fresh and, in Misiones, cooked as compote. Its intense fragrance suits pulp, juice and preserves.",
+  "notes": "Ezeiza: Vale la pena probar. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "ecology": "Árbol de los bosques del sur y sudeste de Brasil y del nordeste argentino. Sus flores sostienen insectos y los frutos se consumen cerca del lugar de recolección por su delicadeza. / A tree of southern and southeastern Brazilian and northeastern Argentine forests. Insects visit its flowers and the delicate fruit is usually eaten close to harvest.",
+  "wildlifeNotes": "Las flores blancas atraen polinizadores; los frutos amarillos ofrecen alimento a fauna frugívora. / White flowers attract pollinators and yellow fruit feeds fruit-eating wildlife.",
+  "sources": "Uvaia en Misiones, relevamiento de frutos silvestres: https://pmc.ncbi.nlm.nih.gov/articles/PMC4673098/ | Eugenia pyriformis, Kew POWO: https://powo.science.kew.org/results?q=Eugenia%20pyriformis"
 }

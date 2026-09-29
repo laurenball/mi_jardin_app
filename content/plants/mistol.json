@@ -4,7 +4,7 @@
   "scientificName": "Sarcomphalus mistol",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Árbol nativo de regiones secas, espinoso, con frutos dulces tradicionales. Excelente para sumar estructura, alimento y tolerancia a sequía. / Native dry-region tree, thorny, with traditional sweet fruit. Excellent for structure, food and drought tolerance.",
+  "description": "Árbol espinoso del Chaco seco con frutos pequeños, pardos y muy dulces. En el monte los frutos se comen frescos o se guardan secos para preparar arrope y harina. / A thorny Chaco dryland tree with small, brown, very sweet fruits. In woodland they are eaten fresh or dried for syrup and flour.",
   "nativeStatus": "Nativo del Chaco, Espinal y regiones secas de Argentina",
   "nativeRange": "Argentina, Bolivia, Paraguay y regiones vecinas",
   "purposes": [
@@ -22,7 +22,7 @@
   "size": "Altura natural sin poda: 4–10+ m.",
   "flowering": "Flores pequeñas",
   "fruiting": "Drupas dulces",
-  "edibleUses": "Frutos frescos, en arrope o molidos como harina. Comunidades wichí del Chaco salteño recolectan mistol y participan en su procesamiento como harina; no se debe atribuirles toda receta regional de mistol. / Fruit is eaten fresh, made into syrup or milled into flour. Wichí communities in Salta’s Chaco collect mistol and participate in processing its flour; this does not attribute every regional mistol recipe to them.",
+  "edibleUses": "El fruto dulce se come fresco o secado, y se convierte en arrope, harina y preparaciones con harina. Comunidades wichí del Chaco salteño mantienen la recolección y el procesamiento de mistol. / The sweet fruit is eaten fresh or dried, and made into syrup and flour-based foods. Wichí communities in the Salta Chaco continue gathering and processing mistol.",
   "status": "Other",
   "priority": "Medium",
   "notes": "Frutal seco y estructural. / Dryland fruit and structure tree. Ezeiza: Ecología de suelo y clima distinta. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.",
@@ -46,5 +46,6 @@
       "licenseUrl": ""
     }
   ],
-  "sources": "Procesamiento de frutos por comunidades wichí: https://www.argentina.gob.ar/node/177953"
+  "sources": "Procesamiento de frutos por comunidades wichí: https://www.argentina.gob.ar/node/177953",
+  "ecology": "Tolera sequía y calor una vez establecido. En Ezeiza sería un ensayo en suelo bien drenado, más húmedo que su ambiente de origen. / Tolerates heat and drought once established. In Ezeiza it would be a trial on well-drained soil wetter than its native habitat."
 }

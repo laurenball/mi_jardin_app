@@ -8,14 +8,28 @@
   "nativeStatus": "Nativa del norte argentino; no propia del pastizal pampeano",
   "nativeRange": "Norte de Argentina, Paraguay, Bolivia y sur de Brasil",
   "ecology": "Crece en ambientes subtropicales; requiere bastante espacio para desarrollar sus cañas. / Grows in subtropical habitats and needs room for its canes.",
-  "purposes": ["Shelter", "Nesting"],
+  "purposes": [
+    "Shelter",
+    "Nesting"
+  ],
   "wildlifeNotes": "Los macizos de cañas pueden ofrecer cobertura y estructura a la fauna. / Stands of canes can provide cover and structure for wildlife.",
   "sun": "Sol y media sombra",
   "water": "Media",
   "soil": "Con humedad y buen drenaje",
   "size": "Bambú de gran porte; prever espacio para el macizo.",
   "safety": "Las cañas pueden ocupar mucho espacio; ubicar lejos de senderos estrechos.",
-  "sources": "Guadua chacoensis, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1093255-2 | Plan de Gestión del Parque Nacional Iberá, SIB: https://sib.gob.ar/archivos/PG_PNIbera.pdf",
+  "sources": "Guadua chacoensis, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1093255-2 | Estudios de uso constructivo, UNNE: https://repositorio.unne.edu.ar/items/fbb951b5-874e-4ce4-931a-89c5f6879bc5",
   "status": "Other",
-  "photos": [{"file": "tacuaruzu-1.jpg", "shows": "Bamboo canes", "sourceFile": "Guadua chacoensis.JPG", "sourcePage": "https://commons.wikimedia.org/wiki/File:Guadua_chacoensis.JPG", "author": "CHUCAO", "license": "CC BY-SA 3.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"}]
+  "photos": [
+    {
+      "file": "tacuaruzu-1.jpg",
+      "shows": "Bamboo canes",
+      "sourceFile": "Guadua chacoensis.JPG",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Guadua_chacoensis.JPG",
+      "author": "CHUCAO",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    }
+  ],
+  "otherUses": "Las cañas de Guadua chacoensis se estudian como material para componentes de construcción. Un macizo bien manejado también puede dar varas para tutores y estructuras livianas. / Guadua chacoensis canes are being studied for building components. A managed stand can also yield stakes for supports and light structures."
 }

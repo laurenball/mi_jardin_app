@@ -19,7 +19,7 @@
   "fruitSizeGroup": "Needs regular pruning",
   "sizeManagement": "Puede formarse baja para cosechar, pero requiere poda y formación regulares; sin manejo puede superar 7 m.",
   "fruiting": "Frutos verdes con pulpa blanca",
-  "edibleUses": "La pulpa madura se come fresca, separando cáscara y semillas. Un estudio botánico e histórico documenta la chirimoya como alimento en el Perú prehispánico, sin atribuir una receta o un pueblo concreto. / Ripe pulp is eaten fresh, separating the peel and seeds. A botanical and historical study documents cherimoya as food in pre-Hispanic Peru without assigning a recipe or naming a particular people.",
+  "edibleUses": "La pulpa blanca del fruto maduro se come fresca, con cuchara, descartando cáscara y semillas. La chirimoya ya era alimento en los Andes antes de la colonización europea. / Scoop out the sweet white pulp of the ripe fruit, discarding skin and seeds. Cherimoya was eaten in the Andes before European colonization.",
   "sources": "Annona cherimola, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/927235-1 | Cherimoya, UC Cooperative Extension: https://ucanr.edu/county/cooperative-extension-ventura-county/cherimoya | Estudio histórico-botánico de chirimoya en Perú prehispánico: https://www.scielo.org.pe/scielo.php?pid=S2413-32992017000200013&script=sci_arttext",
   "status": "Want",
   "photos": [
@@ -32,5 +32,6 @@
       "license": "CC0 1.0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
     }
-  ]
+  ],
+  "wildlifeNotes": "Las flores reciben insectos polinizadores; para una cosecha fiable fuera de su región de origen puede hacer falta polinización manual. / Insects visit the flowers; reliable crops outside its native range may require hand pollination."
 }

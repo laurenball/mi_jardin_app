@@ -4,7 +4,7 @@
   "scientificName": "Blepharocalyx salicifolius",
   "plantType": "Tree",
   "layer": "Canopy",
-  "description": "Anacahuita / arrayán (Blepharocalyx salicifolius). Frutos carnosos pequeños.",
+  "description": "Árbol perenne de hojas angostas y aromáticas, flores blancas y pequeñas bayas que pasan de amarillas a rojizas o moradas. También se llama arrayán u horco molle. / An evergreen tree with narrow aromatic leaves, white flowers and small berries that turn from yellow to red or purple. Also called arrayán or horco molle.",
   "purposes": [
     "Bird food"
   ],
@@ -22,5 +22,10 @@
   "size": "Altura natural sin poda: 5–12 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 4–6 m. Puede mantenerse cerca de 5 m con formación y poda regulares; el rango orientativo puede rozar o superar los 5 m.",
   "fruiting": "Frutos carnosos pequeños",
-  "notes": "Ezeiza: Excelente; regional. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 2/5. Tamaños orientativos aportados en la tabla de planificación."
+  "notes": "Ezeiza: Excelente; regional. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 2/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "ecology": "Crece en selvas marginales, bosques ribereños y otros ambientes húmedos; llega a Buenos Aires por el Delta y la ribera platense. / Grows in riverside and other moist woods, reaching Buenos Aires along the Delta and Río de la Plata shore.",
+  "wildlifeNotes": "Los frutos pequeños son alimento para aves y la copa perenne ofrece refugio durante todo el año. / Small fruit feeds birds and the evergreen crown shelters them year round.",
+  "edibleUses": "Los frutos son comestibles, aunque pequeños; también se han agregado a bebidas como aperitivo aromático. / The small fruit is edible and has also been added to drinks for its aroma.",
+  "medicinalUses": "En la herboristería rioplatense se prepara una decocción de hojas para tos y molestias de garganta. / In Río de la Plata herbal practice, leaves are simmered for coughs and sore throats.",
+  "sources": "Anacahuita, UNLP: https://sedici.unlp.edu.ar/handle/10915/198300 | Anacahuita, INTA: https://repositorio.inta.gob.ar/xmlui/bitstream/handle/20.500.12123/12677/INTA_CRBsAsNorte_EEASanPedro_Gutierrez_R-et-al_Ficha_nativa_Anacahuita.pdf?isAllowed=y&sequence=2"
 }

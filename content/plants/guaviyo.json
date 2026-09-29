@@ -4,7 +4,7 @@
   "scientificName": "Myrcianthes pungens",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Árbol frutal nativo, perenne, de follaje brillante y frutos oscuros dulces. Muy valioso para jardín comestible y para aves. / Native evergreen fruit tree with glossy foliage and sweet dark fruit. Very valuable for an edible garden and for birds.",
+  "description": "Mirtácea perenne de hojas brillantes, con pequeños frutos oscuros y dulces. Es un árbol de fruta compartida: se puede cosechar para comer y dejar parte para las aves. / An evergreen myrtle with glossy leaves and small sweet dark fruit. People can harvest some and leave some for birds.",
   "nativeStatus": "Nativo del norte argentino y la región rioplatense ampliada",
   "nativeRange": "Argentina, Uruguay, Paraguay, Bolivia y Brasil",
   "purposes": [
@@ -22,7 +22,7 @@
   "size": "Altura natural sin poda: 8–15+ m.",
   "flowering": "Flores blancas de mirtácea",
   "fruiting": "Bayas oscuras comestibles",
-  "edibleUses": "Frutos frescos, con o sin piel; también pulpa, dulces, jugos, helados, licores y fermentados. Relevamientos históricos y etnográficos registran su consumo por comunidades originarias del norte argentino, sin identificar pueblos concretos en esta fuente. / Fruit is eaten fresh, with or without the skin, and made into pulp, preserves, juice, ice cream, liqueur and fermented drinks. Historical and ethnographic surveys record its consumption by Indigenous communities in northern Argentina without naming specific peoples.",
+  "edibleUses": "Las bayas maduras se comen frescas; la pulpa también se aprovecha en dulces, jugos, helados, licores y fermentados. Es una fruta de recolección local, compartida con aves. / Ripe berries are eaten fresh, or made into preserves, juice, ice cream, liqueur and fermented drinks. This locally gathered fruit is shared with birds.",
   "sources": "Guaviyú, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/myrcianthes-pungens | Manual de flora indígena, Jardín Botánico de Montevideo: https://jardinbotanico.montevideo.gub.uy/sites/jardinbotanico.montevideo.gub.uy/files/eventos/descargas/manual_del_curso_de_flora_indigena_0.pdf | Código Alimentario Argentino (antecedentes de uso): https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-36-2025-414767/texto | Conocimientos tradicionales, Uruguay: https://www.gub.uy/agencia-uruguaya-cooperacion-internacional/sites/agencia-uruguaya-cooperacion-internacional/files/documentos/publicaciones/undp-uy-Nagoya_conocimentos_tradicionales_final.pdf",
   "status": "Other",
   "priority": "High",
@@ -46,5 +46,6 @@
       "license": "",
       "licenseUrl": ""
     }
-  ]
+  ],
+  "ecology": "Propio de bosques del nordeste y litoral. Necesita sitio con espacio para copa y suelo con humedad razonable; en Ezeiza vale probarlo sin contarlo como arbusto de menos de 5 m. / Native to forests of the northeast and Litoral. Allow room for a crown and reasonably moist soil; in Ezeiza it should not be counted as a naturally small shrub."
 }

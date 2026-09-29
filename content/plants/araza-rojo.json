@@ -21,7 +21,7 @@
   "size": "Altura: 2–6 m (altura aproximada; varía con el sitio).",
   "flowering": "Flores blancas",
   "fruiting": "Frutos rojos aromáticos",
-  "edibleUses": "Frutos frescos, jugos y conservas. El uso culinario está documentado en la región, pero no encontré una práctica atribuible con seguridad a un pueblo indígena concreto para esta forma roja. / Fruit is eaten fresh or made into juice and preserves. Regional culinary use is documented, but no practice could be confidently attributed to a specific Indigenous people for this red form.",
+  "edibleUses": "El fruto rojo maduro se come fresco y se transforma en jugo, pulpa, dulce y mermelada. Su aroma se pierde pronto después de la cosecha. / Ripe red fruit is eaten fresh or made into juice, pulp, sweets and jam. Its aroma fades soon after picking.",
   "sources": "Psidium cattleianum, UF/IFAS Extension: https://edis.ifas.ufl.edu/publication/ST529",
   "status": "Other",
   "priority": "High",
@@ -45,5 +45,6 @@
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
     }
-  ]
+  ],
+  "ecology": "Mirtácea de ambientes cálidos y húmedos; en Ezeiza conviene un lugar soleado y protegido de heladas fuertes. Puede mantenerse como arbusto frutal mediante poda moderada. / A myrtle of warm humid habitats. In Ezeiza give it sun and shelter from hard frost; moderate pruning can keep it shrub-sized."
 }

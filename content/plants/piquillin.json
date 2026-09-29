@@ -4,7 +4,7 @@
   "scientificName": "Condalia microphylla",
   "plantType": "Shrub",
   "layer": "Fruit tree",
-  "description": "Piquillín (Condalia microphylla). Bayas dulces; conservas.",
+  "description": "Arbusto bajo y espinoso del monte seco, con hojas diminutas y drupas que pasan del rojo al morado oscuro. Entra naturalmente bajo el límite de 5 m. / A short thorny shrub of dry woodland with tiny leaves and berries that darken from red to purple. It naturally stays below five meters.",
   "purposes": [
     "Edible"
   ],
@@ -22,6 +22,10 @@
   "size": "Altura natural sin poda: 1–2,5 m.",
   "sizeManagement": "Tamaño mantenido orientativo: 1–2 m. Naturalmente menor de 5 m; no requiere poda para alcanzar ese límite.",
   "fruiting": "Bayas dulces; conservas",
-  "edibleUses": "Bayas dulces; conservas",
-  "notes": "Ezeiza: Atender suelo y humedad más que frío. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación."
+  "edibleUses": "Los frutos maduros se comen frescos y se cuecen lentamente para hacer arrope de piquillín. / Ripe berries are eaten fresh or slowly cooked into piquillín syrup.",
+  "notes": "Ezeiza: Atender suelo y humedad más que frío. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 4/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "ecology": "Propio de ambientes secos del Monte, Chaco y Espinal. Para Ezeiza importa tanto el drenaje y la humedad del suelo como la temperatura. / Native to the dry Monte, Chaco and Espinal. In Ezeiza, soil drainage and moisture may matter more than cold.",
+  "wildlifeNotes": "Los frutos de verano alimentan fauna; la maraña espinosa ofrece refugio a animales pequeños. / Summer fruit feeds wildlife, while tangled thorny branches shelter small animals.",
+  "otherUses": "La raíz se usó para obtener tinte violeta; su madera densa sirvió como leña y para cabos de herramientas. / The root supplied purple dye; dense wood served as firewood and for tool handles.",
+  "sources": "Piquillín, guía de forrajeras del Chaco Seco: https://www.argentina.gob.ar/sites/default/files/kit-gran-chaco-guia-de-forrajeras.pdf | Condalia microphylla, SIB Parques Nacionales: https://sib.gob.ar/especies/condalia-microphylla"
 }
