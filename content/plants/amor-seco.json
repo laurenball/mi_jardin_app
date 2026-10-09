@@ -1,0 +1,30 @@
+{
+  "slug": "amor-seco",
+  "commonName": "Amor seco",
+  "scientificName": "Bidens pilosa",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Hierba anual de flores pequeñas y frutos que se enganchan en la ropa y el pelo. / Annual herb with small flowers and barbed fruits that cling to clothing and fur.",
+  "nativeStatus": "Nativa de América tropical y subtropical, incluido el norte argentino y Uruguay",
+  "nativeRange": "América tropical y subtropical; nordeste y noroeste argentinos, Paraguay y Uruguay",
+  "ecology": "Coloniza lugares abiertos y perturbados, se resiembra con facilidad y puede dar flores durante gran parte del año en climas benignos. / Colonizes open, disturbed ground, self-seeds readily and can flower through much of the year in mild climates.",
+  "purposes": ["Pollinators"],
+  "wildlifeNotes": "La floración prolongada atrae numerosas abejas, moscas y otros insectos pequeños. / Its long flowering period draws many bees, flies and other small insects.",
+  "sun": "Pleno sol",
+  "water": "Baja a media",
+  "flowering": "Gran parte del año en climas benignos; disminuye con el frío",
+  "status": "Other",
+  "priority": "Medium",
+  "sources": "Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:32564-2",
+  "photos": [
+    {
+      "file": "amor-seco-1.jpg",
+      "shows": "Flower close-up",
+      "sourceFile": "Bidens pilosa flower.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Bidens_pilosa_flower.jpg",
+      "author": "Joecheriross",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

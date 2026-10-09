@@ -1,0 +1,30 @@
+{
+  "slug": "vara-dorada",
+  "commonName": "Vara dorada",
+  "scientificName": "Solidago chilensis",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Perenne de tallos erguidos y racimos de flores amarillas. / Perennial with upright stems and clusters of yellow flowers.",
+  "nativeStatus": "Nativa del sur de Sudamérica",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Bolivia, Chile y Brasil",
+  "ecology": "Su floración otoñal aporta recursos cuando empieza a disminuir la oferta de otras flores. / Its autumn bloom provides resources as other flowers become less available.",
+  "purposes": ["Pollinators"],
+  "wildlifeNotes": "Las numerosas flores pequeñas ofrecen néctar y polen a insectos de fin de temporada. / Its many small flowers offer nectar and pollen to late-season insects.",
+  "sun": "Pleno sol",
+  "water": "Baja a media",
+  "flowering": "Final del verano y otoño",
+  "status": "Other",
+  "priority": "High",
+  "sources": "Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:249473-1",
+  "photos": [
+    {
+      "file": "vara-dorada-1.jpg",
+      "shows": "Plant in flower",
+      "sourceFile": "Solidago chilensis Meyen.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Solidago_chilensis_Meyen.jpg",
+      "author": "Pluchea",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+    }
+  ]
+}

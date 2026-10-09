@@ -1,0 +1,30 @@
+{
+  "slug": "chinchilla",
+  "commonName": "Chinchilla",
+  "scientificName": "Tagetes minuta",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Hierba anual aromática y de crecimiento rápido, con hojas divididas y numerosas cabezuelas florales pequeñas. / Fast-growing aromatic annual with divided leaves and many small flower heads.",
+  "nativeStatus": "Nativa del sur de Sudamérica",
+  "nativeRange": "Argentina, Uruguay, Paraguay, Bolivia, Chile y Brasil",
+  "ecology": "Anual de lugares abiertos que puede establecerse rápido y completar su ciclo en una temporada. / An annual of open ground that can establish quickly and complete its life cycle in one season.",
+  "purposes": ["Pollinators"],
+  "wildlifeNotes": "Sus numerosas flores pequeñas ofrecen recursos a insectos visitantes. / Its many small flowers offer resources to visiting insects.",
+  "sun": "Pleno sol",
+  "water": "Baja a media",
+  "flowering": "Durante la estación cálida, según el sitio",
+  "status": "Other",
+  "priority": "Medium",
+  "sources": "Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:252132-1",
+  "photos": [
+    {
+      "file": "chinchilla-1.jpg",
+      "shows": "Plant in flower",
+      "sourceFile": "Tagetes minuta.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tagetes_minuta.jpg",
+      "author": "Arthur Chapman",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    }
+  ]
+}
