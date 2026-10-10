@@ -7,7 +7,7 @@
   <title>Sanctuario de Aves</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=48" />
+  <link rel="stylesheet" href="styles.css?v=49" />
 </head>
 <body>
   <nav class="site-nav" aria-label="Secciones">
@@ -81,15 +81,25 @@
         <span id="map-count" class="map-count"></span>
       </div>
       <div class="map-tools">
+        <label>Mostrar
+          <select id="map-category">
+            <option value="all">Todas</option>
+            <option value="trees">Árboles y palmeras</option>
+            <option value="shrubs">Arbustos</option>
+            <option value="herbs">Herbáceas</option>
+            <option value="climbers">Trepadoras</option>
+            <option value="grasses">Gramíneas</option>
+          </select>
+        </label>
         <label>Planta que tenemos
           <select id="map-plant-select"></select>
         </label>
         <button id="map-add" class="primary-button" type="button">Agregar ubicación</button>
         <button id="map-cancel" class="secondary-button" type="button" hidden>Cancelar</button>
       </div>
-      <p id="map-instruction" class="map-instruction" role="status">Elegí una planta y agregá su ubicación en el plano.</p>
+      <p id="map-instruction" class="map-instruction" role="status">Elegí una planta y agregá su ubicación. Arrastrá la casa o los números para moverlos; tocá un número para leer sobre la planta.</p>
       <div id="map-board" class="map-board" aria-label="Plano esquemático del jardín y la casa">
-        <div class="map-house" aria-hidden="true">Casa</div>
+        <button id="map-house" class="map-house" type="button" aria-label="Casa. Arrastrá para moverla o usá las flechas del teclado.">Casa</button>
         <div id="map-pins" class="map-pins"></div>
       </div>
       <h3 class="map-list-heading">Plantas ubicadas</h3>
@@ -223,6 +233,6 @@
     <button id="update-app" class="primary-button" type="button">Actualizar</button>
   </aside>
 
-  <script type="module" src="app.js?v=61"></script>
+  <script type="module" src="app.js?v=62"></script>
 </body>
 </html>

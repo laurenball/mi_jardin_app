@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=61';
+import { STARTER_PLANTS } from './starter-plants.js?v=62';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -20,6 +20,8 @@ const mapBoard = document.querySelector('#map-board');
 const mapPinsElement = document.querySelector('#map-pins');
 const mapLegend = document.querySelector('#map-legend');
 const mapPlantSelect = document.querySelector('#map-plant-select');
+const mapCategory = document.querySelector('#map-category');
+const mapHouse = document.querySelector('#map-house');
 const mapInstruction = document.querySelector('#map-instruction');
 const mapCount = document.querySelector('#map-count');
 const mapCancel = document.querySelector('#map-cancel');
@@ -35,6 +37,20 @@ let updateReady = false;
 let reloadForUpdate = false;
 let reloading = false;
 let mapPlacement = null;
+let mapDrag = null;
+let suppressPinClickUntil = 0;
+const HOUSE_POSITION_KEY = 'sanctuario-map-house-position';
+const DEFAULT_HOUSE_POSITION = {x: 8, y: 8};
+
+function readHousePosition() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(HOUSE_POSITION_KEY));
+    if (Number.isFinite(saved?.x) && Number.isFinite(saved?.y)) return saved;
+  } catch { /* Storage may be unavailable in private browsing. */ }
+  return {...DEFAULT_HOUSE_POSITION};
+}
+
+let housePosition = readHousePosition();
 
 const DISPLAY_LABELS = {
   status: {'Want':'Quiero','Looking For':'Buscando','Bought':'Comprada','Planted':'Plantada','Other':'Otro'},
@@ -671,18 +687,47 @@ function placedPlants() {
     .sort((a, b) => a.pin.number - b.pin.number);
 }
 
+function mapCategoryFor(plant) {
+  if (['Tree', 'Palm'].includes(plant.plantType)) return 'trees';
+  return ({Shrub: 'shrubs', Herb: 'herbs', Climber: 'climbers', Grass: 'grasses'})[plant.plantType] || 'other';
+}
+
+function visibleOnMap(plant) {
+  return mapCategory.value === 'all' || mapCategoryFor(plant) === mapCategory.value;
+}
+
+function positionHouse() {
+  const board = mapBoard.getBoundingClientRect();
+  const house = mapHouse.getBoundingClientRect();
+  if (board.width && board.height) {
+    housePosition.x = Math.max(0, Math.min(100 - house.width / board.width * 100, housePosition.x));
+    housePosition.y = Math.max(0, Math.min(100 - house.height / board.height * 100, housePosition.y));
+  }
+  mapHouse.style.left = `${housePosition.x}%`;
+  mapHouse.style.top = `${housePosition.y}%`;
+}
+
+function saveHousePosition() {
+  try { localStorage.setItem(HOUSE_POSITION_KEY, JSON.stringify(housePosition)); }
+  catch { /* The current position still works until this page closes. */ }
+}
+
 function renderMap() {
   const selected = mapPlantSelect.value;
-  const available = plants.filter(hasPlant).sort((a, b) => nameCollator.compare(a.commonName, b.commonName));
+  const available = plants.filter(plant => hasPlant(plant) && visibleOnMap(plant))
+    .sort((a, b) => nameCollator.compare(a.commonName, b.commonName));
   mapPlantSelect.innerHTML = available.map(plant =>
     `<option value="${escapeHtml(plant.id)}">${escapeHtml(plant.commonName)}</option>`).join('');
   if (available.some(plant => plant.id === selected)) mapPlantSelect.value = selected;
   document.querySelector('#map-add').disabled = available.length === 0;
 
-  const placed = placedPlants();
-  mapCount.textContent = `${placed.length} ${placed.length === 1 ? 'ubicación' : 'ubicaciones'}`;
+  const allPlaced = placedPlants();
+  const placed = allPlaced.filter(({plant}) => visibleOnMap(plant));
+  mapCount.textContent = mapCategory.value === 'all'
+    ? `${placed.length} ${placed.length === 1 ? 'ubicación' : 'ubicaciones'}`
+    : `${placed.length} de ${allPlaced.length} ubicaciones`;
   mapPinsElement.innerHTML = placed.map(({plant, pin}) =>
-    `<button class="map-pin" type="button" data-plant-id="${escapeHtml(plant.id)}" style="left:${Math.max(0, Math.min(100, pin.x))}%;top:${Math.max(0, Math.min(100, pin.y))}%" aria-label="${escapeHtml(`${pin.number}: ${plant.commonName}. Leer más`)}" title="${escapeHtml(plant.commonName)}">${pin.number}</button>`).join('');
+    `<button class="map-pin" type="button" data-plant-id="${escapeHtml(plant.id)}" data-pin-id="${escapeHtml(pin.id)}" style="left:${Math.max(0, Math.min(100, pin.x))}%;top:${Math.max(0, Math.min(100, pin.y))}%" aria-label="${escapeHtml(`${pin.number}: ${plant.commonName}. Leer más o arrastrar para mover`)}" title="${escapeHtml(plant.commonName)}">${pin.number}</button>`).join('');
   mapLegend.innerHTML = placed.length ? placed.map(({plant, pin}) =>
     `<div class="map-legend-row">
       <span class="map-number">${pin.number}</span>
@@ -690,10 +735,11 @@ function renderMap() {
       <button type="button" data-map-action="read" data-plant-id="${escapeHtml(plant.id)}">Leer más</button>
       <button type="button" data-map-action="move" data-plant-id="${escapeHtml(plant.id)}" data-pin-id="${escapeHtml(pin.id)}">Mover</button>
       <button type="button" data-map-action="remove" data-plant-id="${escapeHtml(plant.id)}" data-pin-id="${escapeHtml(pin.id)}">Quitar</button>
-    </div>`).join('') : '<p class="map-empty">Todavía no hay plantas ubicadas. Elegí una arriba y tocá el plano para poner el primer número.</p>';
+    </div>`).join('') : `<p class="map-empty">${allPlaced.length ? 'No hay ubicaciones en esta categoría.' : 'Todavía no hay plantas ubicadas. Elegí una arriba y tocá el plano para poner el primer número.'}</p>`;
+  positionHouse();
   mapBoard.classList.toggle('placing', Boolean(mapPlacement));
   mapCancel.hidden = !mapPlacement;
-  if (!mapPlacement) mapInstruction.textContent = 'Elegí una planta y agregá su ubicación en el plano.';
+  if (!mapPlacement) mapInstruction.textContent = 'Elegí una planta y agregá su ubicación. Arrastrá la casa o los números para moverlos; tocá un número para leer sobre la planta.';
 }
 
 function showView() {
@@ -725,12 +771,107 @@ document.querySelector('#map-add').addEventListener('click', () => {
   mapInstruction.textContent = `Tocá el plano donde está ${plant.commonName}.`;
 });
 
+mapCategory.addEventListener('change', () => {
+  mapPlacement = null;
+  renderMap();
+});
+
 mapCancel.addEventListener('click', () => {
   mapPlacement = null;
   renderMap();
 });
 
+mapBoard.addEventListener('pointerdown', event => {
+  const item = event.target.closest('.map-house, .map-pin');
+  if (!item || (event.pointerType === 'mouse' && event.button !== 0)) return;
+  const pin = item.classList.contains('map-pin')
+    ? placedPlants().find(({plant, pin}) => plant.id === item.dataset.plantId && pin.id === item.dataset.pinId)
+    : null;
+  if (item.classList.contains('map-pin') && !pin) return;
+  mapDrag = {
+    item, pointerId: event.pointerId, kind: pin ? 'pin' : 'house',
+    plantId: pin?.plant.id, pinId: pin?.pin.id,
+    startClientX: event.clientX, startClientY: event.clientY,
+    startX: pin ? pin.pin.x : housePosition.x,
+    startY: pin ? pin.pin.y : housePosition.y,
+    x: pin ? pin.pin.x : housePosition.x,
+    y: pin ? pin.pin.y : housePosition.y,
+    moved: false
+  };
+  item.setPointerCapture(event.pointerId);
+});
+
+mapBoard.addEventListener('pointermove', event => {
+  if (!mapDrag || event.pointerId !== mapDrag.pointerId) return;
+  const dx = event.clientX - mapDrag.startClientX;
+  const dy = event.clientY - mapDrag.startClientY;
+  if (!mapDrag.moved && Math.hypot(dx, dy) < 5) return;
+  mapDrag.moved = true;
+  mapDrag.item.classList.add('dragging');
+  const board = mapBoard.getBoundingClientRect();
+  const house = mapHouse.getBoundingClientRect();
+  const maxX = mapDrag.kind === 'house' ? 100 - house.width / board.width * 100 : 94;
+  const maxY = mapDrag.kind === 'house' ? 100 - house.height / board.height * 100 : 94;
+  const min = mapDrag.kind === 'house' ? 0 : 6;
+  mapDrag.x = Math.max(min, Math.min(maxX, mapDrag.startX + dx / board.width * 100));
+  mapDrag.y = Math.max(min, Math.min(maxY, mapDrag.startY + dy / board.height * 100));
+  mapDrag.item.style.left = `${mapDrag.x}%`;
+  mapDrag.item.style.top = `${mapDrag.y}%`;
+});
+
+mapBoard.addEventListener('pointerup', async event => {
+  if (!mapDrag || event.pointerId !== mapDrag.pointerId) return;
+  const drag = mapDrag;
+  mapDrag = null;
+  drag.item.classList.remove('dragging');
+  if (!drag.moved) return;
+  suppressPinClickUntil = performance.now() + 250;
+  if (drag.kind === 'house') {
+    housePosition = {x: drag.x, y: drag.y};
+    saveHousePosition();
+    return;
+  }
+  const plant = plants.find(item => item.id === drag.plantId);
+  const pins = (plant?.mapPins || []).map(pin => pin.id === drag.pinId ? {...pin, x: drag.x, y: drag.y} : pin);
+  if (mapPlacement?.pinId === drag.pinId) mapPlacement = null;
+  if (plant) await saveMapPins(plant, pins);
+});
+
+mapBoard.addEventListener('pointercancel', event => {
+  if (!mapDrag || event.pointerId !== mapDrag.pointerId) return;
+  mapDrag = null;
+  renderMap();
+});
+
+mapBoard.addEventListener('keydown', async event => {
+  if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) return;
+  const item = event.target.closest('.map-house, .map-pin');
+  if (!item) return;
+  event.preventDefault();
+  const step = event.shiftKey ? 5 : 1;
+  const dx = event.key === 'ArrowLeft' ? -step : event.key === 'ArrowRight' ? step : 0;
+  const dy = event.key === 'ArrowUp' ? -step : event.key === 'ArrowDown' ? step : 0;
+  if (item === mapHouse) {
+    const board = mapBoard.getBoundingClientRect();
+    const house = mapHouse.getBoundingClientRect();
+    housePosition.x = Math.max(0, Math.min(100 - house.width / board.width * 100, housePosition.x + dx));
+    housePosition.y = Math.max(0, Math.min(100 - house.height / board.height * 100, housePosition.y + dy));
+    positionHouse();
+    saveHousePosition();
+    return;
+  }
+  const plant = plants.find(plant => plant.id === item.dataset.plantId);
+  if (!plant) return;
+  const pins = (plant.mapPins || []).map(pin => pin.id === item.dataset.pinId
+    ? {...pin, x: Math.max(6, Math.min(94, pin.x + dx)), y: Math.max(6, Math.min(94, pin.y + dy))}
+    : pin);
+  await saveMapPins(plant, pins);
+  mapPinsElement.querySelector(`[data-pin-id="${CSS.escape(item.dataset.pinId)}"]`)?.focus();
+});
+
 mapBoard.addEventListener('click', async event => {
+  if (performance.now() < suppressPinClickUntil) return;
+  if (event.target.closest('.map-house')) return;
   const marker = event.target.closest('.map-pin');
   if (marker) {
     openPlant(marker.dataset.plantId);
