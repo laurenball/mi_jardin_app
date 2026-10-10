@@ -4,7 +4,7 @@
   "scientificName": "Solanum betaceum",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Arbolito o arbusto de hojas grandes, flores claras y frutos ovales comestibles. Da un toque casi tropical dentro del estrato frutal. / Small tree or shrub with large leaves, pale flowers and edible oval fruit. Adds an almost tropical note to the fruiting layer.",
+  "description": "Arbolito andino de hojas grandes y frutos ovales, jugosos y agridulces. En Ezeiza cabe en poco espacio, pero necesita sombra luminosa y protección de heladas. / Small Andean tree with large leaves and juicy, tangy oval fruit. It fits a small space in Ezeiza but needs bright partial shade and frost protection.",
   "nativeStatus": "Nativo de zonas tropicales y subtropicales andinas de Sudamérica",
   "nativeRange": "Desde los Andes tropicales hasta el noroeste argentino",
   "purposes": [
@@ -13,7 +13,7 @@
     "Bird food"
   ],
   "wildlifeNotes": "Las flores sostienen polinizadores y los frutos pueden ser aprovechados por fauna frugívora. / The flowers support pollinators and the fruit can feed fruit-eating wildlife.",
-  "sun": "Sol y media sombra",
+  "sun": "Media sombra",
   "water": "Media",
   "soil": "Fértil, drenado y protegido de heladas fuertes",
   "fruitSizeGroup": "Easy to keep small",
@@ -21,21 +21,12 @@
   "size": "Altura natural sin poda: 2–7 m.",
   "flowering": "Flores blanco-rosadas agrupadas",
   "fruiting": "Frutos ovales rojos, anaranjados o amarillos",
-  "edibleUses": "Fruto maduro en fresco, jugos y dulces; suele retirarse la cáscara amarga. Una publicación oficial argentina indica que fue domesticado y cultivado por poblaciones originarias andinas y que sigue integrando la alimentación de comunidades locales. / Ripe fruit is eaten fresh or made into juice and preserves; the bitter skin is often removed. An Argentine government publication says Andean Indigenous populations domesticated and cultivated it, and local communities still eat it.",
-  "sources": "Chilto, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/solanum-betaceum | Chilto, Secretaría de Ambiente de Argentina: https://www.argentina.gob.ar/sites/default/files/triptico_chilto_pdf_final.pdf",
+  "edibleUses": "Abrir el fruto maduro y sacar la pulpa; la cáscara suele ser amarga. Su acidez funciona especialmente bien en salsa, chutney, jugo y dulce. / Scoop the pulp from ripe fruit; the skin is often bitter. Its tang is especially good in sauces, chutney, juice and preserves.",
+  "sources": "Chilto, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/solanum-betaceum | Chilto, Secretaría de Ambiente de Argentina: https://www.argentina.gob.ar/sites/default/files/triptico_chilto_pdf_final.pdf | Cultivo del chilto, Argentina.gob.ar: https://www.argentina.gob.ar/sites/default/files/chilto.pdf",
   "status": "Want",
   "priority": "High",
-  "notes": "Frutal para buscar. / Fruit plant to source. Ezeiza: Sitio protegido. Valor para el santuario: 4/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "notes": "Probar en sombra luminosa y sitio protegido. / Trial in bright partial shade with frost protection.",
   "photos": [
-    {
-      "file": "chilto-1.jpg",
-      "shows": "Flowers close-up",
-      "sourceFile": "Close-up flower of Tamarillo.jpg",
-      "sourcePage": "https://www.healthbenefitstimes.com/tamarillo/",
-      "author": "See source page",
-      "license": "",
-      "licenseUrl": ""
-    },
     {
       "file": "chilto-2.jpg",
       "shows": "Ripe fruit",
@@ -44,6 +35,16 @@
       "author": "See source page",
       "license": "",
       "licenseUrl": ""
+    },
+    {
+      "file": "chilto-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Close-up flower of Tamarillo.jpg",
+      "sourcePage": "https://www.healthbenefitstimes.com/tamarillo/",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
     }
-  ]
+  ],
+  "ecology": "Frutal andino de ambientes frescos y húmedos. Una guía argentina recomienda protegerlo del sol intenso y de las heladas, sobre todo cuando es joven. / Andean fruit plant of cool, moist habitats. Argentine guidance recommends shelter from harsh sun and frost, especially while young."
 }

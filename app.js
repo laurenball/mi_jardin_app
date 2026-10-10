@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=57';
+import { STARTER_PLANTS } from './starter-plants.js?v=58';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -370,10 +370,7 @@ function sectionHtml(title, rows) {
 
 function careRows(plant) {
   return [
-    ['Sol', displayValue('sun', plant.sun)],
-    ['Agua', plant.water],
     ['Suelo', plant.soil],
-    ['Tamaño', plant.size],
     ['Cómo mantener el tamaño', plant.sizeManagement],
     ['Floración', plant.flowering],
     ['Fructificación', plant.fruiting],
@@ -405,22 +402,21 @@ function plantSections(plant) {
       infoRow('Ubicación', plant.gardenLocation),
       infoRow('Notas', plant.notes)
     ]),
-    sectionHtml('Ecología nativa', [
-      infoRow('Nativa', plant.nativeStatus),
-      infoRow('Distribución', plant.nativeRange),
-      infoRow('Ecología', plant.ecology),
-      infoRow('Hospedera', plant.hostPlant)
-    ]),
-    sectionHtml('Usos humanos', [
-      infoRow('Comestible', plant.edibleUses),
-      infoRow('Uso medicinal', plant.medicinalUses),
-      infoRow('Otros usos', plant.otherUses),
-      infoRow('Precauciones', plant.safety)
-    ]),
     sectionHtml('Fuentes', [
       linkRow('Referencia', String(plant.sources || '').split(' | ').join('\n'))
     ])
   ].join('');
+}
+
+function plantNarrative(plant) {
+  const paragraph = value => value ? `<p>${textWithTranslation(value)}</p>` : '';
+  const paragraphs = [paragraph(plant.description), paragraph(plant.edibleUses)];
+  if (plant.safety) paragraphs.push(`<p class="plant-safety"><strong>Precaución:</strong> ${textWithTranslation(plant.safety)}</p>`);
+  paragraphs.push(...[plant.ecology, plant.hostPlant, plant.medicinalUses, plant.otherUses].map(paragraph));
+  if (plant.nativeStatus || plant.nativeRange) {
+    paragraphs.push(`<p class="native-origin">${escapeHtml([plant.nativeStatus, plant.nativeRange].filter(Boolean).join(' · '))}</p>`);
+  }
+  return paragraphs.join('');
 }
 
 function tagMarkup(plant, limit = 4) {
@@ -611,7 +607,7 @@ function detailPlant(plant) {
         </header>
         ${tags ? `<div class="meta">${tags}</div>` : ''}
         ${careStrip(plant, 4)}
-        ${plant.description ? `<p>${textWithTranslation(plant.description)}</p>` : ''}
+        ${plantNarrative(plant)}
         ${plant.wildlifeNotes ? `<p class="wildlife-callout">${textWithTranslation(plant.wildlifeNotes)}</p>` : ''}
         <div class="detail-sections">${plantSections(plant)}</div>
       </div>

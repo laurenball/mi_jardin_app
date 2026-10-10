@@ -1,0 +1,33 @@
+{
+  "slug": "jaboticaba",
+  "commonName": "Jaboticaba",
+  "scientificName": "Plinia cauliflora",
+  "plantType": "Tree",
+  "layer": "Fruit tree",
+  "description": "Arbolito perenne brasileño que da bayas moradas directamente sobre el tronco y las ramas gruesas. Bajo la piel hay pulpa blanca, jugosa y dulce, parecida a una uva. En Ezeiza sería un ensayo para un rincón abrigado, con suelo ligeramente ácido y humedad constante. / Evergreen Brazilian tree whose purple berries grow directly on its trunk and large branches. The white pulp is juicy and grape-like. In Ezeiza, try it in a sheltered spot with slightly acidic soil and steady moisture.",
+  "nativeStatus": "Nativa de Bolivia y Brasil; no es autóctona de Ezeiza",
+  "nativeRange": "Este de Bolivia y regiones del este y sur de Brasil",
+  "purposes": ["Edible", "Bird food"],
+  "wildlifeNotes": "Las flores reciben insectos y la fruta madura también puede aprovecharse por aves. / Insects visit the flowers, and birds may take ripe fruit.",
+  "sun": "Sol y media sombra",
+  "water": "Media a alta; mantener humedad regular",
+  "soil": "Drenado, húmedo y ligeramente ácido",
+  "size": "Altura natural aproximada: 3–8 m; puede crecer más según el sitio.",
+  "fruitSizeGroup": "Needs regular pruning",
+  "sizeManagement": "Reservar espacio para la copa; formar y podar con moderación para facilitar la cosecha.",
+  "edibleUses": "Se come fresca del árbol: se aprieta la baya para sacar la pulpa blanca y se descartan las semillas. También sirve para jalea, mermelada y vino; la piel puede resultar astringente. Buscar una selección injertada de fructificación temprana si se quiere cosechar antes. / Eat the white pulp fresh by squeezing the berry and discarding the seeds. It also makes jelly, jam and wine; the skin can be astringent. A grafted early-fruiting selection may shorten the wait for a harvest.",
+  "status": "Other",
+  "priority": "Medium",
+  "sources": "Plinia cauliflora, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:203847-2 | Jaboticaba, UF/IFAS Extension: https://edis.ifas.ufl.edu/mg373",
+  "photos": [
+    {
+      "file": "jaboticaba-1.jpg",
+      "shows": "Ripe fruit",
+      "sourceFile": "Plinia cauliflora 3.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Plinia_cauliflora_3.jpg",
+      "author": "Bruno.karklis",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+}

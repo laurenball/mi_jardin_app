@@ -4,7 +4,7 @@
   "scientificName": "Eugenia uniflora",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Arbusto grande o arbolito perenne con flores blancas perfumadas y frutos acanalados rojos a anaranjados. / Large evergreen shrub or small tree with fragrant white flowers and ribbed red to orange fruit.",
+  "description": "Arbusto o arbolito perenne de flores blancas y frutos acanalados, aromáticos y agridulces. Hay formas anaranjadas, rojas y moradas oscuras; el sabor cambia entre plantas. Es compacto, tolera algo de sombra y da fruta para personas y aves. / Evergreen shrub or small tree with white flowers and aromatic, sweet-tart ribbed fruit. Orange, red and dark-purple forms vary in flavor. It stays compact, tolerates some shade and feeds both people and birds.",
   "nativeStatus": "Nativo del noreste argentino y de la región subtropical rioplatense amplia",
   "nativeRange": "Argentina, Uruguay, Paraguay, Brazil",
   "ecology": "Las aves silvestres dispersan sus semillas al comer los frutos, y así se expande en el bosque subtropical. / Wild birds disperse the seed by eating the fruit, which is how it spreads through subtropical woodland.",
@@ -33,15 +33,6 @@
   "priority": "High",
   "photos": [
     {
-      "file": "nangapiri-4.jpg",
-      "shows": "Branch with flower and fruit",
-      "sourceFile": "Starr 011025-9002 Eugenia uniflora.jpg",
-      "sourcePage": "https://commons.wikimedia.org/wiki/File:Starr_011025-9002_Eugenia_uniflora.jpg",
-      "author": "Forest & Kim Starr",
-      "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
-    },
-    {
       "file": "nangapiri-3.jpg",
       "shows": "Ripe fruit",
       "sourceFile": "Pitanga (Eugenia uniflora).JPG",
@@ -49,7 +40,16 @@
       "author": "Michael Hermann",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    {
+      "file": "nangapiri-4.jpg",
+      "shows": "Branch with flower and fruit",
+      "sourceFile": "Starr 011025-9002 Eugenia uniflora.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Starr_011025-9002_Eugenia_uniflora.jpg",
+      "author": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
     }
   ],
-  "notes": "Ya tenemos uno en el sanctuario. / Already in the sanctuary. Ezeiza: Excelente. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación."
+  "notes": "Ya tenemos uno. Para comer fresco, vale probar una selección morada oscura de buen sabor. / Already planted. For fresh eating, seek a good-tasting dark-purple selection."
 }

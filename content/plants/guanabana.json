@@ -4,7 +4,7 @@
   "scientificName": "Annona muricata",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Árbol frutal tropical de hojas perennes y frutos grandes, verdes y de pulpa blanca. / Tropical evergreen fruit tree with large green fruits and white pulp.",
+  "description": "Árbol tropical perenne de frutos grandes, blandos y aromáticos, con pulpa blanca agridulce. En Ezeiza solo vale como ensayo en maceta o invernadero: las heladas dañan incluso árboles adultos. / Evergreen tropical tree with large, soft, aromatic fruit and sweet-tart white pulp. In Ezeiza it belongs in a protected container or greenhouse experiment because even mature trees are frost-sensitive.",
   "nativeStatus": "Nativa de América tropical; exótica en Buenos Aires",
   "nativeRange": "Del sur de México a Venezuela y Perú",
   "ecology": "Especie de clima tropical húmedo. En Buenos Aires necesitaría un lugar muy protegido del frío. / Species of wet tropical climates. Around Buenos Aires it would need a site well protected from cold.",
@@ -19,8 +19,8 @@
   "fruitSizeGroup": "Needs regular pruning",
   "sizeManagement": "Puede mantenerse alrededor de 2,5–3,5 m con poda anual o semestral; sin manejo puede alcanzar unos 8–9 m. Necesita protección del frío.",
   "fruiting": "Frutos verdes grandes con pulpa blanca comestible",
-  "edibleUses": "La pulpa blanca del fruto maduro se come fresca o en jugos y batidos; se descartan cáscara y semillas. Restos hallados en sitios arqueológicos de Perú muestran su consumo prehispánico. / The ripe white pulp is eaten fresh or made into juice and smoothies; discard skin and seeds. Finds at archaeological sites in Peru show precolonial food use.",
-  "sources": "Annona muricata, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/14308-2 | Annona muricata, Kew: https://powo.science.kew.org/taxon/14308-2 | Fruit tree maintenance heights, UF/IFAS Extension: https://ask.ifas.ufl.edu/publication/HS1387 | Arqueobotánica de Áspero y Caral: https://pmc.ncbi.nlm.nih.gov/articles/PMC10465486/",
+  "edibleUses": "Enfriar el fruto maduro, abrirlo y comer la pulpa con cuchara; también va bien en licuados, helados y postres. Descartar cáscara y semillas. / Chill the ripe fruit and scoop out the pulp; it also works in smoothies, ice cream and desserts. Discard skin and seeds.",
+  "sources": "Annona muricata, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/14308-2 | Annona muricata, Kew: https://powo.science.kew.org/taxon/14308-2 | Fruit tree maintenance heights, UF/IFAS Extension: https://ask.ifas.ufl.edu/publication/HS1387 | Arqueobotánica de Áspero y Caral: https://pmc.ncbi.nlm.nih.gov/articles/PMC10465486/ | Guanábana y frío, UF/IFAS Extension: https://edis.ifas.ufl.edu/publication/HS1499",
   "status": "Want",
   "photos": [
     {
@@ -32,5 +32,7 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     }
-  ]
+  ],
+  "priority": "Low",
+  "notes": "Solo ensayo protegido; no reservarle un lugar permanente a la intemperie en Ezeiza. / Protected experiment only; do not give it a permanent outdoor orchard spot in Ezeiza."
 }

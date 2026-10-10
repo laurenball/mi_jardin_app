@@ -4,7 +4,7 @@
   "scientificName": "Myrcianthes pungens",
   "plantType": "Tree",
   "layer": "Fruit tree",
-  "description": "Mirtácea perenne de hojas brillantes, con pequeños frutos oscuros y dulces. Es un árbol de fruta compartida: se puede cosechar para comer y dejar parte para las aves. / An evergreen myrtle with glossy leaves and small sweet dark fruit. People can harvest some and leave some for birds.",
+  "description": "Árbol perenne de frutos morados oscuros, pequeños, dulces y jugosos. Es buena fruta para comer fresca y compartir con las aves, pero necesita espacio para la copa. / Evergreen tree with small, sweet, juicy dark-purple fruit. Good for fresh eating and birds, but allow room for its crown.",
   "nativeStatus": "Nativo del norte argentino y la región rioplatense ampliada",
   "nativeRange": "Argentina, Uruguay, Paraguay, Bolivia y Brasil",
   "purposes": [
@@ -22,26 +22,26 @@
   "size": "Altura natural sin poda: 8–15+ m.",
   "flowering": "Flores blancas de mirtácea",
   "fruiting": "Bayas oscuras comestibles",
-  "edibleUses": "Las bayas maduras se comen frescas; la pulpa también se aprovecha en dulces, jugos, helados, licores y fermentados. Es una fruta de recolección local, compartida con aves. / Ripe berries are eaten fresh, or made into preserves, juice, ice cream, liqueur and fermented drinks. This locally gathered fruit is shared with birds.",
+  "edibleUses": "Cosechar las bayas cuando estén moradas oscuras y blandas; son especialmente buenas frescas. Si sobra fruta, preparar jugo, dulce o helado, dejando algunas para las aves. / Pick the berries when dark purple and soft; they are especially good fresh. Turn a surplus into juice, preserves or ice cream, leaving some for birds.",
   "sources": "Guaviyú, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/myrcianthes-pungens | Manual de flora indígena, Jardín Botánico de Montevideo: https://jardinbotanico.montevideo.gub.uy/sites/jardinbotanico.montevideo.gub.uy/files/eventos/descargas/manual_del_curso_de_flora_indigena_0.pdf | Código Alimentario Argentino (antecedentes de uso): https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-36-2025-414767/texto | Conocimientos tradicionales, Uruguay: https://www.gub.uy/agencia-uruguaya-cooperacion-internacional/sites/agencia-uruguaya-cooperacion-internacional/files/documentos/publicaciones/undp-uy-Nagoya_conocimentos_tradicionales_final.pdf",
   "status": "Other",
   "priority": "High",
-  "notes": "Frutal nativo prioritario. / Priority native fruit tree. Ezeiza: Bueno con espacio. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 5/5. Tamaños orientativos aportados en la tabla de planificación.",
+  "notes": "Prioritario para fruta fresca y aves, si hay lugar para su copa. / A priority for fresh fruit and birds where its crown fits.",
   "photos": [
-    {
-      "file": "guaviyo-1.jpg",
-      "shows": "Flowers close-up",
-      "sourceFile": "Guaviyú flowers",
-      "sourcePage": "https://uruguay1.blogspot.com/2010/11/guaviyu-myrcianthes-pungens.html",
-      "author": "See source page",
-      "license": "",
-      "licenseUrl": ""
-    },
     {
       "file": "guaviyo-2.jpg",
       "shows": "Ripe fruit",
       "sourceFile": "Myrcianthes pungens branch with berries",
       "sourcePage": "https://www.inaturalist.org/es/taxa/440878-Myrcianthes-pungens",
+      "author": "See source page",
+      "license": "",
+      "licenseUrl": ""
+    },
+    {
+      "file": "guaviyo-1.jpg",
+      "shows": "Flowers close-up",
+      "sourceFile": "Guaviyú flowers",
+      "sourcePage": "https://uruguay1.blogspot.com/2010/11/guaviyu-myrcianthes-pungens.html",
       "author": "See source page",
       "license": "",
       "licenseUrl": ""

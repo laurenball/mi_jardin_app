@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sanctuario-de-aves-shell-v60';
+const CACHE_NAME = 'sanctuario-de-aves-shell-v61';
 const PLANT_IMAGES = [
   './assets/plants/algarrobo-blanco-1.jpg',
   './assets/plants/algarrobo-negro-1.jpg',
@@ -35,6 +35,7 @@ const PLANT_IMAGES = [
   './assets/plants/chilto-2.jpg',
   './assets/plants/chinchilla-1.jpg',
   './assets/plants/chirimoya-1.jpg',
+  './assets/plants/chirimoya-2.jpg',
   './assets/plants/cola-de-zorro-1.jpg',
   './assets/plants/cola-de-zorro-2.jpg',
   './assets/plants/cola-de-zorro-3.jpg',
@@ -70,6 +71,7 @@ const PLANT_IMAGES = [
   './assets/plants/guayaba-2.jpg',
   './assets/plants/iochroma-1.jpg',
   './assets/plants/iochroma-2.jpg',
+  './assets/plants/jaboticaba-1.jpg',
   './assets/plants/jacaranda-1.jpg',
   './assets/plants/jacaranda-2.jpg',
   './assets/plants/lagrima-de-reina-1.jpg',
@@ -136,6 +138,8 @@ const PLANT_IMAGES = [
   './assets/plants/tala-6.jpg',
   './assets/plants/talilla-1.jpg',
   './assets/plants/talilla-2.jpg',
+  './assets/plants/tasi-1.jpg',
+  './assets/plants/tasi-2.jpg',
   './assets/plants/tipa-blanca-1.jpg',
   './assets/plants/tipa-blanca-2.jpg',
   './assets/plants/ubajay-1.jpg',
@@ -159,7 +163,7 @@ const BIRD_IMAGES = [
   'paloma-picazuro', 'picaflor-bronceado', 'picaflor-verde', 'pitiayumi', 'ratona',
   'tero', 'torcaza', 'tordo-musico', 'tordo-renegrido', 'zorzal-colorado'
 ].map(slug => `./assets/birds/${slug}.jpg`);
-const APP_SHELL = ['./','./index.html','./birds.html','./birds.js?v=2','./styles.css?v=47','./app.js?v=57','./db.js','./starter-plants.js?v=57','./manifest.webmanifest','./assets/icon.svg', ...BIRD_IMAGES];
+const APP_SHELL = ['./','./index.html','./birds.html','./birds.js?v=2','./styles.css?v=47','./app.js?v=58','./db.js','./starter-plants.js?v=58','./manifest.webmanifest','./assets/icon.svg', ...BIRD_IMAGES];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)));

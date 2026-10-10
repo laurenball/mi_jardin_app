@@ -1,0 +1,41 @@
+{
+  "slug": "tasi",
+  "commonName": "Tasi / Doca",
+  "scientificName": "Araujia sericifera",
+  "plantType": "Climber",
+  "layer": "Climber",
+  "description": "Trepadora nativa de los talares bonaerenses, con flores blanco rosadas y frutos verdes grandes que liberan semillas sedosas. Sus hojas alimentan orugas de la mariposa monarca austral. Crece con fuerza: darle un soporte y evitar que cubra árboles jóvenes. / Native vine of Buenos Aires tala woodlands, with pale pink-white flowers and large green pods that release silky seeds. Its leaves feed southern monarch caterpillars. Give this vigorous climber a support so it does not cover young trees.",
+  "nativeStatus": "Autóctona de Buenos Aires y otras provincias del litoral argentino",
+  "nativeRange": "Argentina, Uruguay, Paraguay y sur de Brasil",
+  "purposes": ["Butterflies", "Pollinators", "Edible"],
+  "wildlifeNotes": "Hospedera de la monarca austral (Danaus erippus); sus flores también reciben insectos. / Host plant for the southern monarch (Danaus erippus); insects also visit its flowers.",
+  "sun": "Sol y media sombra",
+  "water": "Media",
+  "flowering": "Primavera y verano",
+  "propagation": "Por semillas o gajos; controlar las plántulas si se resiembra. / From seed or cuttings; manage volunteers if it self-sows.",
+  "edibleUses": "Una publicación argentina describe el consumo de frutos tiernos crudos y de frutos más desarrollados hervidos, rellenos o en dulce. Para hacer mermelada se retiran piel y semillas antes de cocer la pulpa. / An Argentine publication describes eating young pods raw and preparing more developed pods boiled, stuffed or as preserves. For jam, remove the skin and seeds before cooking the flesh.",
+  "safety": "Identificar la especie antes de usarla como alimento. No comer hojas ni semillas; el látex lechoso puede irritar la piel y los ojos. Hay advertencias internacionales de toxicidad para esta especie, aunque una publicación argentina documenta el uso alimentario tradicional de sus frutos. / Confirm the species before food use. Do not eat leaves or seeds; the milky sap can irritate skin and eyes. Some international sources warn of toxicity, while an Argentine publication documents traditional use of the fruit.",
+  "status": "Other",
+  "priority": "Medium",
+  "sources": "Tasi, CONICET La Plata, Nuevos usos de especies nativas: https://laplata.conicet.gov.ar/wp-content/uploads/sites/97/2026/01/Libro-NUS-Argentina-contra-el-Hambre_compressed.pdf | Araujia sericifera, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30117279-2 | Moth vine safety, NSW Government: https://weeds.dpi.nsw.gov.au/Weed/MothVine",
+  "photos": [
+    {
+      "file": "tasi-1.jpg",
+      "shows": "Green fruit",
+      "sourceFile": "Araujia sericifera 1DS-II 1-6787.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Araujia_sericifera_1DS-II_1-6787.jpg",
+      "author": "SAplants",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "file": "tasi-2.jpg",
+      "shows": "Flower",
+      "sourceFile": "Araujia sericifera flower NC1.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Araujia_sericifera_flower_NC1.jpg",
+      "author": "Macleay Grass Man",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    }
+  ]
+}
