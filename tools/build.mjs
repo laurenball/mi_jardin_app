@@ -78,7 +78,7 @@ async function updateServiceWorker(plants, version) {
       .replace(/starter-plants\.js\?v=\d+/, `starter-plants.js?v=${version}`);
   }
   if (next !== current) {
-    next = next.replace(/sanctuario-de-aves-shell-v(\d+)/g, (_, n) => `sanctuario-de-aves-shell-v${Number(n) + 1}`);
+    next = next.replace(/sanctuario-shell-v(\d+)/g, (_, n) => `sanctuario-shell-v${Number(n) + 1}`);
   }
   await writeFile(file, next);
   return {images: images.length, bumped: next !== current};

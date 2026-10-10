@@ -1,3 +1,4 @@
+// Keep this storage identifier stable when the app's display name changes.
 const DB_NAME = 'sanctuario-de-aves';
 const LEGACY_DB_NAMES = [['san', 'tuario', 'de', 'aves'].join('-'), ['my', 'garden'].join('-')];
 const DB_VERSION = 1;
@@ -88,6 +89,25 @@ export async function addPlant(plant) {
 export async function addPlants(plants) {
   const db = await openDatabase();
   return writePlants(db, plants);
+}
+
+export async function replacePlants(plants) {
+  const db = await openDatabase();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(PLANT_STORE, 'readwrite');
+    const store = tx.objectStore(PLANT_STORE);
+    // Clearing and restoring share a transaction: a failed restore keeps the old data.
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error);
+    try {
+      store.clear();
+      plants.forEach(plant => store.put(plant));
+    } catch (error) {
+      tx.abort();
+      reject(error);
+    }
+  });
 }
 
 export async function updatePlant(plant) {

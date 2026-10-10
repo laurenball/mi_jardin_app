@@ -1,6 +1,8 @@
-# Sanctuario de Aves / Bird Sanctuary
+# Sanctuario
 
 A private, local-first native-garden field guide and sanctuary care app.
+
+The app's name is **Sanctuario**. The planned Codeberg repository name is `sanctuario`, with the website at `https://USERNAME.codeberg.page/sanctuario/` once the account and publishing setup are complete. See [moving to Codeberg](docs/CODEBERG.md) for the setup and data-transfer steps.
 
 ## Current version
 
@@ -11,7 +13,7 @@ The app now stores plants as more than a wishlist. Each record can include:
 - Valor para la fauna / Wildlife value
 - Cuidados / Care
 - Usos humanos / Human uses
-- Sanctuario de Aves / Bird sanctuary
+- Sanctuario
 
 It includes starter entries for the plants we identified for the Buenos Aires-area garden, plus search, a status filter for all plants, plants we have, active wants, and other reference plants, and a light filter for sun and shade. The primary screen groups plants by garden layer. Have, Want, and Other are filter choices, so someday plants can live in the guide without crowding the next-to-source list. Tap a plant to expand it into a card, then open all information from that card. Both the card and the full view show every photo as a swipeable gallery. Photos can be added, reordered and deleted from the full view; once a record's photos are reordered or one is deleted, the app stops re-syncing its bundled photos.
 
@@ -61,11 +63,15 @@ Three files are generated from `content/` and should not be edited directly:
 
 Both commands need Node. Nothing is installed: there are no dependencies.
 
-Changes reach the app the same way any code change does. Commit, push, and the deployed site picks them up. On each device the startup sync then refreshes the stored records and seeds any plant that device has never held.
+For Codeberg Pages, commit changes on `main`, then publish the same commit to the remote `pages` branch. A Forgejo webhook deploys that branch; the commands and settings are in [docs/CODEBERG.md](docs/CODEBERG.md). Pushing `main` alone does not update the website. Publishing is done by the owner, not by the coding agent. On each device the startup sync then refreshes the stored records and seeds any plant that device has never held.
 
 ## Important data behavior
 
 Plant data is stored in IndexedDB on the device/browser where it is entered. Starter plants are added only when the database is completely empty, so restarting the app will not duplicate them.
+
+**Respaldo / Backup** exports the entire saved collection, personal photo files, plant map locations and the house position to a JSON file. Import validates the file before asking to replace the collection; a failed database write rolls back the replacement. When moving from GitHub Pages to Codeberg Pages, export from the old address on each device and import at the new address. Browser storage does not move between hosts automatically. The backup stays on your device; keep it outside the repository.
+
+The IndexedDB name remains a stable storage identifier from the earlier app name so the display-name change keeps existing records accessible.
 
 Existing Version 1 plant records remain compatible.
 

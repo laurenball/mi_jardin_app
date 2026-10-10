@@ -1,5 +1,13 @@
 # Plant Data Model
 
+## Backups and hosting migration
+
+`backup.html` exports every stored plant field, including `mapPins`, and the house position from local storage. Backup format 1 identifies itself with `app: "sanctuario"` and `formatVersion: 1`. Photo strings remain URLs; Blob/File photos are encoded as base64 with their MIME type and, for files, name and modification time. Import restores those photos as Blob/File objects, checks plant IDs for duplicates and validates the file before writing.
+
+Restoring replaces the full collection in one IndexedDB transaction, preserving IDs without merging in duplicate starter records. Failure aborts the transaction and retains the earlier collection. The house position is restored separately after the database succeeds. The UI asks for confirmation before replacement and reports a local-storage failure separately.
+
+The display name is Sanctuario. The database name is kept stable for existing installations. Moving hosts requires export at the old origin and import at the new one because browser storage belongs to an origin.
+
 ## Where starter content lives
 
 Starter plant content is authored in `content/plants/*.json` and compiled into `starter-plants.js` by `tools/build.mjs`. The content files are the source of truth. Each photo entry there carries its own credit:

@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=63';
+import { STARTER_PLANTS } from './starter-plants.js?v=64';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -440,7 +440,7 @@ function careStrip(plant, limit = 3) {
 function plantSections(plant) {
   return [
     sectionHtml('Cuidados', careRows(plant).map(([label, value]) => infoRow(label, value))),
-    sectionHtml('Sanctuario de Aves', [
+    sectionHtml('Sanctuario', [
       infoRow('Estado', displayValue('status', plant.status)),
       infoRow('Prioridad', displayValue('priority', plant.priority)),
       infoRow('Vivero', plant.nursery),

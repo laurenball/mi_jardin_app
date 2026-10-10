@@ -12,8 +12,8 @@
 
 ## Next — protect and maintain the collection
 
-- [ ] Export all garden data to a backup file
-- [ ] Import a backup file
+- [x] Export all garden data, personal photos and map positions to a backup file
+- [x] Import a backup file with confirmation and atomic collection replacement
 - [ ] Edit an existing plant
 - [ ] Delete a plant with confirmation
 - [ ] Multiple photos per plant

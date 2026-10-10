@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f4f7ef" />
+  <title>Respaldo · Sanctuario</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css?v=50" />
+</head>
+<body>
+  <nav class="site-nav" aria-label="Secciones">
+    <a href="./index.html">Plantas</a>
+    <a href="./index.html#mapa">Mapa</a>
+    <a href="./birds.html">Aves</a>
+    <a href="./backup.html" aria-current="page">Respaldo / Backup</a>
+  </nav>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Sanctuario</p>
+      <h1>Respaldo / Backup</h1>
+      <p class="header-copy">Guardá tus plantas, notas, fotos personales y ubicaciones del mapa en un archivo. Usalo para cambiar de dirección web o de dispositivo.</p>
+    </div>
+  </header>
+  <main class="backup-view">
+    <section class="backup-panel">
+      <h2>Guardar / Export</h2>
+      <p>Descargá una copia de los datos guardados en este navegador. El archivo queda en tu dispositivo.</p>
+      <button id="export-backup" class="primary-button" type="button">Descargar respaldo / Download backup</button>
+    </section>
+    <section class="backup-panel">
+      <h2>Restaurar / Import</h2>
+      <p>Elegí el archivo que descargaste. Restaurarlo reemplaza la colección y la posición de la casa en este navegador. Guardá primero un respaldo si querés conservar la colección actual.</p>
+      <label for="backup-file">Archivo de respaldo / Backup file</label>
+      <input id="backup-file" type="file" accept=".json,application/json" />
+      <p id="backup-preview" class="backup-preview" hidden></p>
+      <button id="restore-backup" class="secondary-button" type="button" disabled>Restaurar respaldo / Restore backup</button>
+    </section>
+    <p id="backup-status" role="status" aria-live="polite"></p>
+  </main>
+  <script type="module" src="backup.js"></script>
+</body>
+</html>
