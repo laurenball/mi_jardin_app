@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=60';
+import { STARTER_PLANTS } from './starter-plants.js?v=61';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -12,6 +12,17 @@ const noResults = document.querySelector('#no-results');
 const searchInput = document.querySelector('#search');
 const statusFilter = document.querySelector('#status-filter');
 const sunFilter = document.querySelector('#sun-filter');
+const plantView = document.querySelector('#plant-view');
+const mapView = document.querySelector('#map-view');
+const plantsNav = document.querySelector('#plants-nav');
+const mapNav = document.querySelector('#map-nav');
+const mapBoard = document.querySelector('#map-board');
+const mapPinsElement = document.querySelector('#map-pins');
+const mapLegend = document.querySelector('#map-legend');
+const mapPlantSelect = document.querySelector('#map-plant-select');
+const mapInstruction = document.querySelector('#map-instruction');
+const mapCount = document.querySelector('#map-count');
+const mapCancel = document.querySelector('#map-cancel');
 const updateNotice = document.querySelector('#update-notice');
 const updateButton = document.querySelector('#update-app');
 let plants = [];
@@ -23,6 +34,7 @@ let updateWorker = null;
 let updateReady = false;
 let reloadForUpdate = false;
 let reloading = false;
+let mapPlacement = null;
 
 const DISPLAY_LABELS = {
   status: {'Want':'Quiero','Looking For':'Buscando','Bought':'Comprada','Planted':'Plantada','Other':'Otro'},
@@ -101,7 +113,7 @@ function starterRecordFor(plant) {
 }
 
 function hasPersonalPlantData(plant) {
-  return Boolean(plant.nursery || plant.price || plant.gardenLocation || plant.photosEdited
+  return Boolean(plant.nursery || plant.price || plant.gardenLocation || plant.photosEdited || plant.mapPins?.length
     || (plant.photo && (typeof plant.photo !== 'string' || !isBundledPhoto(plant.photo)))
     || plantPhotos(plant).some(photo => typeof photo !== 'string' || !isBundledPhoto(photo)));
 }
@@ -650,7 +662,119 @@ function render() {
   grid.replaceChildren(...groupPlants(visiblePlants).map(([label, plantsInLayer]) => layerGroupSection(label, plantsInLayer)));
   emptyState.hidden = plants.length > 0;
   noResults.hidden = plants.length === 0 || visiblePlants.length > 0;
+  if (!mapView.hidden) renderMap();
 }
+
+function placedPlants() {
+  return plants.filter(hasPlant).flatMap(plant => (plant.mapPins || []).map(pin => ({plant, pin})))
+    .filter(({pin}) => Number.isFinite(pin.x) && Number.isFinite(pin.y) && Number.isFinite(pin.number))
+    .sort((a, b) => a.pin.number - b.pin.number);
+}
+
+function renderMap() {
+  const selected = mapPlantSelect.value;
+  const available = plants.filter(hasPlant).sort((a, b) => nameCollator.compare(a.commonName, b.commonName));
+  mapPlantSelect.innerHTML = available.map(plant =>
+    `<option value="${escapeHtml(plant.id)}">${escapeHtml(plant.commonName)}</option>`).join('');
+  if (available.some(plant => plant.id === selected)) mapPlantSelect.value = selected;
+  document.querySelector('#map-add').disabled = available.length === 0;
+
+  const placed = placedPlants();
+  mapCount.textContent = `${placed.length} ${placed.length === 1 ? 'ubicación' : 'ubicaciones'}`;
+  mapPinsElement.innerHTML = placed.map(({plant, pin}) =>
+    `<button class="map-pin" type="button" data-plant-id="${escapeHtml(plant.id)}" style="left:${Math.max(0, Math.min(100, pin.x))}%;top:${Math.max(0, Math.min(100, pin.y))}%" aria-label="${escapeHtml(`${pin.number}: ${plant.commonName}. Leer más`)}" title="${escapeHtml(plant.commonName)}">${pin.number}</button>`).join('');
+  mapLegend.innerHTML = placed.length ? placed.map(({plant, pin}) =>
+    `<div class="map-legend-row">
+      <span class="map-number">${pin.number}</span>
+      <span class="map-legend-name">${escapeHtml(plant.commonName)}</span>
+      <button type="button" data-map-action="read" data-plant-id="${escapeHtml(plant.id)}">Leer más</button>
+      <button type="button" data-map-action="move" data-plant-id="${escapeHtml(plant.id)}" data-pin-id="${escapeHtml(pin.id)}">Mover</button>
+      <button type="button" data-map-action="remove" data-plant-id="${escapeHtml(plant.id)}" data-pin-id="${escapeHtml(pin.id)}">Quitar</button>
+    </div>`).join('') : '<p class="map-empty">Todavía no hay plantas ubicadas. Elegí una arriba y tocá el plano para poner el primer número.</p>';
+  mapBoard.classList.toggle('placing', Boolean(mapPlacement));
+  mapCancel.hidden = !mapPlacement;
+  if (!mapPlacement) mapInstruction.textContent = 'Elegí una planta y agregá su ubicación en el plano.';
+}
+
+function showView() {
+  const mapActive = window.location.hash === '#mapa';
+  if (!mapActive) mapPlacement = null;
+  plantView.hidden = mapActive;
+  mapView.hidden = !mapActive;
+  if (mapActive) {
+    plantsNav.removeAttribute('aria-current');
+    mapNav.setAttribute('aria-current', 'page');
+  } else {
+    mapNav.removeAttribute('aria-current');
+    plantsNav.setAttribute('aria-current', 'page');
+  }
+  if (mapActive) renderMap();
+}
+
+async function saveMapPins(plant, pins) {
+  await updatePlant({...plant, mapPins: pins, updatedAt: new Date().toISOString()});
+  plants = await getPlants();
+  renderMap();
+}
+
+document.querySelector('#map-add').addEventListener('click', () => {
+  const plant = plants.find(item => item.id === mapPlantSelect.value && hasPlant(item));
+  if (!plant) return;
+  mapPlacement = {plantId: plant.id};
+  renderMap();
+  mapInstruction.textContent = `Tocá el plano donde está ${plant.commonName}.`;
+});
+
+mapCancel.addEventListener('click', () => {
+  mapPlacement = null;
+  renderMap();
+});
+
+mapBoard.addEventListener('click', async event => {
+  const marker = event.target.closest('.map-pin');
+  if (marker) {
+    openPlant(marker.dataset.plantId);
+    return;
+  }
+  if (!mapPlacement) return;
+  const plant = plants.find(item => item.id === mapPlacement.plantId && hasPlant(item));
+  if (!plant) return;
+  const rect = mapBoard.getBoundingClientRect();
+  const x = Math.max(6, Math.min(94, (event.clientX - rect.left) / rect.width * 100));
+  const y = Math.max(6, Math.min(94, (event.clientY - rect.top) / rect.height * 100));
+  const pins = [...(plant.mapPins || [])];
+  if (mapPlacement.pinId) {
+    const pin = pins.find(item => item.id === mapPlacement.pinId);
+    if (!pin) return;
+    pin.x = x;
+    pin.y = y;
+  } else {
+    const nextNumber = Math.max(0, ...placedPlants().map(({pin}) => pin.number)) + 1;
+    pins.push({id: crypto.randomUUID(), number: nextNumber, x, y});
+  }
+  mapPlacement = null;
+  await saveMapPins(plant, pins);
+});
+
+mapLegend.addEventListener('click', async event => {
+  const button = event.target.closest('button[data-map-action]');
+  if (!button) return;
+  const plant = plants.find(item => item.id === button.dataset.plantId);
+  if (!plant) return;
+  if (button.dataset.mapAction === 'read') {
+    openPlant(plant.id);
+  } else if (button.dataset.mapAction === 'move') {
+    mapPlacement = {plantId: plant.id, pinId: button.dataset.pinId};
+    renderMap();
+    mapInstruction.textContent = `Tocá el nuevo lugar de ${plant.commonName} en el plano.`;
+  } else if (button.dataset.mapAction === 'remove') {
+    if (!window.confirm(`¿Quitar la ubicación de ${plant.commonName} del plano?`)) return;
+    mapPlacement = null;
+    await saveMapPins(plant, (plant.mapPins || []).filter(pin => pin.id !== button.dataset.pinId));
+  }
+});
+
+window.addEventListener('hashchange', showView);
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -745,3 +869,4 @@ await addMissingStarterPlants();
 await syncStarterRecords();
 statusFilter.value = 'active';
 render();
+showView();

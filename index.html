@@ -7,11 +7,12 @@
   <title>Sanctuario de Aves</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=47" />
+  <link rel="stylesheet" href="styles.css?v=48" />
 </head>
 <body>
   <nav class="site-nav" aria-label="Secciones">
-    <a href="./index.html" aria-current="page">Plantas</a>
+    <a id="plants-nav" href="#plantas" aria-current="page">Plantas</a>
+    <a id="map-nav" href="#mapa">Mapa</a>
     <a href="./birds.html">Aves</a>
   </nav>
   <header class="app-header">
@@ -24,6 +25,7 @@
   </header>
 
   <main>
+    <section id="plant-view">
     <section class="toolbar" aria-label="Herramientas de plantas">
       <label class="search-field">
         <span class="sr-only">Buscar plantas</span>
@@ -68,6 +70,31 @@
     </section>
 
     <section id="plant-grid" class="plant-grid" aria-live="polite"></section>
+    </section>
+
+    <section id="map-view" class="map-view" hidden>
+      <div class="map-heading">
+        <div>
+          <h2>Mapa del jardín</h2>
+          <p>La casa es un esquema provisional. Ubicá cada planta donde está; podés agregar más de una de la misma especie.</p>
+        </div>
+        <span id="map-count" class="map-count"></span>
+      </div>
+      <div class="map-tools">
+        <label>Planta que tenemos
+          <select id="map-plant-select"></select>
+        </label>
+        <button id="map-add" class="primary-button" type="button">Agregar ubicación</button>
+        <button id="map-cancel" class="secondary-button" type="button" hidden>Cancelar</button>
+      </div>
+      <p id="map-instruction" class="map-instruction" role="status">Elegí una planta y agregá su ubicación en el plano.</p>
+      <div id="map-board" class="map-board" aria-label="Plano esquemático del jardín y la casa">
+        <div class="map-house" aria-hidden="true">Casa</div>
+        <div id="map-pins" class="map-pins"></div>
+      </div>
+      <h3 class="map-list-heading">Plantas ubicadas</h3>
+      <div id="map-legend" class="map-legend"></div>
+    </section>
   </main>
 
   <dialog id="browse-dialog">
@@ -196,6 +223,6 @@
     <button id="update-app" class="primary-button" type="button">Actualizar</button>
   </aside>
 
-  <script type="module" src="app.js?v=60"></script>
+  <script type="module" src="app.js?v=61"></script>
 </body>
 </html>
