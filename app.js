@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=62';
+import { STARTER_PLANTS } from './starter-plants.js?v=63';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -396,6 +396,19 @@ async function syncStarterRecords() {
   plants = await getPlants();
 }
 
+async function correctEspinilloMapPins() {
+  const coronillo = plants.find(plant => plant.scientificName === 'Scutia buxifolia');
+  const espinillo = plants.find(plant => plant.scientificName === 'Vachellia caven');
+  if (!coronillo?.mapPins?.length || !espinillo) return;
+  const existingIds = new Set((espinillo.mapPins || []).map(pin => pin.id));
+  const movedPins = coronillo.mapPins.filter(pin => !existingIds.has(pin.id));
+  if (movedPins.length) {
+    await updatePlant({...espinillo, mapPins: [...(espinillo.mapPins || []), ...movedPins], updatedAt: new Date().toISOString()});
+  }
+  await updatePlant({...coronillo, mapPins: [], updatedAt: new Date().toISOString()});
+  plants = await getPlants();
+}
+
 function sectionHtml(title, rows) {
   const content = rows.filter(Boolean).join('');
   return content ? `<section class="detail-section"><h3>${escapeHtml(title)}</h3>${content}</section>` : '';
@@ -682,9 +695,11 @@ function render() {
 }
 
 function placedPlants() {
+  // The saved number keeps placement order; the displayed number closes gaps after removals.
   return plants.filter(hasPlant).flatMap(plant => (plant.mapPins || []).map(pin => ({plant, pin})))
     .filter(({pin}) => Number.isFinite(pin.x) && Number.isFinite(pin.y) && Number.isFinite(pin.number))
-    .sort((a, b) => a.pin.number - b.pin.number);
+    .sort((a, b) => a.pin.number - b.pin.number)
+    .map(({plant, pin}, index) => ({plant, pin: {...pin, number: index + 1}}));
 }
 
 function mapCategoryFor(plant) {
@@ -890,7 +905,8 @@ mapBoard.addEventListener('click', async event => {
     pin.x = x;
     pin.y = y;
   } else {
-    const nextNumber = Math.max(0, ...placedPlants().map(({pin}) => pin.number)) + 1;
+    const nextNumber = Math.max(0, ...plants.flatMap(item => (item.mapPins || []).map(pin => pin.number))
+      .filter(Number.isFinite)) + 1;
     pins.push({id: crypto.randomUUID(), number: nextNumber, x, y});
   }
   mapPlacement = null;
@@ -1008,6 +1024,7 @@ plants = await getPlants();
 await cleanupRepeatedStarterPlants();
 await addMissingStarterPlants();
 await syncStarterRecords();
+await correctEspinilloMapPins();
 statusFilter.value = 'active';
 render();
 showView();

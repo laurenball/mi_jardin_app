@@ -124,7 +124,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos morado oscuro',
     otherUses: 'Los frutos dan un tinte oscuro. La madera es extremadamente dura y se usó tradicionalmente para postes de alambrado de larga duración. / The berries yield a dark dye. The wood is extremely hard and was traditionally used for fence posts that last decades.',
     sources: 'La biodiversidad urbana, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/noticias/la-biodiversidad-urbana-el-corazon-verde-de-la-ciudad',
-    status: 'Planted',
+    status: 'Other',
     priority: 'High',
     notes: 'Ezeiza: Excelente; local. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 2/5. Tamaños orientativos aportados en la tabla de planificación.'
   },
@@ -1014,7 +1014,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Vainas oscuras y curvas',
     otherUses: 'La madera es densa y se usó durante mucho tiempo para postes y leña. / The wood is dense and has long been used for posts and firewood.',
     safety: 'Las espinas pares son largas y filosas. Ubicar lejos de senderos. / The paired thorns are long and sharp. Site it away from paths.',
-    status: 'Other'
+    status: 'Planted'
   },
   {
     commonName: 'Sombra de toro',
