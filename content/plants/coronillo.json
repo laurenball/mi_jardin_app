@@ -25,9 +25,18 @@
   "fruiting": "Frutos morado oscuro",
   "otherUses": "Los frutos dan un tinte oscuro. La madera es extremadamente dura y se usó tradicionalmente para postes de alambrado de larga duración. / The berries yield a dark dye. The wood is extremely hard and was traditionally used for fence posts that last decades.",
   "sources": "La biodiversidad urbana, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/noticias/la-biodiversidad-urbana-el-corazon-verde-de-la-ciudad",
-  "status": "Other",
+  "status": "Planted",
   "priority": "High",
   "photos": [
+    {
+      "file": "coronillo-4.jpg",
+      "shows": "Ripe dark-purple fruit and leaves",
+      "sourceFile": "CORONILLA Scutia buxifolia foto_DarioNiz (1).jpg",
+      "sourcePage": "https://floradeluruguay.blogspot.com/2010/06/coronilla.html",
+      "author": "Darío Niz",
+      "license": "",
+      "licenseUrl": ""
+    },
     {
       "file": "coronillo-2.jpg",
       "shows": "Flowers and leaves",

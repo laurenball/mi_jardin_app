@@ -1,0 +1,28 @@
+{
+  "slug": "flor-de-sangre",
+  "commonName": "Flor de sangre",
+  "scientificName": "Asclepias curassavica",
+  "plantType": "Herb",
+  "layer": "Herbaceous",
+  "description": "Hierba de flores rojas y anaranjadas que atraen mariposas y otros insectos. Sus hojas alimentan orugas de la monarca austral. Florece durante los meses cálidos y puede rebrotar después de heladas suaves. Tiene látex irritante y todas sus partes son tóxicas si se ingieren. / Red and orange flowers attract butterflies and other insects, while the leaves feed southern monarch caterpillars. It flowers through the warm months and may regrow after light frost. Its milky sap can irritate skin, and all parts are toxic if eaten.",
+  "nativeStatus": "Nativa de América tropical; introducida en Argentina",
+  "nativeRange": "México a América tropical",
+  "purposes": ["Butterflies", "Pollinators"],
+  "sun": "Pleno sol a media sombra",
+  "water": "Media",
+  "flowering": "Primavera a otoño",
+  "status": "Planted",
+  "priority": "Medium",
+  "sources": "Asclepias curassavica, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/94213-1 | Tropical Milkweed, NC State Extension: https://plants.ces.ncsu.edu/plants/asclepias-curassavica/",
+  "photos": [
+    {
+      "file": "flor-de-sangre-1.jpg",
+      "shows": "Mariposa monarca en las flores / Monarch butterfly on flowers",
+      "sourceFile": "Las asclepias han desarrollado características que favorecen la polinización cruzada mediante la atracción de mariposas",
+      "sourcePage": "https://www.lanacion.com.ar/revista-jardin/esta-es-la-planta-que-tenes-que-cultivar-para-tener-un-show-de-mariposas-en-tu-jardin-nid25092024/",
+      "author": "Gabriela Benito / Revista Jardín",
+      "license": "",
+      "licenseUrl": ""
+    }
+  ]
+}

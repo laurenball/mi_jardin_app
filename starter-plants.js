@@ -107,7 +107,7 @@ export const STARTER_PLANTS = [
     scientificName: 'Scutia buxifolia',
     plantType: 'Tree',
     layer: 'Canopy',
-    photos: ['./assets/plants/coronillo-2.jpg', './assets/plants/coronillo-3.jpg'],
+    photos: ['./assets/plants/coronillo-4.jpg', './assets/plants/coronillo-2.jpg', './assets/plants/coronillo-3.jpg'],
     description: 'Árbol perenne o arbusto grande, con ramas densas y espinosas y frutos morado oscuro. Su presencia se considera indicador de salud ecosistémica. / Evergreen tree or large shrub with dense, spiny branches and dark purple berries. Its presence is treated as an indicator of ecosystem health.',
     nativeStatus: 'Nativo de la región rioplatense',
     nativeRange: 'Argentina, Uruguay, southern Brazil',
@@ -124,7 +124,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos morado oscuro',
     otherUses: 'Los frutos dan un tinte oscuro. La madera es extremadamente dura y se usó tradicionalmente para postes de alambrado de larga duración. / The berries yield a dark dye. The wood is extremely hard and was traditionally used for fence posts that last decades.',
     sources: 'La biodiversidad urbana, Gobierno de la Ciudad de Buenos Aires: https://buenosaires.gob.ar/gcaba_historico/noticias/la-biodiversidad-urbana-el-corazon-verde-de-la-ciudad',
-    status: 'Other',
+    status: 'Planted',
     priority: 'High',
     notes: 'Ezeiza: Excelente; local. Valor para el santuario: 5/5. Calidad alimentaria del fruto: 2/5. Tamaños orientativos aportados en la tabla de planificación.'
   },
@@ -182,7 +182,7 @@ export const STARTER_PLANTS = [
     notes: 'Ya tenemos uno. Para comer fresco, vale probar una selección morada oscura de buen sabor. / Already planted. For fresh eating, seek a good-tasting dark-purple selection.'
   },
   {
-    commonName: 'Falso guayabo / Feijoa',
+    commonName: 'Guayabo del país / Feijoa',
     scientificName: 'Acca sellowiana',
     plantType: 'Tree',
     layer: 'Fruit tree',
@@ -203,7 +203,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Fruto verde aromático',
     edibleUses: 'Cortar el fruto maduro y comer la pulpa perfumada con cuchara; también hace buenas compotas y mermeladas. Los pétalos carnosos son dulces y comestibles. Dos cultivares compatibles pueden mejorar la cosecha. / Halve ripe fruit and scoop out the fragrant pulp; it also makes good compote and jam. The fleshy petals are sweet and edible. Two compatible cultivars may improve fruit set.',
     sources: 'Árboles nativos de Argentina, Argentina Forestal: https://www.argentinaforestal.com/2026/04/29/arboles-nativos-de-argentina/ | Acca sellowiana, NC State Extension: https://plants.ces.ncsu.edu/plants/acca-sellowiana/ | Relevamiento de conocimientos locales, Uruguay: https://www.gub.uy/agencia-uruguaya-cooperacion-internacional/sites/agencia-uruguaya-cooperacion-internacional/files/documentos/publicaciones/undp-uy-Nagoya_conocimentos_tradicionales_final.pdf',
-    status: 'Want',
+    status: 'Planted',
     priority: 'High',
     notes: 'Una de las mejores primeras elecciones para Ezeiza: compacta, perenne y resistente al frío moderado. / A strong first choice for Ezeiza: compact, evergreen and fairly cold-tolerant.'
   },
@@ -227,7 +227,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos verdes grandes con pulpa blanca comestible',
     edibleUses: 'Enfriar el fruto maduro, abrirlo y comer la pulpa con cuchara; también va bien en licuados, helados y postres. Descartar cáscara y semillas. / Chill the ripe fruit and scoop out the pulp; it also works in smoothies, ice cream and desserts. Discard skin and seeds.',
     sources: 'Annona muricata, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/14308-2 | Annona muricata, Kew: https://powo.science.kew.org/taxon/14308-2 | Fruit tree maintenance heights, UF/IFAS Extension: https://ask.ifas.ufl.edu/publication/HS1387 | Arqueobotánica de Áspero y Caral: https://pmc.ncbi.nlm.nih.gov/articles/PMC10465486/ | Guanábana y frío, UF/IFAS Extension: https://edis.ifas.ufl.edu/publication/HS1499',
-    status: 'Want',
+    status: 'Other',
     priority: 'Low',
     notes: 'Solo ensayo protegido; no reservarle un lugar permanente a la intemperie en Ezeiza. / Protected experiment only; do not give it a permanent outdoor orchard spot in Ezeiza.'
   },
@@ -252,7 +252,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos verdes con pulpa blanca',
     edibleUses: 'Dejar ablandar el fruto cosechado y comer la pulpa con cuchara; también sirve para helados y postres fríos. Descartar piel y semillas. Si florece pero no cuaja, probar polinización manual. / Let the picked fruit soften, then scoop out the flesh; it also suits ice cream and chilled desserts. Discard skin and seeds. If flowers fail to set fruit, try hand pollination.',
     sources: 'Annona cherimola, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/927235-1 | Cherimoya, UC Cooperative Extension: https://ucanr.edu/county/cooperative-extension-ventura-county/cherimoya | Estudio histórico-botánico de chirimoya en Perú prehispánico: https://www.scielo.org.pe/scielo.php?pid=S2413-32992017000200013&script=sci_arttext | Chirimoya y polinización, UC Cooperative Extension: https://ucanr.edu/blog/topics-subtropics/article/cherimoya',
-    status: 'Want',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Ensayo en sitio cálido y protegido, antes de darle un lugar principal. / Trial in a warm, sheltered spot before giving it a prime planting position.'
   },
@@ -401,7 +401,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos ovales rojos, anaranjados o amarillos',
     edibleUses: 'Abrir el fruto maduro y sacar la pulpa; la cáscara suele ser amarga. Su acidez funciona especialmente bien en salsa, chutney, jugo y dulce. / Scoop the pulp from ripe fruit; the skin is often bitter. Its tang is especially good in sauces, chutney, juice and preserves.',
     sources: 'Chilto, SIB Parques Nacionales Argentina: https://sib.gob.ar/especies/solanum-betaceum | Chilto, Secretaría de Ambiente de Argentina: https://www.argentina.gob.ar/sites/default/files/triptico_chilto_pdf_final.pdf | Cultivo del chilto, Argentina.gob.ar: https://www.argentina.gob.ar/sites/default/files/chilto.pdf',
-    status: 'Want',
+    status: 'Planted',
     priority: 'High',
     notes: 'Probar en sombra luminosa y sitio protegido. / Trial in bright partial shade with frost protection.'
   },
@@ -484,7 +484,7 @@ export const STARTER_PLANTS = [
     notes: 'Mirtácea nativa para el estrato frutal. / Native myrtle-family plant for the fruiting layer.'
   },
   {
-    commonName: 'Cereja / Cherry of the Rio Grande',
+    commonName: 'Cerella / Cereza de monte',
     scientificName: 'Eugenia involucrata',
     plantType: 'Tree',
     layer: 'Fruit tree',
@@ -504,7 +504,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos rojos a morado oscuro',
     edibleUses: 'Esperar a que el fruto esté rojo oscuro o casi negro y comerlo fresco: el sabor puede ir de dulce a bastante ácido según el árbol. Con una cosecha abundante, hacer mermelada o helado. / Wait until fruit turns deep red or nearly black, then eat it fresh; flavor ranges from sweet to quite tart between trees. Use a larger crop for jam or ice cream.',
     sources: 'Código Alimentario Argentino (antecedentes de uso): https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-36-2025-414767/texto | Guía de árboles nativos, Ministerio de Ambiente de Uruguay: https://www.gub.uy/ministerio-ambiente/sites/ministerio-ambiente/files/documentos/publicaciones/Guia_de_identificacion_de_especies_arboreas_nativas_de_Uruguay_compressed.pdf',
-    status: 'Want',
+    status: 'Planted',
     priority: 'High',
     notes: 'Prioritaria para comer fresca; buscar una selección de buen sabor. / A fresh-eating priority; look for a good-tasting selection.'
   },
@@ -607,7 +607,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos amarillos aromáticos',
     edibleUses: 'El ubajay maduro se come fresco; su pulpa agridulce y perfumada sirve para jugos, compotas, mermeladas y vinagres. Como se ablanda pronto, rinde mejor cosechado cerca de donde se consume. / Ripe ubajay is eaten fresh. Its sweet-tart fragrant pulp goes into juice, compote, jam and vinegar. The soft fruit is best used near where it is picked.',
     sources: 'Código Alimentario Argentino (antecedentes de uso): https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-36-2025-414767/texto | Eugenia myrcianthes, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98707-2 | Descripción botánica, Universidad de la República: https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/36481/1/LegrandDiego.pdf',
-    status: 'Want',
+    status: 'Planted',
     priority: 'High',
     notes: 'Prioritario si hay lugar para su copa; cosechar el fruto blando enseguida y compartir parte con las aves. / A priority where its crown fits; use the soft fruit promptly and leave some for birds.'
   },
@@ -791,6 +791,23 @@ export const STARTER_PLANTS = [
     safety: 'Identificar la especie antes de usarla como alimento. No comer hojas ni semillas; el látex lechoso puede irritar la piel y los ojos. Hay advertencias internacionales de toxicidad para esta especie, aunque una publicación argentina documenta el uso alimentario tradicional de sus frutos. / Confirm the species before food use. Do not eat leaves or seeds; the milky sap can irritate skin and eyes. Some international sources warn of toxicity, while an Argentine publication documents traditional use of the fruit.',
     sources: 'Tasi, CONICET La Plata, Nuevos usos de especies nativas: https://laplata.conicet.gov.ar/wp-content/uploads/sites/97/2026/01/Libro-NUS-Argentina-contra-el-Hambre_compressed.pdf | Araujia sericifera, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30117279-2 | Moth vine safety, NSW Government: https://weeds.dpi.nsw.gov.au/Weed/MothVine',
     status: 'Other',
+    priority: 'Medium'
+  },
+  {
+    commonName: 'Flor de sangre',
+    scientificName: 'Asclepias curassavica',
+    plantType: 'Herb',
+    layer: 'Herbaceous',
+    photos: ['./assets/plants/flor-de-sangre-1.jpg'],
+    description: 'Hierba de flores rojas y anaranjadas que atraen mariposas y otros insectos. Sus hojas alimentan orugas de la monarca austral. Florece durante los meses cálidos y puede rebrotar después de heladas suaves. Tiene látex irritante y todas sus partes son tóxicas si se ingieren. / Red and orange flowers attract butterflies and other insects, while the leaves feed southern monarch caterpillars. It flowers through the warm months and may regrow after light frost. Its milky sap can irritate skin, and all parts are toxic if eaten.',
+    nativeStatus: 'Nativa de América tropical; introducida en Argentina',
+    nativeRange: 'México a América tropical',
+    purposes: ['Butterflies','Pollinators'],
+    sun: 'Pleno sol a media sombra',
+    water: 'Media',
+    flowering: 'Primavera a otoño',
+    sources: 'Asclepias curassavica, Plants of the World Online, Kew: https://powo.science.kew.org/taxon/94213-1 | Tropical Milkweed, NC State Extension: https://plants.ces.ncsu.edu/plants/asclepias-curassavica/',
+    status: 'Planted',
     priority: 'Medium'
   },
   {
@@ -1067,9 +1084,9 @@ export const STARTER_PLANTS = [
     sizeManagement: 'Árbol pionero de 4–10 m; su crecimiento rápido exige mantenimiento si se quiere limitarlo.',
     flowering: 'Flores lilas en racimos',
     fruiting: 'Bayas pequeñas',
-    status: 'Want',
+    status: 'Planted',
     priority: 'Low',
-    notes: 'Árbol que queremos sumar al jardín. / A tree we want to add to the garden.'
+    notes: 'Ya está en el santuario. / Already in the sanctuary.'
   },
   {
     commonName: 'Laurel criollo',
@@ -1501,7 +1518,7 @@ export const STARTER_PLANTS = [
     size: 'Altura: 2–4 m (altura aproximada; varía con el sitio).',
     flowering: 'Flores violetas tubulares',
     propagation: 'Por esquejes o semillas. / By cuttings or seed.',
-    status: 'Other',
+    status: 'Planted',
     priority: 'High',
     notes: 'Nectarífera andina para picaflores. / Andean hummingbird nectar plant.'
   },
@@ -1550,7 +1567,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Verano',
     propagation: 'Por semillas',
     sources: 'Gobierno de la Ciudad de Buenos Aires, Ombú: https://buenosaires.gob.ar/gcaba_historico/espaciopublicoehigieneurbana/ciudad-verde/parque-de-la-ciudad/ombu | De la Peña y Pensiero, Las plantas como recurso alimenticio de las aves (UNL/CONICET): https://ri.conicet.gov.ar/bitstream/handle/11336/110320/CONICET_Digital_Nro.554bc8f2-fcbc-47a2-af93-6eb6fb654f1a_A.pdf?isAllowed=y&sequence=2',
-    status: 'Want'
+    status: 'Other'
   },
   {
     commonName: 'Jacarandá',
@@ -1573,7 +1590,7 @@ export const STARTER_PLANTS = [
     flowering: 'Primavera, a menudo antes de que rebrote el follaje',
     fruiting: 'Cápsulas redondeadas y planas con semillas aladas',
     sources: 'Argentina.gob.ar, Árboles: https://www.argentina.gob.ar/node/492317 | Universidad Nacional de La Plata, descripción de Jacaranda mimosifolia: https://www.bfa.fcnym.unlp.edu.ar/catalogo/doc_num.php?explnum_id=4861 | University of Florida IFAS, Jacaranda mimosifolia: https://ask.ifas.ufl.edu/publication/ST317 | Estudio de visitantes florales: https://zenodo.org/records/18319137',
-    status: 'Want'
+    status: 'Planted'
   },
   {
     commonName: 'Araticú / chirimoya del monte',
@@ -1630,7 +1647,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Fruto amarillo muy aromático y agridulce',
     edibleUses: 'Probarla fresca apenas cosechada; su acidez y perfume brillan en jugo, sorbete, helado, compota y mermelada. El sabor y la proporción de pulpa varían mucho entre plantas. / Taste it fresh just after picking; its acidity and fragrance shine in juice, sorbet, ice cream, compote and jam. Flavor and pulp yield vary considerably between plants.',
     sources: 'Uvaia en Misiones, relevamiento de frutos silvestres: https://pmc.ncbi.nlm.nih.gov/articles/PMC4673098/ | Eugenia pyriformis, Kew POWO: https://powo.science.kew.org/results?q=Eugenia%20pyriformis | Variación de pulpa y acidez en uvaia: https://pmc.ncbi.nlm.nih.gov/articles/PMC10177832/',
-    status: 'Want',
+    status: 'Other',
     priority: 'Medium',
     notes: 'Probar la fruta de la planta madre si es posible: algunas son mucho más ácidas que otras. / Taste the parent plant’s fruit if possible: some are much tarter than others.'
   },
@@ -1716,7 +1733,7 @@ export const STARTER_PLANTS = [
     fruiting: 'Frutos redondos de unos 2–2,5 cm, amarillos al madurar',
     edibleUses: 'El fruto aromático se come fresco durante la cosecha; también se transforma en jaleas, helados y licores. / The fragrant fruit is eaten fresh in season or made into jelly, ice cream and liqueur.',
     sources: 'Campomanesia adamantium, Kew POWO: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60466515-2 | Uso y propagación de guavira, UFMS: https://repositorio.ufms.br/handle/123456789/6425?mode=full | Porte y fenología, Revista de Ciências Agrárias: https://scielo.pt/scielo.php?pid=S0871-018X2020000100105&script=sci_arttext',
-    status: 'Want',
+    status: 'Other',
     notes: 'Probar como frutal experimental en Ezeiza; su procedencia es el Cerrado, no el talar local. Comprar como Campomanesia adamantium para evitar confusión con C. xanthocarpa.'
   },
   {

@@ -1,6 +1,6 @@
 {
   "slug": "cerella",
-  "commonName": "Cereja / Cherry of the Rio Grande",
+  "commonName": "Cerella / Cereza de monte",
   "scientificName": "Eugenia involucrata",
   "plantType": "Tree",
   "layer": "Fruit tree",
@@ -22,18 +22,18 @@
   "flowering": "Flores blancas",
   "fruiting": "Frutos rojos a morado oscuro",
   "edibleUses": "Esperar a que el fruto esté rojo oscuro o casi negro y comerlo fresco: el sabor puede ir de dulce a bastante ácido según el árbol. Con una cosecha abundante, hacer mermelada o helado. / Wait until fruit turns deep red or nearly black, then eat it fresh; flavor ranges from sweet to quite tart between trees. Use a larger crop for jam or ice cream.",
-  "status": "Want",
+  "status": "Planted",
   "priority": "High",
   "notes": "Prioritaria para comer fresca; buscar una selección de buen sabor. / A fresh-eating priority; look for a good-tasting selection.",
   "photos": [
     {
       "file": "cerella-2.jpg",
-      "shows": "Ripening fruit",
-      "sourceFile": "Eugenia involucrata CEREJEIRA FotoDarioNiz",
-      "sourcePage": "https://floradeluruguay.blogspot.com/2010/11/cerejeira.html",
-      "author": "See source page",
-      "license": "",
-      "licenseUrl": ""
+      "shows": "Ripe red and dark-purple fruit on tree",
+      "sourceFile": "CherryFlickr17.jpg",
+      "sourcePage": "https://www.growables.org/information/TropicalFruit/cherryoftheriogrande.htm",
+      "author": "Mauricio Mercadante",
+      "license": "CC BY-NC-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/"
     },
     {
       "file": "cerella-1.jpg",

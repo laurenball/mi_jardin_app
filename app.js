@@ -1,5 +1,5 @@
 import { addPlant, addPlants, deletePlants, getPlants, updatePlant } from './db.js';
-import { STARTER_PLANTS } from './starter-plants.js?v=58';
+import { STARTER_PLANTS } from './starter-plants.js?v=60';
 
 const dialog = document.querySelector('#plant-dialog');
 const browseDialog = document.querySelector('#browse-dialog');
@@ -39,6 +39,10 @@ const SCHEMA_VERSION = 4;
 const STARTER_INFO_FIELDS = ['plantType','layer','description','nativeStatus','nativeRange','ecology','hostPlant','purposes','wildlifeNotes',
   'sun','water','soil','size','fruitSizeGroup','canopySizeGroup','sizeManagement','flowering','fruiting','propagation','edibleUses','medicinalUses','otherUses','safety','sources',
   'status','priority','notes'];
+const STARTER_NAME_RENAMES = {
+  'Acca sellowiana': 'Falso guayabo / Feijoa',
+  'Eugenia involucrata': 'Cereja / Cherry of the Rio Grande'
+};
 const UNGROUPED_LABEL = 'Otras';
 const LAYER_ORDER = ['Groundcover', 'Herbaceous', 'Grass', 'Shrub', 'Climber', 'Fruit tree', 'Canopy'];
 const FRUIT_SIZE_ORDER = ['Naturally small', 'Easy to keep small', 'Needs regular pruning', 'Needs space'];
@@ -312,6 +316,7 @@ function starterInfoUpdate(plant) {
   const starter = starterRecordFor(plant);
   if (!starter) return null;
   const changes = {};
+  if (plant.commonName === STARTER_NAME_RENAMES[starter.scientificName]) changes.commonName = starter.commonName;
   for (const field of STARTER_INFO_FIELDS) {
     const next = field in starter ? starter[field] : (field === 'purposes' ? [] : '');
     if (!sameFieldValue(plant[field], next)) changes[field] = next;
@@ -635,6 +640,7 @@ function render() {
     return searchableText(plant).includes(query)
       && (!sunFilter.value || canonicalSun(plant.sun) === sunFilter.value)
       && (!statusFilter.value
+        || (statusFilter.value === 'active' && (hasPlant(plant) || wantsPlant(plant)))
         || (statusFilter.value === 'have' && hasPlant(plant))
         || (statusFilter.value === 'want' && wantsPlant(plant))
         || (statusFilter.value === 'other' && inventoryBucket(plant) === 'other'));
@@ -669,7 +675,7 @@ for (const id of ['close-form','cancel-form']) document.querySelector(`#${id}`).
 for (const input of [searchInput, statusFilter, sunFilter]) input.addEventListener(input.tagName === 'INPUT' ? 'input' : 'change', render);
 document.querySelector('#clear-filters').addEventListener('click', () => {
   searchInput.value = '';
-  statusFilter.value = '';
+  statusFilter.value = 'active';
   sunFilter.value = '';
   render();
 });
@@ -737,4 +743,5 @@ plants = await getPlants();
 await cleanupRepeatedStarterPlants();
 await addMissingStarterPlants();
 await syncStarterRecords();
+statusFilter.value = 'active';
 render();
